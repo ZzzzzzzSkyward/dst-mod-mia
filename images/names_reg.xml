@@ -1,0 +1,6 @@
+<Atlas>
+	<Texture filename="names_reg.tex" />
+	<Elements>
+		<Element name="reg.tex" u1="0.00195313" u2="0.900391" v1="0.404297" v2="0.998047" />
+	</Elements>
+</Atlas>

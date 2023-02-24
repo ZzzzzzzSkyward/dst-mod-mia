@@ -1,0 +1,10 @@
+<Atlas><Texture filename="mia_minimap.tex" />
+    <Elements>
+        <Element name="mitty_bottled.png" u1="0.001953125" u2="0.33398438" v1="0.66992188" v2="0.99804688"/>
+        <Element name="nanachi.png" u1="0.001953125" u2="0.23632813" v1="0.34570313" v2="0.66601563"/>
+        <Element name="nanachitent.png" u1="0.33789063" u2="0.68554688" v1="0.68554688" v2="0.99804688"/>
+        <Element name="reg.png" u1="0.24023438" u2="0.48632813" v1="0.41992188" v2="0.66601563"/>
+        <Element name="riko.png" u1="0.68945313" u2="0.93164063" v1="0.69335938" v2="0.99804688"/>
+        <Element name="rikocookpot.png" u1="0.49023438" u2="0.73632813" v1="0.41992188" v2="0.66601563"/>
+    </Elements>
+</Atlas>

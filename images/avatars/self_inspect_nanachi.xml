@@ -1,0 +1,6 @@
+<Atlas>
+	<Texture filename="self_inspect_nanachi.tex" />
+	<Elements>
+		<Element name="self_inspect_nanachi.tex" u1="0.0078125" u2="0.992188" v1="0.0078125" v2="0.992188" />
+	</Elements>
+</Atlas>

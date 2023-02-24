@@ -1,0 +1,57 @@
+local MakePlayerCharacter = require "prefabs/player_common"
+local assets = {Asset("ANIM", "anim/reg.zip"), Asset("ANIM", "anim/ghost_reg_build.zip")}
+local prefabs = {}
+local start_inv = {"regcloak", "reghat", "abyssweapon"}
+local function onload(inst, data)
+    if inst.components and inst.components.exp then inst.components.exp:ApplyUpgrades() end
+end
+local function oneat(inst, food)
+    if food:HasTag("rikofood") then inst.components.exp:DoDelta(1) end
+end
+local function onupdate(inst)
+    inst.components.health:SetMaxHealth(150 + inst.components.exp.levelpoint * 50)
+    inst.components.hunger:SetMax(100 + inst.components.exp.levelpoint * 25)
+    inst.components.sanity:SetMax(100 + inst.components.exp.levelpoint * 25)
+    inst.components.combat.damagemultiplier = 1 + inst.components.exp.levelpoint * 0.1
+end
+local function onlightingstrike(inst)
+    local headitem = nil
+    if inst.components.inventory then
+        headitem = inst.components.inventory.equipslots[EQUIPSLOTS.HEAD]
+    elseif inst.replica.inventory then
+        headitem = inst.replica.inventory:GetEquippedItem(EQUIPSLOTS.HEAD)
+    end
+    if inst.components.health ~= nil and not (inst.components.health:IsDead() or inst.components.health:IsInvincible()) then
+        if inst.components.inventory:IsInsulated() then
+            inst:PushEvent("lightningdamageavoided")
+        else
+            inst.components.health:DoDelta(TUNING.HEALING_SUPERHUGE, false, "lightning")
+            inst.components.sanity:DoDelta(-TUNING.SANITY_LARGE)
+            if headitem and headitem:HasTag("regerhat") then
+                headitem.components.fueled:DoDelta(TUNING.REGBOMB_CONSUME)
+                headitem.components.fueled.ontakefuelfn(headitem)
+            end
+        end
+    end
+end
+local common_postinit = function(inst)
+    inst.MiniMapEntity:SetIcon("reg.png")
+    inst:AddTag("reger")
+end
+local master_postinit = function(inst)
+    inst.soundsname = "wilson"
+    inst.components.health:SetMaxHealth(TUNING.REG_HEALTH)
+    inst.components.hunger:SetMax(TUNING.REG_HUNGER)
+    inst.components.sanity:SetMax(TUNING.REG_SANITY)
+    inst.components.combat.damagemultiplier = TUNING.REG_DAMAGEMULTIPLIER
+    inst.components.health:SetAbsorptionAmount(TUNING.REG_ABSORPTION)
+    inst.components.health.fire_damage_scale = 0
+    inst.components.eater:SetOnEatFn(oneat)
+    inst.components.playerlightningtarget:SetHitChance(1)
+    inst.components.playerlightningtarget:SetOnStrikeFn(onlightingstrike)
+    inst.components.hunger.hungerrate = TUNING.REG_HUNGERRATE
+    inst.regerweapon = SpawnPrefab("regweapon")
+    inst.regerweapon.entity:SetParent(inst.entity)
+    inst.OnLoad = onload
+end
+return MakePlayerCharacter("reg", prefabs, assets, common_postinit, master_postinit, start_inv)

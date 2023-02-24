@@ -1,0 +1,19 @@
+<Atlas><Texture filename="mia_inventoryimages.tex" />
+    <Elements>
+        <Element name="abyssweapon.tex" u1="0.001953125" u2="0.24804688" v1="0.75195313" v2="0.99804688"/>
+        <Element name="mitty_bottled.tex" u1="0.25195313" u2="0.49804688" v1="0.75195313" v2="0.99804688"/>
+        <Element name="nanachi_soup.tex" u1="0.50195313" u2="0.74804688" v1="0.75195313" v2="0.99804688"/>
+        <Element name="nanachihat.tex" u1="0.75195313" u2="0.99804688" v1="0.75195313" v2="0.99804688"/>
+        <Element name="nanachitent.tex" u1="0.001953125" u2="0.24804688" v1="0.50195313" v2="0.74804688"/>
+        <Element name="regcloak.tex" u1="0.25195313" u2="0.49804688" v1="0.50195313" v2="0.74804688"/>
+        <Element name="reghat.tex" u1="0.50195313" u2="0.74804688" v1="0.50195313" v2="0.74804688"/>
+        <Element name="riko_dashi.tex" u1="0.75195313" u2="0.99804688" v1="0.50195313" v2="0.74804688"/>
+        <Element name="riko_friedfish.tex" u1="0.001953125" u2="0.24804688" v1="0.25195313" v2="0.49804688"/>
+        <Element name="riko_grill.tex" u1="0.25195313" u2="0.49804688" v1="0.25195313" v2="0.49804688"/>
+        <Element name="riko_onigiri.tex" u1="0.50195313" u2="0.74804688" v1="0.25195313" v2="0.49804688"/>
+        <Element name="riko_sack.tex" u1="0.75195313" u2="0.99804688" v1="0.25195313" v2="0.49804688"/>
+        <Element name="riko_snack.tex" u1="0.001953125" u2="0.24804688" v1="0.001953125" v2="0.24804688"/>
+        <Element name="rikocookpot_item.tex" u1="0.25195313" u2="0.49804688" v1="0.001953125" v2="0.24804688"/>
+        <Element name="rikohat.tex" u1="0.50195313" u2="0.74804688" v1="0.001953125" v2="0.24804688"/>
+    </Elements>
+</Atlas>

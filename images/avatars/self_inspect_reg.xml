@@ -1,0 +1,6 @@
+<Atlas>
+	<Texture filename="self_inspect_reg.tex" />
+	<Elements>
+		<Element name="self_inspect_reg.tex" u1="0.0078125" u2="0.960938" v1="0.488281" v2="0.996094" />
+	</Elements>
+</Atlas>

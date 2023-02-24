@@ -1,0 +1,19 @@
+return {
+    "riko",
+    "rikohat",
+    "riko_sack",
+    "rikocookpot",
+    "rikofoods",
+    "nanachi",
+    "nanachi_soup",
+    "nanachihat",
+    "nanachitent",
+    "mitty",
+    "reg",
+    "regcloak",
+    "reghat",
+    "abyssweapon",
+    "regweapon",
+    "reg_projectile",
+    "mia_skins"
+}
