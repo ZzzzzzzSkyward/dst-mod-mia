@@ -27,9 +27,10 @@ local function fn()
     inst:AddComponent("inspectable")
     inst:AddComponent("inventoryitem")
     inst:AddComponent("equippable")
-    inst.components.equippable.equipslot = EQUIPSLOTS.BACK or EQUIPSLOTS.BODY
+    inst.components.equippable.equipslot = EQUIPSLOTS.BODY
     inst:AddComponent("insulator")
-    inst.components.insulator:SetInsulation(TUNING.INSULATION_LARGE)
+    inst.components.insulator:SetInsulation(TUNING.INSULATION_MED)
+    inst.components.insulator:SetSummer()
     inst.components.equippable:SetOnEquip(onequip)
     inst.components.equippable:SetOnUnequip(onunequip)
     MakeHauntableLaunch(inst)

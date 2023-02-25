@@ -16,7 +16,7 @@ all_clients_require_mod = true
 icon_atlas = "modicon.xml"
 icon = "modicon.tex"
 server_filter_tags = {"XZmodmaker", "made_in_abyss"}
-version = "20230225"
+version = "20230225.1"
 configuration = {
     {
         name = "attract",
@@ -45,7 +45,7 @@ translation = {
 莉可，活泼而又好奇心旺盛的女孩子，是见习探窟家，梦想追上母亲，成为传说中的探窟家“白笛”。
 雷古，莉可在深渊里发现的，拥有和人类相似外形的机器人，失去了记忆。
 娜娜奇，来自深渊底部的迷之生物，毛茸茸的闻起来很香很香。]],
-            version = [[修复翻译]],
+            version = [[雷古改版]],
             ["Accord to the game"] = "跟随游戏设置",
             ["Set Language"] = "设置语言",
             Keybinds = "按键绑定",
@@ -64,7 +64,7 @@ translation = {
             name = name,
             description = description,
             attract_hover = "Nanachi will/won't attract pigman.",
-            version = [[Fix English translation]]
+            version = [[Reg reworked]]
         },
         translateFunction = function(key)
             return translation[2].dict[key] or key

@@ -2,7 +2,7 @@ local delicious_abyss_dishes = dig("foods")
 for k, recipe in pairs(delicious_abyss_dishes) do AddCookerRecipe("rikocookpot", recipe) end
 modimport("scripts/mia_recipes.lua")
 modimport("scripts/hamlet_dodge.lua")
-local postinit = {components = {"portablestructure"}}
+local postinit = {components = {"portablestructure"}, scenarios = {"chestfunctions"}}
 for k, v in pairs(postinit) do
     for k2, v2 in pairs(v) do require("mia_postinit/" .. k .. "/" .. v2)(require(k .. "/" .. v2)) end
 end
@@ -69,7 +69,6 @@ AddPlayerPostInit(function(inst)
     end
 end)
 FUELTYPE.POWER = "power"
-table.insert(FUELTYPE, FUELTYPE.POWER)
 AddPrefabPostInit("gunpowder", function(inst)
     inst:AddComponent("fuel")
     inst:AddTag("power_fuel")

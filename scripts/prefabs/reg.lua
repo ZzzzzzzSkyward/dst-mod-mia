@@ -31,9 +31,14 @@ end
 local common_postinit = function(inst)
     inst.MiniMapEntity:SetIcon("reg.png")
     inst:AddTag("mia_reg")
+    inst:AddTag("heatresistant")
+    inst:AddTag("soulless") -- non human representation
+    inst:AddTag("electricdamageimmune")
+    if TheNet:GetServerGameMode() == "quagmire" then inst:AddTag("quagmire_grillmaster") end
 end
 local master_postinit = function(inst)
-    inst.soundsname = "walter"
+    inst.starting_inventory = start_inv
+    inst.soundsname = "walter" -- #TODO
     inst.components.health:SetMaxHealth(TUNING.REG_HEALTH)
     inst.components.hunger:SetMax(TUNING.REG_HUNGER)
     inst.components.sanity:SetMax(TUNING.REG_SANITY)
@@ -44,6 +49,10 @@ local master_postinit = function(inst)
     inst.components.playerlightningtarget:SetHitChance(1)
     inst.components.playerlightningtarget:SetOnStrikeFn(onlightingstrike)
     inst.components.hunger.hungerrate = TUNING.REG_HUNGERRATE
+    inst.components.temperature.inherentinsulation = -TUNING.INSULATION_MED
+    inst.components.temperature.inherentsummerinsulation = -TUNING.INSULATION_MED
+    inst.components.temperature:SetFreezingHurtRate(TUNING.REG_FREEZE_DAMAGE_RATE)
+    inst.components.temperature:SetOverheatHurtRate(TUNING.REG_HEAT_DAMAGE_RATE)
     inst.regweapon = SpawnPrefab("regweapon")
     inst.regweapon.entity:SetParent(inst.entity)
     inst.OnLoad = onload

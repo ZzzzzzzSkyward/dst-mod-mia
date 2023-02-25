@@ -141,8 +141,11 @@ end
 local nanachi_assets = {Asset("ANIM", "anim/hat_nanachihat.zip")}
 
 local function nanachi_onequip(inst, owner)
-    if owner.prefab == "nanachi" then owner.AnimState:AddOverrideBuild("nanachihair") end
     onequip(inst, owner)
+    if owner.prefab == "nanachi" then
+        owner.AnimState:AddOverrideBuild("nanachihair")
+        owner.AnimState:Show("HAIR")
+    end
 end
 
 local function nanachi_onunequip(inst, owner)

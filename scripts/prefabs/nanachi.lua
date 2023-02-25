@@ -61,6 +61,7 @@ end
 local common_postinit = function(inst)
     inst.MiniMapEntity:SetIcon("nanachi.png")
     inst:AddTag("nanachi")
+    inst:AddTag("soulless")-- non human representation
     inst:RemoveTag("scarytoprey")
     -- compatible with hamlet
     inst.dodgetime = net_bool(inst.GUID, "player.dodgetime", "dodgetimedirty")

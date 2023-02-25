@@ -3,6 +3,8 @@ local function ret()
         RIKO_HEALTH = wilson_health,
         RIKO_HUNGER = wilson_hunger,
         RIKO_SANITY = wilson_sanity,
+        RIKO_NIGHT_SANITY_MULT = 0.2,
+        RIKO_NEG_SANITY_MULT = -1,
         NANACHI_HEALTH = wilson_health,
         NANACHI_HUNGER = 150,
         NANACHI_SANITY = 200,
@@ -26,7 +28,10 @@ local function ret()
         REG_ABSORPTION = 0.4,
         RIKOHAT_LIGHTTIME = MINERHAT_LIGHTTIME * 2,
         REGHAT_ABSORPTION = 0.9,
-        BLAZEREAP_DAMAGE = 51
+        BLAZEREAP_DAMAGE = 51,
+        REG_FIRE_DAMAGE = .2,
+        REG_FREEZE_DAMAGE_RATE = .1,
+        REG_HEAT_DAMAGE_RATE = .1
     }
 end
 local TuningHack = {}
