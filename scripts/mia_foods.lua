@@ -69,6 +69,7 @@ local foods = {
         test = function(cooker, names, tags)
             return tags.egg and tags.veggie and tags.veggie >= 2 and tags.fish
         end,
+        tag = {"nanachisoup"},
         priority = 6,
         weight = 1,
         foodtype = FOODTYPE.VEGGIE,

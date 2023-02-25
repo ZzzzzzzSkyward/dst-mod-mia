@@ -10,7 +10,7 @@ local function onunequip(inst, owner)
 end
 local function onattack(inst, owner, target)
     if target.components.health and not inst.components.fueled:IsEmpty() then
-        if owner:HasTag("reger") then
+        if owner:HasTag("mia_reg") then
             SpawnPrefab("explode_small").Transform:SetPosition(target.Transform:GetWorldPosition())
             target.components.health:DoDelta(-150)
             inst.components.fueled:DoDelta(-10)
@@ -32,7 +32,7 @@ local function simple(name)
     inst.AnimState:SetBank(name)
     inst.AnimState:SetBuild(name)
     inst.AnimState:PlayAnimation("idle")
-    inst:AddTag("abyssweapon")
+    inst:AddTag("blazereap")
     inst:AddTag("power_fueled")
     inst.entity:SetPristine()
     if not TheWorld.ismastersim then return inst end
@@ -49,11 +49,11 @@ local function simple(name)
     MakeHauntableLaunch(inst)
     return inst
 end
-local function fn()
-    local inst = simple("abyssweapon")
+local function blazereap()
+    local inst = simple("blazereap")
     if not TheWorld.ismastersim then return inst end
-    inst.components.weapon:SetDamage(51)
+    inst.components.weapon:SetDamage(TUNING.BLAZEREAP_DAMAGE)
     inst.components.weapon:SetOnAttack(onattack)
     return inst
 end
-return Prefab("abyssweapon", fn, assets)
+return Prefab("blazereap", blazereap, assets)

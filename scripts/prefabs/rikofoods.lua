@@ -12,7 +12,15 @@ local function MakeFood(name, def)
         inst.AnimState:SetBuild(name)
         inst.AnimState:PlayAnimation("idle")
         inst:AddTag("preparedfood")
-        inst:AddTag("rikofood")
+        if def.tag then
+            if type(def.tag) == "string" then
+                inst:AddTag(def.tag)
+            elseif type(def.tag) == "table" and def.tag[1] then
+                inst:AddTags(def.tag)
+            end
+        else
+            inst:AddTag("rikofood")
+        end
         inst.entity:SetPristine()
         if not TheWorld.ismastersim then return inst end
         inst:AddComponent("edible")

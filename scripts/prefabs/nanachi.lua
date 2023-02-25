@@ -68,6 +68,7 @@ local common_postinit = function(inst)
     inst:ListenForEvent("dodgetimedirty", function()
         inst.last_dodge_time = GetTime()
     end)
+    inst:ListenForEvent("setowner", OnSetOwner)
 end
 
 local master_postinit = function(inst)
@@ -87,8 +88,8 @@ local master_postinit = function(inst)
     inst:ListenForEvent("ms_respawnedfromghost", forcefast)
     inst:ListenForEvent("death", forcefast)
     inst:ListenForEvent("equip", onequip)
-    inst:ListenForEvent("setowner", OnSetOwner)
     inst.OnLoad = forcefast
+    inst:ListenForEvent("playeractivated", forcefast)
 end
 
 return MakePlayerCharacter("nanachi", prefabs, assets, common_postinit, master_postinit, start_inv)

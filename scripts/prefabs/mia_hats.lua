@@ -1,66 +1,10 @@
-local assets = {Asset("ANIM", "anim/hat_rikohat.zip")}
-local function _onequip(inst, owner, build, symbol_override, headbase_hat_override)
-
-    local skin_build = inst:GetSkinBuild()
-    if skin_build ~= nil then
-        owner:PushEvent("equipskinneditem", inst:GetSkinName())
-        owner.AnimState:OverrideItemSkinSymbol("swap_hat", skin_build, symbol_override or "swap_hat", inst.GUID, fname)
-    else
-        owner.AnimState:OverrideSymbol("swap_hat", build, symbol_override or "swap_hat")
-    end
-
-    owner.AnimState:ClearOverrideSymbol("headbase_hat") -- clear out previous overrides
-    if headbase_hat_override ~= nil then
-        local skin_build = owner.AnimState:GetSkinBuild()
-        if skin_build ~= "" then
-            owner.AnimState:OverrideSkinSymbol("headbase_hat", skin_build, headbase_hat_override)
-        else
-            local build = owner.AnimState:GetBuild()
-            owner.AnimState:OverrideSymbol("headbase_hat", build, headbase_hat_override)
-        end
-    end
-
-    owner.AnimState:Show("HAT")
-    owner.AnimState:Show("HAIR_HAT")
-    owner.AnimState:Hide("HAIR_NOHAT")
-    owner.AnimState:Hide("HAIR")
-
-    if owner:HasTag("player") then
-        owner.AnimState:Hide("HEAD")
-        owner.AnimState:Show("HEAD_HAT")
-    end
-
-    if inst.components.fueled ~= nil then inst.components.fueled:StartConsuming() end
-
-    if inst.skin_equip_sound and owner.SoundEmitter then owner.SoundEmitter:PlaySound(inst.skin_equip_sound) end
-end
-
-local function _onunequip(inst, owner)
-    local skin_build = inst:GetSkinBuild()
-    if skin_build ~= nil then owner:PushEvent("unequipskinneditem", inst:GetSkinName()) end
-
-    owner.AnimState:ClearOverrideSymbol("headbase_hat") -- it might have been overriden by _onequip
-    if owner.components.skinner ~= nil then owner.components.skinner.base_change_cb = owner.old_base_change_cb end
-
-    owner.AnimState:ClearOverrideSymbol("swap_hat")
-    owner.AnimState:Hide("HAT")
-    owner.AnimState:Hide("HAIR_HAT")
-    owner.AnimState:Show("HAIR_NOHAT")
-    owner.AnimState:Show("HAIR")
-
-    if owner:HasTag("player") then
-        owner.AnimState:Show("HEAD")
-        owner.AnimState:Hide("HEAD_HAT")
-    end
-
-    if inst.components.fueled ~= nil then inst.components.fueled:StopConsuming() end
-end
-
-local function onequip(inst, owner, symbol_override)
-    _onequip(inst, owner, "hat_rikohat", symbol_override)
+local riko_assets = {Asset("ANIM", "anim/hat_rikohat.zip")}
+local fns = require("common_hatfn")
+local function onequip(inst, owner, ...)
+    fns._onequip(inst, owner, inst.build, ...)
 end
 local function onunequip(inst, owner)
-    _onunequip(inst, owner)
+    fns._onunequip(inst, owner)
 end
 
 local function miner_turnon(inst)
@@ -90,7 +34,7 @@ end
 local function miner_turnoff(inst)
     local owner = inst.components.inventoryitem ~= nil and inst.components.inventoryitem.owner or nil
     if owner ~= nil and inst.components.equippable ~= nil and inst.components.equippable:IsEquipped() then
-        onequip(inst, owner, "swap_hat_off")
+        onequip(inst, owner, inst.build, "swap_hat_off")
     end
     inst.components.fueled:StopConsuming()
     if inst._light ~= nil then
@@ -155,21 +99,6 @@ local function simple()
     MakeHauntableLaunch(inst)
     return inst
 end
-local function riko_custom_init(inst)
-    inst.AnimState:SetBank("rikohat")
-    inst.AnimState:SetBuild("hat_rikohat")
-    inst.AnimState:PlayAnimation("anim")
-    if not TheWorld.ismastersim then return inst end
-    inst.components.fueled:InitializeFuelLevel(TUNING.RIKOHAT_LIGHTTIME)
-end
-local function reg_custom_init(inst)
-    inst:AddTag("regerhat")
-    inst.AnimState:SetBank("regerhat")
-    inst.AnimState:SetBuild("hat_regerhat")
-    inst.AnimState:PlayAnimation("anim")
-    if not TheWorld.ismastersim then return inst end
-    inst.components.fueled:InitializeFuelLevel(TUNING.RIKOHAT_LIGHTTIME)
-end
 local function miner_custom_init(inst)
     -- waterproofer (from waterproofer component) added to pristine state for optimization
     inst:AddTag("waterproofer")
@@ -183,7 +112,6 @@ local function miner_custom_init(inst)
     inst.components.equippable:SetOnEquip(miner_turnon)
     inst.components.equippable:SetOnUnequip(miner_unequip)
     inst.components.equippable:SetOnEquipToModel(miner_onequiptomodel)
-    inst.components.equippable.restrictedtag = "riko"
 
     inst:AddComponent("fueled")
     inst.components.fueled.fueltype = FUELTYPE.CAVE
@@ -199,10 +127,81 @@ local function miner_custom_init(inst)
     inst._light = nil
     inst.OnRemoveEntity = miner_onremove
 end
-local function rikohat()
-    local inst = simple()
+local function riko_custom_init(inst)
     miner_custom_init(inst)
-    riko_custom_init(inst)
+    inst.AnimState:SetBank("rikohat")
+    inst.AnimState:SetBuild("hat_rikohat")
+    inst.AnimState:PlayAnimation("anim")
+    if not TheWorld.ismastersim then return inst end
+    inst.build = "hat_rikohat"
+    inst.components.fueled:InitializeFuelLevel(TUNING.RIKOHAT_LIGHTTIME)
+    inst.components.equippable.restrictedtag = "riko"
+end
+
+local nanachi_assets = {Asset("ANIM", "anim/hat_nanachihat.zip")}
+
+local function nanachi_onequip(inst, owner)
+    if owner.prefab == "nanachi" then owner.AnimState:AddOverrideBuild("nanachihair") end
+    onequip(inst, owner)
+end
+
+local function nanachi_onunequip(inst, owner)
+    if owner.prefab == "nanachi" then owner.AnimState:ClearOverrideBuild("nanachihair") end
+    onunequip(inst, owner)
+end
+
+local function nanachi_custom_init(inst)
+    inst.AnimState:SetBank("nanachihat")
+    inst.AnimState:SetBuild("hat_nanachihat")
+    inst.AnimState:PlayAnimation("anim")
+    inst:AddTag("nanachihat")
+    inst:AddTag("waterproofer")
+    if not TheWorld.ismastersim then return inst end
+    inst.build = "hat_nanachihat"
+    inst.components.equippable.restrictedtag = "nanachi"
+
+    inst.components.equippable:SetOnEquip(nanachi_onequip)
+    inst.components.equippable:SetOnUnequip(nanachi_onunequip)
+    inst.components.inventoryitem.keepondeath = true
+
+    inst:AddComponent("waterproofer")
+    inst.components.waterproofer:SetEffectiveness(0.35)
+
+    inst.components.equippable.dapperness = TUNING.DAPPERNESS_LARGE
+
+    inst:AddComponent("insulator")
+    inst.components.insulator:SetInsulation(TUNING.INSULATION_MED)
+
     return inst
 end
-return Prefab("rikohat", rikohat, assets)
+local reg_assets = {Asset("ANIM", "anim/hat_regerhat.zip")}
+local function reg_custom_init(inst)
+    inst.AnimState:SetBank("regerhat")
+    inst.AnimState:SetBuild("hat_regerhat")
+    inst.AnimState:PlayAnimation("anim")
+    inst.entity:AddSoundEmitter()
+    inst:AddTag("reghat")
+    inst:AddTag("waterproofer")
+    inst:RemoveComponent("floater")
+    if not TheWorld.ismastersim then return inst end
+    inst.build = "hat_regerhat"
+    inst.components.equippable.restrictedtag = "mia_reg"
+
+    inst:AddComponent("armor")
+    inst.components.armor:InitIndestructible(TUNING.REGHAT_ABSORPTION)
+
+    inst:AddComponent("waterproofer")
+    inst.components.waterproofer:SetEffectiveness(TUNING.WATERPROOFNESS_SMALL)
+    inst:AddComponent("submersible")
+    inst.components.inventoryitem:SetSinks(true)
+end
+local function makehat(custom_init)
+    return function()
+        local inst = simple()
+        custom_init(inst)
+        return inst
+    end
+end
+return Prefab("rikohat", makehat(riko_custom_init), riko_assets),
+    Prefab("nanachihat", makehat(nanachi_custom_init), nanachi_assets),
+    Prefab("reghat", makehat(reg_custom_init), reg_assets)

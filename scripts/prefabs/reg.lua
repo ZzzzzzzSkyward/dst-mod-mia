@@ -1,18 +1,12 @@
 local MakePlayerCharacter = require "prefabs/player_common"
 local assets = {Asset("ANIM", "anim/reg.zip"), Asset("ANIM", "anim/ghost_reg_build.zip")}
 local prefabs = {}
-local start_inv = {"regcloak", "reghat", "abyssweapon"}
+local start_inv = {"regcloak", "reghat"}
 local function onload(inst, data)
     if inst.components and inst.components.exp then inst.components.exp:ApplyUpgrades() end
 end
 local function oneat(inst, food)
     if food:HasTag("rikofood") then inst.components.exp:DoDelta(1) end
-end
-local function onupdate(inst)
-    inst.components.health:SetMaxHealth(150 + inst.components.exp.levelpoint * 50)
-    inst.components.hunger:SetMax(100 + inst.components.exp.levelpoint * 25)
-    inst.components.sanity:SetMax(100 + inst.components.exp.levelpoint * 25)
-    inst.components.combat.damagemultiplier = 1 + inst.components.exp.levelpoint * 0.1
 end
 local function onlightingstrike(inst)
     local headitem = nil
@@ -27,7 +21,7 @@ local function onlightingstrike(inst)
         else
             inst.components.health:DoDelta(TUNING.HEALING_SUPERHUGE, false, "lightning")
             inst.components.sanity:DoDelta(-TUNING.SANITY_LARGE)
-            if headitem and headitem:HasTag("regerhat") then
+            if headitem and headitem:HasTag("reghat") then
                 headitem.components.fueled:DoDelta(TUNING.REGBOMB_CONSUME)
                 headitem.components.fueled.ontakefuelfn(headitem)
             end
@@ -36,10 +30,10 @@ local function onlightingstrike(inst)
 end
 local common_postinit = function(inst)
     inst.MiniMapEntity:SetIcon("reg.png")
-    inst:AddTag("reger")
+    inst:AddTag("mia_reg")
 end
 local master_postinit = function(inst)
-    inst.soundsname = "wilson"
+    inst.soundsname = "walter"
     inst.components.health:SetMaxHealth(TUNING.REG_HEALTH)
     inst.components.hunger:SetMax(TUNING.REG_HUNGER)
     inst.components.sanity:SetMax(TUNING.REG_SANITY)
@@ -50,8 +44,8 @@ local master_postinit = function(inst)
     inst.components.playerlightningtarget:SetHitChance(1)
     inst.components.playerlightningtarget:SetOnStrikeFn(onlightingstrike)
     inst.components.hunger.hungerrate = TUNING.REG_HUNGERRATE
-    inst.regerweapon = SpawnPrefab("regweapon")
-    inst.regerweapon.entity:SetParent(inst.entity)
+    inst.regweapon = SpawnPrefab("regweapon")
+    inst.regweapon.entity:SetParent(inst.entity)
     inst.OnLoad = onload
 end
 return MakePlayerCharacter("reg", prefabs, assets, common_postinit, master_postinit, start_inv)

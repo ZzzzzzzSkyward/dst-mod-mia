@@ -41,9 +41,8 @@ end
 local function ondeploy(inst, pt, deployer)
     local pot = SpawnPrefab("rikocookpot")
     if pot ~= nil then
-        pt = Vector3(pt.x, 0, pt.z)
         pot.Physics:SetCollides(false)
-        pot.Physics:Teleport(pt.x, pt.y, pt.z)
+        pot.Physics:Teleport(pt.x, 0, pt.z)
         pot.Physics:SetCollides(true)
         pot.AnimState:PlayAnimation("place")
         pot.AnimState:PlayAnimation("idle_empty", false)
@@ -61,9 +60,10 @@ local function itemfn()
     MakeInventoryPhysics(inst)
     inst.AnimState:SetBank("portable_cook_pot")
     inst.AnimState:SetBuild("cook_pot_riko")
-    inst.AnimState:PlayAnimation("idle_empty")
+    inst.AnimState:PlayAnimation("idle_ground")
     MakeInventoryFloatable(inst)
     inst.MiniMapEntity:SetIcon("rikocookpot.png")
+    inst:AddTag("irreplaceable")
     inst.entity:SetPristine()
     if not TheWorld.ismastersim then return inst end
     inst:AddComponent("inspectable")
@@ -183,20 +183,12 @@ local function OnHaunt(inst, haunter)
     end
     return ret
 end
-local function pickupfn(inst, guy)
-    if guy.components.inventory ~= nil then
-        local potitem = SpawnPrefab("rikocookpot_item")
-        ChangeToItem(inst)
-        inst:Remove()
-        guy.components.inventory:GiveItem(potitem)
-        return true
-    end
-end
-local function OnDismantle(inst) -- , doer)
+
+local function OnDismantle(inst, doer)
     ChangeToItem(inst)
     inst:Remove()
 end
-local function fn(Sim)
+local function fn()
     local inst = CreateEntity()
     inst.entity:AddTransform()
     inst.entity:AddAnimState()
@@ -214,6 +206,7 @@ local function fn(Sim)
     inst.Light:SetColour(235 / 255, 62 / 255, 12 / 255)
     inst:AddTag("structure")
     inst:AddTag("stewer")
+    inst:AddTag("irreplaceable")
     inst.AnimState:SetBank("portable_cook_pot")
     inst.AnimState:SetBuild("cook_pot_riko")
     inst.AnimState:PlayAnimation("idle_empty")
@@ -223,6 +216,7 @@ local function fn(Sim)
     if not TheWorld.ismastersim then return inst end
     inst:AddComponent("portablestructure")
     inst.components.portablestructure:SetOnDismantleFn(OnDismantle)
+    inst.components.portablestructure.restrictedtag = "riko"
     inst:AddComponent("stewer")
     inst.components.stewer.onstartcooking = startcookfn
     inst.components.stewer.oncontinuecooking = continuecookfn
@@ -236,17 +230,12 @@ local function fn(Sim)
     inst.components.container.onclosefn = onclose
     inst.components.container.skipclosesnd = true
     inst.components.container.skipopensnd = true
-    inst:AddComponent("inspectable")
     inst:AddComponent("lootdropper")
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
-    inst.components.workable:SetWorkLeft(2)
+    inst.components.workable:SetWorkLeft(75)
     inst.components.workable:SetOnFinishCallback(onhammered)
     inst.components.workable:SetOnWorkCallback(onhit)
-    inst:AddComponent("inventoryitem")
-    inst.components.inventoryitem.canbepickedup = false
-    inst:AddComponent("pickupable")
-    inst.components.pickupable:SetOnPickupFn(pickupfn)
     inst:AddComponent("inspectable")
     inst.components.inspectable.getstatus = getstatus
     inst:AddComponent("playerprox")

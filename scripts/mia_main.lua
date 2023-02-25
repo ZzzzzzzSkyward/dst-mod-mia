@@ -2,18 +2,16 @@ local delicious_abyss_dishes = dig("foods")
 for k, recipe in pairs(delicious_abyss_dishes) do AddCookerRecipe("rikocookpot", recipe) end
 modimport("scripts/mia_recipes.lua")
 modimport("scripts/hamlet_dodge.lua")
+local postinit = {components = {"portablestructure"}}
+for k, v in pairs(postinit) do
+    for k2, v2 in pairs(v) do require("mia_postinit/" .. k .. "/" .. v2)(require(k .. "/" .. v2)) end
+end
 local containers = require("containers")
 containers.params.riko_sack = containers.params.krampus_sack or {
-    widget =
-    {
-        slotpos = {},
-        animbank = "ui_krampusbag_2x8",
-        animbuild = "ui_krampusbag_2x8",
-        pos = Vector3(-5, -120, 0),
-    },
+    widget = {slotpos = {}, animbank = "ui_krampusbag_2x8", animbuild = "ui_krampusbag_2x8", pos = Vector3(-5, -120, 0)},
     issidewidget = true,
     type = "pack",
-    openlimit = 1,
+    openlimit = 1
 }
 containers.params.rikocookpot = containers.params.portablecookpot
 AddPrefabPostInit("shadowmeteor", function(inst)
@@ -45,7 +43,7 @@ AddPrefabPostInit("beefalo", function(inst)
 end)
 local xz_exp = require("widgets/xz_exp")
 local function AddExp(self)
-    if self.owner and self.owner:HasTag("reger") then
+    if self.owner and self.owner:HasTag("mia_reg") then
         self.xz_exp = self.status:AddChild(xz_exp(self.owner))
         self.xz_exp:SetPosition(-80, -40, 0)
     end
@@ -59,7 +57,7 @@ local function onupdate(inst)
     inst.components.exp.maxtimepiont = inst.components.exp.levelpoint * 20 + 20
 end
 AddPlayerPostInit(function(inst)
-    if inst:HasTag("reger") then
+    if inst:HasTag("mia_reg") then
         inst.exp_max = net_shortint(inst.GUID, "exp_max", "exp_maxdirty")
         inst.exp_current = net_shortint(inst.GUID, "exp_current", "exp_currentdirty")
         inst.exp_level = net_shortint(inst.GUID, "exp_level", "exp_leveldirty")
@@ -133,7 +131,7 @@ local state_regbomb = State {
             inst.sg:RemoveStateTag("busy")
             inst.SoundEmitter:PlaySound("dontstarve/creatures/slurtle/explode")
             if TheWorld.ismastersim then
-                inst.regerweapon.components.weapon:LaunchProjectile(inst.regerweapon, inst.target, inst)
+                inst.regweapon.components.weapon:LaunchProjectile(inst.regerweapon, inst.target, inst)
                 for i, v in ipairs(AllPlayers) do
                     local distSq = v:GetDistanceSqToInst(inst)
                     local k = math.max(0, math.min(1, distSq / 1600))

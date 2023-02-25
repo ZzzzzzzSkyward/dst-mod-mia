@@ -24,7 +24,9 @@ local function ret()
         REG_HUNGERRATE = 1.7 * WILSON_HUNGER_RATE,
         REG_DAMAGEMULTIPLIER = 1,
         REG_ABSORPTION = 0.4,
-        RIKOHAT_LIGHTTIME = MINERHAT_LIGHTTIME * 2
+        RIKOHAT_LIGHTTIME = MINERHAT_LIGHTTIME * 2,
+        REGHAT_ABSORPTION = 0.9,
+        BLAZEREAP_DAMAGE = 51
     }
 end
 local TuningHack = {}
