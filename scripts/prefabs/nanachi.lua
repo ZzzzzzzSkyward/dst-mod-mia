@@ -6,6 +6,7 @@ local assets = {
     Asset("ANIM", "anim/nanachi.zip"),
     Asset("ANIM", "anim/nanachihair.zip"),
     Asset("ANIM", "anim/ghost_nanachi_build.zip"),
+    Asset("ANIM", "anim/player_actions_roll.zip")
 }
 local prefabs = {"nanachihat"}
 local start_inv = {"nanachihat"}
@@ -28,49 +29,66 @@ local function FindFriend(inst)
         end
     end
 end
+local function forcefast(inst)
+    inst.components.locomotor.walkspeed = TUNING.WILSON_WALK_SPEED * TUNING.NANACHI_SPEED_MULTIPLIER
+    inst.components.locomotor.runspeed = TUNING.WILSON_RUN_SPEED * TUNING.NANACHI_SPEED_MULTIPLIER
+end
+local function GetPointSpecialActions(inst, pos, useitem, right)
+    if right then
+        local rider = inst.replica.rider
+        if rider == nil or not rider:IsRiding() then return {ACTIONS.DODGE} end
+    end
+    return {}
+end
 
-local function onbecamehuman(inst)
-    inst.components.locomotor.walkspeed = 4 * 1.35
-    inst.components.locomotor.runspeed = 6 * 1.35
-
-    local hat = inst.components.inventory:GetEquippedItem(EQUIPSLOTS.HEAD)
-    if hat ~= nil and hat:HasTag("nanachihat") then
-        inst.AnimState:AddOverrideBuild("nanachihair")
-        inst.AnimState:OverrideSymbol("swap_hat", "hat_nanachihat", "swap_hat")
-        inst.AnimState:Show("HAT")
-        inst.AnimState:Show("HAT_HAIR")
+local function OnSetOwner(inst)
+    if inst.components.playeractionpicker ~= nil then
+        inst.components.playeractionpicker.pointspecialactionsfn = GetPointSpecialActions
     end
 end
-
-local function onload(inst)
-    inst:ListenForEvent("ms_respawnedfromghost", onbecamehuman)
-    inst:RemoveTag("scarytoprey")
-    if not inst:HasTag("playerghost") then onbecamehuman(inst) end
+local function onequip(inst, data)
+    local slot = data.eslot or false
+    local hat = data.item
+    if slot == EQUIPSLOTS.HEAD and hat then
+        if hat:HasTag("nanachihat") then
+            inst.AnimState:AddOverrideBuild("nanachihair")
+            inst.AnimState:OverrideSymbol("swap_hat", "hat_nanachihat", "swap_hat")
+            inst.AnimState:Show("HAT")
+            inst.AnimState:Show("HAT_HAIR")
+        end
+    end
 end
-
 local common_postinit = function(inst)
     inst.MiniMapEntity:SetIcon("nanachi.png")
     inst:AddTag("nanachi")
     inst:RemoveTag("scarytoprey")
+    -- compatible with hamlet
+    inst.dodgetime = net_bool(inst.GUID, "player.dodgetime", "dodgetimedirty")
+    inst.last_dodge_time = GetTime()
+    inst:ListenForEvent("dodgetimedirty", function()
+        inst.last_dodge_time = GetTime()
+    end)
 end
 
 local master_postinit = function(inst)
     inst.soundsname = "nanachi"
+    -- disable invincible dodge
+    inst._dodgenotinvincible = true
     inst.talker_path_override = "nanachi/"
-    inst.components.health:SetMaxHealth(150)
-    inst.components.hunger:SetMax(150)
-    inst.components.sanity:SetMax(300)
-    inst.components.combat.damagemultiplier = 1
+    inst.components.health:SetMaxHealth(TUNING.NANACHI_HEALTH)
+    inst.components.hunger:SetMax(TUNING.NANACHI_HUNGER)
+    inst.components.sanity:SetMax(TUNING.NANACHI_SANITY)
+    -- inst.components.combat.damagemultiplier = 1
     inst:AddComponent("sanityaura")
     inst.components.sanityaura.aura = TUNING.SANITYAURA_MED
+    inst.components.locomotor:SetTriggersCreep(false)
 
-    inst.components.locomotor.walkspeed = 4 * 1.35
-    inst.components.locomotor.runspeed = 6 * 1.35
-
-    if TUNING.NANACHIFRIEND == 1 and inst.task == nil then inst.task = inst:DoPeriodicTask(1, FindFriend) end
-
-    inst.OnLoad = onload
-    inst.OnNewSpawn = onload
+    if TUNING.NANACHIFRIEND and inst.task == nil then inst.task = inst:DoPeriodicTask(5, FindFriend) end
+    inst:ListenForEvent("ms_respawnedfromghost", forcefast)
+    inst:ListenForEvent("death", forcefast)
+    inst:ListenForEvent("equip", onequip)
+    inst:ListenForEvent("setowner", OnSetOwner)
+    inst.OnLoad = forcefast
 end
 
 return MakePlayerCharacter("nanachi", prefabs, assets, common_postinit, master_postinit, start_inv)

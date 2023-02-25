@@ -1,6 +1,7 @@
 local delicious_abyss_dishes = dig("foods")
 for k, recipe in pairs(delicious_abyss_dishes) do AddCookerRecipe("rikocookpot", recipe) end
 modimport("scripts/mia_recipes.lua")
+modimport("scripts/hamlet_dodge.lua")
 local containers = require("containers")
 containers.params.riko_sack = containers.params.krampus_sack or {
     widget =

@@ -5,6 +5,28 @@ local prefabs = {"collapse_small", "ash"}
 for k, v in pairs(cooking.recipes.cookpot) do table.insert(prefabs, v.name) end
 local foods = require("preparedfoods")
 for k, recipe in pairs(foods) do AddCookerRecipe("rikocookpot", recipe) end
+local function SetProductSymbol(inst, product, overridebuild)
+    local recipe = cooking.GetRecipe(inst.prefab, product)
+    local potlevel = recipe ~= nil and recipe.potlevel or nil
+    local build = (recipe ~= nil and recipe.overridebuild) or overridebuild or "cook_pot_food"
+    local overridesymbol = (recipe ~= nil and recipe.overridesymbolname) or product
+
+    if potlevel == "high" then
+        inst.AnimState:Show("swap_high")
+        inst.AnimState:Hide("swap_mid")
+        inst.AnimState:Hide("swap_low")
+    elseif potlevel == "low" then
+        inst.AnimState:Hide("swap_high")
+        inst.AnimState:Hide("swap_mid")
+        inst.AnimState:Show("swap_low")
+    else
+        inst.AnimState:Hide("swap_high")
+        inst.AnimState:Show("swap_mid")
+        inst.AnimState:Hide("swap_low")
+    end
+
+    inst.AnimState:OverrideSymbol("swap_cooked", build, overridesymbol)
+end
 local function ChangeToItem(inst)
     if inst.components.stewer.product ~= nil and inst.components.stewer:IsDone() then
         inst.components.stewer:Harvest()
@@ -29,35 +51,7 @@ local function ondeploy(inst, pt, deployer)
         inst:Remove()
     end
 end
-local function item_droppedfn(inst)
-    if inst.components.deployable and inst.components.deployable:CanDeploy(inst:GetPosition()) then
-        inst.components.deployable:Deploy(inst:GetPosition(), inst)
-    end
-end
-local function storeincontainer(inst, container)
-    if container ~= nil and container.components.container ~= nil then
-        inst:ListenForEvent("onputininventory", inst._oncontainerownerchanged, container)
-        inst:ListenForEvent("ondropped", inst._oncontainerownerchanged, container)
-        inst._container = container
-    end
-end
-local function unstore(inst)
-    if inst._container ~= nil then
-        inst:RemoveEventCallback("onputininventory", inst._oncontainerownerchanged, inst._container)
-        inst:RemoveEventCallback("ondropped", inst._oncontainerownerchanged, inst._container)
-        inst._container = nil
-    end
-end
-local function topocket(inst, owner)
-    if inst._container ~= owner then
-        unstore(inst)
-        storeincontainer(inst, owner)
-    end
-end
-local function toground(inst)
-    unstore(inst)
-end
-local function itemfn(Sim)
+local function itemfn()
     local inst = CreateEntity()
     inst.entity:AddTransform()
     inst.entity:AddAnimState()
@@ -70,23 +64,12 @@ local function itemfn(Sim)
     inst.AnimState:PlayAnimation("idle_empty")
     MakeInventoryFloatable(inst)
     inst.MiniMapEntity:SetIcon("rikocookpot.png")
+    inst.entity:SetPristine()
     if not TheWorld.ismastersim then return inst end
-    inst._container = nil
-    inst._oncontainerownerchanged = function(container)
-        topocket(inst, container)
-    end
-    inst._oncontainerremoved = function()
-        unstore(inst)
-    end
-    inst:AddComponent("chosenowner")
-    inst.components.chosenowner:SetOwner("riko")
-    inst:ListenForEvent("onputininventory", topocket)
-    inst:ListenForEvent("ondropped", toground)
     inst:AddComponent("inspectable")
     inst:AddComponent("inventoryitem")
-    inst.components.inventoryitem:SetOnDroppedFn(item_droppedfn)
     inst:AddComponent("deployable")
-    -- inst.components.deployable:SetDeployMode(DEPLOYMODE.DEFAULT)
+    inst.components.deployable.restrictedtag = "riko"
     inst.components.deployable.ondeploy = ondeploy
     MakeHauntableLaunch(inst)
     return inst
@@ -137,11 +120,9 @@ local function spoilfn(inst)
     inst.AnimState:OverrideSymbol("swap_cooked", "cook_pot_food", inst.components.stewer.product)
 end
 local function ShowProduct(inst)
-    local product = inst.components.stewer.product
-    if IsModCookingProduct(inst.prefab, product) then
-        inst.AnimState:OverrideSymbol("swap_cooked", product, product)
-    else
-        inst.AnimState:OverrideSymbol("swap_cooked", "cook_pot_food", product)
+    if not inst:HasTag("burnt") then
+        local product = inst.components.stewer.product
+        SetProductSymbol(inst, product, IsModCookingProduct(inst.prefab, product) and product or nil)
     end
 end
 local function donecookfn(inst)

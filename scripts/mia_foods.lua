@@ -8,7 +8,7 @@ local foods = {
         foodtype = FOODTYPE.VEGGIE,
         health = 12,
         hunger = 62.5,
-        perishtime = TUNING.PERISH_MED,
+        perishtime = 15,
         sanity = 5,
         cooktime = .5
     },
@@ -21,7 +21,7 @@ local foods = {
         foodtype = FOODTYPE.MEAT,
         health = 60,
         hunger = 37.5,
-        perishtime = TUNING.PERISH_MED,
+        perishtime = 6,
         sanity = 33,
         cooktime = 2
     },
@@ -34,7 +34,7 @@ local foods = {
         foodtype = FOODTYPE.MEAT,
         health = 3,
         hunger = 37.5,
-        perishtime = TUNING.PERISH_MED,
+        perishtime = 9,
         sanity = 5,
         cooktime = .25
     },
@@ -48,7 +48,7 @@ local foods = {
         foodtype = FOODTYPE.MEAT,
         health = 80,
         hunger = 50,
-        perishtime = nil,
+        perishtime = 7,
         sanity = 15,
         cooktime = 2
     },
@@ -61,7 +61,7 @@ local foods = {
         foodtype = FOODTYPE.VEGGIE,
         health = 10,
         hunger = 12.5,
-        perishtime = TUNING.PERISH_MED,
+        perishtime = 8,
         sanity = 50,
         cooktime = 2
     },
@@ -74,9 +74,10 @@ local foods = {
         foodtype = FOODTYPE.VEGGIE,
         health = 40,
         hunger = 50,
-        perishtime = TUNING.PERISH_MED,
+        perishtime = 10,
         sanity = -20,
-        cooktime = 2
+        cooktime = 2,
+        fireproof = true
     }
 
 }
@@ -84,5 +85,6 @@ for k, v in pairs(foods) do
     v.name = k
     v.weight = v.weight or 1
     v.priority = v.priority or 0
+    v.perishtime = v.perishtime and (v.perishtime * TUNING.PERISH_ONE_DAY)
 end
 return foods

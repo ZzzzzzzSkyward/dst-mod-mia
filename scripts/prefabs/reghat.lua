@@ -69,37 +69,9 @@ end
 local function miner_onremove(inst)
     if inst._light ~= nil and inst._light:IsValid() then inst._light:Remove() end
 end
-local function item_droppedfn(inst)
-    if inst.components.deployable and inst.components.deployable:CanDeploy(inst:GetPosition()) then
-        inst.components.deployable:Deploy(inst:GetPosition(), inst)
-    end
-end
-local function storeincontainer(inst, container)
-    if container ~= nil and container.components.container ~= nil then
-        inst:ListenForEvent("onputininventory", inst._oncontainerownerchanged, container)
-        inst:ListenForEvent("ondropped", inst._oncontainerownerchanged, container)
-        inst._container = container
-    end
-end
-local function unstore(inst)
-    if inst._container ~= nil then
-        inst:RemoveEventCallback("onputininventory", inst._oncontainerownerchanged, inst._container)
-        inst:RemoveEventCallback("ondropped", inst._oncontainerownerchanged, inst._container)
-        inst._container = nil
-    end
-end
-local function topocket(inst, owner)
-    if inst._container ~= owner then
-        unstore(inst)
-        storeincontainer(inst, owner)
-    end
-end
-local function toground(inst)
-    unstore(inst)
-end
 local function simple()
     local inst = CreateEntity()
-    local trans = inst.entity:AddTransform()
+    inst.entity:AddTransform()
     local anim = inst.entity:AddAnimState()
     MakeInventoryPhysics(inst)
     inst.entity:AddNetwork()
@@ -110,17 +82,6 @@ local function simple()
     anim:PlayAnimation("anim")
     inst:AddComponent("inspectable")
     if not TheWorld.ismastersim then return inst end
-    inst._container = nil
-    inst._oncontainerownerchanged = function(container)
-        topocket(inst, container)
-    end
-    inst._oncontainerremoved = function()
-        unstore(inst)
-    end
-    inst:AddComponent("chosenowner")
-    inst.components.chosenowner:SetOwner("reg")
-    inst:ListenForEvent("onputininventory", topocket)
-    inst:ListenForEvent("ondropped", toground)
     inst:AddComponent("inventoryitem")
     inst:AddComponent("equippable")
     inst.components.equippable.equipslot = EQUIPSLOTS.HEAD
@@ -135,8 +96,12 @@ local function fn()
     inst.components.inventoryitem:SetOnDroppedFn(miner_turnoff)
     inst.components.equippable:SetOnEquip(miner_turnon)
     inst.components.equippable:SetOnUnequip(miner_unequip)
+
+
+    inst.components.equippable.restrictedtag = "reg"
+
     inst:AddComponent("fueled")
-    inst.components.fueled.fueltype = FUELTYPE.CAVE
+    inst.components.fueled.fueltype = FUELTYPE.MAGIC
     inst.components.fueled:InitializeFuelLevel(TUNING.REGERMAXTIME)
     inst.components.fueled:SetDepletedFn(miner_perish)
     inst.components.fueled:SetTakeFuelFn(miner_takefuel)

@@ -1,4 +1,4 @@
-local assets = {}
+local assets = {Asset("ATLAS_BUILD", "images/mia_inventoryimages.xml", 256)}
 local mia_assets = {"images/mia_inventoryimages", "images/mia_minimap"}
 for i, v in ipairs(mia_assets) do
     table.insert(assets, Asset("IMAGE", v .. ".tex"))

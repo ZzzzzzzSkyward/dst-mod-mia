@@ -2,11 +2,11 @@ local assets = {Asset("ANIM", "anim/nanachi_soup.zip")}
 
 local prefabs = {"spoiled_food"}
 
-local function fn(Sim)
+local function fn()
     local inst = CreateEntity()
     inst.entity:AddTransform()
     inst.entity:AddAnimState()
-    if TheSim:GetGameID() == "DST" then inst.entity:AddNetwork() end
+    inst.entity:AddNetwork()
 
     MakeInventoryPhysics(inst)
     MakeSmallBurnable(inst)
@@ -19,11 +19,8 @@ local function fn(Sim)
     inst:AddTag("preparedfood")
     inst:AddTag("nanachisoup")
 
-    if TheSim:GetGameID() == "DST" then
-        if not TheWorld.ismastersim then return inst end
-
-        inst.entity:SetPristine()
-    end
+    inst.entity:SetPristine()
+    if not TheWorld.ismastersim then return inst end
 
     inst:AddComponent("edible")
     inst.components.edible.foodtype = FOODTYPE.VEGGIE
