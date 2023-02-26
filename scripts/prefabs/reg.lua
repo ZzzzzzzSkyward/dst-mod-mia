@@ -34,12 +34,15 @@ local common_postinit = function(inst)
     inst:AddTag("heatresistant")
     inst:AddTag("soulless") -- non human representation
     inst:AddTag("electricdamageimmune")
+    inst:RemoveTag("poisonable")
     if TheNet:GetServerGameMode() == "quagmire" then inst:AddTag("quagmire_grillmaster") end
 end
 local master_postinit = function(inst)
     inst.starting_inventory = start_inv
     inst.soundsname = "walter" -- #TODO sound for reg
     inst.components.health:SetMaxHealth(TUNING.REG_HEALTH)
+    inst.components.health.vulnerabletopoisondamage = false
+    inst.components.health.poison_damage_scale = 0
     inst.components.hunger:SetMax(TUNING.REG_HUNGER)
     inst.components.sanity:SetMax(TUNING.REG_SANITY)
     inst.components.combat.damagemultiplier = TUNING.REG_DAMAGEMULTIPLIER
