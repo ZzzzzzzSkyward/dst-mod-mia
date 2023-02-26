@@ -12,12 +12,12 @@ local prefabs = {"nanachihat"}
 local start_inv = {"nanachihat"}
 
 local function FindFriend(inst)
+            if inst.components.leader:CountFollowers("nanachifriend") >= 1 then return end
     local x, y, z = inst.Transform:GetWorldPosition()
     local ents = TheSim:FindEntities(x, y, z, 3, {"pig"}, {"player", "werepig", "guard", "nanachifriend"})
     for k, v in pairs(ents) do
         if not v:IsAsleep() and not v.components.sleeper:IsAsleep() then
-            if inst.components.leader:CountFollowers() >= 1 then return end
-            if v.components.health and not v.components.health:IsDead() then
+            if not IsEntityDeadOrGhost(v) and v.components.follower then
                 inst:PushEvent("makefriend")
                 inst.components.leader:AddFollower(v)
                 v.components.follower:AddLoyaltyTime(240)

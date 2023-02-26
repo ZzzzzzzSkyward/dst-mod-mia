@@ -23,4 +23,4 @@ do
     local tuning = dig("tuning")()
     for k, v in pairs(tuning) do TUNING[k] = TUNING[k] or v end
 end
-if TheNet:GetIsServer() or TheNet:GetIsClient() then modimport("scripts/mia_main.lua") end
+if not env.ismim and (TheNet:GetIsServer() or TheNet:GetIsClient()) then modimport("scripts/mia_main.lua") end
