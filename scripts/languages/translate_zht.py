@@ -3,7 +3,7 @@ import os
 t2s=opencc.OpenCC("t2s")
 s2t=opencc.OpenCC("s2t")
 srcfile="speech_nanachi_zht.lua"
-dstfile=["speech_nanachi_zh.lua","speech_nanachi_zht.lua"]
+dstfile=["speech_nanachi_zh.lua"]
 dsttranslator=[t2s,s2t]
 mask=[0,1]
 if os.path.exists(srcfile):

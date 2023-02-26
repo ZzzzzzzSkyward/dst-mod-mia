@@ -21,7 +21,7 @@ local function ret()
         REGBOMB_DAMAGE = 800,
         REGBOMB_CONSUME = 1,
         REGERMAXTIME = 5,
-        ABYSSUSES = 200,
+        BLAZEREAP_USES = 200,
         REGER_SLOW_HUNGER = 0.6,
         REG_HUNGERRATE = 1.7 * WILSON_HUNGER_RATE,
         REG_DAMAGEMULTIPLIER = 1,
@@ -31,7 +31,17 @@ local function ret()
         BLAZEREAP_DAMAGE = 51,
         REG_FIRE_DAMAGE = .2,
         REG_FREEZE_DAMAGE_RATE = .1,
-        REG_HEAT_DAMAGE_RATE = .1
+        REG_HEAT_DAMAGE_RATE = .1,
+        BLAZEREAP_MINE_EFFECTIVENESS = 1.5,
+        GRIM_REAPER_USES = AXE_USES,
+        GRIM_REAPER_HUNGER = -5,
+        GRIM_REAPER_HUNGER_MODIFIER = 2,
+        SCALED_UMBRELLA_DAMAGE = 20,
+        SCALED_UMBRELLA_DURABILITY = 3000,
+        SCALED_UMBRELLA_ARMOR = 1,
+        SUN_SPHERE_INTENSITY = .8,
+        SUN_SPHERE_DURATION = 10,
+        LONGETIVITY_DRINK_IMMUNITY = 60 * 8
     }
 end
 local TuningHack = {}

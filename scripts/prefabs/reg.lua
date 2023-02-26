@@ -38,7 +38,7 @@ local common_postinit = function(inst)
 end
 local master_postinit = function(inst)
     inst.starting_inventory = start_inv
-    inst.soundsname = "walter" -- #TODO
+    inst.soundsname = "walter" -- #TODO sound for reg
     inst.components.health:SetMaxHealth(TUNING.REG_HEALTH)
     inst.components.hunger:SetMax(TUNING.REG_HUNGER)
     inst.components.sanity:SetMax(TUNING.REG_SANITY)

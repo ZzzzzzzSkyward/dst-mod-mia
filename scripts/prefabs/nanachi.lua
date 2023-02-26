@@ -46,18 +46,7 @@ local function OnSetOwner(inst)
         inst.components.playeractionpicker.pointspecialactionsfn = GetPointSpecialActions
     end
 end
-local function onequip(inst, data)
-    local slot = data.eslot or false
-    local hat = data.item
-    if slot == EQUIPSLOTS.HEAD and hat then
-        if hat:HasTag("nanachihat") then
-            inst.AnimState:AddOverrideBuild("nanachihair")
-            inst.AnimState:OverrideSymbol("swap_hat", "hat_nanachihat", "swap_hat")
-            inst.AnimState:Show("HAT")
-            inst.AnimState:Show("HAT_HAIR")
-        end
-    end
-end
+
 local common_postinit = function(inst)
     inst.MiniMapEntity:SetIcon("nanachi.png")
     inst:AddTag("nanachi")
@@ -88,7 +77,6 @@ local master_postinit = function(inst)
     if TUNING.NANACHIFRIEND and inst.task == nil then inst.task = inst:DoPeriodicTask(5, FindFriend) end
     inst:ListenForEvent("ms_respawnedfromghost", forcefast)
     inst:ListenForEvent("death", forcefast)
-    inst:ListenForEvent("equip", onequip)
     inst.OnLoad = forcefast
     inst:ListenForEvent("playeractivated", forcefast)
 end

@@ -1,6 +1,6 @@
 name = "Riko, Reg &Nanachi"
 description =
-    [[Riko, a lively and inquisitive girl, a trainee explorer, her dream is to catch up with her mother, become the legendary explorer "White Whistle".
+    [[Riko, a lively and inquisitive girl, a apprentice delver, her dream is to catch up with her mother, become the legendary explorer "White Whistle".
 Reg, the humanoid-looking robot that Riko had found in the Abyss, has lost its memory.
 Nanachi, a furry creature from the bottom of the abyss. Smells good.]]
 author = "Haori & Mario, zzzzzzzs"
@@ -16,7 +16,7 @@ all_clients_require_mod = true
 icon_atlas = "modicon.xml"
 icon = "modicon.tex"
 server_filter_tags = {"XZmodmaker", "made_in_abyss"}
-version = "20230225.1"
+version = "20230225.2"
 configuration = {
     {
         name = "attract",

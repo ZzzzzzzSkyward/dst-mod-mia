@@ -1,5 +1,5 @@
 local invimages = {
-    "blazereap",
+    "blaze_reap",
     "mitty_bottled",
     "nanachi_soup",
     "nanachihat",

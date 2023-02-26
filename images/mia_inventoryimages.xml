@@ -1,6 +1,6 @@
 <Atlas><Texture filename="mia_inventoryimages.tex" />
     <Elements>
-        <Element name="blazereap.tex" u1="0.001953125" u2="0.24804688" v1="0.75195313" v2="0.99804688"/>
+        <Element name="blaze_reap.tex" u1="0.001953125" u2="0.24804688" v1="0.75195313" v2="0.99804688"/>
         <Element name="mitty_bottled.tex" u1="0.25195313" u2="0.49804688" v1="0.75195313" v2="0.99804688"/>
         <Element name="nanachi_soup.tex" u1="0.50195313" u2="0.74804688" v1="0.75195313" v2="0.99804688"/>
         <Element name="nanachihat.tex" u1="0.75195313" u2="0.99804688" v1="0.75195313" v2="0.99804688"/>

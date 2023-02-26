@@ -9,8 +9,9 @@ return {
     "mitty",
     "reg",
     "regcloak",
-    "mia_weapons",
     "regweapon",
     "reg_projectile",
-    "mia_skins"
+    "mia_skins",
+    "mia_artifacts",
+    "mia_equippable_artifacts"
 }

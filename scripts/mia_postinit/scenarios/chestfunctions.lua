@@ -1,18 +1,15 @@
+local function require(x)
+    package.loaded[x] = nil
+    return require(x)
+end
+local valid_chests = {"sunkenchest", "minotaurchest", "pandoraschest"}
 return function(t)
     if not t or not t.AddChestItems then return end
     local old = t.AddChestItems
     t.AddChestItems = function(chest, loot, num, ...)
-        if type(loot) == "table" then
-            table.insert(loot, {
-                -- Weapon Items
-                item = {"blazereap", "blazereap", "blazereap"},
-                chance = 0.04,
-                count = math.random(1, 3),
-                initfn = function(item)
-                    item.components.finiteuses:SetUses(math.random(item.components.finiteuses.total * 0.1,
-                        item.components.finiteuses.total * 1))
-                end
-            })
+        if chest and table.contains(valid_chests, chest.prefab) and type(loot) == "table" then
+            local mia_loot = require("mia_labyrinth_loottable")
+            for i, v in ipairs(mia_loot) do table.insert(loot, v) end
         end
         return old(chest, loot, num, ...)
     end
