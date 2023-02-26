@@ -12,6 +12,7 @@ local function common(def)
     inst.entity:AddAnimState()
     inst.entity:AddNetwork()
     MakeInventoryPhysics(inst)
+    if def.commonpostinit then def.commonpostinit(inst) end
     if not def.silent then inst.entity:AddSoundEmitter() end
     if def.light then
         local light = def.light
@@ -38,6 +39,12 @@ local function common(def)
 
     inst:AddComponent("inspectable")
     inst:AddComponent("inventoryitem")
+    if def.light then
+        if not def.slot then
+            inst.components.inventoryitem:SetOnDroppedFn(OnDropped)
+            inst.components.inventoryitem:SetOnPickupFn(OnPickup)
+        end
+    end
     if def.should_sink then inst.components.inventoryitem:SetSinks(true) end
 
     return inst

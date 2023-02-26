@@ -49,14 +49,23 @@ local function sun_sphere_diminish(inst)
     inst._chargeprogress = inst._chargeprogress - dcharge
     if inst._chargeprogress <= 0 then inst._chargeprogress = 0 end
     local intensity = Lerp(0, TUNING.SUN_SPHERE_INTENSITY, inst._chargeprogress)
+    local radius = Lerp(TUNING.SUN_SPHERE_RADIUS_MIN, TUNING.SUN_SPHERE_RADIUS_MAX, inst._chargeprogress)
     inst._lasttime = now
     inst.Light:SetIntensity(intensity)
-    if inst._chargeprogress <= 0 then inst.components.updatelooper:RemoveOnUpdateFn(sun_sphere_diminish) end
+    inst.Light:SetRadius(radius)
+    if inst._chargeprogress <= 0 then inst:StopCharge() end
 end
 local function sun_sphere_charge(inst)
     inst._chargeprogress = 1
     inst._lasttime = nil
+    if inst.components.fueled then inst.components.fueled:StartConsuming() end
     inst.components.updatelooper:AddOnUpdateFn(sun_sphere_diminish)
+end
+local function sun_sphere_stop(inst)
+    inst._chargeprogress = 1
+    inst._lasttime = nil
+    inst.components.updatelooper:RemoveOnUpdateFn(sun_sphere_diminish)
+    if inst.components.fueled then inst.components.fueled:StopConsuming() end
 end
 local defs = {
     --[[
@@ -220,7 +229,7 @@ local defs = {
         assets = {Asset("ANIM", "anim/sun_sphere.zip")},
         bank = "sun_sphere",
         build = "sun_sphere",
-        light = {enable = false, radius = 20, intensity = .7, falloff = .9},
+        light = {enable = true, radius = TUNING.SUN_SPHERE_RADIUS_MIN, intensity = .7, falloff = .9},
         anim = "idle",
         postinit = function(inst)
             inst:AddComponent("activatable")
@@ -229,7 +238,9 @@ local defs = {
             inst._chargeprogress = 0
             inst.Recharge = sun_sphere_recharge
             inst.StartCharge = sun_sphere_charge
+            inst.StopCharge = sun_sphere_stop
             inst.components.activatable.OnActivate = function(inst)
+                inst.components.activatable.inactive = true
                 if inst._chargeprogress > 0 then
                     inst:Recharge()
                     return

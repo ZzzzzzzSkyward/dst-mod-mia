@@ -78,7 +78,12 @@ local foods = {
         perishtime = 10,
         sanity = -20,
         cooktime = 2,
-        fireproof = true
+        fireproof = true,
+        oneatenfn = function(food, eater)
+            if eater and eater:IsValid() and eater.components.domesticatable then
+                eater.components.domesticatable:DeltaDomestication(0.05)
+            end
+        end
     }
 
 }

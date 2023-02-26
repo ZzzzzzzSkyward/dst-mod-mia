@@ -14,33 +14,6 @@ containers.params.riko_sack = containers.params.krampus_sack or {
     openlimit = 1
 }
 containers.params.rikocookpot = containers.params.portablecookpot
-AddPrefabPostInit("shadowmeteor", function(inst)
-    if not TheWorld.ismastersim then return inst end
-    local oldSetSize = inst.SetSize
-    inst.SetSize = function(inst, sz, mod)
-        local size = 0.7
-        if sz ~= nil then
-            if sz == "medium" then
-                size = 1
-            elseif sz == "large" then
-                size = 1.3
-            end
-        end
-        local x1, y1, z1 = inst.Transform:GetWorldPosition()
-        local entis = TheSim:FindEntities(x1, y1, z1, size * TUNING.METEOR_RADIUS)
-        for i, v in ipairs(entis) do if v.prefab == "rikocookpot" then return end end
-        oldSetSize(inst, sz, mod)
-    end
-end)
-AddPrefabPostInit("beefalo", function(inst)
-    if inst.components and inst.components.eater then
-        local OldOnEat = inst.components.eater.oneatfn
-        inst.components.eater:SetOnEatFn(function(inst, food)
-            if food:HasTag("nanachisoup") then inst.components.domesticatable:DeltaDomestication(0.05) end
-            OldOnEat(inst, food)
-        end)
-    end
-end)
 local xz_exp = require("widgets/xz_exp")
 local function AddExp(self)
     if self.owner and self.owner:HasTag("mia_reg") then
@@ -166,7 +139,6 @@ AddStategraphState("wilson", state_regbomb)
 AddStategraphState("wilson_client", state_regbomb)
 AddStategraphActionHandler("wilson", ActionHandler(ACTIONS.REGBOMB, "regbomb"))
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.REGBOMB, "regbomb"))
-TUNING.NANACHIFRIEND = GetModConfigData("attract") == "true"
 if not package.loaded["scripts/apis.lua"] then return end
 do return end
 modimport("scripts/mia_test.lua")

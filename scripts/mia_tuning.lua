@@ -40,7 +40,9 @@ local function ret()
         SCALED_UMBRELLA_DURABILITY = 3000,
         SCALED_UMBRELLA_ARMOR = 1,
         SUN_SPHERE_INTENSITY = .8,
-        SUN_SPHERE_DURATION = 10,
+        SUN_SPHERE_DURATION = 60,
+        SUN_SPHERE_RADIUS_MIN = 1,
+        SUN_SPHERE_RADIUS_MAX = 20,
         LONGETIVITY_DRINK_IMMUNITY = 60 * 8
     }
 end

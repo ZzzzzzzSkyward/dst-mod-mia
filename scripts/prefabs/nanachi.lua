@@ -50,7 +50,7 @@ end
 local common_postinit = function(inst)
     inst.MiniMapEntity:SetIcon("nanachi.png")
     inst:AddTag("nanachi")
-    inst:AddTag("soulless")-- non human representation
+    inst:AddTag("soulless") -- non human representation
     inst:RemoveTag("scarytoprey")
     -- compatible with hamlet
     inst.dodgetime = net_bool(inst.GUID, "player.dodgetime", "dodgetimedirty")
@@ -74,7 +74,7 @@ local master_postinit = function(inst)
     inst.components.sanityaura.aura = TUNING.SANITYAURA_MED
     inst.components.locomotor:SetTriggersCreep(false)
 
-    if TUNING.NANACHIFRIEND and inst.task == nil then inst.task = inst:DoPeriodicTask(5, FindFriend) end
+    inst.attracttask = inst:DoPeriodicTask(5, FindFriend)
     inst:ListenForEvent("ms_respawnedfromghost", forcefast)
     inst:ListenForEvent("death", forcefast)
     inst.OnLoad = forcefast
