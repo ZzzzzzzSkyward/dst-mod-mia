@@ -12,6 +12,9 @@ for file in dstfile:
         print("sorting",file)
         newdata=[]
         for i in data:
+            i=i.strip()
+            if i=="":
+                continue
             newdata.append(i.split("="))
         for i in newdata:
             for j in range(len(i)):
