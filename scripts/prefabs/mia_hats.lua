@@ -78,7 +78,7 @@ end
 local function miner_onremove(inst)
     if inst._light ~= nil and inst._light:IsValid() then inst._light:Remove() end
 end
-local function simple()
+local function simple(common_postinit, postinit)
     local inst = CreateEntity()
     inst.entity:AddTransform()
     inst.entity:AddAnimState()
@@ -86,6 +86,7 @@ local function simple()
     inst:AddTag("hat")
     MakeInventoryPhysics(inst)
     MakeInventoryFloatable(inst)
+    common_postinit(inst)
     inst.entity:SetPristine()
     if not TheWorld.ismastersim then return inst end
     inst:AddComponent("inspectable")
@@ -97,17 +98,17 @@ local function simple()
     inst.components.equippable:SetOnUnequip(onunequip)
     inst.components.equippable:SetOnEquipToModel(simple_onequiptomodel)
     MakeHauntableLaunch(inst)
+    postinit(inst)
     return inst
 end
-local function miner_custom_init(inst)
+local function miner(inst)
     -- waterproofer (from waterproofer component) added to pristine state for optimization
     inst:AddTag("waterproofer")
     inst.entity:AddSoundEmitter()
     inst.components.floater:SetSize("med")
     inst.components.floater:SetScale(0.6)
-
-    if not TheWorld.ismastersim then return inst end
-
+end
+local function miner2(inst)
     inst.components.inventoryitem:SetOnDroppedFn(miner_turnoff)
     inst.components.equippable:SetOnEquip(miner_turnon)
     inst.components.equippable:SetOnUnequip(miner_unequip)
@@ -127,12 +128,14 @@ local function miner_custom_init(inst)
     inst._light = nil
     inst.OnRemoveEntity = miner_onremove
 end
-local function riko_custom_init(inst)
-    miner_custom_init(inst)
+local function riko(inst)
+    miner(inst)
     inst.AnimState:SetBank("rikohat")
     inst.AnimState:SetBuild("hat_rikohat")
     inst.AnimState:PlayAnimation("anim")
-    if not TheWorld.ismastersim then return inst end
+end
+local function riko2(inst)
+    miner2(inst)
     inst.build = "hat_rikohat"
     inst.components.fueled:InitializeFuelLevel(TUNING.RIKOHAT_LIGHTTIME)
     inst.components.equippable.restrictedtag = "riko"
@@ -153,13 +156,14 @@ local function nanachi_onunequip(inst, owner)
     onunequip(inst, owner)
 end
 
-local function nanachi_custom_init(inst)
+local function nanachi(inst)
     inst.AnimState:SetBank("nanachihat")
     inst.AnimState:SetBuild("hat_nanachihat")
     inst.AnimState:PlayAnimation("anim")
     inst:AddTag("nanachihat")
     inst:AddTag("waterproofer")
-    if not TheWorld.ismastersim then return inst end
+end
+local function nanachi2(inst)
     inst.build = "hat_nanachihat"
     inst.components.equippable.restrictedtag = "nanachi"
 
@@ -178,7 +182,7 @@ local function nanachi_custom_init(inst)
     return inst
 end
 local reg_assets = {Asset("ANIM", "anim/hat_regerhat.zip")}
-local function reg_custom_init(inst)
+local function reg(inst)
     inst.AnimState:SetBank("regerhat")
     inst.AnimState:SetBuild("hat_regerhat")
     inst.AnimState:PlayAnimation("anim")
@@ -186,7 +190,9 @@ local function reg_custom_init(inst)
     inst:AddTag("reghat")
     inst:AddTag("waterproofer")
     inst:RemoveComponent("floater")
-    if not TheWorld.ismastersim then return inst end
+end
+local function reg2(inst)
+    inst:RemoveComponent("floater")
     inst.build = "hat_regerhat"
     inst.components.equippable.restrictedtag = "mia_reg"
 
@@ -198,13 +204,11 @@ local function reg_custom_init(inst)
     inst:AddComponent("submersible")
     inst.components.inventoryitem:SetSinks(true)
 end
-local function makehat(custom_init)
+local function makehat(a, b)
     return function()
-        local inst = simple()
-        custom_init(inst)
+        local inst = simple(a, b)
         return inst
     end
 end
-return Prefab("rikohat", makehat(riko_custom_init), riko_assets),
-    Prefab("nanachihat", makehat(nanachi_custom_init), nanachi_assets),
-    Prefab("reghat", makehat(reg_custom_init), reg_assets)
+return Prefab("rikohat", makehat(riko, riko2), riko_assets),
+    Prefab("nanachihat", makehat(nanachi, nanachi2), nanachi_assets), Prefab("reghat", makehat(reg, reg2), reg_assets)

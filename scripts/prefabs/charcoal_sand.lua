@@ -1,7 +1,4 @@
-local assets =
-{
-    Asset("ANIM", "anim/charcoal_sand.zip"),
-}
+local assets = {Asset("ANIM", "anim/charcoal_sand.zip")}
 
 local function fn()
     local inst = CreateEntity()
@@ -22,9 +19,7 @@ local function fn()
 
     inst.entity:SetPristine()
 
-    if not TheWorld.ismastersim then
-        return inst
-    end
+    if not TheWorld.ismastersim then return inst end
     inst:AddComponent("inspectable")
     inst:AddComponent("inventoryitem")
     inst:AddComponent("stackable")

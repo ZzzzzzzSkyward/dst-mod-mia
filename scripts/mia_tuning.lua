@@ -37,10 +37,13 @@ local function ret()
         GRIM_REAPER_HUNGER = -5,
         GRIM_REAPER_HUNGER_MODIFIER = 2,
         SCALED_UMBRELLA_DAMAGE = 20,
+        SCALED_UMBRELLA_DAMAGE_WEAPON = 40,
         SCALED_UMBRELLA_DURABILITY = 3000,
-        SCALED_UMBRELLA_ARMOR = 1,
+        SCALED_UMBRELLA_ARMOR = 0.5,
         SUN_SPHERE_INTENSITY = .8,
         SUN_SPHERE_DURATION = 60,
+        SUN_SPHERE_FUEL = 1999 * total_day_time,
+        SUN_SPHERE_RATE = 1 / 70,--assume 1 year is 70 days, to match Abyss calendar
         SUN_SPHERE_RADIUS_MIN = 1,
         SUN_SPHERE_RADIUS_MAX = 20,
         LONGETIVITY_DRINK_IMMUNITY = 60 * 8
@@ -51,7 +54,8 @@ setmetatable(TuningHack, {
     __index = function(_, k)
         if k == nil then return nil end
         if type(k) == "string" and TUNING[string.upper(k)] then
-            return TUNING[string.upper(k)]
+            TuningHack[k] = TUNING[string.upper(k)]
+            return TuningHack[k]
         else
             return _G[k]
         end

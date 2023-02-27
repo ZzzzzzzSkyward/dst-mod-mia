@@ -6,7 +6,7 @@ local assets = {
     Asset("ANIM", "anim/ghost_riko_build.zip")
 }
 local prefabs = {}
-local start_inv = TUNING.GAMEMODE_STARTING_ITEMS.DEFAULT.RIKO
+local start_inv = TUNING.GAMEMODE_STARTING_ITEMS.DEFAULT.RIKO or {}
 for i, v in ipairs(start_inv) do table.insert(prefabs, v) end
 local common_postinit = function(inst)
     inst.MiniMapEntity:SetIcon("riko.png")

@@ -7,11 +7,11 @@ return {
     "nanachi",
     "nanachitent",
     "mitty",
-    "reg",
     "regcloak",
     "regweapon",
     "reg_projectile",
+    "reg",
     "mia_skins",
---    "mia_artifacts",
---    "mia_equippable_artifacts"
+    "mia_artifacts",
+    "mia_equippable_artifacts"
 }

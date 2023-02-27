@@ -39,7 +39,8 @@ local function AddLocalFlavor()
     substrs = nil
 end
 do
-    local lang, trad = GetLanguageCode()
+    local lang_conf = GetModConfigData("language")
+    local lang = lang_conf == "default" and GetLanguageCode() or lang_conf
     if lang ~= "zh" and lang ~= "zht" then
         lang = "en"
     else

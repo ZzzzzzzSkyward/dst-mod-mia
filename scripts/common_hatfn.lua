@@ -1,11 +1,11 @@
 local function _onequip(inst, owner, build, symbol_override, headbase_hat_override, opentop)
-
+    if type(symbol_override) ~= "string" then symbol_override = "swap_hat" end
     local skin_build = inst:GetSkinBuild()
     if skin_build ~= nil then
         owner:PushEvent("equipskinneditem", inst:GetSkinName())
-        owner.AnimState:OverrideItemSkinSymbol("swap_hat", skin_build, symbol_override or "swap_hat", inst.GUID, fname)
+        owner.AnimState:OverrideItemSkinSymbol("swap_hat", skin_build, symbol_override, inst.GUID, fname)
     else
-        owner.AnimState:OverrideSymbol("swap_hat", build, symbol_override or "swap_hat")
+        owner.AnimState:OverrideSymbol("swap_hat", build, symbol_override)
     end
 
     owner.AnimState:ClearOverrideSymbol("headbase_hat") -- clear out previous overrides

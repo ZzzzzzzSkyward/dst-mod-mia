@@ -4,7 +4,17 @@ GLOBAL.setmetatable(env, {
     end
 })
 function dig(x)
-    return require("mia_" .. x)
+    local file = resolvefilepath_soft(table.concat({"scripts/mia_", x, ".lua"}))
+    if not file then
+        print("error: no such file", x)
+        return nil
+    end
+    local fn = kleiloadlua(file)
+    if type(fn) == "function" then
+        setfenv(fn, env)
+        return fn()
+    end
+    return nil
 end
 PrefabFiles = dig("prefablist")
 Assets = dig("assets")

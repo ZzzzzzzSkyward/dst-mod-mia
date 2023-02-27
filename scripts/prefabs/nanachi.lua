@@ -9,11 +9,11 @@ local assets = {
     Asset("ANIM", "anim/player_actions_roll.zip")
 }
 local prefabs = {}
-local start_inv = TUNING.GAMEMODE_STARTING_ITEMS.DEFAULT.NANACHI
+local start_inv = TUNING.GAMEMODE_STARTING_ITEMS.DEFAULT.NANACHI or {}
 for i, v in ipairs(start_inv) do table.insert(prefabs, v) end
 
 local function FindFriend(inst)
-            if inst.components.leader:CountFollowers("nanachifriend") >= 1 then return end
+    if inst.components.leader:CountFollowers("nanachifriend") >= 1 then return end
     local x, y, z = inst.Transform:GetWorldPosition()
     local ents = TheSim:FindEntities(x, y, z, 3, {"pig"}, {"player", "werepig", "guard", "nanachifriend"})
     for k, v in pairs(ents) do
@@ -66,6 +66,7 @@ local master_postinit = function(inst)
     inst.soundsname = "nanachi"
     -- disable invincible dodge
     inst._dodgenotinvincible = true
+    inst._nosoundwhendodge = true
     inst.talker_path_override = "nanachi/"
     inst.components.health:SetMaxHealth(TUNING.NANACHI_HEALTH)
     inst.components.hunger:SetMax(TUNING.NANACHI_HUNGER)

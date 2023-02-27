@@ -16,7 +16,7 @@ local function MakeFood(name, def)
             if type(def.tag) == "string" then
                 inst:AddTag(def.tag)
             elseif type(def.tag) == "table" and def.tag[1] then
-                inst:AddTags(def.tag)
+                for i, v in pairs(def.tag) do inst:AddTag(v) end
             end
         else
             inst:AddTag("rikofood")

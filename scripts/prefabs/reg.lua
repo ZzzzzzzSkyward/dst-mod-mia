@@ -1,7 +1,7 @@
 local MakePlayerCharacter = require "prefabs/player_common"
 local assets = {Asset("ANIM", "anim/reg.zip"), Asset("ANIM", "anim/ghost_reg_build.zip")}
 local prefabs = {}
-local start_inv = TUNING.GAMEMODE_STARTING_ITEMS.DEFAULT.REG
+local start_inv = TUNING.GAMEMODE_STARTING_ITEMS.DEFAULT.RIKO or {}
 for i, v in ipairs(start_inv) do table.insert(prefabs, v) end
 local function onload(inst, data)
     if inst.components and inst.components.exp then inst.components.exp:ApplyUpgrades() end

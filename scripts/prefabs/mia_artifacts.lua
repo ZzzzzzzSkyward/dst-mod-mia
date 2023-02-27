@@ -30,22 +30,29 @@ local function common(def)
     inst.AnimState:PlayAnimation(def.anim)
     inst.is_mia_artifact = true
     if def.tag ~= nil then inst:AddTag(def.tag) end
-    if def.tags then inst:AddTags(def.tags) end
-    if not def.should_sink then MakeInventoryFloatable(inst, "med", nil, 0.6) end
-    if def.postinit then def.postinit(inst) end
-    inst.entity:SetPristine()
+    if def.tags then for i, v in pairs(def.tags) do inst:AddTag(v) end end
+    if not def.should_sink then
+        if def.floatsymbol then
+            MakeInventoryFloatable(inst, "med", 0, {1.0, 0.4, 1.0}, true, -20,
+                {sym_name = def.floatsymbol, sym_build = def.build, bank = def.bank})
+        else
+            MakeInventoryFloatable(inst, "med", nil, 0.6)
+        end
+    end
+    if def.common_postinit then def.common_postinit(inst) end
 
+    inst.entity:SetPristine()
     if not TheWorld.ismastersim then return inst end
 
     inst:AddComponent("inspectable")
     inst:AddComponent("inventoryitem")
     if def.light then
-        if not def.slot then
-            inst.components.inventoryitem:SetOnDroppedFn(OnDropped)
-            inst.components.inventoryitem:SetOnPickupFn(OnPickup)
-        end
+        inst.components.inventoryitem:SetOnDroppedFn(OnDropped)
+        inst.components.inventoryitem:SetOnPickupFn(OnPickup)
     end
     if def.should_sink then inst.components.inventoryitem:SetSinks(true) end
+    MakeHauntableLaunch(inst)
+    if def.postinit then def.postinit(inst) end
 
     return inst
 end
@@ -57,5 +64,5 @@ local function makeartifact(def)
 end
 local artifacts = require("mia_artifacts")
 local prefs = {}
-for k, v in pairs(artifacts) do table.insert(prefs, Prefab(k, makeartifact(v), v.assets)) end
+for k, v in pairs(artifacts) do if not v.slot then table.insert(prefs, Prefab(k, makeartifact(v), v.assets)) end end
 return unpack(prefs)

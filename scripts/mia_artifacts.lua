@@ -23,7 +23,7 @@ end
 local function blaze_reap(inst)
     inst:AddComponent("weapon")
     inst:AddComponent("tool")
-    inst.components.tool:SetAction(ACTIONS.MINE, TUNING.BLAZEREAP_MINE_EFFECTIVENESS)
+    blaze_reap_onfueled(inst)
     inst.build = "swap_abyssweapon"
     inst.handsymbol = "abyssweapon"
     inst.components.weapon:SetDamage(TUNING.BLAZEREAP_DAMAGE)
@@ -31,7 +31,7 @@ local function blaze_reap(inst)
     inst:AddComponent("submersible")
     inst:AddComponent("fueled")
     inst.components.fueled.fueltype = FUELTYPE.POWER
-    inst.components.fueled:InitializeFuelLevel(TUNING.BLAZEREAP_USE)
+    inst.components.fueled:InitializeFuelLevel(TUNING.BLAZEREAP_USES)
     inst.components.fueled:SetDepletedFn(blaze_reap_ondepleted)
     inst.components.fueled:SetTakeFuelFn(blaze_reap_onfueled)
     return inst
@@ -64,6 +64,54 @@ local function sun_sphere_stop(inst)
     inst._lasttime = nil
     inst.components.updatelooper:RemoveOnUpdateFn(sun_sphere_diminish)
     if inst.components.fueled then inst.components.fueled:StopConsuming() end
+end
+local function scaled_umbrella_transform(inst)
+    if inst.opened then
+        inst.components.weapon:SetDamage(TUNING.SCALED_UMBRELLA_DAMAGE_WEAPON)
+        inst.components.armor:SetAbsorption(0)
+        inst:AddTag("jab")
+        -- #TODO hack GetAbsorption
+    else
+        inst:RemoveTag("jab")
+        inst.components.armor:SetAbsorption(TUNING.SCALED_UMBRELLA_ARMOR)
+        inst.components.weapon:SetDamage(TUNING.SCALED_UMBRELLA_DAMAGE)
+    end
+    inst.opened = not inst.opened
+    inst.components.useableitem.inuse = false
+end
+local function scaled_umbrella_onload(inst, data)
+    inst.opened = data and data.opened
+    if inst.opened then scaled_umbrella_transform(inst) end
+end
+local function scaled_umbrella_onsave(inst, data)
+    data.opened = inst.opened
+    return data
+end
+local function scaled_umbrella_getstatus(inst)
+    local opened = inst.opened
+    if opened then return "OPEN" end
+end
+local function prushka_activate(inst)
+    local owner = inst.components.inventoryitem.owner
+    if not owner then return end
+    inst:DoTaskInTime(3, function()
+        inst.components.useableitem.inuse = false
+    end)
+    local talker = owner.components.talker
+    if owner.prefab == "riko" then
+        local x, y, z = owner.Transform:GetWorldPosition()
+        local ents = TheSim:FindEntities(x, y, z, 40, {"player", "reg"})
+        for i, reg in ipairs(ents) do if reg.TransformToWhite then reg:TransformToWhite(inst, owner) end end
+        if talker then
+            local str = GetString(owner, "ANNOUNCE_REVERBERATE")
+            talker:Say(str)
+        end
+    else
+        if talker then
+            local str = GetActionFailString(owner, "REVERBERATE", "PRUSHKA")
+            talker:Say(str)
+        end
+    end
 end
 local defs = {
     unheard_bell = {
@@ -218,15 +266,39 @@ local defs = {
         slot = "hand",
         anim = "idle",
         tags = {"nopunch", "umbrella", "pointy", "jab", "weapon"},
+        floatsymbol = "swap_scaled_umbrella",
         postinit = function(inst)
+            inst.handsymbol = "swap_scaled_umbrella"
+            inst.build = "scaled_umbrella"
             inst:AddComponent("weapon")
-            inst.components.weapon:SetDamage(TUNING.SCALED_UMBRELLA_DAMAGE)
+            inst.components.weapon:SetDamage(TUNING.SCALED_UMBRELLA_DAMAGE_WEAPON)
+            inst.components.weapon:SetOnAttack(function(inst, attacker)
+                local self = inst.components.weapon
+                if inst.components.armor ~= nil then
+                    local uses = (self.attackwear or 1) * self.attackwearmultipliers:Get()
+                    if attacker ~= nil and attacker:IsValid() and attacker.components.efficientuser ~= nil then
+                        uses = uses * (attacker.components.efficientuser:GetMultiplier(ACTIONS.ATTACK) or 1)
+                    end
+                    inst.components.armor:SetCondition(inst.components.armor.condition - uses)
+                end
+
+            end)
+            -- inst:AddComponent("parryweapon")
             inst:AddComponent("armor")
             inst.components.armor:InitCondition(TUNING.SCALED_UMBRELLA_DURABILITY, 0)
+            inst:AddComponent("useableitem")
+            inst.components.useableitem:SetOnUseFn(scaled_umbrella_transform)
+            -- protect
+            inst.components.useableitem.inuse = true
+            inst:AddTag("inuse")
+            ---------------------
             inst:AddComponent("waterproofer")
-            inst.components.waterproof:SetEffectiveness(0)
+            inst.components.waterproofer:SetEffectiveness(0)
             inst:AddComponent("insulator")
             inst.components.insulator:SetSummer()
+            inst.OnLoad = scaled_umbrella_onload
+            inst.OnSave = scaled_umbrella_onsave
+            inst.components.inspectable.getstatus = scaled_umbrella_getstatus
         end,
         desc = [[
             It is a processed Artifact created from Charcoal Sand, a Third Grade Artifact, by being compressed into bars to form an umbrella. However poor craftsmanship resulted in an overall degradation of the grade. Nevertheless, the light weight and strength of Charcoal Sand hasn't been lost, meaning Riko can use the Scale Umbrella as a shield
@@ -243,6 +315,11 @@ local defs = {
             inst:AddComponent("activatable")
             inst:AddComponent("timer")
             inst:AddComponent("updatelooper")
+            inst:AddComponent("fueled")
+            inst.components.fueled.fueltype = FUELTYPE.MAGIC
+            inst.components.fueled:SetDepletedFn(inst.Remove)
+            inst.components.fueled.maxfuel = TUNING.SUN_SPHERE_FUEL
+            inst.components.fueled.rate = TUNING.SUN_SPHERE_RATE
             inst._chargeprogress = 0
             inst.Recharge = sun_sphere_recharge
             inst.StartCharge = sun_sphere_charge
@@ -277,6 +354,19 @@ It was eaten by an aquatic creature in the Sea of Corpses.
         end,
         desc_en = [[A Relic used by Detchuanga. Equipping it significantly increases one's physical abilities.
         It heals injuries, but can't cure disease]]
+    },
+    artifact_prushka = {
+        slot = "neck",
+        bank = "artifact_prushka",
+        build = "artifact_prushka",
+        anim = "idle",
+        assets = {Asset("ANIM", "anim/artifact_prushka.zip")},
+        postinit = function(inst)
+            inst.build = "artifact_prushka"
+            inst.bodysymbol = "swap_artifact_prushka"
+            inst:AddComponent("useableitem")
+            inst.components.useableitem:SetOnUseFn(prushka_activate)
+        end
     }
 }
 -- protect

@@ -19,10 +19,16 @@ server_filter_tags = {"XZmodmaker", "made_in_abyss"}
 version = "20230225.2"
 configuration = {
     {
-        name = "attract",
-        hover = "attract_hover",
-        options = {{description = "Yes", data = "true"}, {description = "No", data = "false"}},
-        default = "true"
+        name = "language",
+        label = "Language",
+        hover = "Set Language",
+        options = {
+            {description = "Default", hover = "Accord to the game", data = "default"},
+            {description = "English", data = "en", hover = "English"},
+            {description = "中文", data = "zh", hover = "Simplified Chinese"},
+            {description = "繁体中文", data = "zht", hover = "Traditional Chinese"}
+        },
+        default = "default"
     }
 }
 

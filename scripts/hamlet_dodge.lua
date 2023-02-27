@@ -1,8 +1,8 @@
 AddStategraphEvent("wilson", EventHandler("redirect_locomote", function(inst, data)
     inst.sg:GoToState("dodge", data)
 end))
-local fns=dig("mia_common_physics")
-local vel={20, 0, 0}
+local fns = dig("common_physics")
+local vel = {20, 0, 0}
 AddStategraphState("wilson", State {
     name = "dodge",
     tags = {"busy", "evade", "no_stun", "canrotate"},
@@ -18,7 +18,9 @@ AddStategraphState("wilson", State {
         inst.AnimState:PlayAnimation("slide_pre")
 
         inst.AnimState:PushAnimation("slide_loop")
-        inst.SoundEmitter:PlaySound("hamletcharactersound/characters/wheeler/slide")
+        if not inst._nosoundwhendodge then
+            inst.SoundEmitter:PlaySound("hamletcharactersound/characters/wheeler/slide")
+        end
         inst.Physics:SetMotorVelOverride(unpack(vel))
         fns.MakeCharacterPassThrough(inst)
         inst.components.locomotor:EnableGroundSpeedMultiplier(false)
@@ -39,10 +41,10 @@ AddStategraphState("wilson", State {
 
     onexit = function(inst)
         inst.sg.statemem.isphysicstoggle = nil
-        fns.MakeCharacterNoPassThrough(inst)
-        inst.components.locomotor:EnableGroundSpeedMultiplier(true)
         inst.Physics:ClearMotorVelOverride()
-        inst.components.locomotor:Stop()
+        inst.components.locomotor:EnableGroundSpeedMultiplier(true)
+        fns.MakeCharacterNoPassThrough(inst)
+        -- inst.components.locomotor:Stop()
 
         inst.components.locomotor:SetBufferedAction(nil)
         if not inst._dodgenotinvincible then
@@ -58,7 +60,7 @@ AddStategraphState("wilson", State {
 
     onenter = function(inst)
         inst.AnimState:PlayAnimation("slide_pst")
-        inst.Physics:SetMotorVel(unpack(vel))
+        -- inst.Physics:SetMotorVel(unpack(vel))
     end,
 
     events = {
