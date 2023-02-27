@@ -290,14 +290,13 @@ local defs = {
             inst.components.useableitem:SetOnUseFn(scaled_umbrella_transform)
             -- protect
             inst.components.useableitem.inuse = true
-            inst:AddTag("inuse")
+            -- inst.OnLoad = scaled_umbrella_onload
+            -- inst.OnSave = scaled_umbrella_onsave
             ---------------------
             inst:AddComponent("waterproofer")
             inst.components.waterproofer:SetEffectiveness(0)
             inst:AddComponent("insulator")
             inst.components.insulator:SetSummer()
-            inst.OnLoad = scaled_umbrella_onload
-            inst.OnSave = scaled_umbrella_onsave
             inst.components.inspectable.getstatus = scaled_umbrella_getstatus
         end,
         desc = [[

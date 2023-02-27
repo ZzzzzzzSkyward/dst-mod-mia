@@ -2,9 +2,16 @@ local delicious_abyss_dishes = dig("foods")
 for k, recipe in pairs(delicious_abyss_dishes) do AddCookerRecipe("rikocookpot", recipe) end
 modimport("scripts/mia_recipes.lua")
 modimport("scripts/hamlet_dodge.lua")
-local postinit = {components = {"portablestructure"}, scenarios = {"chestfunctions"}}
+local preinit = {components = {"portablestructure"}, scenarios = {"chestfunctions"}}
+local postinit = {Prefab = {"riko"}}
+for k, v in pairs(preinit) do for k2, v2 in pairs(v) do dig("postinit/" .. k .. "/" .. v2)(require(k .. "/" .. v2)) end end
 for k, v in pairs(postinit) do
-    for k2, v2 in pairs(v) do require("mia_postinit/" .. k .. "/" .. v2)(require(k .. "/" .. v2)) end
+    local key = k .. "PostInit"
+    if not env.postinitfns[key] then env.postinitfns[key] = {} end
+    for k2, v2 in pairs(v) do
+        if not env.postinitfns[key][v2] then env.postinitfns[key][v2] = {} end
+        table.insert(env.postinitfns[k .. "PostInit"][v2], dig("postinit/" .. k:lower() .. "/" .. v2))
+    end
 end
 local containers = require("containers")
 containers.params.riko_sack = containers.params.krampus_sack or {

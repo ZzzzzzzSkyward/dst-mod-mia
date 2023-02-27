@@ -16,7 +16,7 @@ all_clients_require_mod = true
 icon_atlas = "modicon.xml"
 icon = "modicon.tex"
 server_filter_tags = {"XZmodmaker", "made_in_abyss"}
-version = "20230225.2"
+version = "20230227"
 configuration = {
     {
         name = "language",
@@ -29,6 +29,13 @@ configuration = {
             {description = "繁体中文", data = "zht", hover = "Traditional Chinese"}
         },
         default = "default"
+    },
+    {
+        name = "complement",
+        label = "Retrieve Lost Starting Items",
+        hover = "complement_hover",
+        options = {{description = "Yes", data = "true"}, {description = "No", data = "false"}},
+        default = "false"
     }
 }
 
@@ -59,7 +66,9 @@ translation = {
             Yes = "是",
             Default = "默认",
             Client = "客户端",
-            debug = "开启调试"
+            debug = "开启调试",
+            complement_hover = "重新分配莉可的起始物品（如果不存在的话）",
+            complement = "获取起始物品"
         }
     },
     {
@@ -70,7 +79,8 @@ translation = {
             name = name,
             description = description,
             attract_hover = "Nanachi will/won't attract pigman.",
-            version = [[Reg reworked]]
+            version = [[]],
+            complement_hover = "Give Riko's starting items if they no longer exist in the world."
         },
         translateFunction = function(key)
             return translation[2].dict[key] or key
