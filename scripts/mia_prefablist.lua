@@ -12,6 +12,6 @@ return {
     "regweapon",
     "reg_projectile",
     "mia_skins",
-    "mia_artifacts",
-    "mia_equippable_artifacts"
+--    "mia_artifacts",
+--    "mia_equippable_artifacts"
 }

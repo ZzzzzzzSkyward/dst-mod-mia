@@ -29,13 +29,11 @@ local function blaze_reap(inst)
     inst.components.weapon:SetDamage(TUNING.BLAZEREAP_DAMAGE)
     inst.components.weapon:SetOnAttack(blaze_reap_onattack)
     inst:AddComponent("submersible")
-    inst.components.inventoryitem:SetSinks(true)
     inst:AddComponent("fueled")
     inst.components.fueled.fueltype = FUELTYPE.POWER
     inst.components.fueled:InitializeFuelLevel(TUNING.BLAZEREAP_USE)
     inst.components.fueled:SetDepletedFn(blaze_reap_ondepleted)
     inst.components.fueled:SetTakeFuelFn(blaze_reap_onfueled)
-    MakeHauntableLaunch(inst)
     return inst
 end
 local function sun_sphere_recharge(inst)
@@ -68,15 +66,15 @@ local function sun_sphere_stop(inst)
     if inst.components.fueled then inst.components.fueled:StopConsuming() end
 end
 local defs = {
-    --[[
-        unheard_bell={
-            assets={Asset("ANIM", "anim/artifact_unheard_bell.zip")}
-            ,postinit=function(inst)
-                if not TheWorld.ismastersim then return inst end
-                inst:AddComponent("activatable")
-            end
-    } ]]
+    unheard_bell = {
+        disabled = true,
+        assets = {Asset("ANIM", "anim/artifact_unheard_bell.zip")},
+        postinit = function(inst)
+            inst:AddComponent("activatable")
+        end
+    },
     longetivity_drink = {
+        disabled = true,
         assets = {Asset("ANIM", "anim/longetivity_drink.zip")},
         bank = "longetivity_drink",
         build = "longetivity_drink",
@@ -107,12 +105,14 @@ local defs = {
         desc_en = [[It is a liquid Artifact, contained in an unusual shaped container. Upon consumption, it greatly extends the lifespan of the user.]]
     },
     grim_reaper = {
+        disabled = true,
         slot = "hand",
         assets = {Asset("ANIM", "anim/grim_reaper.zip"), Asset("ANIM", "anim/swap_grim_reaper.zip")},
         bank = "grim_reaper",
         build = "grim_reaper",
         anim = "idle",
         tags = {"tool", "heavy"},
+        should_sink = true,
         postinit = function(inst)
             inst:AddComponent("tool")
             inst:AddComponent("finiteuses")
@@ -124,6 +124,7 @@ local defs = {
             inst.components.finiteuses:SetMaxUses(TUNING.GRIM_REAPER_USES)
             inst.components.finiteuses:SetUses(TUNING.GRIM_REAPER_USES)
             inst.components.finiteuses:SetOnFinished(inst.Remove)
+            inst:AddComponent("submersible")
             inst:ListenForEvent("percentusedchange", function(inst, newpc)
                 if newpc < 0 then return end
                 if inst:HasTag("usesdepleted") then return end
@@ -157,19 +158,24 @@ local defs = {
         build = "abyssweapon",
         anim = "idle",
         tags = {"blaze_reap", "sharp", "power_fueled", "weapon"},
+        should_sink = true,
         postinit = blaze_reap,
         desc_en = [[The Blaze Reap is an abnormally large pickaxe that contains Everlasting Gunpowder, which causes ongoing explosions on whatever it is struck on and thus allowing it to serve as an impact explosive type weapon and earning it the epithet of the Everlasting Pickaxe]]
     },
     thousand_pin = {
+        disabled = true,
         assets = {Asset("ANIM", "anim/thousand_pin.zip")},
         bank = "thousand_pin",
         build = "thousand_pin",
         anim = "idle",
+        should_sink = true,
         postinit = function(inst)
+            inst:AddComponent("submersible")
         end,
         desc_en = [[Thousand-Men Pins are Artifacts said to grant their user the strength of a thousand men with a single pin when thrust into the skin. Its auction name is Health Junkie]]
     },
     gold_shaker = {
+        disabled = true,
         assets = {Asset("ANIM", "anim/gold_shaker.zip")},
         bank = "gold_shaker",
         build = "gold_shaker",
@@ -183,6 +189,7 @@ local defs = {
         desc="生命回响之石"
         --},]]
     tomorrow_signal = {
+        disabled = true,
         assets = {Asset("ANIM", "anim/tomorrow_signal.zip")},
         bank = "tomorrow_signal",
         build = "tomorrow_signal",
@@ -193,6 +200,7 @@ local defs = {
         desc = [[预测天气的风信鸡]]
     },
     princess_bosom = {
+        disabled = true,
         assets = {Asset("ANIM", "anim/princess_bosom.zip")},
         bank = "princess_bosom",
         build = "princess_bosom",
@@ -209,7 +217,7 @@ local defs = {
         build = "scaled_umbrella",
         slot = "hand",
         anim = "idle",
-        tags = {"nopunch", "umbrella"},
+        tags = {"nopunch", "umbrella", "pointy", "jab", "weapon"},
         postinit = function(inst)
             inst:AddComponent("weapon")
             inst.components.weapon:SetDamage(TUNING.SCALED_UMBRELLA_DAMAGE)
@@ -220,12 +228,12 @@ local defs = {
             inst:AddComponent("insulator")
             inst.components.insulator:SetSummer()
         end,
-        should_sink = true,
         desc = [[
             It is a processed Artifact created from Charcoal Sand, a Third Grade Artifact, by being compressed into bars to form an umbrella. However poor craftsmanship resulted in an overall degradation of the grade. Nevertheless, the light weight and strength of Charcoal Sand hasn't been lost, meaning Riko can use the Scale Umbrella as a shield
         ]]
     },
     sun_sphere = {
+        disabled = true,
         assets = {Asset("ANIM", "anim/sun_sphere.zip")},
         bank = "sun_sphere",
         build = "sun_sphere",
@@ -259,6 +267,7 @@ It was eaten by an aquatic creature in the Sea of Corpses.
     -- desc=[[火葬炮]]
     -- }
     fruitful_orb = {
+        disabled = true,
         assets = {Asset("ANIM", "anim/friutful_orb.zip")},
         bank = "friutful_orb",
         build = "friutful_orb",
@@ -270,14 +279,6 @@ It was eaten by an aquatic creature in the Sea of Corpses.
         It heals injuries, but can't cure disease]]
     }
 }
--- retrofit
-defs.blazereap = defs.blaze_reap
-defs.blazereap.postinit = function(inst)
-    inst:DoTaskInTime(0, function()
-        local olddata = inst:GetSaveRecord()
-        olddata.prefab = "blaze_reap"
-        SpawnSaveRecord(olddata)
-        inst:Remove()
-    end)
-end
+-- protect
+for k, v in pairs(defs) do if v.disabled then defs[k] = nil end end
 return defs

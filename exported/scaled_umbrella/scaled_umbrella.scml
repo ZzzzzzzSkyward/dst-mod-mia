@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r11">
+    <folder id="0" name="swap_scaled_umbrella">
+        <file id="0" name="swap_scaled_umbrella/swap_scaled_umbrella-0.png" width="90" height="344" pivot_x="0.52" pivot_y="0.17"/>
+        <file id="1" name="swap_scaled_umbrella/swap_scaled_umbrella-6.png" width="118" height="344" pivot_x="0.45" pivot_y="0.125"/>
+    </folder>
+    <folder id="1" name="grass">
+        <file id="0" name="grass/grass-0.png" width="70" height="26" pivot_x="0.5" pivot_y="0.5"/>
+    </folder>
+    <entity id="0" name="scaled_umbrella">
+        <obj_info name="scaled_umbrella_swap_scaled_umbrella-0" realname="swap_scaled_umbrella-0" type="sprite">
+            <frames>
+                <i folder="0" file="0"/>
+            </frames>
+        </obj_info>
+        <obj_info name="scaled_umbrella_grass-0" realname="grass-0" type="sprite">
+            <frames>
+                <i folder="1" file="0"/>
+            </frames>
+        </obj_info>
+        <animation id="0" name="idle" length="100" interval="100">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" name="swap_scaled_umbrella-0" folder="0" file="0" abs_x="48.6" abs_y="-7.616" abs_angle="180" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="0" key="0" z_index="0"/>
+                    <object_ref id="1" name="grass-0" folder="1" file="0" abs_x="-33.173913" abs_y="15.888889" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="1" key="0" z_index="1"/>
+                </key>
+                <key id="1" time="34">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="0" z_index="1"/>
+                </key>
+                <key id="2" time="67">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="0" z_index="1"/>
+                </key>
+                <key id="3" time="100">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="0" z_index="1"/>
+                </key>
+            </mainline>
+            <timeline id="0" obj="0" name="swap_scaled_umbrella-0">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="1.8" y="277.904" angle="180"/>
+                </key>
+            </timeline>
+            <timeline id="1" obj="1" name="grass-0">
+                <key id="0" spin="0">
+                    <object folder="1" file="0" x="1.826087" y="2.888889" angle="0"/>
+                </key>
+            </timeline>
+        </animation>
+    </entity>
+</spriter_data>

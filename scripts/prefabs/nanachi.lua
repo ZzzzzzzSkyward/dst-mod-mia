@@ -8,8 +8,9 @@ local assets = {
     Asset("ANIM", "anim/ghost_nanachi_build.zip"),
     Asset("ANIM", "anim/player_actions_roll.zip")
 }
-local prefabs = {"nanachihat"}
-local start_inv = {"nanachihat"}
+local prefabs = {}
+local start_inv = TUNING.GAMEMODE_STARTING_ITEMS.DEFAULT.NANACHI
+for i, v in ipairs(start_inv) do table.insert(prefabs, v) end
 
 local function FindFriend(inst)
             if inst.components.leader:CountFollowers("nanachifriend") >= 1 then return end

@@ -19,6 +19,7 @@ do
             {type = "ghost_skin", anim_bank = "ghost", idle_anim = "idle", scale = 0.75, offset = {0, 25}}
         })
         if data.skin then PREFAB_SKINS[name] = data.skin end
+        if data.start_inv then TUNING.GAMEMODE_STARTING_ITEMS.DEFAULT[name:upper()] = data.start_inv end
     end
     local tuning = dig("tuning")()
     for k, v in pairs(tuning) do TUNING[k] = TUNING[k] or v end

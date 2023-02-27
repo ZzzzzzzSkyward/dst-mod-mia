@@ -52,10 +52,14 @@ local function common(def)
     inst.AnimState:PlayAnimation(def.anim)
     if def.tag ~= nil then inst:AddTag(def.tag) end
     if def.tags then inst:AddTags(def.tags) end
-    inst.entity:SetPristine()
+        if not def.should_sink then MakeInventoryFloatable(inst, "med", nil, 0.6) end
     if not TheWorld.ismastersim then return inst end
     inst:AddComponent("inspectable")
     inst:AddComponent("inventoryitem")
+        inst:AddComponent("equippable")
+        if def.should_sink then inst.components.inventoryitem:SetSinks(true) end
+
+    MakeHauntableLaunch(inst)
     return inst
 end
 local function common_amulet(bank, build, anim, postinit, tag, should_sink)
@@ -94,8 +98,10 @@ local function common_amulet(bank, build, anim, postinit, tag, should_sink)
     return inst
 end
 local function common_hand(def)
-    local inst = common()
-    inst:AddComponent("equippable")
+    local inst = common()if def.common_postinit then def.common_postinit(inst)end
+        inst.entity:SetPristine()
+if not TheWorld.ismastersim then return end
+    inst.components.equippable.equipslot=EQUIPSLOTS.HANDS
     inst.components.equippable:SetOnEquip(def.onequip or hand_onequip)
     inst.components.equippable:SetOnUnequip(def.onunequip or hand_onunequip)
     if def.postinit then def.postinit(inst) end

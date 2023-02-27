@@ -37,4 +37,7 @@ local t = {
         end
     }
 }
+-- protect
+local prefabs = require("mia_artifacts")
+for i, v in ipairs(t) do if not prefabs[v.item[1]] then table.remove(t, i) end end
 return t

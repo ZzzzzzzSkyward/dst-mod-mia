@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Build name="fence_rotator">
+  <Symbol name="rotator">
+    <Frame framenum="0" duration="1" x="-0.0184020996" y="0.000503539981" w="162" h="306" />
+  </Symbol>
+  <Symbol name="swap_fence_rotator">
+    <Frame framenum="0" duration="3" x="1.67500103" y="-86.34375" w="102" h="328" />
+    <Frame framenum="3" duration="1" x="-51.5875015" y="-72.2749863" w="314" h="233" />
+    <Frame framenum="4" duration="5" x="1.67500103" y="-86.34375" w="102" h="328" />
+  </Symbol>
+  <Atlas name="atlas-0.tex" />
+  <Atlas name="atlas-1.tex" />
+</Build>
