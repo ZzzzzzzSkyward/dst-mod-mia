@@ -8,6 +8,8 @@ local function simple(name)
     inst.AnimState:SetBank(name)
     inst.AnimState:SetBuild(name)
     inst.AnimState:PlayAnimation("idle")
+    inst.persists=false
+    inst:AddTag("NOBLOCK")
     inst.entity:SetPristine()
     if not TheWorld.ismastersim then return inst end
     inst:AddComponent("weapon")
