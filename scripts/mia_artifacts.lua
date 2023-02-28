@@ -122,7 +122,6 @@ local defs = {
         end
     },
     longetivity_drink = {
-        disabled = true,
         assets = {Asset("ANIM", "anim/longetivity_drink.zip")},
         bank = "longetivity_drink",
         build = "longetivity_drink",
@@ -132,7 +131,10 @@ local defs = {
             inst:AddComponent("finiteuses")
             inst.components.finiteuses:SetMaxUses(1)
             inst.components.finiteuses:SetUses(1)
+            inst.components.edible.secondaryfoodtype = FOODTYPE.ROUGHAGE
+            inst.components.edible.hungervalue = 0
             inst.components.edible:SetGetHealthFn(function(inst, eater)
+                if not eater then return 0 end
                 local health = eater.components.health
                 if health then return health:GetMaxWithPenalty() end
                 return 0
@@ -141,10 +143,12 @@ local defs = {
                 local oldager = eater.components.oldager
                 if oldager then
                     oldager:AddValidHealingCause(inst.prefab)
-                    oldager:StopDamageOverTime()
+                    if oldager.damage_per_second > 0 then oldager:StopDamageOverTime() end
                 end
                 local poisonable = eater.components.poisonable
                 if poisonable then poisonable:Cure(nil, true, TUNING.LONGETIVITY_DRINK_IMMUNITY) end
+                local buff = eater.components.debuffable
+                if buff then buff:AddDebuff("longetivity_drink", "ghostlyelixir_slowregen_buff") end
             end)
         end,
         desc = [[（命を延ばす酒（））
@@ -171,7 +175,7 @@ local defs = {
             end
             inst.components.finiteuses:SetMaxUses(TUNING.GRIM_REAPER_USES)
             inst.components.finiteuses:SetUses(TUNING.GRIM_REAPER_USES)
-            inst.components.finiteuses:SetOnFinished(inst.Remove)
+            -- inst.components.finiteuses:SetOnFinished(inst.Remove)
             inst:AddComponent("submersible")
             inst:ListenForEvent("percentusedchange", function(inst, newpc)
                 if newpc < 0 then return end
@@ -343,13 +347,18 @@ It was eaten by an aquatic creature in the Sea of Corpses.
     -- desc=[[火葬炮]]
     -- }
     fruitful_orb = {
-        disabled = true,
-        assets = {Asset("ANIM", "anim/friutful_orb.zip")},
-        bank = "friutful_orb",
-        build = "friutful_orb",
-        light = {enable = false, radius = 20, intensity = .7, falloff = .9},
+        assets = {Asset("ANIM", "anim/fruitful_orb.zip")},
+        bank = "fruitful_orb",
+        build = "fruitful_orb",
+        light = {enable = false, radius = 0.5, intensity = .2, falloff = 1},
         anim = "idle",
         postinit = function(inst)
+            inst:ListenForEvent("mia_activate", function()
+                inst.Light:Enable(true)
+                if inst._deactivatetask then inst._deactivatetask:Cancel() end
+                inst._deactivatetask = inst:DoTaskInTime(10, inst.deactivate)
+            end)
+            inst.deactivate = sun_sphere_charge -- #TODO
         end,
         desc_en = [[A Relic used by Detchuanga. Equipping it significantly increases one's physical abilities.
         It heals injuries, but can't cure disease]]

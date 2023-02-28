@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r11">
+    <folder id="0" name="longetivity_drink">
+        <file id="0" name="longetivity_drink/longetivity_drink-0.png" width="200" height="251" pivot_x="0.39" pivot_y="0.067729"/>
+    </folder>
+    <folder id="1" name="shadow">
+        <file id="0" name="shadow/shadow-0.png" width="193" height="64" pivot_x="0.471503" pivot_y="0.15625"/>
+    </folder>
+    <entity id="0" name="longetivity_drink">
+        <obj_info name="longetivity_drink_longetivity_drink-0" realname="longetivity_drink-0" type="sprite">
+            <frames>
+                <i folder="0" file="0"/>
+            </frames>
+        </obj_info>
+        <obj_info name="longetivity_drink_shadow-0" realname="shadow-0" type="sprite">
+            <frames>
+                <i folder="1" file="0"/>
+            </frames>
+        </obj_info>
+        <animation id="0" name="idle" length="234" interval="100">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" name="shadow-0" folder="1" file="0" abs_x="-56.444367" abs_y="39.351369" abs_angle="0" abs_scale_x="0.624799" abs_scale_y="1" abs_a="1" timeline="1" key="0" z_index="0"/>
+                    <object_ref id="1" name="longetivity_drink-0" folder="0" file="0" abs_x="-46.071612" abs_y="136.102335" abs_angle="0" abs_scale_x="0.6" abs_scale_y="0.6" abs_a="1" timeline="0" key="0" z_index="1"/>
+                </key>
+                <key id="1" time="34">
+                    <object_ref id="0" timeline="1" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="0" key="0" z_index="1"/>
+                </key>
+                <key id="2" time="67">
+                    <object_ref id="0" timeline="1" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="0" key="0" z_index="1"/>
+                </key>
+                <key id="3" time="100">
+                    <object_ref id="0" timeline="1" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="0" key="0" z_index="1"/>
+                </key>
+                <key id="4" time="134">
+                    <object_ref id="0" timeline="1" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="0" key="0" z_index="1"/>
+                </key>
+                <key id="5" time="167">
+                    <object_ref id="0" timeline="1" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="0" key="0" z_index="1"/>
+                </key>
+                <key id="6" time="200">
+                    <object_ref id="0" timeline="1" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="0" key="0" z_index="1"/>
+                </key>
+                <key id="7" time="234">
+                    <object_ref id="0" timeline="1" key="1" z_index="0"/>
+                    <object_ref id="1" timeline="0" key="1" z_index="1"/>
+                </key>
+            </mainline>
+            <timeline id="0" obj="0" name="longetivity_drink-0">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="0.728388" y="-4.297677" angle="0" scale_x="0.6" scale_y="0.6"/>
+                </key>
+                <key id="1" time="234" spin="0">
+                    <object folder="0" file="0" x="0.728388" y="-4.297677" angle="0" scale_x="0.6" scale_y="0.6"/>
+                </key>
+            </timeline>
+            <timeline id="1" obj="1" name="shadow-0">
+                <key id="0" spin="0">
+                    <object folder="1" file="0" x="0.412391" y="-14.648631" angle="0" scale_x="0.624799"/>
+                </key>
+                <key id="1" time="234" spin="0">
+                    <object folder="1" file="0" x="0.412391" y="-14.648631" angle="0" scale_x="0.624799"/>
+                </key>
+            </timeline>
+        </animation>
+    </entity>
+</spriter_data>
