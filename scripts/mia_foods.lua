@@ -1,4 +1,5 @@
 local foods = {
+    -- riko
     riko_onigiri = {
         test = function(cooker, names, tags)
             return not tags.meat and tags.veggie and not tags.inedible
@@ -65,6 +66,7 @@ local foods = {
         sanity = 50,
         cooktime = 2
     },
+    -- nanachi
     nanachi_soup = {
         test = function(cooker, names, tags)
             return tags.egg and tags.veggie and tags.veggie >= 2 and tags.fish
@@ -85,7 +87,8 @@ local foods = {
             end
         end
     }
-
+    -- belaf
+    -- mitty_cupped
 }
 for k, v in pairs(foods) do
     v.name = k

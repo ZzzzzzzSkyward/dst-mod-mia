@@ -16,3 +16,7 @@ DeconstructRecipe("nanachitent", {Ingredient("goose_feather", 5), Ingredient("cu
 AddRecipe2("scaled_umbrella", {Ingredient("umbrella", 1), Ingredient("charcoal_sand", 60), Ingredient("rope", 8)},
     TECH.NONE, {builder_tag = "riko"}, {"MODS", "STRUCTURES", "RIKO"})
 DeconstructRecipe("scaled_umbrella", {Ingredient("umbrella", 1), Ingredient("charcoal_sand", 30), Ingredient("rope", 8)})
+-- Gives back a mitty later
+-- Health value is set to character's max health*60% later
+AddRecipe2("mitty_tea_bundle", {Ingredient("mitty_bottled", 1), Ingredient(CHARACTER_INGREDIENT.MAX_HEALTH, 0)}, TECH.NONE, {},
+    {"MODS", "BELAF", "FOOD"})

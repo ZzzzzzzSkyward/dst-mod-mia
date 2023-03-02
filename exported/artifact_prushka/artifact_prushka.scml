@@ -5,7 +5,7 @@
     </folder>
     <folder id="1" name="swap_artifact_prushka">
         <file id="0" name="swap_artifact_prushka/swap_artifact_prushka-0.png" width="75" height="133" pivot_x="0.478659" pivot_y="0.214552"/>
-        <file id="1" name="swap_artifact_prushka/swap_artifact_prushka-3.png" width="52" height="115" pivot_x="0.300625" pivot_y="0.108824"/>
+        <file id="1" name="swap_artifact_prushka/swap_artifact_prushka-3.png" width="52" height="115" pivot_x="0.250625" pivot_y="0.108824"/>
     </folder>
     <entity id="0" name="artifact_prushka">
         <obj_info name="artifact_prushka_artifact_prushka" realname="artifact_prushka" type="sprite">
@@ -16,7 +16,7 @@
         <animation id="0" name="idle" length="67" interval="100">
             <mainline>
                 <key id="0">
-                    <object_ref id="0" name="artifact_prushka" folder="0" file="0" abs_x="-130.13179" abs_y="59.94747" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="0" key="0" z_index="0"/>
+                    <object_ref id="0" name="artifact_prushka" folder="0" file="0" abs_x="-83.840895" abs_y="23.498735" abs_angle="0" abs_scale_x="0.5" abs_scale_y="0.5" abs_a="1" timeline="0" key="0" z_index="0"/>
                 </key>
                 <key id="1" time="34">
                     <object_ref id="0" timeline="0" key="1" z_index="0"/>
@@ -27,7 +27,7 @@
             </mainline>
             <timeline id="0" obj="0" name="artifact_prushka">
                 <key id="0" spin="0">
-                    <object folder="0" file="0" x="37.55" y="-4.95" angle="0"/>
+                    <object folder="0" file="0" y="-8.95" angle="0" scale_x="0.5" scale_y="0.5"/>
                 </key>
                 <key id="1" time="34" spin="0">
                     <object folder="0" file="0" x="37.55" y="-4.95" angle="0"/>

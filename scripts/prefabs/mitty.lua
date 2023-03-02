@@ -69,7 +69,7 @@ local function onsave(inst, data)
     data.mitty_num = inst.mitty_num or 0
 end
 
-local function fn()
+local function bottled()
     local inst = CreateEntity()
 
     inst.entity:AddTransform()
@@ -79,7 +79,7 @@ local function fn()
 
     inst:AddTag("mitty")
     inst:AddTag("irreplaceable")
-    inst:AddTag("nonpotatable")
+    -- inst:AddTag("nonpotatable")
 
     inst.mitty_num = 0
 
@@ -121,5 +121,91 @@ local function fn()
 
     return inst
 end
+local tea_assets = {Asset("ANIM", "anim/mitty_tea.zip")}
+local defsanity = 5
+local function GetSanity(eater)
+    if not eater then return end
+    if eater.components.sanity then
+        if eater.prefab == "nanachi" then
+            return -defsanity
+        elseif eater.prefab == "belaf" then
+            return defsanity
+        end
+    end
+end
+local def = {
+    foodtype = FOODTYPE.MEAT,
+    hunger = 10,
+    oneatenfn = function(inst, eater)
+        -- local sanity = GetSanity(eater)
+        -- if sanity then eater.components.sanity:DoDelta(sanity) end
+    end
+}
+local function tea()
+    local inst = CreateEntity()
 
-return Prefab("mitty_bottled", fn, assets)
+    inst.entity:AddTransform()
+    inst.entity:AddAnimState()
+    inst.entity:AddMiniMapEntity()
+    inst.entity:AddNetwork()
+
+    inst:AddTag("mitty")
+    inst:AddTag("irreplaceable")
+    -- inst:AddTag("nonpotatable")
+
+    MakeInventoryPhysics(inst)
+    MakeInventoryFloatable(inst)
+
+    inst.MiniMapEntity:SetIcon("mitty_bottled.png")
+
+    inst.AnimState:SetBank("mitty_tea")
+    inst.AnimState:SetBuild("mitty_tea")--https://www.bilibili.com/video/BV1ke4y1k7Ra/
+    inst.AnimState:PlayAnimation("idle", true)
+
+    inst.entity:SetPristine()
+
+    if not TheWorld.ismastersim then return inst end
+
+    inst:AddComponent("inspectable")
+
+    inst:AddComponent("inventoryitem")
+
+    inst:AddComponent("edible")
+    inst.components.edible.foodtype = def.foodtype or FOODTYPE.GENERIC
+    inst.components.edible.secondaryfoodtype = def.secondaryfoodtype or nil
+    inst.components.edible.healthvalue = def.health or 0
+    inst.components.edible.hungervalue = def.hunger or 0
+    inst.components.edible.sanityvalue = def.sanity or 0
+    inst.components.edible.temperaturedelta = def.temperature or 0
+    inst.components.edible.temperatureduration = def.temperatureduration or 0
+    inst.components.edible.nochill = def.nochill or nil
+    inst.components.edible.spice = def.spice
+    inst.components.edible:SetOnEatenFn(def.oneatenfn)
+    local old = inst.components.edible.GetSanity
+    function inst.components.edible:GetSanity(eater)
+        return GetSanity(eater) or old(self, eater)
+    end
+    MakeHauntableLaunch(inst)
+    return inst
+end
+local function mitty_bundle()
+    local inst = CreateEntity()
+    inst:AddTransform()
+    inst.entity:SetPristine()
+    if not TheWorld.ismastersim then return inst end
+    local DropLoot = function(inst)
+        local mitty = SpawnPrefab("mitty")
+        local tea = SpawnPrefab("mitty_tea")
+        if mitty and tea then
+            local x, y, z = inst.Transform:GetWorldPosition()
+            mitty.Transform:SetPosition(x, y, z)
+            tea.Transform:SetPosition(x, y, z)
+        end
+        inst:Remove()
+    end
+    inst:DoTaskInTime(0, DropLoot)
+    return inst
+end
+return Prefab("mitty_bottled", bottled, assets),
+-- Prefab("mitty_tea", tea, tea_assets),
+    Prefab("mitty_tea_bundle", mitty_bundle)

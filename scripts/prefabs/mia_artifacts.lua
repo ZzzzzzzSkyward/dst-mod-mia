@@ -56,10 +56,13 @@ local function common(def)
 
     return inst
 end
-
 local function makeartifact(def)
-    return function()
-        return common(def)
+    if def.fn then
+        return def.fn
+    else
+        return function()
+            return common(def)
+        end
     end
 end
 local artifacts = require("mia_artifacts")

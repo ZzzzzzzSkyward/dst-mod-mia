@@ -3,7 +3,7 @@ GLOBAL.setmetatable(env, {
         return GLOBAL.rawget(GLOBAL, k)
     end
 })
-function dig(x)
+function dig(x, _env)
     local file = resolvefilepath_soft(table.concat({"scripts/mia_", x, ".lua"}))
     if not file then
         print("error: no such file", x)
@@ -11,7 +11,7 @@ function dig(x)
     end
     local fn = kleiloadlua(file)
     if type(fn) == "function" then
-        setfenv(fn, env)
+        setfenv(fn, _env or env)
         return fn()
     end
     return nil
@@ -31,7 +31,19 @@ do
         if data.skin then PREFAB_SKINS[name] = data.skin end
         if data.start_inv then TUNING.GAMEMODE_STARTING_ITEMS.DEFAULT[name:upper()] = data.start_inv end
     end
-    local tuning = dig("tuning")()
+    local TuningHack = {}
+    setmetatable(TuningHack, {
+        __index = function(_, k)
+            if k == nil then return nil end
+            if type(k) == "string" and TUNING[string.upper(k)] then
+                TuningHack[k] = TUNING[string.upper(k)]
+                return TuningHack[k]
+            else
+                return env[k]
+            end
+        end
+    })
+    local tuning = dig("tuning", TuningHack)
     for k, v in pairs(tuning) do TUNING[k] = TUNING[k] or v end
 end
 if not env.ismim and (TheNet:GetIsServer() or TheNet:GetIsClient()) then modimport("scripts/mia_main.lua") end

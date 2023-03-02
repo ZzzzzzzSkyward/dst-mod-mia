@@ -1,13 +1,12 @@
-<?xml version="1.0"?>
-<Build name="fence_rotator">
-  <Symbol name="rotator">
-    <Frame framenum="0" duration="1" x="-0.0184020996" y="0.000503539981" w="162" h="306" />
-  </Symbol>
-  <Symbol name="swap_fence_rotator">
-    <Frame framenum="0" duration="3" x="1.67500103" y="-86.34375" w="102" h="328" />
-    <Frame framenum="3" duration="1" x="-51.5875015" y="-72.2749863" w="314" h="233" />
-    <Frame framenum="4" duration="5" x="1.67500103" y="-86.34375" w="102" h="328" />
-  </Symbol>
-  <Atlas name="atlas-0.tex" />
-  <Atlas name="atlas-1.tex" />
+<Build name="scaled_umbrella.scml">
+ <Symbol name="swap_scaled_umbrella">
+  <Frame framenum="0" duration="5" image="swap_scaled_umbrella-0" w="90" h="344" x="-1.799999" y="-113.520004"/>
+  <Frame framenum="5" duration="3" image="swap_scaled_umbrella-6" w="118" h="344" x="5.900002" y="-129.000000"/>
+ </Symbol>
+ <Symbol name="grass">
+  <Frame framenum="0" duration="1" image="grass-0" w="70" h="26" x="0.000000" y="0.000000"/>
+ </Symbol>
+ <Symbol name="swap_scaled_umbrella_open">
+  <Frame framenum="0" duration="8" image="swap_scaled_umbrella_open-0" w="420" h="455" x="-10.000214" y="-197.050034"/>
+ </Symbol>
 </Build>

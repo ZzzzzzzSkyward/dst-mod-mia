@@ -1,3 +1,175 @@
+local function inscinerator_ReticuleTarget()
+    return Vector3(ThePlayer.entity:LocalToWorldSpace(6.5, 0, 0)) -- this is for controller to get player face direction
+end
+
+local function inscinerator_ReticuleMouseTarget(inst, mousepos)
+    if mousepos ~= nil then
+        local x, y, z = inst.Transform:GetWorldPosition()
+        local dx = mousepos.x - x
+        local dz = mousepos.z - z
+        local l = dx * dx + dz * dz
+        if l <= 0 then return inst.components.reticule.targetpos end
+        l = 6.5 / math.sqrt(l)
+        return Vector3(x + dx * l, 0, z + dz * l)
+    end
+end
+
+local function inscinerator_ReticuleUpdate(inst, pos, reticule, ease, smoothing, dt)
+    local x, y, z = inst.Transform:GetWorldPosition()
+    reticule.Transform:SetPosition(x, 0, z)
+    local rot = -math.atan2(pos.z - z, pos.x - x) / DEGREES
+    if ease and dt ~= nil then
+        local rot0 = reticule.Transform:GetRotation()
+        local drot = rot - rot0
+        rot = Lerp((drot > 180 and rot0 + 360) or (drot < -180 and rot0 - 360) or rot0, rot, dt * smoothing)
+    end
+    reticule.Transform:SetRotation(rot)
+end
+
+local function BloomOrange(inst)
+    inst:AddLight()
+    --    inst.AnimState:SetMultColour(204/255,131/255,57/255,1)
+    inst.Light:SetColour(219 / 255, 168 / 255, 117 / 255, 1)
+    inst.Light:SetRadius(1)
+    inst.Light:SetFalloff(0.5)
+    inst.Light:SetIntensity(1)
+end
+local function makefx(t)
+    local function startfx(proxy)
+        -- print ("SPAWN", debugstack())
+        local inst = CreateEntity(t.name)
+
+        inst.entity:AddTransform()
+        inst.entity:AddAnimState()
+
+        local parent = proxy.entity:GetParent()
+        if parent ~= nil then inst.entity:SetParent(parent.entity) end
+
+        if t.nameoverride == nil and t.description == nil then inst:AddTag("FX") end
+        --[[Non-networked entity]]
+        inst.entity:SetCanSleep(false)
+        inst.persists = false
+
+        inst.Transform:SetFromProxy(proxy.GUID)
+
+        if t.autorotate and parent ~= nil then inst.Transform:SetRotation(parent.Transform:GetRotation()) end
+
+        if t.sound ~= nil then
+            inst.entity:AddSoundEmitter()
+            if t.update_while_paused then
+                inst:DoStaticTaskInTime(t.sounddelay or 0, PlaySound, t.sound)
+            else
+                inst:DoTaskInTime(t.sounddelay or 0, PlaySound, t.sound)
+            end
+        end
+
+        if t.sound2 ~= nil then
+            if inst.SoundEmitter == nil then inst.entity:AddSoundEmitter() end
+            if t.update_while_paused then
+                inst:DoStaticTaskInTime(t.sounddelay2 or 0, PlaySound, t.sound2)
+            else
+                inst:DoTaskInTime(t.sounddelay2 or 0, PlaySound, t.sound2)
+            end
+        end
+
+        inst.AnimState:SetBank(t.bank)
+        inst.AnimState:SetBuild(t.build)
+        inst.AnimState:PlayAnimation(FunctionOrValue(t.anim)) -- THIS IS A CLIENT SIDE FUNCTION
+        if t.update_while_paused then inst.AnimState:AnimateWhilePaused(true) end
+        if t.tint ~= nil then
+            inst.AnimState:SetMultColour(t.tint.x, t.tint.y, t.tint.z, t.tintalpha or 1)
+        elseif t.tintalpha ~= nil then
+            inst.AnimState:SetMultColour(t.tintalpha, t.tintalpha, t.tintalpha, t.tintalpha)
+        end
+        -- print(inst.AnimState:GetMultColour())
+        if t.transform ~= nil then inst.AnimState:SetScale(t.transform:Get()) end
+
+        if t.nameoverride ~= nil then
+            if inst.components.inspectable == nil then inst:AddComponent("inspectable") end
+            inst.components.inspectable.nameoverride = t.nameoverride
+            inst.name = t.nameoverride
+        end
+
+        if t.description ~= nil then
+            if inst.components.inspectable == nil then inst:AddComponent("inspectable") end
+            inst.components.inspectable.descriptionfn = t.description
+        end
+
+        if t.bloom then inst.AnimState:SetBloomEffectHandle("shaders/anim.ksh") end
+
+        if t.animqueue then
+            inst:ListenForEvent("animqueueover", inst.Remove)
+        else
+            inst:ListenForEvent("animover", inst.Remove)
+        end
+
+        if t.fn ~= nil then
+            if t.fntime ~= nil then
+                if t.update_while_paused then
+                    inst:DoStaticTaskInTime(t.fntime, t.fn)
+                else
+                    inst:DoTaskInTime(t.fntime, t.fn)
+                end
+            else
+                t.fn(inst)
+            end
+        end
+    end
+
+    local function fn()
+        local inst = CreateEntity()
+
+        inst.entity:AddTransform()
+        inst.entity:AddNetwork()
+
+        -- Dedicated server does not need to spawn the local fx
+        if not TheNet:IsDedicated() then
+            -- Delay one frame so that we are positioned properly before starting the effect
+            -- or in case we are about to be removed
+            if t.update_while_paused then
+                inst:DoStaticTaskInTime(0, startfx, inst)
+            else
+                inst:DoTaskInTime(0, startfx, inst)
+            end
+        end
+
+        if t.twofaced then
+            inst.Transform:SetTwoFaced()
+        elseif t.eightfaced then
+            inst.Transform:SetEightFaced()
+        elseif t.sixfaced then
+            inst.Transform:SetSixFaced()
+        elseif not t.nofaced then
+            inst.Transform:SetFourFaced()
+        end
+
+        inst:AddTag("FX")
+
+        inst.entity:SetPristine()
+
+        if not TheWorld.ismastersim then return inst end
+
+        inst.persists = false
+        inst:DoTaskInTime(1, inst.Remove)
+
+        return inst
+    end
+
+    return fn
+end
+local glow_fx = makefx({
+    name = "inscinerator_glowfx",
+    bank = "",
+    build = "",
+    anim = "",
+    fn = function(inst)
+        BloomOrange(inst)
+    end
+})
+local fireball_hit_fx = function()
+    return Prefabs.fireball_hit_fx.fn()
+end
+
 local function blaze_reap_onattack(inst, owner, target)
     if target.components.health and not inst.components.fueled:IsEmpty() then
         if owner:HasTag("mia_reg") then
@@ -65,19 +237,43 @@ local function sun_sphere_stop(inst)
     inst.components.updatelooper:RemoveOnUpdateFn(sun_sphere_diminish)
     if inst.components.fueled then inst.components.fueled:StopConsuming() end
 end
+local lookupval = nil
+local lookupsize = nil
+local function CalcMult(size, mult)
+    if size == lookupsize then return lookupval end
+    local v = 1
+    for i = 1, size do v = v * mult end
+    lookupsize = size
+    lookupval = v
+    return v
+end
 local function scaled_umbrella_transform(inst)
     if inst.opened then
         inst.components.weapon:SetDamage(TUNING.SCALED_UMBRELLA_DAMAGE_WEAPON)
         inst.components.armor:SetAbsorption(0)
+        inst.components.insulator:SetInsulation(0)
         inst:AddTag("jab")
+        inst.handsymbol = "swap_scaled_umbrella"
+        inst.components.inventoryitem.imagename = "scaled_umbrella"
+        inst.components.waterproofer:SetEffectiveness(0)
         -- #TODO hack GetAbsorption
     else
         inst:RemoveTag("jab")
         inst.components.armor:SetAbsorption(TUNING.SCALED_UMBRELLA_ARMOR)
         inst.components.weapon:SetDamage(TUNING.SCALED_UMBRELLA_DAMAGE)
+        inst.components.insulator:SetInsulation(TUNING.SCALED_UMBRELLA_INSULATION)
+        inst.handsymbol = "swap_scaled_umbrella_open"
+        inst.components.inventoryitem.imagename = "scaled_umbrella_open"
+        inst.components.waterproofer:SetEffectiveness(TUNING.SCALED_UMBRELLA_WATERPROOF)
+    end
+    if inst.components.equippable:IsEquipped() then
+        local owner = inst.components.inventoryitem.owner
+        if owner then
+            inst.components.equippable:Unequip(owner)
+            inst.components.equippable:Equip(owner)
+        end
     end
     inst.opened = not inst.opened
-    inst.components.useableitem.inuse = false
 end
 local function scaled_umbrella_onload(inst, data)
     inst.opened = data and data.opened
@@ -91,17 +287,21 @@ local function scaled_umbrella_getstatus(inst)
     local opened = inst.opened
     if opened then return "OPEN" end
 end
+local prushka_cooldown = 3
+local prushka_activate_range = 40 -- consider change this into a component if more white whistle are added. but currently we only have prushka
 local function prushka_activate(inst)
     local owner = inst.components.inventoryitem.owner
     if not owner then return end
-    inst:DoTaskInTime(3, function()
+    inst:DoTaskInTime(prushka_cooldown, function()
         inst.components.useableitem.inuse = false
     end)
     local talker = owner.components.talker
     if owner.prefab == "riko" then
         local x, y, z = owner.Transform:GetWorldPosition()
-        local ents = TheSim:FindEntities(x, y, z, 40, {"player", "reg"})
-        for i, reg in ipairs(ents) do if reg.TransformToWhite then reg:TransformToWhite(inst, owner) end end
+        local ents = TheSim:FindEntities(x, y, z, prushka_activate_range, {"player", "reg"})
+        for i, reg in ipairs(ents) do
+            if reg.components.relicactivatable then reg.components.relicactivatable:Activate(inst) end
+        end
         if talker then
             local str = GetString(owner, "ANNOUNCE_REVERBERATE")
             talker:Say(str)
@@ -223,6 +423,13 @@ local defs = {
         should_sink = true,
         postinit = function(inst)
             inst:AddComponent("submersible")
+            inst:AddComponent("relicequip")
+            inst:AddComponent("stackable")
+            inst:ListenForEvent("stacksizechange", function(inst, data)
+                inst.components.relicequip.damagemult = CalcMult(data.stacksize, TUNING.THOUSAND_PIN_DAMAGE_MULT)
+            end)
+            inst.components.stackable:SetStackSize(TUNING.THOUSAND_PIN_STACKSIZE)
+            inst.components.relicequip.equipslot = RELICSLOTS.SKIN
         end,
         desc_en = [[Thousand-Men Pins are Artifacts said to grant their user the strength of a thousand men with a single pin when thrust into the skin. Its auction name is Health Junkie]]
     },
@@ -269,7 +476,7 @@ local defs = {
         build = "scaled_umbrella",
         slot = "hand",
         anim = "idle",
-        tags = {"nopunch", "umbrella", "pointy", "jab", "weapon"},
+        tags = {"umbrella", "pointy", "jab", "weapon"},
         floatsymbol = "swap_scaled_umbrella",
         postinit = function(inst)
             inst.handsymbol = "swap_scaled_umbrella"
@@ -292,11 +499,15 @@ local defs = {
             inst.components.armor:InitCondition(TUNING.SCALED_UMBRELLA_DURABILITY, 0)
             inst:AddComponent("useableitem")
             inst.components.useableitem:SetOnUseFn(scaled_umbrella_transform)
-            -- protect
-            inst.components.useableitem.inuse = true
-            -- inst.OnLoad = scaled_umbrella_onload
-            -- inst.OnSave = scaled_umbrella_onsave
-            ---------------------
+            -- hack
+            local old = inst.components.useableitem.StartUsingItem
+            function inst.components.useableitem:StartUsingItem(...)
+                local ret = {old(self, ...)}
+                self.inuse = false
+                return unpack(ret)
+            end
+            inst.OnLoad = scaled_umbrella_onload
+            inst.OnSave = scaled_umbrella_onsave
             inst:AddComponent("waterproofer")
             inst.components.waterproofer:SetEffectiveness(0)
             inst:AddComponent("insulator")
@@ -343,20 +554,103 @@ It was used by Riko and Reg to distract the attention of creatures away from the
 It was eaten by an aquatic creature in the Sea of Corpses.
         ]]
     },
-    -- inscinerator={
-    -- desc=[[火葬炮]]
-    -- }
+    inscinerator = {
+        assets = {},
+        fn = function(inst)
+            local inst = CreateEntity()
+            inst.entity:AddTransform()
+            inst.entity:AddNetwork() -- because of aoetargeting
+            inst.entity:SetPristine()
+            inst:AddTag("NOBLOCK")
+            inst:AddTag("NOCLICK")
+            inst:AddTag("INLIMBO")
+            -- direction indicator
+            inst:AddComponent("aoetargeting")
+            inst.components.aoetargeting:SetAlwaysValid(true)
+            inst.components.aoetargeting.reticule.reticuleprefab = "reticulelongmulti"
+            inst.components.aoetargeting.reticule.pingprefab = "reticulelongmultiping"
+            inst.components.aoetargeting.reticule.targetfn = inscinerator_ReticuleTarget
+            inst.components.aoetargeting.reticule.mousetargetfn = inscinerator_ReticuleMouseTarget
+            inst.components.aoetargeting.reticule.updatepositionfn = inscinerator_ReticuleUpdate
+            inst.components.aoetargeting.reticule.validcolour = {1, .75, 0, 1}
+            inst.components.aoetargeting.reticule.invalidcolour = {.5, 0, 0, 1}
+            inst.components.aoetargeting.reticule.ease = true
+            inst.components.aoetargeting.reticule.mouseenabled = true
+            -- hack to bypass non inventoryitem
+            function inst.components.aoetargeting:StartTargeting()
+                if not inst:IsValid() then return end
+                local r = inst.components.reticule
+                if not r then
+                    inst:AddComponent("reticule")
+                    r = inst.components.reticule
+                    for k, v in pairs(self.reticule) do r[k] = v end
+                end
+                if r.reticule then return end
+                if r.mouseenabled or TheInput:ControllerAttached() then
+                    r:CreateReticule()
+                    local player = inst.entity:GetParent()
+                    if player then
+                        local pc = player.components.playercontroller
+                        if pc then
+                            local rr = pc.reticule
+                            if rr ~= r then
+                                if rr then rr:DestroyReticule() end
+                                pc.reticule = r
+                            end
+                        end
+                    end
+                end
+            end
+            function inst.components.aoetargeting:StopTargeting()
+                local reticule = self.inst.components.reticule
+                if reticule then
+                    reticule:DestroyReticule()
+                    self.inst:RemoveComponent("reticule")
+                end
+            end
+            inst.entity:SetPristine()
+            if not TheWorld.ismastersim then return inst end
+            inst.is_mia_artifact = true
+            -- "red glow glimmer unstable fx"
+            -- simplified
+            inst.instant_fire_fx = fireball_hit_fx
+
+            -- below are not realized fx
+            inst.heat_glow = glow_fx
+            inst.energy_absorb = "sparks flying into fx"
+            inst.emit_before = "electric shock fx"
+            inst.emit_stream = {"electricity ring around fx", "particle send fx", "unstable x-ray fx"}
+            inst.ember_after = "spark scatter fx"
+            inst.steam_after = "steam fx"
+            -- other.burnt = "?"
+            -- ground.burnt = "meteor ground fx"
+            return inst
+        end,
+
+        desc = [[火葬炮]]
+    },
     fruitful_orb = {
+        disable = true,
         assets = {Asset("ANIM", "anim/fruitful_orb.zip")},
         bank = "fruitful_orb",
         build = "fruitful_orb",
         light = {enable = false, radius = 0.5, intensity = .2, falloff = 1},
         anim = "idle",
         postinit = function(inst)
-            inst:ListenForEvent("mia_activate", function()
+            -- inst.AnimState:SetMultColour(1,1,1,0.8)--#TODO change anim
+            inst:AddComponent("relicactivatable")
+            inst.components.relicactivatable:SetOnActivate(function()
                 inst.Light:Enable(true)
+                inst.Light:SetRadius(0.5)
+                inst.Light:SetIntensity(.2)
+                inst.Light:SetFalloff(1)
+                inst.AnimState:SetHaunted(true)
                 if inst._deactivatetask then inst._deactivatetask:Cancel() end
                 inst._deactivatetask = inst:DoTaskInTime(10, inst.deactivate)
+            end)
+            inst.components.relicactivatable:SetOnDeactivate(function()
+                inst.Light:Enable(false)
+                inst.AnimState:SetHaunted(false)
             end)
             inst.deactivate = sun_sphere_charge -- #TODO
         end,
@@ -368,12 +662,14 @@ It was eaten by an aquatic creature in the Sea of Corpses.
         bank = "artifact_prushka",
         build = "artifact_prushka",
         anim = "idle",
+        -- tags = {"irreplacable"},
         assets = {Asset("ANIM", "anim/artifact_prushka.zip")},
         postinit = function(inst)
             inst.build = "artifact_prushka"
             inst.bodysymbol = "swap_artifact_prushka"
             inst:AddComponent("useableitem")
             inst.components.useableitem:SetOnUseFn(prushka_activate)
+            -- inst.components.equippable.restrictedtag = "riko"--others can equip her but nothing happens
         end
     }
 }

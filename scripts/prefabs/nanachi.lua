@@ -35,16 +35,27 @@ local function forcefast(inst)
     inst.components.locomotor.runspeed = TUNING.WILSON_RUN_SPEED * TUNING.NANACHI_SPEED_MULTIPLIER
 end
 local function GetPointSpecialActions(inst, pos, useitem, right)
-    if right then
-        local rider = inst.replica.rider
-        if rider == nil or not rider:IsRiding() then return {ACTIONS.DODGE} end
-    end
-    return {}
+    local ret = {}
+    if not right then return ret end
+
+    local rider = inst.replica.rider
+    if rider and rider:IsRiding() then return ret end
+    local distsq = inst:GetDistanceSqToPoint(pos)
+    if distsq < 4 or distsq > 1600 then return ret end
+    if useitem then return ret end
+    return {ACTIONS.DODGE}
 end
 
 local function OnSetOwner(inst)
     if inst.components.playeractionpicker ~= nil then
-        inst.components.playeractionpicker.pointspecialactionsfn = GetPointSpecialActions
+        local old = inst.components.playeractionpicker.pointspecialactionsfn
+        if not old then
+            inst.components.playeractionpicker.pointspecialactionsfn = GetPointSpecialActions
+        else
+            inst.components.playeractionpicker.pointspecialactionsfn = function(...)
+                return TableUnion(GetPointSpecialActions(...), old(...))
+            end
+        end
     end
 end
 

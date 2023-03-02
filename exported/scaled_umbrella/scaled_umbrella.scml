@@ -7,6 +7,9 @@
     <folder id="1" name="grass">
         <file id="0" name="grass/grass-0.png" width="70" height="26" pivot_x="0.5" pivot_y="0.5"/>
     </folder>
+    <folder id="2" name="swap_scaled_umbrella_open">
+        <file id="0" name="swap_scaled_umbrella_open/swap_scaled_umbrella_open-0.png" width="394" height="455" pivot_x="0.436548" pivot_y="0.076923"/>
+    </folder>
     <entity id="0" name="scaled_umbrella">
         <obj_info name="scaled_umbrella_swap_scaled_umbrella-0" realname="swap_scaled_umbrella-0" type="sprite">
             <frames>

@@ -3,11 +3,12 @@ local assets = {Asset("ANIM", "anim/reg.zip"), Asset("ANIM", "anim/ghost_reg_bui
 local prefabs = {}
 local start_inv = TUNING.GAMEMODE_STARTING_ITEMS.DEFAULT.REG or {}
 for i, v in ipairs(start_inv) do table.insert(prefabs, v) end
-local function onload(inst, data)
-    if inst.components and inst.components.exp then inst.components.exp:ApplyUpgrades() end
-end
-local function oneat(inst, food)
-    if food:HasTag("rikofood") then inst.components.exp:DoDelta(1) end
+local targetmaxtime = 10
+local targetmaxcount = 10
+local lightning_counter = {}
+local function record_lightning(inst)
+    local t = GetTime()
+    if #lightning_counter >= targetmaxcount then end
 end
 local function onlightingstrike(inst)
     local headitem = nil
@@ -29,6 +30,47 @@ local function onlightingstrike(inst)
         end
     end
 end
+local function TrySpawnInscinerator(inst)
+    inst.chargeleft = inst.chargeleft or TUNING.REG_INSCINATOR_MAX_USE
+    inst.inscinerator = inst.inscinerator or SpawnPrefab("inscinerator")
+    inst.inscinerator.entity:SetParent(inst.entity)
+end
+local function onload(inst, data)
+    -- if this is considered a worldly data then move it to TheWorld.abyss
+    if not data then return end
+    inst.chargeleft = data.chargeleft
+    inst.inscinerator = data.inscinerator and SpawnSaveRecord(data.inscinerator) or SpawnPrefab("inscinerator")
+end
+local function onsave(inst, data)
+    data.chargeleft = inst.chargeleft
+    data.inscinerator = inst.inscinerator and inst.inscinerator:GetSaveRecord()
+end
+-- add action for inspection button
+local function hack_button(inst, self)
+    local old = self.OnMouseButton
+    function self:OnMouseButton(control, down, ...)
+        if down then return old(self, control, down, ...) end
+        if control == MOUSEBUTTON_RIGHT then
+            if inst.components.reticule then
+                inst:PushEvent("aoetargetingstop", {target = inst.components.reticule.targetpos})
+                inst.components.aoetargeting:StopTargeting()
+            else
+                inst.components.aoetargeting:StartTargeting()
+                inst:PushEvent("aoetargetingstart")
+            end
+        else
+            return old(self, control, down, ...)
+        end
+    end
+end
+local function hudpostinit(inst)
+    local success, inspect = pcall(function(inst)
+        return inst.HUD.controls.inv.inspectcontrol
+    end, inst)
+    if not success then return end
+    if not inst.inscinerator then return end
+    hack_button(inst.inscinerator, inspect)
+end
 local common_postinit = function(inst)
     inst.MiniMapEntity:SetIcon("reg.png")
     inst:AddTag("mia_reg")
@@ -36,7 +78,10 @@ local common_postinit = function(inst)
     inst:AddTag("soulless") -- non human representation
     inst:AddTag("electricdamageimmune")
     inst:RemoveTag("poisonable")
-    if TheNet:GetServerGameMode() == "quagmire" then inst:AddTag("quagmire_grillmaster") end
+    -- #TODO add a hud
+    -- inst.hud=
+    -- #TODO rethink about forge and gorge
+    -- if TheNet:GetServerGameMode() == "quagmire" then inst:AddTag("quagmire_grillmaster") end
 end
 local master_postinit = function(inst)
     inst.starting_inventory = start_inv
@@ -49,7 +94,6 @@ local master_postinit = function(inst)
     inst.components.combat.damagemultiplier = TUNING.REG_DAMAGEMULTIPLIER
     inst.components.health:SetAbsorptionAmount(TUNING.REG_ABSORPTION)
     inst.components.health.fire_damage_scale = 0
-    inst.components.eater:SetOnEatFn(oneat)
     inst.components.playerlightningtarget:SetHitChance(1)
     inst.components.playerlightningtarget:SetOnStrikeFn(onlightingstrike)
     inst.components.hunger.hungerrate = TUNING.REG_HUNGERRATE
@@ -57,8 +101,10 @@ local master_postinit = function(inst)
     inst.components.temperature.inherentsummerinsulation = -TUNING.INSULATION_MED
     inst.components.temperature:SetFreezingHurtRate(TUNING.REG_FREEZE_DAMAGE_RATE)
     inst.components.temperature:SetOverheatHurtRate(TUNING.REG_HEAT_DAMAGE_RATE)
-    inst.regweapon = SpawnPrefab("regweapon")
-    inst.regweapon.entity:SetParent(inst.entity)
     inst.OnLoad = onload
+    inst.OnSave = onsave
+    -- spawn custom relic inscinerator
+    inst:DoTaskInTime(0, TrySpawnInscinerator)
+    inst:DoTaskInTime(10, hudpostinit) -- try to postinit this
 end
 return MakePlayerCharacter("reg", prefabs, assets, common_postinit, master_postinit, start_inv)

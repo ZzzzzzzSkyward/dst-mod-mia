@@ -3,18 +3,23 @@ local assets = {
     Asset("SCRIPT", "scripts/prefabs/player_common.lua"),
     Asset("ANIM", "anim/riko.zip"),
     Asset("SOUND", "sound/willow.fsb"),
-    Asset("ANIM", "anim/ghost_riko_build.zip")
+    Asset("ANIM", "anim/ghost_riko_build.zip"),
+    Asset("ANIM", "anim/player_idles_warly.zip")
 }
 local prefabs = {}
 local start_inv = TUNING.GAMEMODE_STARTING_ITEMS.DEFAULT.RIKO or {}
 for i, v in ipairs(start_inv) do table.insert(prefabs, v) end
 local common_postinit = function(inst)
     inst.MiniMapEntity:SetIcon("riko.png")
-    inst:AddTag("riko")
+    inst:AddTag("riko") -- referenced by inventoryitem to specify restrictedtag
     inst:AddTag("soulless") -- non human representation
+    inst:AddTag("expertchef") -- cook faster on fire
+    inst:AddTag("nowormholesanityloss") -- from walter
+    inst.AnimState:AddOverrideBuild("player_idles_warly") -- warly idle
     if TheNet:GetServerGameMode() == "quagmire" then inst:AddTag("quagmire_shopper") end
 end
 local master_postinit = function(inst)
+    inst.customidleanim = "idle_warly"
     inst.starting_inventory = start_inv
     inst.soundsname = "willow"
     inst.components.health:SetMaxHealth(TUNING.RIKO_HEALTH)

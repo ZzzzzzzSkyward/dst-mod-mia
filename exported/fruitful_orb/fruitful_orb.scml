@@ -2,6 +2,7 @@
 <spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r11">
     <folder id="0" name="fruitful_orb">
         <file id="0" name="fruitful_orb/fruitful_orb-0.png" width="140" height="165" pivot_x="0.507143" pivot_y="0.242424"/>
+        <file id="1" name="fruitful_orb/fruitful_orb-1.png" width="140" height="165" pivot_x="0.507143" pivot_y="0.242424"/>
     </folder>
     <folder id="1" name="shadow">
         <file id="0" name="shadow/shadow-0.png" width="193" height="64" pivot_x="0.471503" pivot_y="0.15625"/>
@@ -9,7 +10,7 @@
     <entity id="0" name="fruitful_orb">
         <obj_info name="fruitful_orb_fruitful_orb-0" realname="fruitful_orb-0" type="sprite">
             <frames>
-                <i folder="0" file="0"/>
+                <i folder="0" file="1"/>
             </frames>
         </obj_info>
         <obj_info name="fruitful_orb_shadow-0" realname="shadow-0" type="sprite">
@@ -20,8 +21,8 @@
         <animation id="0" name="idle" length="234" interval="100">
             <mainline>
                 <key id="0">
-                    <object_ref id="0" name="shadow-0" folder="1" file="0" abs_x="-46.058257" abs_y="36.973423" abs_angle="0" abs_scale_x="0.463995" abs_scale_y="1" abs_a="1" timeline="1" key="0" z_index="0"/>
-                    <object_ref id="1" name="fruitful_orb-0" folder="0" file="0" abs_x="-42.100167" abs_y="74.211165" abs_angle="0" abs_scale_x="0.6" abs_scale_y="0.6" abs_a="1" timeline="0" key="0" z_index="1"/>
+                    <object_ref id="0" name="shadow-0" folder="1" file="0" abs_x="-46.058295" abs_y="36.973423" abs_angle="0" abs_scale_x="0.463995" abs_scale_y="1" abs_a="1" timeline="1" key="0" z_index="0"/>
+                    <object_ref id="1" name="fruitful_orb-0" folder="0" file="1" abs_x="-42.100179" abs_y="74.211165" abs_angle="0" abs_scale_x="0.6" abs_scale_y="0.6" abs_a="1" timeline="0" key="0" z_index="1"/>
                 </key>
                 <key id="1" time="34">
                     <object_ref id="0" timeline="1" key="0" z_index="0"/>
@@ -54,10 +55,10 @@
             </mainline>
             <timeline id="0" obj="0" name="fruitful_orb-0">
                 <key id="0" spin="0">
-                    <object folder="0" file="0" x="0.499833" y="-0.788859" angle="0" scale_x="0.6" scale_y="0.6"/>
+                    <object folder="0" file="1" x="0.499833" y="-0.788859" angle="0" scale_x="0.6" scale_y="0.6"/>
                 </key>
                 <key id="1" time="234" spin="0">
-                    <object folder="0" file="0" x="-0.7214" y="6.54332" angle="0"/>
+                    <object folder="0" file="1" x="0.499833" y="-0.788859" angle="0" scale_x="0.6" scale_y="0.6"/>
                 </key>
             </timeline>
             <timeline id="1" obj="1" name="shadow-0">
@@ -65,7 +66,7 @@
                     <object folder="1" file="0" x="-3.834713" y="-17.026577" angle="0" scale_x="0.463995"/>
                 </key>
                 <key id="1" time="234" spin="0">
-                    <object folder="1" file="0" x="-4.577287" y="-19.208202" angle="0" scale_x="0.826376"/>
+                    <object folder="1" file="0" x="-3.834713" y="-17.026577" angle="0" scale_x="0.463995"/>
                 </key>
             </timeline>
         </animation>

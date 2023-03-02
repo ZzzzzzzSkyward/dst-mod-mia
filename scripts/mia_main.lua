@@ -1,3 +1,6 @@
+RELICSLOTS = RELICSLOTS or {SKIN = "SKIN", EYE = "EYE", ARM = "ARM", BODY = "BODY"}
+GLOBAL.RELICSLOTS = RELICSLOTS
+
 local delicious_abyss_dishes = dig("foods")
 for k, recipe in pairs(delicious_abyss_dishes) do AddCookerRecipe("rikocookpot", recipe) end
 modimport("scripts/mia_recipes.lua")
@@ -21,33 +24,6 @@ containers.params.riko_sack = containers.params.krampus_sack or {
     openlimit = 1
 }
 containers.params.rikocookpot = containers.params.portablecookpot
-local xz_exp = require("widgets/xz_exp")
-local function AddExp(self)
-    if self.owner and self.owner:HasTag("mia_reg") then
-        self.xz_exp = self.status:AddChild(xz_exp(self.owner))
-        self.xz_exp:SetPosition(-80, -40, 0)
-    end
-end
-AddClassPostConstruct("widgets/controls", AddExp)
-local function onupdate(inst)
-    inst.components.health:SetMaxHealth(150 + inst.components.exp.levelpoint * 50)
-    inst.components.hunger:SetMax(100 + inst.components.exp.levelpoint * 25)
-    inst.components.sanity:SetMax(100 + inst.components.exp.levelpoint * 25)
-    inst.components.combat.damagemultiplier = 1 + inst.components.exp.levelpoint * 0.25
-    inst.components.exp.maxtimepiont = inst.components.exp.levelpoint * 20 + 20
-end
-AddPlayerPostInit(function(inst)
-    if inst:HasTag("mia_reg") then
-        inst.exp_max = net_shortint(inst.GUID, "exp_max", "exp_maxdirty")
-        inst.exp_current = net_shortint(inst.GUID, "exp_current", "exp_currentdirty")
-        inst.exp_level = net_shortint(inst.GUID, "exp_level", "exp_leveldirty")
-        if TheWorld.ismastersim then
-            inst:AddComponent("exp")
-            inst.components.exp.updatefn = onupdate
-            inst.components.exp.maxlevel = 2
-        end
-    end
-end)
 FUELTYPE.POWER = "power"
 AddPrefabPostInit("gunpowder", function(inst)
     inst:AddComponent("fuel")
