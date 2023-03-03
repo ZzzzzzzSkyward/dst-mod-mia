@@ -5,6 +5,7 @@ local function init()
     for k, v in pairs(componentactions) do
         if v.type == "POINT" then
             AddPlayerPostInit(function(inst)
+                if inst.prefab ~= k then return end
                 inst:ListenForEvent("playeractivated", function(inst)
                     if inst == ThePlayer then
                         local ac = inst.components.playeractionpicker

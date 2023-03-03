@@ -9,6 +9,7 @@ local AOEProjectile = Class(function(self, inst)
     self.distance = 1
     self.interval = 1
     self.cannons = {}
+    self.enabled = true
 end, nil, {})
 function AOEProjectile:InitAttack(cannon, vec)
     table.insert(self.cannons, {cannon = cannon, vec = vec, pos = cannon:GetPosition(), time = GetTime()})
@@ -52,7 +53,7 @@ function AOEProjectile:SearchSingleTarget(data)
     return ret
 end
 function AOEProjectile:SearchAllTargets()
-    local cannons=self.cannons
+    local cannons = self.cannons
 
 end
 function AOEProjectile:CleanCannons()
@@ -100,5 +101,21 @@ function AOEProjectile:Stop()
         self.task:Cancel()
         self.task = nil
     end
+end
+-- export function
+function AOEProjectile:Launch(data)
+    if not self.enabled then return false, "DISABLED" end
+    local target, pos = data.target, data.pos
+    if type(target) == "table" then
+        if target.entity and target.entity:IsValid() then return self:LaunchToTarget(target) end
+    end
+    if pos then if type(pos) == "table" and pos.x then return self:LaunchToPos(pos) end end
+    return false
+end
+function AOEProjectile:LaunchToTarget(inst)
+    return true
+end
+function AOEProjectile:LaunchToPos(pos)
+    return false
 end
 return AOEProjectile

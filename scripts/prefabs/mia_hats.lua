@@ -203,6 +203,7 @@ local function reg2(inst)
     inst.components.waterproofer:SetEffectiveness(TUNING.WATERPROOFNESS_SMALL)
     inst:AddComponent("submersible")
     inst.components.inventoryitem:SetSinks(true)
+    inst.components.inventoryitem.keepondeath = true
 end
 local function makehat(a, b)
     return function()

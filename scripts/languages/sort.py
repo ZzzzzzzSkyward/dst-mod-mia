@@ -42,5 +42,5 @@ for file in dstfile:
             stringifyed.append(" = ".join(i))
         data="\n".join(stringifyed)
         data=bytes(data,encoding="utf-8")
-        with open(file+".lua","wb") as f:
+        with open(file,"wb") as f:
              f.write(data)

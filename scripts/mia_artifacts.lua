@@ -250,6 +250,7 @@ end
 local function scaled_umbrella_transform(inst)
     if inst.opened then
         inst.components.weapon:SetDamage(TUNING.SCALED_UMBRELLA_DAMAGE_WEAPON)
+        inst.components.weapon:SetRange(TUNING.SCALED_UMBRELLA_RANGE)
         inst.components.armor:SetAbsorption(0)
         inst.components.insulator:SetInsulation(0)
         inst:AddTag("jab")
@@ -262,6 +263,7 @@ local function scaled_umbrella_transform(inst)
         inst:RemoveTag("jab")
         inst.components.armor:SetAbsorption(TUNING.SCALED_UMBRELLA_ARMOR)
         inst.components.weapon:SetDamage(TUNING.SCALED_UMBRELLA_DAMAGE)
+        inst.components.weapon:SetRange(1)
         inst.components.insulator:SetInsulation(TUNING.SCALED_UMBRELLA_INSULATION)
         inst.handsymbol = "swap_scaled_umbrella_open"
         inst.components.inventoryitem.imagename = "scaled_umbrella_open"
@@ -580,24 +582,18 @@ It was eaten by an aquatic creature in the Sea of Corpses.
             inst.components.aoetargeting.reticule.mouseenabled = true
             -- hack to bypass non inventoryitem
             function inst.components.aoetargeting:StartTargeting()
-                p "1"
                 if not inst:IsValid() then return end
-                p "2"
                 local player = inst:GetParent() or ThePlayer
                 if not player then return end
-                p "3"
                 if player:HasTag("playerghost") then return end
-                p "4"
                 if player.replica.health:IsDead() then return end
                 local r = inst.components.reticule
                 if not r then
-                    p "5"
                     inst:AddComponent("reticule")
                     r = inst.components.reticule
                     for k, v in pairs(self.reticule) do r[k] = v end
                 end
                 if r.reticule then return end
-                p "6"
                 if r.mouseenabled or TheInput:ControllerAttached() then
                     --[[
                     if player then

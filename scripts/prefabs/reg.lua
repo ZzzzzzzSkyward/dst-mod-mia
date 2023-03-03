@@ -30,10 +30,21 @@ local function onlightingstrike(inst)
         end
     end
 end
+
+local function DisableInscinerator(inst)
+    if inst.inscinerator then inst.inscinerator.components.aoetargeting:StopTargeting() end
+end
+local function KillInscinerator(inst)
+    if inst.inscinerator then
+        inst.inscinerator.components.aoetargeting:StopTargeting()
+        inst.inscinerator:Remove()
+        inst.inscinerator = nil
+    end
+end
 local function TrySpawnInscinerator(inst)
     if inst.inscinerator then return end
     if not TheWorld.ismastersim then
-        local x, y, z = inst:GetPosition()
+        local x, y, z = inst.Transform:GetWorldPosition()
         local alreadyexist = TheSim:FindEntities(x, y, z, 1)
         for k, v in pairs(alreadyexist) do
             if v.prefab == "inscinerator" then
@@ -47,12 +58,20 @@ local function TrySpawnInscinerator(inst)
     inst.inscinerator = SpawnPrefab("inscinerator")
     inst.inscinerator.entity:SetParent(inst.entity)
     inst.inscinerator.Transform:SetPosition(0, 0, 0) -- force teleport to player
+    if inst.chargeleft <= 0 then
+        inst.chargeleft = 0
+        inst.inscinerator:AddTag("inscinerator_depleted")
+    end
 end
 local function onload(inst, data)
+    inst:ListenForEvent("death", DisableInscinerator)
+    inst:ListenForEvent("seamlessplayerswap", KillInscinerator)
     -- if this is considered a worldly data then move it to TheWorld.abyss
     if not data then return end
     inst.chargeleft = data.chargeleft
     inst.inscinerator = data.inscinerator and SpawnSaveRecord(data.inscinerator) or SpawnPrefab("inscinerator")
+    inst.inscinerator.entity:SetParent(inst.entity)
+    inst.inscinerator.Transform:SetPosition(0, 0, 0) -- force teleport to player
     if inst.chargeleft <= 0 then
         inst.chargeleft = 0
         inst.inscinerator:AddTag("inscinerator_depleted")

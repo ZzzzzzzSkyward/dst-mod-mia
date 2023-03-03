@@ -26,6 +26,7 @@ local function fn()
     if not TheWorld.ismastersim then return inst end
     inst:AddComponent("inspectable")
     inst:AddComponent("inventoryitem")
+    inst.components.inventoryitem.keepondeath = true
     inst:AddComponent("equippable")
     inst.components.equippable.equipslot = EQUIPSLOTS.BODY
     inst:AddComponent("insulator")

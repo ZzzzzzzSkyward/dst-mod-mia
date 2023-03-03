@@ -1,7 +1,8 @@
 STRINGS.ACTIONS.AOEPROJECTILE = "瞄准"
 STRINGS.ACTIONS.CANCELAOEPROJECTILE = "取消"
-STRINGS.ACTIONS.LAUNCHAOEPROJECTILE = "发射"
 STRINGS.ACTIONS.DODGE = "躲避"
+STRINGS.ACTIONS.LAUNCHAOEPROJECTILE = "发射"
+STRINGS.CHARACTERS.GENERIC.ACTIONFAIL.LAUNCHAOEPROJECTILE = {GENERIC = "无法发射", DISABLED = "发射已禁用"}
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.ABYSSWEAPON = ""
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.MITTY_BOTTLED = "米缇"
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.NANACHIHAT = "这是娜娜奇的帽子~"
@@ -20,21 +21,14 @@ STRINGS.CHARACTERS.GENERIC.DESCRIBE.RIKO_SACK = "好沉啊。。"
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.RIKO_SNACK = "孤儿院的节日料理。"
 STRINGS.CHARACTERS.NANACHI = require("languages/speech_nanachi_zh")
 STRINGS.CHARACTERS.REG = STRINGS.CHARACTERS.GENERIC
+STRINGS.CHARACTERS.REG.ACTIONFAIL.LAUNCHAOEPROJECTILE = {GENERIC = "无法发射",DISABLED = "啊，我忘记这个该怎么用了"}
 STRINGS.CHARACTERS.RIKO = STRINGS.CHARACTERS.GENERIC
 STRINGS.CHARACTER_ABOUTME.nanachi = ""
 STRINGS.CHARACTER_ABOUTME.reg = ""
 STRINGS.CHARACTER_ABOUTME.riko = ""
-STRINGS.CHARACTER_BIOS._riko = {
-    {title = "Birthday", desc = "Unknown"},
-    {title = "Favorite Food", desc = "Creamy Potato Purée"},
-    {
-        title = "The Voxola PR-76",
-        desc = "This radio, manufactured in 1919 by the Voxola Radio company of Sidney, Ohio. The radio offered revolutionary sound and reception quality for the time, and was promoted by an intense national marketing campaign. Very few units were actually produced, because the factory was destroyed in a fire only days after production began. Voxola founder Robert Wagstaff went missing the night of the fire, and the company declared bankruptcy soon thereafter."
-    }
-}
+STRINGS.CHARACTER_BIOS._riko = {{title = "Birthday", desc = "Unknown"},{title = "Favorite Food", desc = "Creamy Potato Purée"},{title = "The Voxola PR-76",desc = "This radio, manufactured in 1919 by the Voxola Radio company of Sidney, Ohio. The radio offered revolutionary sound and reception quality for the time, and was promoted by an intense national marketing campaign. Very few units were actually produced, because the factory was destroyed in a fire only days after production began. Voxola founder Robert Wagstaff went missing the night of the fire, and the company declared bankruptcy soon thereafter."}}
 STRINGS.CHARACTER_DESCRIPTIONS.nanachi = "*手感毛茸茸的\n*闻起来很香"
-STRINGS.CHARACTER_DESCRIPTIONS.reg =
-    "*失去记忆\n*钢铁般坚硬\n*强大的战斗能力\n*能在恶劣环境下生存"
+STRINGS.CHARACTER_DESCRIPTIONS.reg = "*失去记忆\n*钢铁般坚硬\n*强大的战斗能力\n*能在恶劣环境下生存"
 STRINGS.CHARACTER_DESCRIPTIONS.riko = "*精通厨艺\n*能制作一个大背包\n*不擅长战斗\n*憧憬冒险"
 STRINGS.CHARACTER_NAMES.nanachi = "娜娜奇"
 STRINGS.CHARACTER_NAMES.reg = "雷古"
