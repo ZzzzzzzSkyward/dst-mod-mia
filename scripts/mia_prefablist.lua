@@ -13,5 +13,6 @@ return {
     "reg",
     "mia_skins",
     "mia_artifacts",
-    "mia_equippable_artifacts"
+    "mia_equippable_artifacts",
+    "charcoal_sand"
 }

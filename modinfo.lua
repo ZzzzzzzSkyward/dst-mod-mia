@@ -52,13 +52,11 @@ translation = {
             language = "语言",
             author = "羽织Haori & 宵征, zzzzzzzs",
             unusable = "不可用",
-            attract = "吸引伙伴",
-            attract_hover = "娜娜奇是否吸引猪人",
             description = [[
 莉可，活泼而又好奇心旺盛的女孩子，是见习探窟家，梦想追上母亲，成为传说中的探窟家“白笛”。
 雷古，莉可在深渊里发现的，拥有和人类相似外形的机器人，失去了记忆。
 娜娜奇，来自深渊底部的迷之生物，毛茸茸的闻起来很香很香。]],
-            version = [[修耕地机]],
+            version = [[修改数值和特点]],
             ["Accord to the game"] = "跟随游戏设置",
             ["Set Language"] = "设置语言",
             Keybinds = "按键绑定",
@@ -78,8 +76,7 @@ translation = {
         dict = {
             name = name,
             description = description,
-            attract_hover = "Nanachi will/won't attract pigman.",
-            version = [[fix bug]],
+            version = [[Change stats and perks.]],
             complement_hover = "Give Riko's starting items if they no longer exist in the world."
         },
         translateFunction = function(key)

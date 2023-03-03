@@ -3,13 +3,15 @@ local foods = dig("foods")
 local atlas = resolvefilepath("images/mia_inventoryimages.xml")
 local invimages = {
     "mitty_bottled",
-    "nanachihat",
     "nanachitent",
+    "riko_sack",
     "regcloak",
+    "nanachihat",
     "reghat",
-    "rikocookpot_item",
     "rikohat",
-    "scaled_umbrella_open"
+    "rikocookpot_item",
+    "scaled_umbrella_open",
+    "charcoal_sand"
 }
 for k, v in pairs(artifacts) do table.insert(invimages, k) end
 for k, v in pairs(foods) do table.insert(invimages, k) end

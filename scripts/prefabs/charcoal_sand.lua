@@ -14,7 +14,7 @@ local function fn()
     inst.AnimState:PlayAnimation("idle")
 
     inst:AddTag("molebait")
-
+    -- #TODO water anim
     MakeInventoryFloatable(inst, "med", 0.05, 0.6)
 
     inst.entity:SetPristine()
