@@ -11,7 +11,8 @@ local foods = {
         hunger = 62.5,
         perishtime = 15,
         sanity = 5,
-        cooktime = .5
+        cooktime = .5,
+        str = "莉可爆弹"
     },
     riko_dashi = {
         test = function(cooker, names, tags)
@@ -24,7 +25,8 @@ local foods = {
         hunger = 37.5,
         perishtime = 6,
         sanity = 33,
-        cooktime = 2
+        cooktime = 2,
+        str = "莉可汤"
     },
     riko_grill = {
         test = function(cooker, names, tags)
@@ -37,7 +39,8 @@ local foods = {
         hunger = 37.5,
         perishtime = 9,
         sanity = 5,
-        cooktime = .25
+        cooktime = .25,
+        str = "莉可石板烧"
     },
     riko_friedfish = {
         test = function(cooker, names, tags)
@@ -51,7 +54,8 @@ local foods = {
         hunger = 50,
         perishtime = 7,
         sanity = 15,
-        cooktime = 2
+        cooktime = 2,
+        str = "煎炸岩辉鳟" -- ???
     },
     riko_snack = {
         test = function(cooker, names, tags)
@@ -64,8 +68,12 @@ local foods = {
         hunger = 12.5,
         perishtime = 8,
         sanity = 50,
-        cooktime = 2
+        cooktime = 2,
+        str = "莉可小碟"
     },
+    riko_sashimi = {disabled = true, str = "莉可刺身"},
+    riko_half_hatched_egg = {disabled = true, str = "莉可半孵化蜥蛋烧"},
+    riko_meat_pot = {disabled = true, str = "莉可肉锅"},
     -- nanachi
     nanachi_soup = {
         test = function(cooker, names, tags)
@@ -85,12 +93,15 @@ local foods = {
             if eater and eater:IsValid() and eater.components.domesticatable then
                 eater.components.domesticatable:DeltaDomestication(0.05)
             end
-        end
-    }
+        end,
+        str = "奈落炖锅"
+    },
+    -- mitty_egg_rice={}
     -- belaf
-    -- mitty_cupped
+    mitty_tea = {disabled = true, str = "米蒂奶茶"}
 }
 for k, v in pairs(foods) do
+    if v.disabled then foods[k] = nil end
     v.name = k
     v.weight = v.weight or 1
     v.priority = v.priority or 0

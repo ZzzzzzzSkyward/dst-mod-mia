@@ -45,6 +45,10 @@ do
         lang = "en"
     else
     end
+    function rand(t)
+        local l = #t
+        return t[math.random(1, l)]
+    end
     modimport("scripts/languages/mia_" .. lang .. ".lua")
     if lang ~= "en" then
         AddPrefabPostInit("nanachi", function(inst)

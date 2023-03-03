@@ -110,13 +110,3 @@ AddStategraphState("wilson_client", State {
         inst.entity:SetIsPredictingMovement(true)
     end
 })
-local old = STRINGS.ACTIONS.DODGE
-AddAction("DODGE", "Dodge", function(act, data)
-    act.doer:PushEvent("redirect_locomote", {pos = act.pos or Vector3(act.target.Transform:GetWorldPosition())})
-    return true
-end)
-
-ACTIONS.DODGE.distance = math.huge
-ACTIONS.DODGE.instant = true
-
-STRINGS.ACTIONS.DODGE = old or STRINGS.ACTIONS.DODGE

@@ -11,11 +11,28 @@ for file in dstfile:
              data=data.split("\n")
         print("sorting",file)
         newdata=[]
-        for i in data:
-            i=i.strip()
-            if i=="":
+        pt=0
+        for idt,st in enumerate(data):
+            st=st.strip()
+            if pt>idt:
                 continue
-            newdata.append(i.split("="))
+            if len(st)==0:
+                continue
+            if st[len(st)-1] not in {"{","="}:
+                newdata.append(st.split("="))
+                continue
+            idt+=1
+            tid=idt
+            if idt>=len(data):
+                continue
+            while data[idt][:7]!="STRINGS":
+                print(tid,idt)
+                st+=data[idt].strip()
+                idt+=1
+                if idt>=len(data):
+                    break
+            newdata.append(st.split("="))
+            pt=idt
         for i in newdata:
             for j in range(len(i)):
                 i[j]=i[j].strip()
@@ -25,5 +42,5 @@ for file in dstfile:
             stringifyed.append(" = ".join(i))
         data="\n".join(stringifyed)
         data=bytes(data,encoding="utf-8")
-        with open(file,"wb") as f:
+        with open(file+".lua","wb") as f:
              f.write(data)

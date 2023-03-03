@@ -31,21 +31,39 @@ local function onlightingstrike(inst)
     end
 end
 local function TrySpawnInscinerator(inst)
+    if inst.inscinerator then return end
+    if not TheWorld.ismastersim then
+        local x, y, z = inst:GetPosition()
+        local alreadyexist = TheSim:FindEntities(x, y, z, 1)
+        for k, v in pairs(alreadyexist) do
+            if v.prefab == "inscinerator" then
+                inst.inscinerator = v
+                return
+            end
+        end
+        return
+    end
     inst.chargeleft = inst.chargeleft or TUNING.REG_INSCINATOR_MAX_USE
-    inst.inscinerator = inst.inscinerator or SpawnPrefab("inscinerator")
+    inst.inscinerator = SpawnPrefab("inscinerator")
     inst.inscinerator.entity:SetParent(inst.entity)
+    inst.inscinerator.Transform:SetPosition(0, 0, 0) -- force teleport to player
 end
 local function onload(inst, data)
     -- if this is considered a worldly data then move it to TheWorld.abyss
     if not data then return end
     inst.chargeleft = data.chargeleft
     inst.inscinerator = data.inscinerator and SpawnSaveRecord(data.inscinerator) or SpawnPrefab("inscinerator")
+    if inst.chargeleft <= 0 then
+        inst.chargeleft = 0
+        inst.inscinerator:AddTag("inscinerator_depleted")
+    end
 end
 local function onsave(inst, data)
     data.chargeleft = inst.chargeleft
     data.inscinerator = inst.inscinerator and inst.inscinerator:GetSaveRecord()
 end
 -- add action for inspection button
+--[[
 local function hack_button(inst, self)
     local old = self.OnMouseButton
     function self:OnMouseButton(control, down, ...)
@@ -68,9 +86,12 @@ local function hudpostinit(inst)
         return inst.HUD.controls.inv.inspectcontrol
     end, inst)
     if not success then return end
+    if inspect.hudinited then return end
     if not inst.inscinerator then return end
+    inspect.hudinited = true
     hack_button(inst.inscinerator, inspect)
 end
+]]
 local common_postinit = function(inst)
     inst.MiniMapEntity:SetIcon("reg.png")
     inst:AddTag("mia_reg")
@@ -78,6 +99,7 @@ local common_postinit = function(inst)
     inst:AddTag("soulless") -- non human representation
     inst:AddTag("electricdamageimmune")
     inst:RemoveTag("poisonable")
+    inst:DoTaskInTime(0, TrySpawnInscinerator)
     -- #TODO add a hud
     -- inst.hud=
     -- #TODO rethink about forge and gorge
@@ -105,6 +127,11 @@ local master_postinit = function(inst)
     inst.OnSave = onsave
     -- spawn custom relic inscinerator
     inst:DoTaskInTime(0, TrySpawnInscinerator)
-    inst:DoTaskInTime(10, hudpostinit) -- try to postinit this
+    --[[
+        abandoned
+    for i = 1, 10 do
+        inst:DoTaskInTime(2 ^ i, hudpostinit) -- try to postinit this
+    end
+    ]]
 end
 return MakePlayerCharacter("reg", prefabs, assets, common_postinit, master_postinit, start_inv)

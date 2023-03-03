@@ -1,3 +1,6 @@
+STRINGS.ACTIONS.AOEPROJECTILE = "Aim"
+STRINGS.ACTIONS.LAUNCHAOEPROJECTILE = "Launch"
+STRINGS.ACTIONS.CANCELAOEPROJECTILE = "Dismiss"
 STRINGS.ACTIONS.DODGE = "Dodge"
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.ABYSSWEAPON = ""
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.MITTY_BOTTLED = "Mitty"
@@ -18,6 +21,17 @@ STRINGS.CHARACTERS.GENERIC.DESCRIBE.RIKO_SNACK = "Holiday cooking in an orphanag
 STRINGS.CHARACTERS.NANACHI = require("languages/speech_nanachi_en")
 STRINGS.CHARACTERS.REG = STRINGS.CHARACTERS.GENERIC
 STRINGS.CHARACTERS.RIKO = STRINGS.CHARACTERS.GENERIC
+STRINGS.CHARACTER_ABOUTME.nanachi = ""
+STRINGS.CHARACTER_ABOUTME.reg = ""
+STRINGS.CHARACTER_ABOUTME.riko = ""
+STRINGS.CHARACTER_BIOS._riko = {
+    {title = "Birthday", desc = "Unknown"},
+    {title = "Favorite Food", desc = "Creamy Potato Purée"},
+    {
+        title = "The Voxola PR-76",
+        desc = "This radio, manufactured in 1919 by the Voxola Radio company of Sidney, Ohio. The radio offered revolutionary sound and reception quality for the time, and was promoted by an intense national marketing campaign. Very few units were actually produced, because the factory was destroyed in a fire only days after production began. Voxola founder Robert Wagstaff went missing the night of the fire, and the company declared bankruptcy soon thereafter."
+    }
+}
 STRINGS.CHARACTER_DESCRIPTIONS.nanachi = "*Irresistibly fragrant.\n*Fluffy.\n*Alert."
 STRINGS.CHARACTER_DESCRIPTIONS.reg = "*Lost memory.\n*Hard as iron.\n*Survive in harsh conditions."
 STRINGS.CHARACTER_DESCRIPTIONS.riko =
@@ -28,12 +42,13 @@ STRINGS.CHARACTER_NAMES.riko = "Riko"
 STRINGS.CHARACTER_QUOTES.nanachi = "\"I'm what you delvers would call a Narehate.\""
 STRINGS.CHARACTER_QUOTES.reg = "\"I must protect Riko.\""
 STRINGS.CHARACTER_QUOTES.riko = "\"Mother is waiting for me at the bottom of Abyss.\""
-STRINGS.CHARACTER_SURVIVABILITY.nanachi = "Doomed"
+STRINGS.CHARACTER_SURVIVABILITY.nanachi = "Uncertain"
 STRINGS.CHARACTER_SURVIVABILITY.reg = "Uncertain"
 STRINGS.CHARACTER_SURVIVABILITY.riko = "Doomed"
-STRINGS.CHARACTER_TITLES.nanachi = "Nanachi"
-STRINGS.CHARACTER_TITLES.reg = "Reg"
-STRINGS.CHARACTER_TITLES.riko = "Riko"
+STRINGS.CHARACTER_TITLES.nanachi = rand({"Nanachi"})
+STRINGS.CHARACTER_TITLES.reg = rand({"Reg"})
+STRINGS.CHARACTER_TITLES.riko = rand({"Riko"})
+STRINGS.NAMES.ARTIFACT_PRUSHKA = "Prushka"
 STRINGS.NAMES.BLAZE_REAP = "Blaze Reap"
 STRINGS.NAMES.CHARCOAL_SAND = "Charcoal Sand"
 STRINGS.NAMES.FRUITFUL_ORB = "Fruitful Orb"
@@ -47,7 +62,6 @@ STRINGS.NAMES.NANACHITENT = "Nanachi's tent"
 STRINGS.NAMES.NANACHI_SOUP = "Netherworld Stew"
 STRINGS.NAMES.PRINCESS_BOSOM = "Princess Bosom"
 STRINGS.NAMES.REG = "Reg"
-STRINGS.NAMES.ARTIFACT_PRUSHKA = "Prushka"
 STRINGS.NAMES.REGCLOAK = "Reg's Cloak"
 STRINGS.NAMES.REGHAT = "Reg's Helmet"
 STRINGS.NAMES.RIKO = "Riko"

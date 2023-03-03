@@ -255,6 +255,7 @@ local function scaled_umbrella_transform(inst)
         inst:AddTag("jab")
         inst.handsymbol = "swap_scaled_umbrella"
         inst.components.inventoryitem.imagename = "scaled_umbrella"
+        inst.components.inventoryitem:ChangeImageName("scaled_umbrella")
         inst.components.waterproofer:SetEffectiveness(0)
         -- #TODO hack GetAbsorption
     else
@@ -264,6 +265,7 @@ local function scaled_umbrella_transform(inst)
         inst.components.insulator:SetInsulation(TUNING.SCALED_UMBRELLA_INSULATION)
         inst.handsymbol = "swap_scaled_umbrella_open"
         inst.components.inventoryitem.imagename = "scaled_umbrella_open"
+        inst.components.inventoryitem:ChangeImageName("scaled_umbrella_open")
         inst.components.waterproofer:SetEffectiveness(TUNING.SCALED_UMBRELLA_WATERPROOF)
     end
     if inst.components.equippable:IsEquipped() then
@@ -578,17 +580,26 @@ It was eaten by an aquatic creature in the Sea of Corpses.
             inst.components.aoetargeting.reticule.mouseenabled = true
             -- hack to bypass non inventoryitem
             function inst.components.aoetargeting:StartTargeting()
+                p "1"
                 if not inst:IsValid() then return end
+                p "2"
+                local player = inst:GetParent() or ThePlayer
+                if not player then return end
+                p "3"
+                if player:HasTag("playerghost") then return end
+                p "4"
+                if player.replica.health:IsDead() then return end
                 local r = inst.components.reticule
                 if not r then
+                    p "5"
                     inst:AddComponent("reticule")
                     r = inst.components.reticule
                     for k, v in pairs(self.reticule) do r[k] = v end
                 end
                 if r.reticule then return end
+                p "6"
                 if r.mouseenabled or TheInput:ControllerAttached() then
-                    r:CreateReticule()
-                    local player = inst.entity:GetParent()
+                    --[[
                     if player then
                         local pc = player.components.playercontroller
                         if pc then
@@ -598,8 +609,11 @@ It was eaten by an aquatic creature in the Sea of Corpses.
                                 pc.reticule = r
                             end
                         end
-                    end
+                    end]]
+                    -- #TODO sync with playercontroller
+                    r:CreateReticule()
                 end
+
             end
             function inst.components.aoetargeting:StopTargeting()
                 local reticule = self.inst.components.reticule
@@ -611,6 +625,10 @@ It was eaten by an aquatic creature in the Sea of Corpses.
             inst.entity:SetPristine()
             if not TheWorld.ismastersim then return inst end
             inst.is_mia_artifact = true
+            inst:AddComponent("relicequip")
+            inst.components.relicequip.equipslot = RELICSLOTS.ARM
+            inst.components.relicequip.un_unequippable = true
+            inst:AddComponent("aoeprojectile")
             -- "red glow glimmer unstable fx"
             -- simplified
             inst.instant_fire_fx = fireball_hit_fx

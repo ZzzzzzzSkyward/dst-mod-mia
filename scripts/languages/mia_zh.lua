@@ -1,3 +1,6 @@
+STRINGS.ACTIONS.AOEPROJECTILE = "瞄准"
+STRINGS.ACTIONS.CANCELAOEPROJECTILE = "取消"
+STRINGS.ACTIONS.LAUNCHAOEPROJECTILE = "发射"
 STRINGS.ACTIONS.DODGE = "躲避"
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.ABYSSWEAPON = ""
 STRINGS.CHARACTERS.GENERIC.DESCRIBE.MITTY_BOTTLED = "米缇"
@@ -18,8 +21,20 @@ STRINGS.CHARACTERS.GENERIC.DESCRIBE.RIKO_SNACK = "孤儿院的节日料理。"
 STRINGS.CHARACTERS.NANACHI = require("languages/speech_nanachi_zh")
 STRINGS.CHARACTERS.REG = STRINGS.CHARACTERS.GENERIC
 STRINGS.CHARACTERS.RIKO = STRINGS.CHARACTERS.GENERIC
+STRINGS.CHARACTER_ABOUTME.nanachi = ""
+STRINGS.CHARACTER_ABOUTME.reg = ""
+STRINGS.CHARACTER_ABOUTME.riko = ""
+STRINGS.CHARACTER_BIOS._riko = {
+    {title = "Birthday", desc = "Unknown"},
+    {title = "Favorite Food", desc = "Creamy Potato Purée"},
+    {
+        title = "The Voxola PR-76",
+        desc = "This radio, manufactured in 1919 by the Voxola Radio company of Sidney, Ohio. The radio offered revolutionary sound and reception quality for the time, and was promoted by an intense national marketing campaign. Very few units were actually produced, because the factory was destroyed in a fire only days after production began. Voxola founder Robert Wagstaff went missing the night of the fire, and the company declared bankruptcy soon thereafter."
+    }
+}
 STRINGS.CHARACTER_DESCRIPTIONS.nanachi = "*手感毛茸茸的\n*闻起来很香"
-STRINGS.CHARACTER_DESCRIPTIONS.reg = "*失去记忆\n*钢铁般坚硬\n*强大的战斗能力\n*能在恶劣环境下生存"
+STRINGS.CHARACTER_DESCRIPTIONS.reg =
+    "*失去记忆\n*钢铁般坚硬\n*强大的战斗能力\n*能在恶劣环境下生存"
 STRINGS.CHARACTER_DESCRIPTIONS.riko = "*精通厨艺\n*能制作一个大背包\n*不擅长战斗\n*憧憬冒险"
 STRINGS.CHARACTER_NAMES.nanachi = "娜娜奇"
 STRINGS.CHARACTER_NAMES.reg = "雷古"
@@ -27,12 +42,13 @@ STRINGS.CHARACTER_NAMES.riko = "莉可"
 STRINGS.CHARACTER_QUOTES.nanachi = "\"不要靠那么近啦！\""
 STRINGS.CHARACTER_QUOTES.reg = "\"我一定要保护莉可\""
 STRINGS.CHARACTER_QUOTES.riko = "\"妈妈在奈落之底等着我呢\""
-STRINGS.CHARACTER_SURVIVABILITY.nanachi = "必死"
+STRINGS.CHARACTER_SURVIVABILITY.nanachi = "未知"
 STRINGS.CHARACTER_SURVIVABILITY.reg = "未知"
 STRINGS.CHARACTER_SURVIVABILITY.riko = "必死"
-STRINGS.CHARACTER_TITLES.nanachi = "娜娜奇"
-STRINGS.CHARACTER_TITLES.reg = "雷古"
-STRINGS.CHARACTER_TITLES.riko = "莉可"
+STRINGS.CHARACTER_TITLES.nanachi = rand({"娜娜奇"})
+STRINGS.CHARACTER_TITLES.reg = rand({"勃起卿"})
+STRINGS.CHARACTER_TITLES.riko = rand({"脱粪卿"})
+STRINGS.NAMES.ARTIFACT_PRUSHKA = "普鲁修卡"
 STRINGS.NAMES.BLAZE_REAP = "无尽锤"
 STRINGS.NAMES.CHARCOAL_SAND = "墨砂"
 STRINGS.NAMES.FRUITFUL_ORB = "结实累累的真球"
@@ -54,7 +70,7 @@ STRINGS.NAMES.RIKOCOOKPOT_ITEM = "探窟便携锅"
 STRINGS.NAMES.RIKOHAT = "探窟帽"
 STRINGS.NAMES.RIKO_DASHI = "莉可汤"
 STRINGS.NAMES.RIKO_FRIEDFISH = "煎炸岩辉鳟"
-STRINGS.NAMES.RIKO_GRILL = "莉可烤肉"
+STRINGS.NAMES.RIKO_GRILL = "莉可石板烧"
 STRINGS.NAMES.RIKO_ONIGIRI = "莉可爆弹"
 STRINGS.NAMES.RIKO_SACK = "探窟背包"
 STRINGS.NAMES.RIKO_SNACK = "莉可小碟"
@@ -62,10 +78,10 @@ STRINGS.NAMES.SCALED_UMBRELLA = "鳞伞"
 STRINGS.NAMES.SUN_SPHERE = "太阳玉"
 STRINGS.NAMES.THOUSAND_PIN = "千人锲"
 STRINGS.NAMES.TOMORROW_SIGNAL = "预测天气的风信鸡"
+STRINGS.NAMES.TORKA_STEW = "Torka Stew"
 STRINGS.RECIPE_DESC.NANACHITENT = "请再稍微等咱一下吧……"
 STRINGS.RECIPE_DESC.RIKO_SACK = ""
 STRINGS.RECIPE_DESC.SCALED_UMBRELLA = ""
 STRINGS.SKIN_NAMES.nanachi_none = "娜娜奇"
 STRINGS.SKIN_NAMES.reg_none = "雷古"
 STRINGS.SKIN_NAMES.riko_none = "莉可"
-STRINGS.NAMES.ARTIFACT_PRUSHKA = "普鲁修卡"

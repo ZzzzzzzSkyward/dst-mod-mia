@@ -3,6 +3,9 @@ GLOBAL.setmetatable(env, {
         return GLOBAL.rawget(GLOBAL, k)
     end
 })
+function GLOBAL.p(...)
+    return print("[log]", ...)
+end
 function dig(x, _env)
     local file = resolvefilepath_soft(table.concat({"scripts/mia_", x, ".lua"}))
     if not file then
@@ -20,6 +23,7 @@ PrefabFiles = dig("prefablist")
 Assets = dig("assets")
 modimport("scripts/mia_inventoryimages.lua")
 modimport("scripts/mia_language.lua")
+modimport("scripts/common_utils.lua")
 do
     local minimapatlas = "images/mia_minimap.xml"
     AddMinimapAtlas(minimapatlas)
