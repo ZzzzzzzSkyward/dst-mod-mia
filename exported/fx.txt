@@ -1,0 +1,24 @@
+fx_boat_pop 闪亮的破裂1
+fx_boat_crackle 四处小破裂
+fx_dock_crackle 近距离四处小破裂
+fx_dock_pop 闪亮的破裂2
+die_fx 泥土爆炸
+shock_fx 电火花+光晕
+moonstorm_spark_shock_fx 更大的电火花+光晕
+groundpound_fx 土迸裂
+lavaarena_spawnerdecor_fx_3 飞溅的火星
+electricchargedfx 电弧
+spider_heal_fx 向左右两侧吹起的烟尘
+firesplash_fx 升起的火花
+fireball_hit_fx 火球放大然后熄灭
+monkey_cursed_pst 挺大一个
+waxwell_shadow_fx 帅气的暗影
+moose_nest_fx_idle 大电弧
+mossling_spin_fx 电弧
+vomitfire_fx 小火花升起
+chester_transform_fx 地面小爆炸
+groundpoundring_fx 地面放大的圆
+tauntfire_fx 急促散开的火花
+
+
+for k,v in pairs(Prefabs) do if k:find("fx") then print(k) end end

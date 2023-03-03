@@ -1,7 +1,7 @@
 from zzz import *
 srcdir = ""
 excluded=["exported","FUNDING.yml",".git",".gitignore","__pycache__",".vscode"]
-excluded_regexp=[".py$"]
+excluded_regexp=["py$"]
 dstdir = "z:\\mia\\"
 def isexclude(x):
     e=x in excluded

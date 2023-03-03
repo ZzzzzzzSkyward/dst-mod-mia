@@ -1,0 +1,5 @@
+<Atlas><Texture filename="mia_bg.tex" />
+    <Elements>
+        <Element name="mia_bg.tex" u1="0.00024414063" u2="0.93725586" v1="0.48803711" v2="0.99975586"/>
+    </Elements>
+</Atlas>

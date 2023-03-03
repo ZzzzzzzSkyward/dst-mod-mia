@@ -9,7 +9,6 @@ end
 -- set no_deconstruct=true to ban deconstruction
 AddRecipe2("riko_sack", {Ingredient("bearger_fur", 1), Ingredient("papyrus", 4), Ingredient("rope", 2)}, TECH.NONE,
     {builder_tag = "riko"}, {"MODS", "CLOTHING", "RIKO"})
-AddRecipeToFilter("riko_sack", "CLOTHING")
 AddRecipe2("nanachitent", {Ingredient("goose_feather", 5), Ingredient("cutgrass", 12), Ingredient("petals", 5)},
     TECH.SCIENCE_TWO, {placer = "nanachitent_placer", builder_tag = "nanachi"}, {"MODS", "STRUCTURES", "NANACHI"})
 AddRecipe2("scaled_umbrella", {Ingredient("umbrella", 1), Ingredient("charcoal_sand", 60), Ingredient("rope", 8)},

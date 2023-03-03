@@ -565,7 +565,6 @@ It was eaten by an aquatic creature in the Sea of Corpses.
             local inst = CreateEntity()
             inst.entity:AddTransform()
             inst.entity:AddNetwork() -- because of aoetargeting
-            inst.entity:SetPristine()
             inst:AddTag("NOBLOCK")
             inst:AddTag("NOCLICK")
             inst:AddTag("INLIMBO")
