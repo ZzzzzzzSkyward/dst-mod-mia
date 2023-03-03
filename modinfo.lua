@@ -16,7 +16,7 @@ all_clients_require_mod = true
 icon_atlas = "modicon.xml"
 icon = "modicon.tex"
 server_filter_tags = {"XZmodmaker", "made_in_abyss"}
-version = "20230303.2"
+version = "20230303.3"
 configuration = {
     {
         name = "language",

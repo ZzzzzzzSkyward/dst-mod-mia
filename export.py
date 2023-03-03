@@ -8,7 +8,7 @@ def isexclude(x):
     if e:
         return True
     for i in excluded_regexp:
-        if reg.search(i,x):
+        if reg.search(x,i):
             return True
     return False
 files=os.listdir()
