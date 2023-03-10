@@ -1,0 +1,3772 @@
+msgid ""
+msgstr ""
+"Language: zh\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT Version: 2.0"
+
+
+#. STRINGS.ACTIONFAIL.COOK.GENERIC
+msgctxt "STRINGS.ACTIONFAIL.COOK.GENERIC"
+msgid "I can't do that."
+msgstr "I can't do that."
+
+#. STRINGS.ACTIONFAIL.COOK.INUSE
+msgctxt "STRINGS.ACTIONFAIL.COOK.INUSE"
+msgid "It's already in use. I guess I'll wait.."
+msgstr "It's already in use. I guess I'll wait.."
+
+#. STRINGS.ACTIONFAIL.GIVEALLTOPLAYER.FULL
+msgctxt "STRINGS.ACTIONFAIL.GIVEALLTOPLAYER.FULL"
+msgid "I guess your pockets are full."
+msgstr "I guess your pockets are full."
+
+#. STRINGS.ACTIONFAIL.GIVETOPLAYER.FULL
+msgctxt "STRINGS.ACTIONFAIL.GIVETOPLAYER.FULL"
+msgid "Come on. You can't even carry one more thing? Nnnaaa..."
+msgstr "Come on. You can't even carry one more thing? Nnnaaa..."
+
+#. STRINGS.ACTIONFAIL.RUMMAGE.GENERIC
+msgctxt "STRINGS.ACTIONFAIL.RUMMAGE.GENERIC"
+msgid "I can't do that."
+msgstr "I can't do that."
+
+#. STRINGS.ACTIONFAIL.RUMMAGE.INUSE
+msgctxt "STRINGS.ACTIONFAIL.RUMMAGE.INUSE"
+msgid "It's already in use. I guess I'll wait.."
+msgstr "It's already in use. I guess I'll wait.."
+
+#. STRINGS.ACTIONFAIL.SHAVE.AWAKEBEEFALO
+msgctxt "STRINGS.ACTIONFAIL.SHAVE.AWAKEBEEFALO"
+msgid "Not a good idea. It's still up and about."
+msgstr "Not a good idea. It's still up and about."
+
+#. STRINGS.ACTIONFAIL.SHAVE.GENERIC
+msgctxt "STRINGS.ACTIONFAIL.SHAVE.GENERIC"
+msgid "I can't shave that."
+msgstr "I can't shave that."
+
+#. STRINGS.ACTIONFAIL.SHAVE.NOBITS
+msgctxt "STRINGS.ACTIONFAIL.SHAVE.NOBITS"
+msgid "No more hair on this one."
+msgstr "No more hair on this one."
+
+#. STRINGS.ACTIONFAIL.STORE.GENERIC
+msgctxt "STRINGS.ACTIONFAIL.STORE.GENERIC"
+msgid "It's full."
+msgstr "It's full."
+
+#. STRINGS.ACTIONFAIL.STORE.INUSE
+msgctxt "STRINGS.ACTIONFAIL.STORE.INUSE"
+msgid "It's already in use. I guess I'll wait.."
+msgstr "It's already in use. I guess I'll wait.."
+
+#. STRINGS.ACTIONFAIL.STORE.NOTALLOWED
+msgctxt "STRINGS.ACTIONFAIL.STORE.NOTALLOWED"
+msgid "I can't put that in there."
+msgstr "I can't put that in there."
+
+#. STRINGS.ACTIONFAIL_GENERIC
+msgctxt "STRINGS.ACTIONFAIL_GENERIC"
+msgid "I can't do that."
+msgstr "I can't do that."
+
+#. STRINGS.ANNOUNCE_ACCOMPLISHMENT
+msgctxt "STRINGS.ANNOUNCE_ACCOMPLISHMENT"
+msgid "That wasn't so hard."
+msgstr "That wasn't so hard."
+
+#. STRINGS.ANNOUNCE_ACCOMPLISHMENT_DONE
+msgctxt "STRINGS.ANNOUNCE_ACCOMPLISHMENT_DONE"
+msgid "If only Mitty could see me now.."
+msgstr "If only Mitty could see me now.."
+
+#. STRINGS.ANNOUNCE_ADVENTUREFAIL
+msgctxt "STRINGS.ANNOUNCE_ADVENTUREFAIL"
+msgid "Well that could have gone smoother. Naaa."
+msgstr "Well that could have gone smoother. Naaa."
+
+#. STRINGS.ANNOUNCE_BECOMEGHOST
+msgctxt "STRINGS.ANNOUNCE_BECOMEGHOST"
+msgid "Mittyy.."
+msgstr "Mittyy.."
+
+#. STRINGS.ANNOUNCE_BEES
+msgctxt "STRINGS.ANNOUNCE_BEES"
+msgid "I should probably keep my distance from these."
+msgstr "I should probably keep my distance from these."
+
+#. STRINGS.ANNOUNCE_BOOMERANG
+msgctxt "STRINGS.ANNOUNCE_BOOMERANG"
+msgid "Ow, a boomerang?!"
+msgstr "Ow, a boomerang?!"
+
+#. STRINGS.ANNOUNCE_CANFIX
+msgctxt "STRINGS.ANNOUNCE_CANFIX"
+msgid "I might just be able to fix this.."
+msgstr "I might just be able to fix this.."
+
+#. STRINGS.ANNOUNCE_CHARLIE
+msgctxt "STRINGS.ANNOUNCE_CHARLIE"
+msgid "I wonder what that was."
+msgstr "I wonder what that was."
+
+#. STRINGS.ANNOUNCE_CHARLIE_ATTACK
+msgctxt "STRINGS.ANNOUNCE_CHARLIE_ATTACK"
+msgid "Ow- HEY! Something's biting me!"
+msgstr "Ow- HEY! Something's biting me!"
+
+#. STRINGS.ANNOUNCE_COLD
+msgctxt "STRINGS.ANNOUNCE_COLD"
+msgid "Getting a little chilly, nnnaaa..."
+msgstr "Getting a little chilly, nnnaaa..."
+
+#. STRINGS.ANNOUNCE_CRAFTING_FAIL
+msgctxt "STRINGS.ANNOUNCE_CRAFTING_FAIL"
+msgid "I'm gonna need a few more things for that..."
+msgstr "I'm gonna need a few more things for that..."
+
+#. STRINGS.ANNOUNCE_DEERCLOPS
+msgctxt "STRINGS.ANNOUNCE_DEERCLOPS"
+msgid "Something big is heading right for us."
+msgstr "Something big is heading right for us."
+
+#. STRINGS.ANNOUNCE_DUSK
+msgctxt "STRINGS.ANNOUNCE_DUSK"
+msgid "It's getting dark."
+msgstr "It's getting dark."
+
+#. STRINGS.ANNOUNCE_EAT.GENERIC
+msgctxt "STRINGS.ANNOUNCE_EAT.GENERIC"
+msgid "Not bad, nnnaaa~"
+msgstr "Not bad, nnnaaa~"
+
+#. STRINGS.ANNOUNCE_EAT.PAINFUL
+msgctxt "STRINGS.ANNOUNCE_EAT.PAINFUL"
+msgid "Maybe I shouldn't have eaten that.."
+msgstr "Maybe I shouldn't have eaten that.."
+
+#. STRINGS.ANNOUNCE_EAT.SPOILED
+msgctxt "STRINGS.ANNOUNCE_EAT.SPOILED"
+msgid "Aha, wow, this is terrible!"
+msgstr "Aha, wow, this is terrible!"
+
+#. STRINGS.ANNOUNCE_EAT.STALE
+msgctxt "STRINGS.ANNOUNCE_EAT.STALE"
+msgid "This food's spoiled. Oh well."
+msgstr "This food's spoiled. Oh well."
+
+#. STRINGS.ANNOUNCE_ENTER_DARK
+msgctxt "STRINGS.ANNOUNCE_ENTER_DARK"
+msgid "Nnnaaa... I can't see..."
+msgstr "Nnnaaa... I can't see..."
+
+#. STRINGS.ANNOUNCE_ENTER_LIGHT
+msgctxt "STRINGS.ANNOUNCE_ENTER_LIGHT"
+msgid "Finally, some light."
+msgstr "Finally, some light."
+
+#. STRINGS.ANNOUNCE_FREEDOM
+msgctxt "STRINGS.ANNOUNCE_FREEDOM"
+msgid "Naaa, I'm free!"
+msgstr "Naaa, I'm free!"
+
+#. STRINGS.ANNOUNCE_GHOSTDRAIN
+msgctxt "STRINGS.ANNOUNCE_GHOSTDRAIN"
+msgid "Quite the familar feeling.. Nnah.."
+msgstr "Quite the familar feeling.. Nnah.."
+
+#. STRINGS.ANNOUNCE_HIGHRESEARCH
+msgctxt "STRINGS.ANNOUNCE_HIGHRESEARCH"
+msgid "Interesting.."
+msgstr "Interesting.."
+
+#. STRINGS.ANNOUNCE_HOUNDS
+msgctxt "STRINGS.ANNOUNCE_HOUNDS"
+msgid "Nnnnaa, that's a pretty scary sound."
+msgstr "Nnnnaa, that's a pretty scary sound."
+
+#. STRINGS.ANNOUNCE_HUNGRY
+msgctxt "STRINGS.ANNOUNCE_HUNGRY"
+msgid "I could really go for some food right now."
+msgstr "I could really go for some food right now."
+
+#. STRINGS.ANNOUNCE_HUNT_BEAST_NEARBY
+msgctxt "STRINGS.ANNOUNCE_HUNT_BEAST_NEARBY"
+msgid "Koalefant tracks. There must be one nearby."
+msgstr "Koalefant tracks. There must be one nearby."
+
+#. STRINGS.ANNOUNCE_HUNT_LOST_TRAIL
+msgctxt "STRINGS.ANNOUNCE_HUNT_LOST_TRAIL"
+msgid "It ends here."
+msgstr "It ends here."
+
+#. STRINGS.ANNOUNCE_INV_FULL
+msgctxt "STRINGS.ANNOUNCE_INV_FULL"
+msgid "Naa.. I don't think I have any more space for that."
+msgstr "Naa.. I don't think I have any more space for that."
+
+#. STRINGS.ANNOUNCE_KNOCKEDOUT
+msgctxt "STRINGS.ANNOUNCE_KNOCKEDOUT"
+msgid "Nnnaaa, what happened?.."
+msgstr "Nnnaaa, what happened?.."
+
+#. STRINGS.ANNOUNCE_LOWRESEARCH
+msgctxt "STRINGS.ANNOUNCE_LOWRESEARCH"
+msgid "Well, that could have gone better."
+msgstr "Well, that could have gone better."
+
+#. STRINGS.ANNOUNCE_MOSQUITOS
+msgctxt "STRINGS.ANNOUNCE_MOSQUITOS"
+msgid "Nnaaa.. Stupid bugs.."
+msgstr "Nnaaa.. Stupid bugs.."
+
+#. STRINGS.ANNOUNCE_NODANGERAFK
+msgctxt "STRINGS.ANNOUNCE_NODANGERAFK"
+msgid "There's no point in fleeing now!"
+msgstr "There's no point in fleeing now!"
+
+#. STRINGS.ANNOUNCE_NODANGERSLEEP
+msgctxt "STRINGS.ANNOUNCE_NODANGERSLEEP"
+msgid "I don't feel safe, sleeping here."
+msgstr "I don't feel safe, sleeping here."
+
+#. STRINGS.ANNOUNCE_NODAYSLEEP
+msgctxt "STRINGS.ANNOUNCE_NODAYSLEEP"
+msgid "I shouldn't waste anymore daylight than I have to.."
+msgstr "I shouldn't waste anymore daylight than I have to.."
+
+#. STRINGS.ANNOUNCE_NODAYSLEEP_CAVE
+msgctxt "STRINGS.ANNOUNCE_NODAYSLEEP_CAVE"
+msgid "I'm not tired yet. Maybe I should keep going."
+msgstr "I'm not tired yet. Maybe I should keep going."
+
+#. STRINGS.ANNOUNCE_NOHUNGERSLEEP
+msgctxt "STRINGS.ANNOUNCE_NOHUNGERSLEEP"
+msgid "Nnnnaaa.. Maybe I should eat something first..."
+msgstr "Nnnnaaa.. Maybe I should eat something first..."
+
+#. STRINGS.ANNOUNCE_NO_TRAP
+msgctxt "STRINGS.ANNOUNCE_NO_TRAP"
+msgid "Fufufu. What a mediocre trap."
+msgstr "Fufufu. What a mediocre trap."
+
+#. STRINGS.ANNOUNCE_PECKED
+msgctxt "STRINGS.ANNOUNCE_PECKED"
+msgid "Ow, get out of here! Dumb bird, nnaa.."
+msgstr "Ow, get out of here! Dumb bird, nnaa.."
+
+#. STRINGS.ANNOUNCE_QUAKE
+msgctxt "STRINGS.ANNOUNCE_QUAKE"
+msgid "An earthquake. I should be careful."
+msgstr "An earthquake. I should be careful."
+
+#. STRINGS.ANNOUNCE_RESEARCH
+msgctxt "STRINGS.ANNOUNCE_RESEARCH"
+msgid "Never enough knowledge..."
+msgstr "Never enough knowledge..."
+
+#. STRINGS.ANNOUNCE_THORNS
+msgctxt "STRINGS.ANNOUNCE_THORNS"
+msgid "Nnnaa, prickly."
+msgstr "Nnnaa, prickly."
+
+#. STRINGS.ANNOUNCE_TORCH_OUT
+msgctxt "STRINGS.ANNOUNCE_TORCH_OUT"
+msgid "I'm gonna need a new light.."
+msgstr "I'm gonna need a new light.."
+
+#. STRINGS.ANNOUNCE_TRAP_WENT_OFF
+msgctxt "STRINGS.ANNOUNCE_TRAP_WENT_OFF"
+msgid "Nnaa, should have been more careful.."
+msgstr "Nnaa, should have been more careful.."
+
+#. STRINGS.ANNOUNCE_UNIMPLEMENTED
+msgctxt "STRINGS.ANNOUNCE_UNIMPLEMENTED"
+msgid "OW! I don't think it's ready yet."
+msgstr "OW! I don't think it's ready yet."
+
+#. STRINGS.ANNOUNCE_WORMHOLE
+msgctxt "STRINGS.ANNOUNCE_WORMHOLE"
+msgid "Nnnaaa.."
+msgstr "Nnnaaa.."
+
+#. STRINGS.BATTLECRY.GENERIC
+msgctxt "STRINGS.BATTLECRY.GENERIC"
+msgid "Nna, bad idea, taking me on!"
+msgstr "Nna, bad idea, taking me on!"
+
+#. STRINGS.BATTLECRY.PIG
+msgctxt "STRINGS.BATTLECRY.PIG"
+msgid "Get back here, swine!"
+msgstr "Get back here, swine!"
+
+#. STRINGS.BATTLECRY.PREY
+msgctxt "STRINGS.BATTLECRY.PREY"
+msgid "Easy pickings!"
+msgstr "Easy pickings!"
+
+#. STRINGS.BATTLECRY.SPIDER
+msgctxt "STRINGS.BATTLECRY.SPIDER"
+msgid "I squish bugs like you all the time!"
+msgstr "I squish bugs like you all the time!"
+
+#. STRINGS.BATTLECRY.SPIDER_WARRIOR
+msgctxt "STRINGS.BATTLECRY.SPIDER_WARRIOR"
+msgid "Better you than me!"
+msgstr "Better you than me!"
+
+#. STRINGS.COMBAT_QUIT.GENERIC
+msgctxt "STRINGS.COMBAT_QUIT.GENERIC"
+msgid "See? No problem."
+msgstr "See? No problem."
+
+#. STRINGS.COMBAT_QUIT.PIG
+msgctxt "STRINGS.COMBAT_QUIT.PIG"
+msgid "I'll let you go, this time.."
+msgstr "I'll let you go, this time.."
+
+#. STRINGS.COMBAT_QUIT.PREY
+msgctxt "STRINGS.COMBAT_QUIT.PREY"
+msgid "Stupid- Get back here!"
+msgstr "Stupid- Get back here!"
+
+#. STRINGS.COMBAT_QUIT.SPIDER
+msgctxt "STRINGS.COMBAT_QUIT.SPIDER"
+msgid "Nnnaa, spiders.."
+msgstr "Nnnaa, spiders.."
+
+#. STRINGS.COMBAT_QUIT.SPIDER_WARRIOR
+msgctxt "STRINGS.COMBAT_QUIT.SPIDER_WARRIOR"
+msgid "N-nna, good, it's gone.."
+msgstr "N-nna, good, it's gone.."
+
+#. STRINGS.DESCRIBE.ABIGAIL
+msgctxt "STRINGS.DESCRIBE.ABIGAIL"
+msgid "N-naa, poor girl."
+msgstr "N-naa, poor girl."
+
+#. STRINGS.DESCRIBE.ACCOMPLISHMENT_SHRINE
+msgctxt "STRINGS.DESCRIBE.ACCOMPLISHMENT_SHRINE"
+msgid "Looking at it makes me feel fufilled."
+msgstr "Looking at it makes me feel fufilled."
+
+#. STRINGS.DESCRIBE.ADVENTURE_PORTAL
+msgctxt "STRINGS.DESCRIBE.ADVENTURE_PORTAL"
+msgid "Sinister. But I can't help but wonder what's inside."
+msgstr "Sinister. But I can't help but wonder what's inside."
+
+#. STRINGS.DESCRIBE.AMULET
+msgctxt "STRINGS.DESCRIBE.AMULET"
+msgid "It looks pretty, but does it have a use?.."
+msgstr "It looks pretty, but does it have a use?.."
+
+#. STRINGS.DESCRIBE.ANCIENT_ALTAR
+msgctxt "STRINGS.DESCRIBE.ANCIENT_ALTAR"
+msgid "Nna, this thing sure does look.. Important."
+msgstr "Nna, this thing sure does look.. Important."
+
+#. STRINGS.DESCRIBE.ANCIENT_ALTAR_BROKEN
+msgctxt "STRINGS.DESCRIBE.ANCIENT_ALTAR_BROKEN"
+msgid "Certainly sinister, but not much else."
+msgstr "Certainly sinister, but not much else."
+
+#. STRINGS.DESCRIBE.ANCIENT_STATUE
+msgctxt "STRINGS.DESCRIBE.ANCIENT_STATUE"
+msgid "I'd hate to meet whatever this was modeled after."
+msgstr "I'd hate to meet whatever this was modeled after."
+
+#. STRINGS.DESCRIBE.ANIMAL_TRACK
+msgctxt "STRINGS.DESCRIBE.ANIMAL_TRACK"
+msgid "Tracks left by a koalefant. I sure am hungry.."
+msgstr "Tracks left by a koalefant. I sure am hungry.."
+
+#. STRINGS.DESCRIBE.ARMORGRASS
+msgctxt "STRINGS.DESCRIBE.ARMORGRASS"
+msgid "Nna, I'm not really sure this is gonna protect me from anything.."
+msgstr "Nna, I'm not really sure this is gonna protect me from anything.."
+
+#. STRINGS.DESCRIBE.ARMORMARBLE
+msgctxt "STRINGS.DESCRIBE.ARMORMARBLE"
+msgid "Maybe Reg should carry this one.."
+msgstr "Maybe Reg should carry this one.."
+
+#. STRINGS.DESCRIBE.ARMORRUINS
+msgctxt "STRINGS.DESCRIBE.ARMORRUINS"
+msgid "This stuff is armor? Feels like I'm wearing nothing."
+msgstr "This stuff is armor? Feels like I'm wearing nothing."
+
+#. STRINGS.DESCRIBE.ARMORSLURPER
+msgctxt "STRINGS.DESCRIBE.ARMORSLURPER"
+msgid "Nnnaaa, it's all wet. What's the point of this thing anyway?"
+msgstr "Nnnaaa, it's all wet. What's the point of this thing anyway?"
+
+#. STRINGS.DESCRIBE.ARMORSNURTLESHELL
+msgctxt "STRINGS.DESCRIBE.ARMORSNURTLESHELL"
+msgid "It sticks to my back."
+msgstr "It sticks to my back."
+
+#. STRINGS.DESCRIBE.ARMORWOOD
+msgctxt "STRINGS.DESCRIBE.ARMORWOOD"
+msgid "I feel invincible already."
+msgstr "I feel invincible already."
+
+#. STRINGS.DESCRIBE.ARMOR_SANITY
+msgctxt "STRINGS.DESCRIBE.ARMOR_SANITY"
+msgid "I'm not sure if I even want this on me, naa.."
+msgstr "I'm not sure if I even want this on me, naa.."
+
+#. STRINGS.DESCRIBE.ASH.GENERIC
+msgctxt "STRINGS.DESCRIBE.ASH.GENERIC"
+msgid "There's a metaphor in here somewhere.."
+msgstr "There's a metaphor in here somewhere.."
+
+#. STRINGS.DESCRIBE.ASH.REMAINS_EYE_BONE
+msgctxt "STRINGS.DESCRIBE.ASH.REMAINS_EYE_BONE"
+msgid "The eyebone was consumed by fire when I teleported."
+msgstr "The eyebone was consumed by fire when I teleported."
+
+#. STRINGS.DESCRIBE.ASH.REMAINS_THINGIE
+msgctxt "STRINGS.DESCRIBE.ASH.REMAINS_THINGIE"
+msgid "This was once some thing before it got burned..."
+msgstr "This was once some thing before it got burned..."
+
+#. STRINGS.DESCRIBE.AXE
+msgctxt "STRINGS.DESCRIBE.AXE"
+msgid "An axe. Lots of applications for this, I'm sure."
+msgstr "An axe. Lots of applications for this, I'm sure."
+
+#. STRINGS.DESCRIBE.BABYBEEFALO
+msgctxt "STRINGS.DESCRIBE.BABYBEEFALO"
+msgid "Maybe just one pat."
+msgstr "Maybe just one pat."
+
+#. STRINGS.DESCRIBE.BACKPACK
+msgctxt "STRINGS.DESCRIBE.BACKPACK"
+msgid "This could come in handy."
+msgstr "This could come in handy."
+
+#. STRINGS.DESCRIBE.BACONEGGS
+msgctxt "STRINGS.DESCRIBE.BACONEGGS"
+msgid "Simple. Yummy. That's all that really matters."
+msgstr "Simple. Yummy. That's all that really matters."
+
+#. STRINGS.DESCRIBE.BANDAGE
+msgctxt "STRINGS.DESCRIBE.BANDAGE"
+msgid "Standard for any Cave Raider."
+msgstr "Standard for any Cave Raider."
+
+#. STRINGS.DESCRIBE.BASALT
+msgctxt "STRINGS.DESCRIBE.BASALT"
+msgid "N-nnaaa.. What kind of rock even is this? I can't break it!"
+msgstr "N-nnaaa.. What kind of rock even is this? I can't break it!"
+
+#. STRINGS.DESCRIBE.BAT
+msgctxt "STRINGS.DESCRIBE.BAT"
+msgid "A creature of the Abyss. This one isn't very friendly."
+msgstr "A creature of the Abyss. This one isn't very friendly."
+
+#. STRINGS.DESCRIBE.BATBAT
+msgctxt "STRINGS.DESCRIBE.BATBAT"
+msgid "This is way too heavy to fly with. But hitting something could be another story.."
+msgstr "This is way too heavy to fly with. But hitting something could be another story.."
+
+#. STRINGS.DESCRIBE.BATWING
+msgctxt "STRINGS.DESCRIBE.BATWING"
+msgid "Nnaa.. Might go nice in a stew.."
+msgstr "Nnaa.. Might go nice in a stew.."
+
+#. STRINGS.DESCRIBE.BATWING_COOKED
+msgctxt "STRINGS.DESCRIBE.BATWING_COOKED"
+msgid "H-hey, not bad!"
+msgstr "H-hey, not bad!"
+
+#. STRINGS.DESCRIBE.BEARDHAIR
+msgctxt "STRINGS.DESCRIBE.BEARDHAIR"
+msgid ".. Why am I holding onto this, nna."
+msgstr ".. Why am I holding onto this, nna."
+
+#. STRINGS.DESCRIBE.BEDROLL_FURRY
+msgctxt "STRINGS.DESCRIBE.BEDROLL_FURRY"
+msgid "Naa.. A nap on one of these sounds so nice right now.."
+msgstr "Naa.. A nap on one of these sounds so nice right now.."
+
+#. STRINGS.DESCRIBE.BEDROLL_STRAW
+msgctxt "STRINGS.DESCRIBE.BEDROLL_STRAW"
+msgid "Well, it's not very comfy looking, but it'll do.."
+msgstr "Well, it's not very comfy looking, but it'll do.."
+
+#. STRINGS.DESCRIBE.BEE.GENERIC
+msgctxt "STRINGS.DESCRIBE.BEE.GENERIC"
+msgid "A bee. Cute, dangerous little things."
+msgstr "A bee. Cute, dangerous little things."
+
+#. STRINGS.DESCRIBE.BEE.HELD
+msgctxt "STRINGS.DESCRIBE.BEE.HELD"
+msgid "Nnaa, this probably isn't safe.."
+msgstr "Nnaa, this probably isn't safe.."
+
+#. STRINGS.DESCRIBE.BEEBOX.FULLHONEY
+msgctxt "STRINGS.DESCRIBE.BEEBOX.FULLHONEY"
+msgid "Honey, honey, honey!"
+msgstr "Honey, honey, honey!"
+
+#. STRINGS.DESCRIBE.BEEBOX.GENERIC
+msgctxt "STRINGS.DESCRIBE.BEEBOX.GENERIC"
+msgid "There's some bees in here. I'd do well not to disturb them."
+msgstr "There's some bees in here. I'd do well not to disturb them."
+
+#. STRINGS.DESCRIBE.BEEBOX.NOHONEY
+msgctxt "STRINGS.DESCRIBE.BEEBOX.NOHONEY"
+msgid "No honey for the moment."
+msgstr "No honey for the moment."
+
+#. STRINGS.DESCRIBE.BEEBOX.SOMEHONEY
+msgctxt "STRINGS.DESCRIBE.BEEBOX.SOMEHONEY"
+msgid "Maybe I should wait a little longer.."
+msgstr "Maybe I should wait a little longer.."
+
+#. STRINGS.DESCRIBE.BEEFALO.FOLLOWER
+msgctxt "STRINGS.DESCRIBE.BEEFALO.FOLLOWER"
+msgid "I guess I can take you along with me."
+msgstr "I guess I can take you along with me."
+
+#. STRINGS.DESCRIBE.BEEFALO.GENERIC
+msgctxt "STRINGS.DESCRIBE.BEEFALO.GENERIC"
+msgid "It's a beefalo."
+msgstr "It's a beefalo."
+
+#. STRINGS.DESCRIBE.BEEFALO.NAKED
+msgctxt "STRINGS.DESCRIBE.BEEFALO.NAKED"
+msgid "Sorry mister Beefalo, I needed that fur."
+msgstr "Sorry mister Beefalo, I needed that fur."
+
+#. STRINGS.DESCRIBE.BEEFALO.SLEEPING
+msgctxt "STRINGS.DESCRIBE.BEEFALO.SLEEPING"
+msgid "They look so peaceful."
+msgstr "They look so peaceful."
+
+#. STRINGS.DESCRIBE.BEEFALOHAT
+msgctxt "STRINGS.DESCRIBE.BEEFALOHAT"
+msgid "Nice and warm. Though I'm not sure why I'd need any more fur, nnaa.."
+msgstr "Nice and warm. Though I'm not sure why I'd need any more fur, nnaa.."
+
+#. STRINGS.DESCRIBE.BEEFALOWOOL
+msgctxt "STRINGS.DESCRIBE.BEEFALOWOOL"
+msgid "Nice and warm. I bet I could make a few things out of this."
+msgstr "Nice and warm. I bet I could make a few things out of this."
+
+#. STRINGS.DESCRIBE.BEEHAT
+msgctxt "STRINGS.DESCRIBE.BEEHAT"
+msgid "This should keep me from harms way."
+msgstr "This should keep me from harms way."
+
+#. STRINGS.DESCRIBE.BEEHIVE
+msgctxt "STRINGS.DESCRIBE.BEEHIVE"
+msgid "Full of bees. Maybe I avoid touching it."
+msgstr "Full of bees. Maybe I avoid touching it."
+
+#. STRINGS.DESCRIBE.BEEMINE
+msgctxt "STRINGS.DESCRIBE.BEEMINE"
+msgid "Seems a little cruel, but, whatever works, naa."
+msgstr "Seems a little cruel, but, whatever works, naa."
+
+#. STRINGS.DESCRIBE.BEEMINE_MAXWELL
+msgctxt "STRINGS.DESCRIBE.BEEMINE_MAXWELL"
+msgid "A big bottle of angry bloodsuckers. Nnaa, I'd hate to be on the recieving end of this."
+msgstr "A big bottle of angry bloodsuckers. Nnaa, I'd hate to be on the recieving end of this."
+
+#. STRINGS.DESCRIBE.BERRIES
+msgctxt "STRINGS.DESCRIBE.BERRIES"
+msgid "These ones look good for eating."
+msgstr "These ones look good for eating."
+
+#. STRINGS.DESCRIBE.BERRIES_COOKED
+msgctxt "STRINGS.DESCRIBE.BERRIES_COOKED"
+msgid "Oh boy. Mush."
+msgstr "Oh boy. Mush."
+
+#. STRINGS.DESCRIBE.BERRYBUSH.BARREN
+msgctxt "STRINGS.DESCRIBE.BERRYBUSH.BARREN"
+msgid "It might need to be fertilized."
+msgstr "It might need to be fertilized."
+
+#. STRINGS.DESCRIBE.BERRYBUSH.GENERIC
+msgctxt "STRINGS.DESCRIBE.BERRYBUSH.GENERIC"
+msgid "These ones look good for eating."
+msgstr "These ones look good for eating."
+
+#. STRINGS.DESCRIBE.BERRYBUSH.PICKED
+msgctxt "STRINGS.DESCRIBE.BERRYBUSH.PICKED"
+msgid "Thanks for the food."
+msgstr "Thanks for the food."
+
+#. STRINGS.DESCRIBE.BIRDCAGE.GENERIC
+msgctxt "STRINGS.DESCRIBE.BIRDCAGE.GENERIC"
+msgid "A birdcage. I bet Mitty would have liked this."
+msgstr "A birdcage. I bet Mitty would have liked this."
+
+#. STRINGS.DESCRIBE.BIRDCAGE.OCCUPIED
+msgctxt "STRINGS.DESCRIBE.BIRDCAGE.OCCUPIED"
+msgid "Cute little thing. Maybe I should keep him for a little longer."
+msgstr "Cute little thing. Maybe I should keep him for a little longer."
+
+#. STRINGS.DESCRIBE.BIRDCAGE.SLEEPING
+msgctxt "STRINGS.DESCRIBE.BIRDCAGE.SLEEPING"
+msgid "So peaceful."
+msgstr "So peaceful."
+
+#. STRINGS.DESCRIBE.BIRDTRAP
+msgctxt "STRINGS.DESCRIBE.BIRDTRAP"
+msgid "I'm sure I could catch something with is. Easy food."
+msgstr "I'm sure I could catch something with is. Easy food."
+
+#. STRINGS.DESCRIBE.BIRD_EGG
+msgctxt "STRINGS.DESCRIBE.BIRD_EGG"
+msgid "It's an egg."
+msgstr "It's an egg."
+
+#. STRINGS.DESCRIBE.BIRD_EGG_COOKED
+msgctxt "STRINGS.DESCRIBE.BIRD_EGG_COOKED"
+msgid "Simple, healthy, delicious."
+msgstr "Simple, healthy, delicious."
+
+#. STRINGS.DESCRIBE.BISHOP
+msgctxt "STRINGS.DESCRIBE.BISHOP"
+msgid "Naa.. I don't like the look of that thing.."
+msgstr "Naa.. I don't like the look of that thing.."
+
+#. STRINGS.DESCRIBE.BISHOP_NIGHTMARE
+msgctxt "STRINGS.DESCRIBE.BISHOP_NIGHTMARE"
+msgid "It's coming apart at the seams!"
+msgstr "It's coming apart at the seams!"
+
+#. STRINGS.DESCRIBE.BLOWDART_FIRE
+msgctxt "STRINGS.DESCRIBE.BLOWDART_FIRE"
+msgid "Careful not to burn everything down."
+msgstr "Careful not to burn everything down."
+
+#. STRINGS.DESCRIBE.BLOWDART_PIPE
+msgctxt "STRINGS.DESCRIBE.BLOWDART_PIPE"
+msgid "This thing sure is primitive. Nnnaa, makes me wonder how effective it really is."
+msgstr "This thing sure is primitive. Nnnaa, makes me wonder how effective it really is."
+
+#. STRINGS.DESCRIBE.BLOWDART_SLEEP
+msgctxt "STRINGS.DESCRIBE.BLOWDART_SLEEP"
+msgid "A less lethal way of taking down, well, almost anything."
+msgstr "A less lethal way of taking down, well, almost anything."
+
+#. STRINGS.DESCRIBE.BLUEAMULET
+msgctxt "STRINGS.DESCRIBE.BLUEAMULET"
+msgid "Why's it so cold?"
+msgstr "Why's it so cold?"
+
+#. STRINGS.DESCRIBE.BLUEGEM
+msgctxt "STRINGS.DESCRIBE.BLUEGEM"
+msgid "A blue gem. It makes me chilly just looking at it."
+msgstr "A blue gem. It makes me chilly just looking at it."
+
+#. STRINGS.DESCRIBE.BLUEPRINT
+msgctxt "STRINGS.DESCRIBE.BLUEPRINT"
+msgid "A blueprint. I wonder what it's for."
+msgstr "A blueprint. I wonder what it's for."
+
+#. STRINGS.DESCRIBE.BLUE_CAP
+msgctxt "STRINGS.DESCRIBE.BLUE_CAP"
+msgid "A blue capped mushroom. Looks pretty appetizing. "
+msgstr "A blue capped mushroom. Looks pretty appetizing. "
+
+#. STRINGS.DESCRIBE.BLUE_CAP_COOKED
+msgctxt "STRINGS.DESCRIBE.BLUE_CAP_COOKED"
+msgid "It's different now..."
+msgstr "It's different now..."
+
+#. STRINGS.DESCRIBE.BLUE_MUSHROOM.GENERIC
+msgctxt "STRINGS.DESCRIBE.BLUE_MUSHROOM.GENERIC"
+msgid "It's a mushroom. A blue one."
+msgstr "It's a mushroom. A blue one."
+
+#. STRINGS.DESCRIBE.BLUE_MUSHROOM.INGROUND
+msgctxt "STRINGS.DESCRIBE.BLUE_MUSHROOM.INGROUND"
+msgid "Looks like it's in the ground for now."
+msgstr "Looks like it's in the ground for now."
+
+#. STRINGS.DESCRIBE.BLUE_MUSHROOM.PICKED
+msgctxt "STRINGS.DESCRIBE.BLUE_MUSHROOM.PICKED"
+msgid "Nna, maybe it'll grow back."
+msgstr "Nna, maybe it'll grow back."
+
+#. STRINGS.DESCRIBE.BOARDS
+msgctxt "STRINGS.DESCRIBE.BOARDS"
+msgid "Wooden boards. I bet I could make plenty of stuff with these."
+msgstr "Wooden boards. I bet I could make plenty of stuff with these."
+
+#. STRINGS.DESCRIBE.BOAT
+msgctxt "STRINGS.DESCRIBE.BOAT"
+msgid "Maybe that's how I got here."
+msgstr "Maybe that's how I got here."
+
+#. STRINGS.DESCRIBE.BONESTEW
+msgctxt "STRINGS.DESCRIBE.BONESTEW"
+msgid "Hey, not bad looking!"
+msgstr "Hey, not bad looking!"
+
+#. STRINGS.DESCRIBE.BOOMERANG
+msgctxt "STRINGS.DESCRIBE.BOOMERANG"
+msgid "More than just a toy."
+msgstr "More than just a toy."
+
+#. STRINGS.DESCRIBE.BUGNET
+msgctxt "STRINGS.DESCRIBE.BUGNET"
+msgid "I could collect all sorts of bugs with this."
+msgstr "I could collect all sorts of bugs with this."
+
+#. STRINGS.DESCRIBE.BUNNYMAN
+msgctxt "STRINGS.DESCRIBE.BUNNYMAN"
+msgid "Poor thing. Nnaa.. I wonder if he's a hollow too."
+msgstr "Poor thing. Nnaa.. I wonder if he's a hollow too."
+
+#. STRINGS.DESCRIBE.BUSHHAT
+msgctxt "STRINGS.DESCRIBE.BUSHHAT"
+msgid "Nnna, the perfect disguise."
+msgstr "Nnna, the perfect disguise."
+
+#. STRINGS.DESCRIBE.BUTTER
+msgctxt "STRINGS.DESCRIBE.BUTTER"
+msgid "Some butter. Now, what to make with it.."
+msgstr "Some butter. Now, what to make with it.."
+
+#. STRINGS.DESCRIBE.BUTTERFLY.GENERIC
+msgctxt "STRINGS.DESCRIBE.BUTTERFLY.GENERIC"
+msgid "Even pretty things like butterflies can exist in a place like this."
+msgstr "Even pretty things like butterflies can exist in a place like this."
+
+#. STRINGS.DESCRIBE.BUTTERFLY.HELD
+msgctxt "STRINGS.DESCRIBE.BUTTERFLY.HELD"
+msgid "Naaa, so pretty."
+msgstr "Naaa, so pretty."
+
+#. STRINGS.DESCRIBE.BUTTERFLYMUFFIN
+msgctxt "STRINGS.DESCRIBE.BUTTERFLYMUFFIN"
+msgid "Nnaa, sorry mister butterfly."
+msgstr "Nnaa, sorry mister butterfly."
+
+#. STRINGS.DESCRIBE.BUTTERFLYWINGS
+msgctxt "STRINGS.DESCRIBE.BUTTERFLYWINGS"
+msgid "Sorry, I needed them more than you did."
+msgstr "Sorry, I needed them more than you did."
+
+#. STRINGS.DESCRIBE.CAMPFIRE.EMBERS
+msgctxt "STRINGS.DESCRIBE.CAMPFIRE.EMBERS"
+msgid "It's about to go out. Maybe I should find some more fuel."
+msgstr "It's about to go out. Maybe I should find some more fuel."
+
+#. STRINGS.DESCRIBE.CAMPFIRE.GENERIC
+msgctxt "STRINGS.DESCRIBE.CAMPFIRE.GENERIC"
+msgid "This might keep a few creatures away for the night."
+msgstr "This might keep a few creatures away for the night."
+
+#. STRINGS.DESCRIBE.CAMPFIRE.HIGH
+msgctxt "STRINGS.DESCRIBE.CAMPFIRE.HIGH"
+msgid "N-nnaa, maybe I should stop feeding it."
+msgstr "N-nnaa, maybe I should stop feeding it."
+
+#. STRINGS.DESCRIBE.CAMPFIRE.LOW
+msgctxt "STRINGS.DESCRIBE.CAMPFIRE.LOW"
+msgid "The fire's getting lower."
+msgstr "The fire's getting lower."
+
+#. STRINGS.DESCRIBE.CAMPFIRE.NORMAL
+msgctxt "STRINGS.DESCRIBE.CAMPFIRE.NORMAL"
+msgid "The best way to keep warm in a place like this."
+msgstr "The best way to keep warm in a place like this."
+
+#. STRINGS.DESCRIBE.CAMPFIRE.OUT
+msgctxt "STRINGS.DESCRIBE.CAMPFIRE.OUT"
+msgid "Well, there it goes."
+msgstr "Well, there it goes."
+
+#. STRINGS.DESCRIBE.CANE
+msgctxt "STRINGS.DESCRIBE.CANE"
+msgid "It makes walking seem much easier!"
+msgstr "It makes walking seem much easier!"
+
+#. STRINGS.DESCRIBE.CARROT
+msgctxt "STRINGS.DESCRIBE.CARROT"
+msgid "A carrot. Maybe just a nibble, nnaa."
+msgstr "A carrot. Maybe just a nibble, nnaa."
+
+#. STRINGS.DESCRIBE.CARROT_COOKED
+msgctxt "STRINGS.DESCRIBE.CARROT_COOKED"
+msgid "Nothing fancy, bit it'll do."
+msgstr "Nothing fancy, bit it'll do."
+
+#. STRINGS.DESCRIBE.CARROT_PLANTED
+msgctxt "STRINGS.DESCRIBE.CARROT_PLANTED"
+msgid "Now all I have to do is be patient."
+msgstr "Now all I have to do is be patient."
+
+#. STRINGS.DESCRIBE.CARROT_SEEDS
+msgctxt "STRINGS.DESCRIBE.CARROT_SEEDS"
+msgid "A carrot farm sounds pretty nice."
+msgstr "A carrot farm sounds pretty nice."
+
+#. STRINGS.DESCRIBE.CAVE_BANANA
+msgctxt "STRINGS.DESCRIBE.CAVE_BANANA"
+msgid "Any fruit is good fruit to me."
+msgstr "Any fruit is good fruit to me."
+
+#. STRINGS.DESCRIBE.CAVE_BANANA_COOKED
+msgctxt "STRINGS.DESCRIBE.CAVE_BANANA_COOKED"
+msgid "Nnnaa, it looks even better cooked."
+msgstr "Nnnaa, it looks even better cooked."
+
+#. STRINGS.DESCRIBE.CAVE_BANANA_TREE
+msgctxt "STRINGS.DESCRIBE.CAVE_BANANA_TREE"
+msgid "Looks kind of scary for a fruit tree.."
+msgstr "Looks kind of scary for a fruit tree.."
+
+#. STRINGS.DESCRIBE.CAVE_ENTRANCE.GENERIC
+msgctxt "STRINGS.DESCRIBE.CAVE_ENTRANCE.GENERIC"
+msgid "I bet that rock can be broken."
+msgstr "I bet that rock can be broken."
+
+#. STRINGS.DESCRIBE.CAVE_ENTRANCE.OPEN
+msgctxt "STRINGS.DESCRIBE.CAVE_ENTRANCE.OPEN"
+msgid "Nnaaa, a familiar sight.."
+msgstr "Nnaaa, a familiar sight.."
+
+#. STRINGS.DESCRIBE.CAVE_EXIT
+msgctxt "STRINGS.DESCRIBE.CAVE_EXIT"
+msgid "Maybe I could use a break, nnaaa.."
+msgstr "Maybe I could use a break, nnaaa.."
+
+#. STRINGS.DESCRIBE.CAVE_FERN
+msgctxt "STRINGS.DESCRIBE.CAVE_FERN"
+msgid "An ordinary fern."
+msgstr "An ordinary fern."
+
+#. STRINGS.DESCRIBE.CHARCOAL
+msgctxt "STRINGS.DESCRIBE.CHARCOAL"
+msgid "So much excitement for something so.. Sad."
+msgstr "So much excitement for something so.. Sad."
+
+#. STRINGS.DESCRIBE.CHESSJUNK1
+msgctxt "STRINGS.DESCRIBE.CHESSJUNK1"
+msgid "It looks like chess pieces. Strange."
+msgstr "It looks like chess pieces. Strange."
+
+#. STRINGS.DESCRIBE.CHESSJUNK2
+msgctxt "STRINGS.DESCRIBE.CHESSJUNK2"
+msgid "More of them. Someone must really like chess."
+msgstr "More of them. Someone must really like chess."
+
+#. STRINGS.DESCRIBE.CHESSJUNK3
+msgctxt "STRINGS.DESCRIBE.CHESSJUNK3"
+msgid "What are all these even from?"
+msgstr "What are all these even from?"
+
+#. STRINGS.DESCRIBE.CHESTER
+msgctxt "STRINGS.DESCRIBE.CHESTER"
+msgid "He looks kinda hungry."
+msgstr "He looks kinda hungry."
+
+#. STRINGS.DESCRIBE.CHESTER_EYEBONE.GENERIC
+msgctxt "STRINGS.DESCRIBE.CHESTER_EYEBONE.GENERIC"
+msgid "Nnaa, I feel like it's staring right at me."
+msgstr "Nnaa, I feel like it's staring right at me."
+
+#. STRINGS.DESCRIBE.CHESTER_EYEBONE.WAITING
+msgctxt "STRINGS.DESCRIBE.CHESTER_EYEBONE.WAITING"
+msgid "Sleeping for now, I suppose."
+msgstr "Sleeping for now, I suppose."
+
+#. STRINGS.DESCRIBE.COMPASS.E
+msgctxt "STRINGS.DESCRIBE.COMPASS.E"
+msgid "East"
+msgstr "East"
+
+#. STRINGS.DESCRIBE.COMPASS.GENERIC
+msgctxt "STRINGS.DESCRIBE.COMPASS.GENERIC"
+msgid "I can't get a reading."
+msgstr "I can't get a reading."
+
+#. STRINGS.DESCRIBE.COMPASS.N
+msgctxt "STRINGS.DESCRIBE.COMPASS.N"
+msgid "North"
+msgstr "North"
+
+#. STRINGS.DESCRIBE.COMPASS.NE
+msgctxt "STRINGS.DESCRIBE.COMPASS.NE"
+msgid "Northeast"
+msgstr "Northeast"
+
+#. STRINGS.DESCRIBE.COMPASS.NW
+msgctxt "STRINGS.DESCRIBE.COMPASS.NW"
+msgid "Northwest"
+msgstr "Northwest"
+
+#. STRINGS.DESCRIBE.COMPASS.S
+msgctxt "STRINGS.DESCRIBE.COMPASS.S"
+msgid "South"
+msgstr "South"
+
+#. STRINGS.DESCRIBE.COMPASS.SE
+msgctxt "STRINGS.DESCRIBE.COMPASS.SE"
+msgid "Southeast"
+msgstr "Southeast"
+
+#. STRINGS.DESCRIBE.COMPASS.SW
+msgctxt "STRINGS.DESCRIBE.COMPASS.SW"
+msgid "Southwest"
+msgstr "Southwest"
+
+#. STRINGS.DESCRIBE.COMPASS.W
+msgctxt "STRINGS.DESCRIBE.COMPASS.W"
+msgid "West"
+msgstr "West"
+
+#. STRINGS.DESCRIBE.COOKEDMANDRAKE
+msgctxt "STRINGS.DESCRIBE.COOKEDMANDRAKE"
+msgid "I suppose it's his fault for looking so tasty."
+msgstr "I suppose it's his fault for looking so tasty."
+
+#. STRINGS.DESCRIBE.COOKEDMEAT
+msgctxt "STRINGS.DESCRIBE.COOKEDMEAT"
+msgid "Gotta keep my strength up somehow."
+msgstr "Gotta keep my strength up somehow."
+
+#. STRINGS.DESCRIBE.COOKEDMONSTERMEAT
+msgctxt "STRINGS.DESCRIBE.COOKEDMONSTERMEAT"
+msgid "Gross, but it'll do."
+msgstr "Gross, but it'll do."
+
+#. STRINGS.DESCRIBE.COOKEDSMALLMEAT
+msgctxt "STRINGS.DESCRIBE.COOKEDSMALLMEAT"
+msgid "Just a bit of a snack."
+msgstr "Just a bit of a snack."
+
+#. STRINGS.DESCRIBE.COOKPOT.COOKING_LONG
+msgctxt "STRINGS.DESCRIBE.COOKPOT.COOKING_LONG"
+msgid "It'll be a while before it's finished."
+msgstr "It'll be a while before it's finished."
+
+#. STRINGS.DESCRIBE.COOKPOT.COOKING_SHORT
+msgctxt "STRINGS.DESCRIBE.COOKPOT.COOKING_SHORT"
+msgid "Nnnaa, I'm getting hungry just thinking about it."
+msgstr "Nnnaa, I'm getting hungry just thinking about it."
+
+#. STRINGS.DESCRIBE.COOKPOT.DONE
+msgctxt "STRINGS.DESCRIBE.COOKPOT.DONE"
+msgid "Looks like it's done. Time to eat up!"
+msgstr "Looks like it's done. Time to eat up!"
+
+#. STRINGS.DESCRIBE.COOKPOT.EMPTY
+msgctxt "STRINGS.DESCRIBE.COOKPOT.EMPTY"
+msgid "Maybe just a quick snack?.."
+msgstr "Maybe just a quick snack?.."
+
+#. STRINGS.DESCRIBE.CORN
+msgctxt "STRINGS.DESCRIBE.CORN"
+msgid "An ear of corn."
+msgstr "An ear of corn."
+
+#. STRINGS.DESCRIBE.CORN_COOKED
+msgctxt "STRINGS.DESCRIBE.CORN_COOKED"
+msgid "Piping hot popcorn."
+msgstr "Piping hot popcorn."
+
+#. STRINGS.DESCRIBE.CORN_SEEDS
+msgctxt "STRINGS.DESCRIBE.CORN_SEEDS"
+msgid "It's a corn seed."
+msgstr "It's a corn seed."
+
+#. STRINGS.DESCRIBE.CROW.GENERIC
+msgctxt "STRINGS.DESCRIBE.CROW.GENERIC"
+msgid "It's a crow. Pretty and ominous all at once."
+msgstr "It's a crow. Pretty and ominous all at once."
+
+#. STRINGS.DESCRIBE.CROW.HELD
+msgctxt "STRINGS.DESCRIBE.CROW.HELD"
+msgid "He's struggling to get away."
+msgstr "He's struggling to get away."
+
+#. STRINGS.DESCRIBE.CUTGRASS
+msgctxt "STRINGS.DESCRIBE.CUTGRASS"
+msgid "Some cut grass. Now what to do with it.."
+msgstr "Some cut grass. Now what to do with it.."
+
+#. STRINGS.DESCRIBE.CUTLICHEN
+msgctxt "STRINGS.DESCRIBE.CUTLICHEN"
+msgid "Nutritious, but it won't last long."
+msgstr "Nutritious, but it won't last long."
+
+#. STRINGS.DESCRIBE.CUTREEDS
+msgctxt "STRINGS.DESCRIBE.CUTREEDS"
+msgid "A clump of cut reeds."
+msgstr "A clump of cut reeds."
+
+#. STRINGS.DESCRIBE.CUTSTONE
+msgctxt "STRINGS.DESCRIBE.CUTSTONE"
+msgid "What's the point of cutting stone anyway?"
+msgstr "What's the point of cutting stone anyway?"
+
+#. STRINGS.DESCRIBE.DEADLYFEAST
+msgctxt "STRINGS.DESCRIBE.DEADLYFEAST"
+msgid "The smell is so strong."
+msgstr "The smell is so strong."
+
+#. STRINGS.DESCRIBE.DEERCLOPS
+msgctxt "STRINGS.DESCRIBE.DEERCLOPS"
+msgid "Maybe I should start running."
+msgstr "Maybe I should start running."
+
+#. STRINGS.DESCRIBE.DEERCLOPS_EYEBALL
+msgctxt "STRINGS.DESCRIBE.DEERCLOPS_EYEBALL"
+msgid "Nnnaa, don't look at me like that."
+msgstr "Nnnaa, don't look at me like that."
+
+#. STRINGS.DESCRIBE.DEPLETED_GRASS.GENERIC
+msgctxt "STRINGS.DESCRIBE.DEPLETED_GRASS.GENERIC"
+msgid "It's probably a tuft of grass."
+msgstr "It's probably a tuft of grass."
+
+#. STRINGS.DESCRIBE.DEVTOOL
+msgctxt "STRINGS.DESCRIBE.DEVTOOL"
+msgid "Strange. It kinda smells like meat."
+msgstr "Strange. It kinda smells like meat."
+
+#. STRINGS.DESCRIBE.DEVTOOL_NODEV
+msgctxt "STRINGS.DESCRIBE.DEVTOOL_NODEV"
+msgid "I'm not strong enough to wield it."
+msgstr "I'm not strong enough to wield it."
+
+#. STRINGS.DESCRIBE.DIRTPILE
+msgctxt "STRINGS.DESCRIBE.DIRTPILE"
+msgid "Just a pile of dirt."
+msgstr "Just a pile of dirt."
+
+#. STRINGS.DESCRIBE.DIVININGROD.COLD
+msgctxt "STRINGS.DESCRIBE.DIVININGROD.COLD"
+msgid "I'm getting something, but it's faint."
+msgstr "I'm getting something, but it's faint."
+
+#. STRINGS.DESCRIBE.DIVININGROD.GENERIC
+msgctxt "STRINGS.DESCRIBE.DIVININGROD.GENERIC"
+msgid "A strange relic. I wonder if it could be used to locate something?"
+msgstr "A strange relic. I wonder if it could be used to locate something?"
+
+#. STRINGS.DESCRIBE.DIVININGROD.HOT
+msgctxt "STRINGS.DESCRIBE.DIVININGROD.HOT"
+msgid "N-nnaa! This thing sure is getting loud!"
+msgstr "N-nnaa! This thing sure is getting loud!"
+
+#. STRINGS.DESCRIBE.DIVININGROD.WARM
+msgctxt "STRINGS.DESCRIBE.DIVININGROD.WARM"
+msgid "I must be heading in the right direction."
+msgstr "I must be heading in the right direction."
+
+#. STRINGS.DESCRIBE.DIVININGROD.WARMER
+msgctxt "STRINGS.DESCRIBE.DIVININGROD.WARMER"
+msgid "I'm headed in the right direction."
+msgstr "I'm headed in the right direction."
+
+#. STRINGS.DESCRIBE.DIVININGRODBASE.GENERIC
+msgctxt "STRINGS.DESCRIBE.DIVININGRODBASE.GENERIC"
+msgid "I wonder what this is for..."
+msgstr "I wonder what this is for..."
+
+#. STRINGS.DESCRIBE.DIVININGRODBASE.READY
+msgctxt "STRINGS.DESCRIBE.DIVININGRODBASE.READY"
+msgid "Maybe it needs a charge key?"
+msgstr "Maybe it needs a charge key?"
+
+#. STRINGS.DESCRIBE.DIVININGRODBASE.UNLOCKED
+msgctxt "STRINGS.DESCRIBE.DIVININGRODBASE.UNLOCKED"
+msgid "Seems like it'll work now."
+msgstr "Seems like it'll work now."
+
+#. STRINGS.DESCRIBE.DIVININGRODSTART
+msgctxt "STRINGS.DESCRIBE.DIVININGRODSTART"
+msgid "A strange device, for sure."
+msgstr "A strange device, for sure."
+
+#. STRINGS.DESCRIBE.DRAGONFRUIT
+msgctxt "STRINGS.DESCRIBE.DRAGONFRUIT"
+msgid "An interesting fruit. I wonder how it tastes."
+msgstr "An interesting fruit. I wonder how it tastes."
+
+#. STRINGS.DESCRIBE.DRAGONFRUIT_COOKED
+msgctxt "STRINGS.DESCRIBE.DRAGONFRUIT_COOKED"
+msgid "Still looks pretty strange to me."
+msgstr "Still looks pretty strange to me."
+
+#. STRINGS.DESCRIBE.DRAGONFRUIT_SEEDS
+msgctxt "STRINGS.DESCRIBE.DRAGONFRUIT_SEEDS"
+msgid "A seed. Maybe I can grow more of those fruit?"
+msgstr "A seed. Maybe I can grow more of those fruit?"
+
+#. STRINGS.DESCRIBE.DRAGONPIE
+msgctxt "STRINGS.DESCRIBE.DRAGONPIE"
+msgid "When all else fails, put it in a pie."
+msgstr "When all else fails, put it in a pie."
+
+#. STRINGS.DESCRIBE.DRUMSTICK
+msgctxt "STRINGS.DESCRIBE.DRUMSTICK"
+msgid "I'm tempted to take a bite right out of it."
+msgstr "I'm tempted to take a bite right out of it."
+
+#. STRINGS.DESCRIBE.DRUMSTICK_COOKED
+msgctxt "STRINGS.DESCRIBE.DRUMSTICK_COOKED"
+msgid "Now it's even even more enticing."
+msgstr "Now it's even even more enticing."
+
+#. STRINGS.DESCRIBE.DUG_BERRYBUSH
+msgctxt "STRINGS.DESCRIBE.DUG_BERRYBUSH"
+msgid "I should plant this somewhere."
+msgstr "I should plant this somewhere."
+
+#. STRINGS.DESCRIBE.DUG_GRASS
+msgctxt "STRINGS.DESCRIBE.DUG_GRASS"
+msgid "I should plant this somewhere"
+msgstr "I should plant this somewhere"
+
+#. STRINGS.DESCRIBE.DUG_MARSH_BUSH
+msgctxt "STRINGS.DESCRIBE.DUG_MARSH_BUSH"
+msgid "I should plant this somewhere."
+msgstr "I should plant this somewhere."
+
+#. STRINGS.DESCRIBE.DUG_SAPLING
+msgctxt "STRINGS.DESCRIBE.DUG_SAPLING"
+msgid "I should plant this somewhere."
+msgstr "I should plant this somewhere."
+
+#. STRINGS.DESCRIBE.DURIAN
+msgctxt "STRINGS.DESCRIBE.DURIAN"
+msgid "A very pointy fruit. Smells pretty bad too."
+msgstr "A very pointy fruit. Smells pretty bad too."
+
+#. STRINGS.DESCRIBE.DURIAN_COOKED
+msgctxt "STRINGS.DESCRIBE.DURIAN_COOKED"
+msgid "Cooking didn't make it much better."
+msgstr "Cooking didn't make it much better."
+
+#. STRINGS.DESCRIBE.DURIAN_SEEDS
+msgctxt "STRINGS.DESCRIBE.DURIAN_SEEDS"
+msgid "A smelly little seed."
+msgstr "A smelly little seed."
+
+#. STRINGS.DESCRIBE.EARMUFFSHAT
+msgctxt "STRINGS.DESCRIBE.EARMUFFSHAT"
+msgid "I gotta keep my ears warm somehow."
+msgstr "I gotta keep my ears warm somehow."
+
+#. STRINGS.DESCRIBE.EEL
+msgctxt "STRINGS.DESCRIBE.EEL"
+msgid "Another ingredient for dinner, nnaa."
+msgstr "Another ingredient for dinner, nnaa."
+
+#. STRINGS.DESCRIBE.EEL_COOKED
+msgctxt "STRINGS.DESCRIBE.EEL_COOKED"
+msgid "Nnnnaaaa~ I can't wait to dig in!"
+msgstr "Nnnnaaaa~ I can't wait to dig in!"
+
+#. STRINGS.DESCRIBE.EGGPLANT
+msgctxt "STRINGS.DESCRIBE.EGGPLANT"
+msgid "It doesn't look like an egg."
+msgstr "It doesn't look like an egg."
+
+#. STRINGS.DESCRIBE.EGGPLANT_COOKED
+msgctxt "STRINGS.DESCRIBE.EGGPLANT_COOKED"
+msgid "It's even less eggy."
+msgstr "It's even less eggy."
+
+#. STRINGS.DESCRIBE.EGGPLANT_SEEDS
+msgctxt "STRINGS.DESCRIBE.EGGPLANT_SEEDS"
+msgid "It's a seed."
+msgstr "It's a seed."
+
+#. STRINGS.DESCRIBE.EVERGREEN.BURNING
+msgctxt "STRINGS.DESCRIBE.EVERGREEN.BURNING"
+msgid "Kinda feels like a waste.."
+msgstr "Kinda feels like a waste.."
+
+#. STRINGS.DESCRIBE.EVERGREEN.BURNT
+msgctxt "STRINGS.DESCRIBE.EVERGREEN.BURNT"
+msgid "Well, better it than me."
+msgstr "Well, better it than me."
+
+#. STRINGS.DESCRIBE.EVERGREEN.CHOPPED
+msgctxt "STRINGS.DESCRIBE.EVERGREEN.CHOPPED"
+msgid "Well, onto the next one.."
+msgstr "Well, onto the next one.."
+
+#. STRINGS.DESCRIBE.EVERGREEN.GENERIC
+msgctxt "STRINGS.DESCRIBE.EVERGREEN.GENERIC"
+msgid "An evergreen tree. These things stay pretty all year round."
+msgstr "An evergreen tree. These things stay pretty all year round."
+
+#. STRINGS.DESCRIBE.EVERGREEN_SPARSE.BURNING
+msgctxt "STRINGS.DESCRIBE.EVERGREEN_SPARSE.BURNING"
+msgid "Kinda feels like a waste.."
+msgstr "Kinda feels like a waste.."
+
+#. STRINGS.DESCRIBE.EVERGREEN_SPARSE.BURNT
+msgctxt "STRINGS.DESCRIBE.EVERGREEN_SPARSE.BURNT"
+msgid "Well, better it than me."
+msgstr "Well, better it than me."
+
+#. STRINGS.DESCRIBE.EVERGREEN_SPARSE.CHOPPED
+msgctxt "STRINGS.DESCRIBE.EVERGREEN_SPARSE.CHOPPED"
+msgid "Well, onto the next one.."
+msgstr "Well, onto the next one.."
+
+#. STRINGS.DESCRIBE.EVERGREEN_SPARSE.GENERIC
+msgctxt "STRINGS.DESCRIBE.EVERGREEN_SPARSE.GENERIC"
+msgid "This evergreen looks a little lumpier than usual."
+msgstr "This evergreen looks a little lumpier than usual."
+
+#. STRINGS.DESCRIBE.EYEPLANT
+msgctxt "STRINGS.DESCRIBE.EYEPLANT"
+msgid "Is something observing me?.."
+msgstr "Is something observing me?.."
+
+#. STRINGS.DESCRIBE.EYETURRET
+msgctxt "STRINGS.DESCRIBE.EYETURRET"
+msgid "This thing looks kinda dangerous.."
+msgstr "This thing looks kinda dangerous.."
+
+#. STRINGS.DESCRIBE.EYETURRET_ITEM
+msgctxt "STRINGS.DESCRIBE.EYETURRET_ITEM"
+msgid "I guess it's off."
+msgstr "I guess it's off."
+
+#. STRINGS.DESCRIBE.FARMPLOT.GENERIC
+msgctxt "STRINGS.DESCRIBE.FARMPLOT.GENERIC"
+msgid "Maybe I should grow some food."
+msgstr "Maybe I should grow some food."
+
+#. STRINGS.DESCRIBE.FARMPLOT.GROWING
+msgctxt "STRINGS.DESCRIBE.FARMPLOT.GROWING"
+msgid "Nnaa, can't grow any faster?"
+msgstr "Nnaa, can't grow any faster?"
+
+#. STRINGS.DESCRIBE.FARMPLOT.NEEDSFERTILIZER
+msgctxt "STRINGS.DESCRIBE.FARMPLOT.NEEDSFERTILIZER"
+msgid "It might need to be fertilized."
+msgstr "It might need to be fertilized."
+
+#. STRINGS.DESCRIBE.FEATHERHAT
+msgctxt "STRINGS.DESCRIBE.FEATHERHAT"
+msgid "I look ridiculous."
+msgstr "I look ridiculous."
+
+#. STRINGS.DESCRIBE.FEATHER_CROW
+msgctxt "STRINGS.DESCRIBE.FEATHER_CROW"
+msgid "A feather from a crow.."
+msgstr "A feather from a crow.."
+
+#. STRINGS.DESCRIBE.FEATHER_ROBIN
+msgctxt "STRINGS.DESCRIBE.FEATHER_ROBIN"
+msgid "A feather from a robin.."
+msgstr "A feather from a robin.."
+
+#. STRINGS.DESCRIBE.FEATHER_ROBIN_WINTER
+msgctxt "STRINGS.DESCRIBE.FEATHER_ROBIN_WINTER"
+msgid "A feather from a winter bird."
+msgstr "A feather from a winter bird."
+
+#. STRINGS.DESCRIBE.FEM_PUPPET
+msgctxt "STRINGS.DESCRIBE.FEM_PUPPET"
+msgid "It looks like she's stuck."
+msgstr "It looks like she's stuck."
+
+#. STRINGS.DESCRIBE.FIREFLIES.GENERIC
+msgctxt "STRINGS.DESCRIBE.FIREFLIES.GENERIC"
+msgid "So pretty. I wonder if I can catch them."
+msgstr "So pretty. I wonder if I can catch them."
+
+#. STRINGS.DESCRIBE.FIREFLIES.HELD
+msgctxt "STRINGS.DESCRIBE.FIREFLIES.HELD"
+msgid "Naaa, they glow so brightly!"
+msgstr "Naaa, they glow so brightly!"
+
+#. STRINGS.DESCRIBE.FIREHOUND
+msgctxt "STRINGS.DESCRIBE.FIREHOUND"
+msgid "That hound looks a bit more dangerous then usual.."
+msgstr "That hound looks a bit more dangerous then usual.."
+
+#. STRINGS.DESCRIBE.FIREPIT.EMBERS
+msgctxt "STRINGS.DESCRIBE.FIREPIT.EMBERS"
+msgid "It's about to go out. Maybe I should find some more fuel."
+msgstr "It's about to go out. Maybe I should find some more fuel."
+
+#. STRINGS.DESCRIBE.FIREPIT.GENERIC
+msgctxt "STRINGS.DESCRIBE.FIREPIT.GENERIC"
+msgid "This might keep a few creatures away for the night."
+msgstr "This might keep a few creatures away for the night."
+
+#. STRINGS.DESCRIBE.FIREPIT.HIGH
+msgctxt "STRINGS.DESCRIBE.FIREPIT.HIGH"
+msgid "N-nnaa, maybe I should stop feeding it."
+msgstr "N-nnaa, maybe I should stop feeding it."
+
+#. STRINGS.DESCRIBE.FIREPIT.LOW
+msgctxt "STRINGS.DESCRIBE.FIREPIT.LOW"
+msgid "The fire's getting lower."
+msgstr "The fire's getting lower."
+
+#. STRINGS.DESCRIBE.FIREPIT.NORMAL
+msgctxt "STRINGS.DESCRIBE.FIREPIT.NORMAL"
+msgid "The best way to keep warm in a place like this."
+msgstr "The best way to keep warm in a place like this."
+
+#. STRINGS.DESCRIBE.FIREPIT.OUT
+msgctxt "STRINGS.DESCRIBE.FIREPIT.OUT"
+msgid "Well, there it goes."
+msgstr "Well, there it goes."
+
+#. STRINGS.DESCRIBE.FIRESTAFF
+msgctxt "STRINGS.DESCRIBE.FIRESTAFF"
+msgid "I'm not sure how safe it is for me to be holding this thing."
+msgstr "I'm not sure how safe it is for me to be holding this thing."
+
+#. STRINGS.DESCRIBE.FISH
+msgctxt "STRINGS.DESCRIBE.FISH"
+msgid "I bet I could make some killer stew with this.."
+msgstr "I bet I could make some killer stew with this.."
+
+#. STRINGS.DESCRIBE.FISHINGROD
+msgctxt "STRINGS.DESCRIBE.FISHINGROD"
+msgid "Perfect for, well, fishing."
+msgstr "Perfect for, well, fishing."
+
+#. STRINGS.DESCRIBE.FISHSTICKS
+msgctxt "STRINGS.DESCRIBE.FISHSTICKS"
+msgid "Fishy, sticky. Delicious."
+msgstr "Fishy, sticky. Delicious."
+
+#. STRINGS.DESCRIBE.FISHTACOS
+msgctxt "STRINGS.DESCRIBE.FISHTACOS"
+msgid "Nnaa, smells fishy."
+msgstr "Nnaa, smells fishy."
+
+#. STRINGS.DESCRIBE.FISH_COOKED
+msgctxt "STRINGS.DESCRIBE.FISH_COOKED"
+msgid "Grilled to perfection."
+msgstr "Grilled to perfection."
+
+#. STRINGS.DESCRIBE.FLINT
+msgctxt "STRINGS.DESCRIBE.FLINT"
+msgid "Ponty. Perfect for making tools."
+msgstr "Ponty. Perfect for making tools."
+
+#. STRINGS.DESCRIBE.FLOWER
+msgctxt "STRINGS.DESCRIBE.FLOWER"
+msgid "Both pretty, and useful."
+msgstr "Both pretty, and useful."
+
+#. STRINGS.DESCRIBE.FLOWERHAT
+msgctxt "STRINGS.DESCRIBE.FLOWERHAT"
+msgid "So pretty."
+msgstr "So pretty."
+
+#. STRINGS.DESCRIBE.FLOWER_CAVE
+msgctxt "STRINGS.DESCRIBE.FLOWER_CAVE"
+msgid "A nice natural alternative to fire."
+msgstr "A nice natural alternative to fire."
+
+#. STRINGS.DESCRIBE.FLOWER_CAVE_DOUBLE
+msgctxt "STRINGS.DESCRIBE.FLOWER_CAVE_DOUBLE"
+msgid "A nice natural alternative to fire."
+msgstr "A nice natural alternative to fire."
+
+#. STRINGS.DESCRIBE.FLOWER_CAVE_TRIPLE
+msgctxt "STRINGS.DESCRIBE.FLOWER_CAVE_TRIPLE"
+msgid "A nice natural alternative to fire."
+msgstr "A nice natural alternative to fire."
+
+#. STRINGS.DESCRIBE.FLOWER_EVIL
+msgctxt "STRINGS.DESCRIBE.FLOWER_EVIL"
+msgid "This flower sure does look sinister."
+msgstr "This flower sure does look sinister."
+
+#. STRINGS.DESCRIBE.FOLIAGE
+msgctxt "STRINGS.DESCRIBE.FOLIAGE"
+msgid "Just a bunch of plants."
+msgstr "Just a bunch of plants."
+
+#. STRINGS.DESCRIBE.FOOTBALLHAT
+msgctxt "STRINGS.DESCRIBE.FOOTBALLHAT"
+msgid "Nnnaa, what a strange helmet."
+msgstr "Nnnaa, what a strange helmet."
+
+#. STRINGS.DESCRIBE.FROG.DEAD
+msgctxt "STRINGS.DESCRIBE.FROG.DEAD"
+msgid "Ribbit, ribbit.."
+msgstr "Ribbit, ribbit.."
+
+#. STRINGS.DESCRIBE.FROG.GENERIC
+msgctxt "STRINGS.DESCRIBE.FROG.GENERIC"
+msgid "A frog! And a grumpy one at that."
+msgstr "A frog! And a grumpy one at that."
+
+#. STRINGS.DESCRIBE.FROG.SLEEPING
+msgctxt "STRINGS.DESCRIBE.FROG.SLEEPING"
+msgid "Sleep tight, froggy."
+msgstr "Sleep tight, froggy."
+
+#. STRINGS.DESCRIBE.FROGGLEBUNWICH
+msgctxt "STRINGS.DESCRIBE.FROGGLEBUNWICH"
+msgid "Well, bad food is better than no food."
+msgstr "Well, bad food is better than no food."
+
+#. STRINGS.DESCRIBE.FROGLEGS
+msgctxt "STRINGS.DESCRIBE.FROGLEGS"
+msgid "I'm sure I could use these for- Something.."
+msgstr "I'm sure I could use these for- Something.."
+
+#. STRINGS.DESCRIBE.FROGLEGS_COOKED
+msgctxt "STRINGS.DESCRIBE.FROGLEGS_COOKED"
+msgid "Hey, these aren't so bad after all."
+msgstr "Hey, these aren't so bad after all."
+
+#. STRINGS.DESCRIBE.FRUITMEDLEY
+msgctxt "STRINGS.DESCRIBE.FRUITMEDLEY"
+msgid "I cooked it myself!"
+msgstr "I cooked it myself!"
+
+#. STRINGS.DESCRIBE.GEARS
+msgctxt "STRINGS.DESCRIBE.GEARS"
+msgid "A bunch of ancient technology."
+msgstr "A bunch of ancient technology."
+
+#. STRINGS.DESCRIBE.GEMSOCKET.GEMS
+msgctxt "STRINGS.DESCRIBE.GEMSOCKET.GEMS"
+msgid "It needs a gem."
+msgstr "It needs a gem."
+
+#. STRINGS.DESCRIBE.GEMSOCKET.VALID
+msgctxt "STRINGS.DESCRIBE.GEMSOCKET.VALID"
+msgid "Looks like it's ready."
+msgstr "Looks like it's ready."
+
+#. STRINGS.DESCRIBE.GHOST
+msgctxt "STRINGS.DESCRIBE.GHOST"
+msgid "Poor soul."
+msgstr "Poor soul."
+
+#. STRINGS.DESCRIBE.GOLDENAXE
+msgctxt "STRINGS.DESCRIBE.GOLDENAXE"
+msgid "That's one expensive axe."
+msgstr "That's one expensive axe."
+
+#. STRINGS.DESCRIBE.GOLDENPICKAXE
+msgctxt "STRINGS.DESCRIBE.GOLDENPICKAXE"
+msgid "Seems a little impracticle."
+msgstr "Seems a little impracticle."
+
+#. STRINGS.DESCRIBE.GOLDENPITCHFORK
+msgctxt "STRINGS.DESCRIBE.GOLDENPITCHFORK"
+msgid "What's the point of the gold part anyway?"
+msgstr "What's the point of the gold part anyway?"
+
+#. STRINGS.DESCRIBE.GOLDENSHOVEL
+msgctxt "STRINGS.DESCRIBE.GOLDENSHOVEL"
+msgid "I can't wait to dig holes."
+msgstr "I can't wait to dig holes."
+
+#. STRINGS.DESCRIBE.GOLDNUGGET
+msgctxt "STRINGS.DESCRIBE.GOLDNUGGET"
+msgid "Sure does look expensive."
+msgstr "Sure does look expensive."
+
+#. STRINGS.DESCRIBE.GRASS.BARREN
+msgctxt "STRINGS.DESCRIBE.GRASS.BARREN"
+msgid "Looks like it needs to grow back first."
+msgstr "Looks like it needs to grow back first."
+
+#. STRINGS.DESCRIBE.GRASS.BURNING
+msgctxt "STRINGS.DESCRIBE.GRASS.BURNING"
+msgid "So long, grass."
+msgstr "So long, grass."
+
+#. STRINGS.DESCRIBE.GRASS.GENERIC
+msgctxt "STRINGS.DESCRIBE.GRASS.GENERIC"
+msgid "It's a tuft of nice soft grass."
+msgstr "It's a tuft of nice soft grass."
+
+#. STRINGS.DESCRIBE.GRASS.PICKED
+msgctxt "STRINGS.DESCRIBE.GRASS.PICKED"
+msgid "It looks so sad now."
+msgstr "It looks so sad now."
+
+#. STRINGS.DESCRIBE.GREENAMULET
+msgctxt "STRINGS.DESCRIBE.GREENAMULET"
+msgid "Conservation is important, nnaa."
+msgstr "Conservation is important, nnaa."
+
+#. STRINGS.DESCRIBE.GREENGEM
+msgctxt "STRINGS.DESCRIBE.GREENGEM"
+msgid "Nnna, so pretty.."
+msgstr "Nnna, so pretty.."
+
+#. STRINGS.DESCRIBE.GREENSTAFF
+msgctxt "STRINGS.DESCRIBE.GREENSTAFF"
+msgid "How in the world do I use this thing.."
+msgstr "How in the world do I use this thing.."
+
+#. STRINGS.DESCRIBE.GREEN_CAP
+msgctxt "STRINGS.DESCRIBE.GREEN_CAP"
+msgid "Naaaa.. Just thinking about eating this worries me."
+msgstr "Naaaa.. Just thinking about eating this worries me."
+
+#. STRINGS.DESCRIBE.GREEN_CAP_COOKED
+msgctxt "STRINGS.DESCRIBE.GREEN_CAP_COOKED"
+msgid "This doesn't look half bad now."
+msgstr "This doesn't look half bad now."
+
+#. STRINGS.DESCRIBE.GREEN_MUSHROOM.GENERIC
+msgctxt "STRINGS.DESCRIBE.GREEN_MUSHROOM.GENERIC"
+msgid "A nice green mushroom."
+msgstr "A nice green mushroom."
+
+#. STRINGS.DESCRIBE.GREEN_MUSHROOM.INGROUND
+msgctxt "STRINGS.DESCRIBE.GREEN_MUSHROOM.INGROUND"
+msgid "Maybe I should come back at dusk."
+msgstr "Maybe I should come back at dusk."
+
+#. STRINGS.DESCRIBE.GREEN_MUSHROOM.PICKED
+msgctxt "STRINGS.DESCRIBE.GREEN_MUSHROOM.PICKED"
+msgid "I wonder if it will grow back?"
+msgstr "I wonder if it will grow back?"
+
+#. STRINGS.DESCRIBE.GUANO
+msgctxt "STRINGS.DESCRIBE.GUANO"
+msgid "Gross, but it might just be useful."
+msgstr "Gross, but it might just be useful."
+
+#. STRINGS.DESCRIBE.GUNPOWDER
+msgctxt "STRINGS.DESCRIBE.GUNPOWDER"
+msgid "Perfect for causing explosions."
+msgstr "Perfect for causing explosions."
+
+#. STRINGS.DESCRIBE.HAMBAT
+msgctxt "STRINGS.DESCRIBE.HAMBAT"
+msgid "What a waste of food."
+msgstr "What a waste of food."
+
+#. STRINGS.DESCRIBE.HAMMER
+msgctxt "STRINGS.DESCRIBE.HAMMER"
+msgid "A hammer. Useful for.. Hammering."
+msgstr "A hammer. Useful for.. Hammering."
+
+#. STRINGS.DESCRIBE.HEALINGSALVE
+msgctxt "STRINGS.DESCRIBE.HEALINGSALVE"
+msgid "Nnnaa.. It kinda stings, but it will do."
+msgstr "Nnnaa.. It kinda stings, but it will do."
+
+#. STRINGS.DESCRIBE.HEATROCK.COLD
+msgctxt "STRINGS.DESCRIBE.HEATROCK.COLD"
+msgid "It's cold to the touch."
+msgstr "It's cold to the touch."
+
+#. STRINGS.DESCRIBE.HEATROCK.GENERIC
+msgctxt "STRINGS.DESCRIBE.HEATROCK.GENERIC"
+msgid "I'm sure some fire would heat it up."
+msgstr "I'm sure some fire would heat it up."
+
+#. STRINGS.DESCRIBE.HEATROCK.HOT
+msgctxt "STRINGS.DESCRIBE.HEATROCK.HOT"
+msgid "Nnnaaa, nice and hot~"
+msgstr "Nnnaaa, nice and hot~"
+
+#. STRINGS.DESCRIBE.HEATROCK.WARM
+msgctxt "STRINGS.DESCRIBE.HEATROCK.WARM"
+msgid "The rock's all warm now!"
+msgstr "The rock's all warm now!"
+
+#. STRINGS.DESCRIBE.HOME
+msgctxt "STRINGS.DESCRIBE.HOME"
+msgid "I wonder if anyone's home?"
+msgstr "I wonder if anyone's home?"
+
+#. STRINGS.DESCRIBE.HOMESIGN
+msgctxt "STRINGS.DESCRIBE.HOMESIGN"
+msgid "The sign reads \"You are here\""
+msgstr "The sign reads \"You are here\""
+
+#. STRINGS.DESCRIBE.HONEY
+msgctxt "STRINGS.DESCRIBE.HONEY"
+msgid "Sweet, sweet honey."
+msgstr "Sweet, sweet honey."
+
+#. STRINGS.DESCRIBE.HONEYCOMB
+msgctxt "STRINGS.DESCRIBE.HONEYCOMB"
+msgid "Bees sure are efficient. "
+msgstr "Bees sure are efficient. "
+
+#. STRINGS.DESCRIBE.HONEYHAM
+msgctxt "STRINGS.DESCRIBE.HONEYHAM"
+msgid "A nice sweet ham. I can't wait to chow down!"
+msgstr "A nice sweet ham. I can't wait to chow down!"
+
+#. STRINGS.DESCRIBE.HONEYNUGGETS
+msgctxt "STRINGS.DESCRIBE.HONEYNUGGETS"
+msgid "Some sweet nuggets. Perfect for a quick bite."
+msgstr "Some sweet nuggets. Perfect for a quick bite."
+
+#. STRINGS.DESCRIBE.HORN
+msgctxt "STRINGS.DESCRIBE.HORN"
+msgid "This thing sure is loud."
+msgstr "This thing sure is loud."
+
+#. STRINGS.DESCRIBE.HOUND
+msgctxt "STRINGS.DESCRIBE.HOUND"
+msgid "Nnna, not a fan of these things."
+msgstr "Nnna, not a fan of these things."
+
+#. STRINGS.DESCRIBE.HOUNDBONE
+msgctxt "STRINGS.DESCRIBE.HOUNDBONE"
+msgid "Creepy."
+msgstr "Creepy."
+
+#. STRINGS.DESCRIBE.HOUNDMOUND
+msgctxt "STRINGS.DESCRIBE.HOUNDMOUND"
+msgid "I wouldn't want to pick a bone with the owner."
+msgstr "I wouldn't want to pick a bone with the owner."
+
+#. STRINGS.DESCRIBE.HOUNDSTOOTH
+msgctxt "STRINGS.DESCRIBE.HOUNDSTOOTH"
+msgid "The tooth of a hound. Pointy.."
+msgstr "The tooth of a hound. Pointy.."
+
+#. STRINGS.DESCRIBE.HUMANMEAT
+msgctxt "STRINGS.DESCRIBE.HUMANMEAT"
+msgid "I'm not sure about this.."
+msgstr "I'm not sure about this.."
+
+#. STRINGS.DESCRIBE.HUMANMEAT_COOKED
+msgctxt "STRINGS.DESCRIBE.HUMANMEAT_COOKED"
+msgid "Cooking it didn't really make it look better, naaa.."
+msgstr "Cooking it didn't really make it look better, naaa.."
+
+#. STRINGS.DESCRIBE.HUMANMEAT_DRIED
+msgctxt "STRINGS.DESCRIBE.HUMANMEAT_DRIED"
+msgid "Human Meat. But dried. It still sickens me, though.."
+msgstr "Human Meat. But dried. It still sickens me, though.."
+
+#. STRINGS.DESCRIBE.ICEBOX
+msgctxt "STRINGS.DESCRIBE.ICEBOX"
+msgid "A perfect place to store some food."
+msgstr "A perfect place to store some food."
+
+#. STRINGS.DESCRIBE.ICEHOUND
+msgctxt "STRINGS.DESCRIBE.ICEHOUND"
+msgid "Another hound? Nnaaa.. Looking at it is giving me chills."
+msgstr "Another hound? Nnaaa.. Looking at it is giving me chills."
+
+#. STRINGS.DESCRIBE.ICESTAFF
+msgctxt "STRINGS.DESCRIBE.ICESTAFF"
+msgid "This staff is kind of cold. I wonder what it does?"
+msgstr "This staff is kind of cold. I wonder what it does?"
+
+#. STRINGS.DESCRIBE.INSANITYROCK.ACTIVE
+msgctxt "STRINGS.DESCRIBE.INSANITYROCK.ACTIVE"
+msgid "Take that, sane self."
+msgstr "Take that, sane self."
+
+#. STRINGS.DESCRIBE.INSANITYROCK.INACTIVE
+msgctxt "STRINGS.DESCRIBE.INSANITYROCK.INACTIVE"
+msgid "Huh. It's lowered into the ground?"
+msgstr "Huh. It's lowered into the ground?"
+
+#. STRINGS.DESCRIBE.JAMMYPRESERVES
+msgctxt "STRINGS.DESCRIBE.JAMMYPRESERVES"
+msgid "Now if only I had something to put it on."
+msgstr "Now if only I had something to put it on."
+
+#. STRINGS.DESCRIBE.KABOBS
+msgctxt "STRINGS.DESCRIBE.KABOBS"
+msgid "I guess food's even better when it's on a stick."
+msgstr "I guess food's even better when it's on a stick."
+
+#. STRINGS.DESCRIBE.KILLERBEE.GENERIC
+msgctxt "STRINGS.DESCRIBE.KILLERBEE.GENERIC"
+msgid "Oh no! It's a killer bee!"
+msgstr "Oh no! It's a killer bee!"
+
+#. STRINGS.DESCRIBE.KILLERBEE.HELD
+msgctxt "STRINGS.DESCRIBE.KILLERBEE.HELD"
+msgid "This seems dangerous."
+msgstr "This seems dangerous."
+
+#. STRINGS.DESCRIBE.KNIGHT
+msgctxt "STRINGS.DESCRIBE.KNIGHT"
+msgid "Some kind of.. Horse?"
+msgstr "Some kind of.. Horse?"
+
+#. STRINGS.DESCRIBE.KNIGHT_NIGHTMARE
+msgctxt "STRINGS.DESCRIBE.KNIGHT_NIGHTMARE"
+msgid "It's a knightmare!"
+msgstr "It's a knightmare!"
+
+#. STRINGS.DESCRIBE.KOALEFANT_SUMMER
+msgctxt "STRINGS.DESCRIBE.KOALEFANT_SUMMER"
+msgid "That thing sure does look tasty."
+msgstr "That thing sure does look tasty."
+
+#. STRINGS.DESCRIBE.KOALEFANT_WINTER
+msgctxt "STRINGS.DESCRIBE.KOALEFANT_WINTER"
+msgid "It looks warm. Not to mention, tasty."
+msgstr "It looks warm. Not to mention, tasty."
+
+#. STRINGS.DESCRIBE.KRAMPUS
+msgctxt "STRINGS.DESCRIBE.KRAMPUS"
+msgid "Nnnaaa, hey! Stay away from my stuff!"
+msgstr "Nnnaaa, hey! Stay away from my stuff!"
+
+#. STRINGS.DESCRIBE.KRAMPUS_SACK
+msgctxt "STRINGS.DESCRIBE.KRAMPUS_SACK"
+msgid "It's surprisingly light."
+msgstr "It's surprisingly light."
+
+#. STRINGS.DESCRIBE.LANTERN
+msgctxt "STRINGS.DESCRIBE.LANTERN"
+msgid "Naa, I feel way safer around one of these. More than an open flame, anyway."
+msgstr "Naa, I feel way safer around one of these. More than an open flame, anyway."
+
+#. STRINGS.DESCRIBE.LEIF
+msgctxt "STRINGS.DESCRIBE.LEIF"
+msgid "Is that.. A tree? Nnnaaa..."
+msgstr "Is that.. A tree? Nnnaaa..."
+
+#. STRINGS.DESCRIBE.LEIF_SPARSE
+msgctxt "STRINGS.DESCRIBE.LEIF_SPARSE"
+msgid "Is that.. A tree?"
+msgstr "Is that.. A tree?"
+
+#. STRINGS.DESCRIBE.LICHEN
+msgctxt "STRINGS.DESCRIBE.LICHEN"
+msgid "Only a cyanobacteria could grow in this light."
+msgstr "Only a cyanobacteria could grow in this light."
+
+#. STRINGS.DESCRIBE.LIFEINJECTOR
+msgctxt "STRINGS.DESCRIBE.LIFEINJECTOR"
+msgid "Nnaa, better already."
+msgstr "Nnaa, better already."
+
+#. STRINGS.DESCRIBE.LIGHTBULB
+msgctxt "STRINGS.DESCRIBE.LIGHTBULB"
+msgid "I'd bet these things have tons of uses... Nnaa, I wonder how they taste."
+msgstr "I'd bet these things have tons of uses... Nnaa, I wonder how they taste."
+
+#. STRINGS.DESCRIBE.LIGHTNING_ROD.CHARGED
+msgctxt "STRINGS.DESCRIBE.LIGHTNING_ROD.CHARGED"
+msgid "Looks like it's charged."
+msgstr "Looks like it's charged."
+
+#. STRINGS.DESCRIBE.LIGHTNING_ROD.GENERIC
+msgctxt "STRINGS.DESCRIBE.LIGHTNING_ROD.GENERIC"
+msgid "A rod that shoots lightning? Don't mind if I do."
+msgstr "A rod that shoots lightning? Don't mind if I do."
+
+#. STRINGS.DESCRIBE.LITTLE_WALRUS
+msgctxt "STRINGS.DESCRIBE.LITTLE_WALRUS"
+msgid "Hey there, little guy."
+msgstr "Hey there, little guy."
+
+#. STRINGS.DESCRIBE.LIVINGLOG
+msgctxt "STRINGS.DESCRIBE.LIVINGLOG"
+msgid "I feel like it's staring back at me, with judging eyes."
+msgstr "I feel like it's staring back at me, with judging eyes."
+
+#. STRINGS.DESCRIBE.LIVINGTREE
+msgctxt "STRINGS.DESCRIBE.LIVINGTREE"
+msgid "I feel like I'm being watched."
+msgstr "I feel like I'm being watched."
+
+#. STRINGS.DESCRIBE.LOCKEDWES
+msgctxt "STRINGS.DESCRIBE.LOCKEDWES"
+msgid "Maxwell's statues are trapping him. Maybe I should help out."
+msgstr "Maxwell's statues are trapping him. Maybe I should help out."
+
+#. STRINGS.DESCRIBE.LOG.BURNING
+msgctxt "STRINGS.DESCRIBE.LOG.BURNING"
+msgid "A burning log!"
+msgstr "A burning log!"
+
+#. STRINGS.DESCRIBE.LOG.GENERIC
+msgctxt "STRINGS.DESCRIBE.LOG.GENERIC"
+msgid "I'm not sure I could lift something that big. That's a lot of wood."
+msgstr "I'm not sure I could lift something that big. That's a lot of wood."
+
+#. STRINGS.DESCRIBE.LUREPLANT
+msgctxt "STRINGS.DESCRIBE.LUREPLANT"
+msgid "There's something oddly alluring about it."
+msgstr "There's something oddly alluring about it."
+
+#. STRINGS.DESCRIBE.LUREPLANTBULB
+msgctxt "STRINGS.DESCRIBE.LUREPLANTBULB"
+msgid "Now I can start my very own meat farm."
+msgstr "Now I can start my very own meat farm."
+
+#. STRINGS.DESCRIBE.MALE_PUPPET
+msgctxt "STRINGS.DESCRIBE.MALE_PUPPET"
+msgid "It looks like he's trapped."
+msgstr "It looks like he's trapped."
+
+#. STRINGS.DESCRIBE.MANDRAKE.DEAD
+msgctxt "STRINGS.DESCRIBE.MANDRAKE.DEAD"
+msgid "That thing sure was creepy."
+msgstr "That thing sure was creepy."
+
+#. STRINGS.DESCRIBE.MANDRAKE.GENERIC
+msgctxt "STRINGS.DESCRIBE.MANDRAKE.GENERIC"
+msgid "That's one strange looking plant."
+msgstr "That's one strange looking plant."
+
+#. STRINGS.DESCRIBE.MANDRAKE.PICKED
+msgctxt "STRINGS.DESCRIBE.MANDRAKE.PICKED"
+msgid "Hey, get out of here, quit following me!"
+msgstr "Hey, get out of here, quit following me!"
+
+#. STRINGS.DESCRIBE.MANDRAKESOUP
+msgctxt "STRINGS.DESCRIBE.MANDRAKESOUP"
+msgid "Nnaa, your fault for being so tasty looking."
+msgstr "Nnaa, your fault for being so tasty looking."
+
+#. STRINGS.DESCRIBE.MANDRAKE_COOKED
+msgctxt "STRINGS.DESCRIBE.MANDRAKE_COOKED"
+msgid "It doesn't seem so strange anymore."
+msgstr "It doesn't seem so strange anymore."
+
+#. STRINGS.DESCRIBE.MANRABBIT_TAIL
+msgctxt "STRINGS.DESCRIBE.MANRABBIT_TAIL"
+msgid "I'm not sure how comfortable I am with this, nnaaa.."
+msgstr "I'm not sure how comfortable I am with this, nnaaa.."
+
+#. STRINGS.DESCRIBE.MARBLE
+msgctxt "STRINGS.DESCRIBE.MARBLE"
+msgid "Fancy."
+msgstr "Fancy."
+
+#. STRINGS.DESCRIBE.MARBLEPILLAR
+msgctxt "STRINGS.DESCRIBE.MARBLEPILLAR"
+msgid "I think I could use that."
+msgstr "I think I could use that."
+
+#. STRINGS.DESCRIBE.MARBLETREE
+msgctxt "STRINGS.DESCRIBE.MARBLETREE"
+msgid "I'm not sure if an axe is strong enough to cut that."
+msgstr "I'm not sure if an axe is strong enough to cut that."
+
+#. STRINGS.DESCRIBE.MARSH_BUSH.BURNING
+msgctxt "STRINGS.DESCRIBE.MARSH_BUSH.BURNING"
+msgid "Nnnaa, it's burning fast!"
+msgstr "Nnnaa, it's burning fast!"
+
+#. STRINGS.DESCRIBE.MARSH_BUSH.GENERIC
+msgctxt "STRINGS.DESCRIBE.MARSH_BUSH.GENERIC"
+msgid "That looks like it'd hurt."
+msgstr "That looks like it'd hurt."
+
+#. STRINGS.DESCRIBE.MARSH_BUSH.PICKED
+msgctxt "STRINGS.DESCRIBE.MARSH_BUSH.PICKED"
+msgid "Well that wasn't worth it at all."
+msgstr "Well that wasn't worth it at all."
+
+#. STRINGS.DESCRIBE.MARSH_PLANT
+msgctxt "STRINGS.DESCRIBE.MARSH_PLANT"
+msgid "It's a plant."
+msgstr "It's a plant."
+
+#. STRINGS.DESCRIBE.MARSH_TREE.BURNING
+msgctxt "STRINGS.DESCRIBE.MARSH_TREE.BURNING"
+msgid "It's burning!"
+msgstr "It's burning!"
+
+#. STRINGS.DESCRIBE.MARSH_TREE.BURNT
+msgctxt "STRINGS.DESCRIBE.MARSH_TREE.BURNT"
+msgid "Now it's burnt and spiky."
+msgstr "Now it's burnt and spiky."
+
+#. STRINGS.DESCRIBE.MARSH_TREE.CHOPPED
+msgctxt "STRINGS.DESCRIBE.MARSH_TREE.CHOPPED"
+msgid "Onto the next one."
+msgstr "Onto the next one."
+
+#. STRINGS.DESCRIBE.MARSH_TREE.GENERIC
+msgctxt "STRINGS.DESCRIBE.MARSH_TREE.GENERIC"
+msgid "That's one spiky tree."
+msgstr "That's one spiky tree."
+
+#. STRINGS.DESCRIBE.MAXWELL
+msgctxt "STRINGS.DESCRIBE.MAXWELL"
+msgid "Nnaa, I don't trust him at all."
+msgstr "Nnaa, I don't trust him at all."
+
+#. STRINGS.DESCRIBE.MAXWELLHEAD
+msgctxt "STRINGS.DESCRIBE.MAXWELLHEAD"
+msgid "You'd have to be really full of yourself to build something like this."
+msgstr "You'd have to be really full of yourself to build something like this."
+
+#. STRINGS.DESCRIBE.MAXWELLLIGHT
+msgctxt "STRINGS.DESCRIBE.MAXWELLLIGHT"
+msgid "Could it be activated my motion?"
+msgstr "Could it be activated my motion?"
+
+#. STRINGS.DESCRIBE.MAXWELLLOCK
+msgctxt "STRINGS.DESCRIBE.MAXWELLLOCK"
+msgid "A keyhole? But where's the key?"
+msgstr "A keyhole? But where's the key?"
+
+#. STRINGS.DESCRIBE.MAXWELLPHONOGRAPH
+msgctxt "STRINGS.DESCRIBE.MAXWELLPHONOGRAPH"
+msgid "Music..? Strange."
+msgstr "Music..? Strange."
+
+#. STRINGS.DESCRIBE.MAXWELLTHRONE
+msgctxt "STRINGS.DESCRIBE.MAXWELLTHRONE"
+msgid "Being in it's presence makes me feel uncomfortable, nnnaa.."
+msgstr "Being in it's presence makes me feel uncomfortable, nnnaa.."
+
+#. STRINGS.DESCRIBE.MEAT
+msgctxt "STRINGS.DESCRIBE.MEAT"
+msgid "Plain old meat. There's so many possibilities."
+msgstr "Plain old meat. There's so many possibilities."
+
+#. STRINGS.DESCRIBE.MEATBALLS
+msgctxt "STRINGS.DESCRIBE.MEATBALLS"
+msgid "Simple, but yummy."
+msgstr "Simple, but yummy."
+
+#. STRINGS.DESCRIBE.MEATRACK.DONE
+msgctxt "STRINGS.DESCRIBE.MEATRACK.DONE"
+msgid "Looks like the meat is done drying."
+msgstr "Looks like the meat is done drying."
+
+#. STRINGS.DESCRIBE.MEATRACK.DRYING
+msgctxt "STRINGS.DESCRIBE.MEATRACK.DRYING"
+msgid "Maybe I should give it some more time."
+msgstr "Maybe I should give it some more time."
+
+#. STRINGS.DESCRIBE.MEATRACK.GENERIC
+msgctxt "STRINGS.DESCRIBE.MEATRACK.GENERIC"
+msgid "Perfect for drying all kinds of meats."
+msgstr "Perfect for drying all kinds of meats."
+
+#. STRINGS.DESCRIBE.MEAT_DRIED
+msgctxt "STRINGS.DESCRIBE.MEAT_DRIED"
+msgid "Perfect for long excursions."
+msgstr "Perfect for long excursions."
+
+#. STRINGS.DESCRIBE.MERM
+msgctxt "STRINGS.DESCRIBE.MERM"
+msgid "Nnnaa, something smells."
+msgstr "Nnnaa, something smells."
+
+#. STRINGS.DESCRIBE.MERMHEAD
+msgctxt "STRINGS.DESCRIBE.MERMHEAD"
+msgid "The stinkiest thing I'll smell all day."
+msgstr "The stinkiest thing I'll smell all day."
+
+#. STRINGS.DESCRIBE.MERMHOUSE
+msgctxt "STRINGS.DESCRIBE.MERMHOUSE"
+msgid "What a strange choice for a home."
+msgstr "What a strange choice for a home."
+
+#. STRINGS.DESCRIBE.MINERHAT
+msgctxt "STRINGS.DESCRIBE.MINERHAT"
+msgid "Hands free lighting, with a little bonus protection."
+msgstr "Hands free lighting, with a little bonus protection."
+
+#. STRINGS.DESCRIBE.MINOTAUR
+msgctxt "STRINGS.DESCRIBE.MINOTAUR"
+msgid "Whatever that is, it doesn't look very happy to see me, nnnaa."
+msgstr "Whatever that is, it doesn't look very happy to see me, nnnaa."
+
+#. STRINGS.DESCRIBE.MINOTAURCHEST
+msgctxt "STRINGS.DESCRIBE.MINOTAURCHEST"
+msgid "Maybe something useful is inside?"
+msgstr "Maybe something useful is inside?"
+
+#. STRINGS.DESCRIBE.MINOTAURHORN
+msgctxt "STRINGS.DESCRIBE.MINOTAURHORN"
+msgid "A big big horn. From a minotaur. Scary."
+msgstr "A big big horn. From a minotaur. Scary."
+
+#. STRINGS.DESCRIBE.MONKEY
+msgctxt "STRINGS.DESCRIBE.MONKEY"
+msgid "Curious little guy."
+msgstr "Curious little guy."
+
+#. STRINGS.DESCRIBE.MONKEYBARREL
+msgctxt "STRINGS.DESCRIBE.MONKEYBARREL"
+msgid "N-nnaa, did that thing just move?"
+msgstr "N-nnaa, did that thing just move?"
+
+#. STRINGS.DESCRIBE.MONSTERLASAGNA
+msgctxt "STRINGS.DESCRIBE.MONSTERLASAGNA"
+msgid "It looks pretty good, for what it is.."
+msgstr "It looks pretty good, for what it is.."
+
+#. STRINGS.DESCRIBE.MONSTERMEAT
+msgctxt "STRINGS.DESCRIBE.MONSTERMEAT"
+msgid "It smells kind of rancid."
+msgstr "It smells kind of rancid."
+
+#. STRINGS.DESCRIBE.MONSTERMEAT_DRIED
+msgctxt "STRINGS.DESCRIBE.MONSTERMEAT_DRIED"
+msgid "Looks like ordinary jerky to me. Though the smell gives it away."
+msgstr "Looks like ordinary jerky to me. Though the smell gives it away."
+
+#. STRINGS.DESCRIBE.MOONROCKNUGGET
+msgctxt "STRINGS.DESCRIBE.MOONROCKNUGGET"
+msgid "A strange rock?.. I wonder where it came from."
+msgstr "A strange rock?.. I wonder where it came from."
+
+#. STRINGS.DESCRIBE.MOSQUITO.GENERIC
+msgctxt "STRINGS.DESCRIBE.MOSQUITO.GENERIC"
+msgid "Disgusting little insects."
+msgstr "Disgusting little insects."
+
+#. STRINGS.DESCRIBE.MOSQUITO.HELD
+msgctxt "STRINGS.DESCRIBE.MOSQUITO.HELD"
+msgid "Looks like your blood-sucking days are over."
+msgstr "Looks like your blood-sucking days are over."
+
+#. STRINGS.DESCRIBE.MOSQUITOSACK
+msgctxt "STRINGS.DESCRIBE.MOSQUITOSACK"
+msgid "It's full of blood."
+msgstr "It's full of blood."
+
+#. STRINGS.DESCRIBE.MOUND.DUG
+msgctxt "STRINGS.DESCRIBE.MOUND.DUG"
+msgid "Well now I feel a bit bad."
+msgstr "Well now I feel a bit bad."
+
+#. STRINGS.DESCRIBE.MOUND.GENERIC
+msgctxt "STRINGS.DESCRIBE.MOUND.GENERIC"
+msgid "There could be something down there. But is it worth it?"
+msgstr "There could be something down there. But is it worth it?"
+
+#. STRINGS.DESCRIBE.MULTIPLAYER_PORTAL
+msgctxt "STRINGS.DESCRIBE.MULTIPLAYER_PORTAL"
+msgid "This isn't like any relic I've seen before..."
+msgstr "This isn't like any relic I've seen before..."
+
+#. STRINGS.DESCRIBE.MULTITOOL_AXE_PICKAXE
+msgctxt "STRINGS.DESCRIBE.MULTITOOL_AXE_PICKAXE"
+msgid "Two useful tools in one. Yeah, I can use this.."
+msgstr "Two useful tools in one. Yeah, I can use this.."
+
+#. STRINGS.DESCRIBE.MUSHTREE_MEDIUM
+msgctxt "STRINGS.DESCRIBE.MUSHTREE_MEDIUM"
+msgid "Oddly mesmerizing."
+msgstr "Oddly mesmerizing."
+
+#. STRINGS.DESCRIBE.MUSHTREE_SMALL
+msgctxt "STRINGS.DESCRIBE.MUSHTREE_SMALL"
+msgid "A mushroom. Or, is it a tree. Naa.."
+msgstr "A mushroom. Or, is it a tree. Naa.."
+
+#. STRINGS.DESCRIBE.MUSHTREE_TALL
+msgctxt "STRINGS.DESCRIBE.MUSHTREE_TALL"
+msgid "I wasn't aware that mushrooms could even get this big."
+msgstr "I wasn't aware that mushrooms could even get this big."
+
+#. STRINGS.DESCRIBE.NIGHTLIGHT
+msgctxt "STRINGS.DESCRIBE.NIGHTLIGHT"
+msgid "A light. An unsettling one at that."
+msgstr "A light. An unsettling one at that."
+
+#. STRINGS.DESCRIBE.NIGHTMAREFUEL
+msgctxt "STRINGS.DESCRIBE.NIGHTMAREFUEL"
+msgid "Nnna.. Just looking at it makes me nervous."
+msgstr "Nnna.. Just looking at it makes me nervous."
+
+#. STRINGS.DESCRIBE.NIGHTMARELIGHT
+msgctxt "STRINGS.DESCRIBE.NIGHTMARELIGHT"
+msgid "I wonder who put this thing here."
+msgstr "I wonder who put this thing here."
+
+#. STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.CALM
+msgctxt "STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.CALM"
+msgid "It seems things are fine for now."
+msgstr "It seems things are fine for now."
+
+#. STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.DAWN
+msgctxt "STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.DAWN"
+msgid "I guess the nightmare is running out!"
+msgstr "I guess the nightmare is running out!"
+
+#. STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.NOMAGIC
+msgctxt "STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.NOMAGIC"
+msgid "Doesn't feel like there's any magic around here."
+msgstr "Doesn't feel like there's any magic around here."
+
+#. STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.STEADY
+msgctxt "STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.STEADY"
+msgid "Seems ballanced, for the moment.."
+msgstr "Seems ballanced, for the moment.."
+
+#. STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.WANING
+msgctxt "STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.WANING"
+msgid "It feels like it's diminishing."
+msgstr "It feels like it's diminishing."
+
+#. STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.WARN
+msgctxt "STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.WARN"
+msgid "I certainly feel something, nnnaa.."
+msgstr "I certainly feel something, nnnaa.."
+
+#. STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.WAXING
+msgctxt "STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.WAXING"
+msgid "H-hey, this thing's getting a little intense!"
+msgstr "H-hey, this thing's getting a little intense!"
+
+#. STRINGS.DESCRIBE.NIGHTSWORD
+msgctxt "STRINGS.DESCRIBE.NIGHTSWORD"
+msgid "I can feel the fear pouring from it."
+msgstr "I can feel the fear pouring from it."
+
+#. STRINGS.DESCRIBE.NITRE
+msgctxt "STRINGS.DESCRIBE.NITRE"
+msgid "A strange type of rock. I wonder what I can do with it?"
+msgstr "A strange type of rock. I wonder what I can do with it?"
+
+#. STRINGS.DESCRIBE.ONEMANBAND
+msgctxt "STRINGS.DESCRIBE.ONEMANBAND"
+msgid "Well this just feels silly."
+msgstr "Well this just feels silly."
+
+#. STRINGS.DESCRIBE.ORANGEAMULET
+msgctxt "STRINGS.DESCRIBE.ORANGEAMULET"
+msgid "Teleportation, huh? Relics sure are full of surprises, naaa."
+msgstr "Teleportation, huh? Relics sure are full of surprises, naaa."
+
+#. STRINGS.DESCRIBE.ORANGEGEM
+msgctxt "STRINGS.DESCRIBE.ORANGEGEM"
+msgid "It's an orange gem. I wonder what I can use this for.."
+msgstr "It's an orange gem. I wonder what I can use this for.."
+
+#. STRINGS.DESCRIBE.ORANGESTAFF
+msgctxt "STRINGS.DESCRIBE.ORANGESTAFF"
+msgid "Teleportation, huh? Relics sure are full of surprises, naaa."
+msgstr "Teleportation, huh? Relics sure are full of surprises, naaa."
+
+#. STRINGS.DESCRIBE.PANDORASCHEST
+msgctxt "STRINGS.DESCRIBE.PANDORASCHEST"
+msgid "Who knows what's inside?"
+msgstr "Who knows what's inside?"
+
+#. STRINGS.DESCRIBE.PANFLUTE
+msgctxt "STRINGS.DESCRIBE.PANFLUTE"
+msgid "I can serenade the animals."
+msgstr "I can serenade the animals."
+
+#. STRINGS.DESCRIBE.PAPYRUS
+msgctxt "STRINGS.DESCRIBE.PAPYRUS"
+msgid "A sheet of paper. I bet I can write a few lists with this."
+msgstr "A sheet of paper. I bet I can write a few lists with this."
+
+#. STRINGS.DESCRIBE.PENGUIN
+msgctxt "STRINGS.DESCRIBE.PENGUIN"
+msgid "They look so defenseless."
+msgstr "They look so defenseless."
+
+#. STRINGS.DESCRIBE.PERD
+msgctxt "STRINGS.DESCRIBE.PERD"
+msgid "N-nnaa, give back my berries, dumb bird!"
+msgstr "N-nnaa, give back my berries, dumb bird!"
+
+#. STRINGS.DESCRIBE.PEROGIES
+msgctxt "STRINGS.DESCRIBE.PEROGIES"
+msgid "I cooked them myself!"
+msgstr "I cooked them myself!"
+
+#. STRINGS.DESCRIBE.PETALS
+msgctxt "STRINGS.DESCRIBE.PETALS"
+msgid "I destroyed a defenseless flower for these. But what do I use them for?"
+msgstr "I destroyed a defenseless flower for these. But what do I use them for?"
+
+#. STRINGS.DESCRIBE.PETALS_EVIL
+msgctxt "STRINGS.DESCRIBE.PETALS_EVIL"
+msgid "Nnaaa.. Holding these makes my head hurt."
+msgstr "Nnaaa.. Holding these makes my head hurt."
+
+#. STRINGS.DESCRIBE.PHLEGM
+msgctxt "STRINGS.DESCRIBE.PHLEGM"
+msgid "Gross.."
+msgstr "Gross.."
+
+#. STRINGS.DESCRIBE.PICKAXE
+msgctxt "STRINGS.DESCRIBE.PICKAXE"
+msgid "I can break all kinds of rocks with this."
+msgstr "I can break all kinds of rocks with this."
+
+#. STRINGS.DESCRIBE.PIGGUARD
+msgctxt "STRINGS.DESCRIBE.PIGGUARD"
+msgid "Nnaa, maybe I shouldn't pick a fight with this one."
+msgstr "Nnaa, maybe I shouldn't pick a fight with this one."
+
+#. STRINGS.DESCRIBE.PIGGYBACK
+msgctxt "STRINGS.DESCRIBE.PIGGYBACK"
+msgid "Seems a bit morbid. But at least I can carry more things with it."
+msgstr "Seems a bit morbid. But at least I can carry more things with it."
+
+#. STRINGS.DESCRIBE.PIGHEAD
+msgctxt "STRINGS.DESCRIBE.PIGHEAD"
+msgid "Who could have done something like this?"
+msgstr "Who could have done something like this?"
+
+#. STRINGS.DESCRIBE.PIGHOUSE.FULL
+msgctxt "STRINGS.DESCRIBE.PIGHOUSE.FULL"
+msgid "I can see a snout pressed up against the window."
+msgstr "I can see a snout pressed up against the window."
+
+#. STRINGS.DESCRIBE.PIGHOUSE.GENERIC
+msgctxt "STRINGS.DESCRIBE.PIGHOUSE.GENERIC"
+msgid "That's a pretty nice house, for a pig."
+msgstr "That's a pretty nice house, for a pig."
+
+#. STRINGS.DESCRIBE.PIGHOUSE.LIGHTSOUT
+msgctxt "STRINGS.DESCRIBE.PIGHOUSE.LIGHTSOUT"
+msgid "Looks like I scared him off."
+msgstr "Looks like I scared him off."
+
+#. STRINGS.DESCRIBE.PIGKING
+msgctxt "STRINGS.DESCRIBE.PIGKING"
+msgid "This is their king? Nnnaa, he smells.."
+msgstr "This is their king? Nnnaa, he smells.."
+
+#. STRINGS.DESCRIBE.PIGMAN.DEAD
+msgctxt "STRINGS.DESCRIBE.PIGMAN.DEAD"
+msgid "Poor thing."
+msgstr "Poor thing."
+
+#. STRINGS.DESCRIBE.PIGMAN.FOLLOWER
+msgctxt "STRINGS.DESCRIBE.PIGMAN.FOLLOWER"
+msgid "Nnaa, I suppose we're friends now."
+msgstr "Nnaa, I suppose we're friends now."
+
+#. STRINGS.DESCRIBE.PIGMAN.GENERIC
+msgctxt "STRINGS.DESCRIBE.PIGMAN.GENERIC"
+msgid "They kind of smell, but they mean no harm."
+msgstr "They kind of smell, but they mean no harm."
+
+#. STRINGS.DESCRIBE.PIGMAN.GUARD
+msgctxt "STRINGS.DESCRIBE.PIGMAN.GUARD"
+msgid "Maybe I should leave him be."
+msgstr "Maybe I should leave him be."
+
+#. STRINGS.DESCRIBE.PIGMAN.WEREPIG
+msgctxt "STRINGS.DESCRIBE.PIGMAN.WEREPIG"
+msgid "I don't think that one is friendly."
+msgstr "I don't think that one is friendly."
+
+#. STRINGS.DESCRIBE.PIGSKIN
+msgctxt "STRINGS.DESCRIBE.PIGSKIN"
+msgid "What was the point of this again?"
+msgstr "What was the point of this again?"
+
+#. STRINGS.DESCRIBE.PIGTENT
+msgctxt "STRINGS.DESCRIBE.PIGTENT"
+msgid "It's somewhere safe to sleep, I guess."
+msgstr "It's somewhere safe to sleep, I guess."
+
+#. STRINGS.DESCRIBE.PIGTORCH
+msgctxt "STRINGS.DESCRIBE.PIGTORCH"
+msgid "It's a bunch of pig heads stacked onto eachother. Fancy."
+msgstr "It's a bunch of pig heads stacked onto eachother. Fancy."
+
+#. STRINGS.DESCRIBE.PINECONE.GENERIC
+msgctxt "STRINGS.DESCRIBE.PINECONE.GENERIC"
+msgid "Soon, you'll be a big tall tree."
+msgstr "Soon, you'll be a big tall tree."
+
+#. STRINGS.DESCRIBE.PINECONE.PLANTED
+msgctxt "STRINGS.DESCRIBE.PINECONE.PLANTED"
+msgid "It'll take a while for it to grow."
+msgstr "It'll take a while for it to grow."
+
+#. STRINGS.DESCRIBE.PITCHFORK
+msgctxt "STRINGS.DESCRIBE.PITCHFORK"
+msgid "Useful for roughing up entire plots of land."
+msgstr "Useful for roughing up entire plots of land."
+
+#. STRINGS.DESCRIBE.PLANTMEAT
+msgctxt "STRINGS.DESCRIBE.PLANTMEAT"
+msgid "How can a leaf be this meaty?"
+msgstr "How can a leaf be this meaty?"
+
+#. STRINGS.DESCRIBE.PLANTMEAT_COOKED
+msgctxt "STRINGS.DESCRIBE.PLANTMEAT_COOKED"
+msgid "Well, now it looks a bit more appetizing at least."
+msgstr "Well, now it looks a bit more appetizing at least."
+
+#. STRINGS.DESCRIBE.PLANT_NORMAL.GENERIC
+msgctxt "STRINGS.DESCRIBE.PLANT_NORMAL.GENERIC"
+msgid "An ordinary plant."
+msgstr "An ordinary plant."
+
+#. STRINGS.DESCRIBE.PLANT_NORMAL.GROWING
+msgctxt "STRINGS.DESCRIBE.PLANT_NORMAL.GROWING"
+msgid "It's growing, but it might take a while."
+msgstr "It's growing, but it might take a while."
+
+#. STRINGS.DESCRIBE.PLANT_NORMAL.READY
+msgctxt "STRINGS.DESCRIBE.PLANT_NORMAL.READY"
+msgid "It looks like it's ready to harvest."
+msgstr "It looks like it's ready to harvest."
+
+#. STRINGS.DESCRIBE.PLAYER.ATTACKER
+msgctxt "STRINGS.DESCRIBE.PLAYER.ATTACKER"
+msgid "Nnnaa.. I'm not sure I trust %s..."
+msgstr "Nnnaa.. I'm not sure I trust %s..."
+
+#. STRINGS.DESCRIBE.PLAYER.GENERIC
+msgctxt "STRINGS.DESCRIBE.PLAYER.GENERIC"
+msgid "It's %s."
+msgstr "It's %s."
+
+#. STRINGS.DESCRIBE.PLAYER.GHOST
+msgctxt "STRINGS.DESCRIBE.PLAYER.GHOST"
+msgid "Poor soul, didn't stand a chance."
+msgstr "Poor soul, didn't stand a chance."
+
+#. STRINGS.DESCRIBE.PLAYER.MURDERER
+msgctxt "STRINGS.DESCRIBE.PLAYER.MURDERER"
+msgid "I know what you've done!"
+msgstr "I know what you've done!"
+
+#. STRINGS.DESCRIBE.PLAYER.REVIVER
+msgctxt "STRINGS.DESCRIBE.PLAYER.REVIVER"
+msgid "Quite the helpful soul, nnna~?"
+msgstr "Quite the helpful soul, nnna~?"
+
+#. STRINGS.DESCRIBE.POMEGRANATE
+msgctxt "STRINGS.DESCRIBE.POMEGRANATE"
+msgid "A tasty pomegranate."
+msgstr "A tasty pomegranate."
+
+#. STRINGS.DESCRIBE.POMEGRANATE_COOKED
+msgctxt "STRINGS.DESCRIBE.POMEGRANATE_COOKED"
+msgid "It looks even better when it's cooked."
+msgstr "It looks even better when it's cooked."
+
+#. STRINGS.DESCRIBE.POMEGRANATE_SEEDS
+msgctxt "STRINGS.DESCRIBE.POMEGRANATE_SEEDS"
+msgid "It's a pomegranate seed."
+msgstr "It's a pomegranate seed."
+
+#. STRINGS.DESCRIBE.POND
+msgctxt "STRINGS.DESCRIBE.POND"
+msgid "Small, but surprisingly deep."
+msgstr "Small, but surprisingly deep."
+
+#. STRINGS.DESCRIBE.POND_ALGAE
+msgctxt "STRINGS.DESCRIBE.POND_ALGAE"
+msgid "Algae. Maybe I should scrape some up for later.."
+msgstr "Algae. Maybe I should scrape some up for later.."
+
+#. STRINGS.DESCRIBE.POOP
+msgctxt "STRINGS.DESCRIBE.POOP"
+msgid "Good for making your plants grow strong."
+msgstr "Good for making your plants grow strong."
+
+#. STRINGS.DESCRIBE.POTTEDFERN
+msgctxt "STRINGS.DESCRIBE.POTTEDFERN"
+msgid "What a pretty plant."
+msgstr "What a pretty plant."
+
+#. STRINGS.DESCRIBE.POWCAKE
+msgctxt "STRINGS.DESCRIBE.POWCAKE"
+msgid "I guess it doesn't look that bad.. Na.."
+msgstr "I guess it doesn't look that bad.. Na.."
+
+#. STRINGS.DESCRIBE.PUMPKIN
+msgctxt "STRINGS.DESCRIBE.PUMPKIN"
+msgid "That's a big pumpkin."
+msgstr "That's a big pumpkin."
+
+#. STRINGS.DESCRIBE.PUMPKINCOOKIE
+msgctxt "STRINGS.DESCRIBE.PUMPKINCOOKIE"
+msgid "I made them myself."
+msgstr "I made them myself."
+
+#. STRINGS.DESCRIBE.PUMPKIN_COOKED
+msgctxt "STRINGS.DESCRIBE.PUMPKIN_COOKED"
+msgid "Nothing tastier than a roasted pumpkin."
+msgstr "Nothing tastier than a roasted pumpkin."
+
+#. STRINGS.DESCRIBE.PUMPKIN_LANTERN
+msgctxt "STRINGS.DESCRIBE.PUMPKIN_LANTERN"
+msgid "An eerie decoration."
+msgstr "An eerie decoration."
+
+#. STRINGS.DESCRIBE.PUMPKIN_SEEDS
+msgctxt "STRINGS.DESCRIBE.PUMPKIN_SEEDS"
+msgid "It's a pumpkin seed. I bet I could plant more."
+msgstr "It's a pumpkin seed. I bet I could plant more."
+
+#. STRINGS.DESCRIBE.PURPLEAMULET
+msgctxt "STRINGS.DESCRIBE.PURPLEAMULET"
+msgid "I can hear voices in my head when I hold it too close."
+msgstr "I can hear voices in my head when I hold it too close."
+
+#. STRINGS.DESCRIBE.PURPLEGEM
+msgctxt "STRINGS.DESCRIBE.PURPLEGEM"
+msgid "A purple gem. It's almost mesmerizing."
+msgstr "A purple gem. It's almost mesmerizing."
+
+#. STRINGS.DESCRIBE.RABBIT.GENERIC
+msgctxt "STRINGS.DESCRIBE.RABBIT.GENERIC"
+msgid "Nnna, he looks a lot like me."
+msgstr "Nnna, he looks a lot like me."
+
+#. STRINGS.DESCRIBE.RABBIT.HELD
+msgctxt "STRINGS.DESCRIBE.RABBIT.HELD"
+msgid "Poor thing. It's shaking."
+msgstr "Poor thing. It's shaking."
+
+#. STRINGS.DESCRIBE.RABBITHOLE
+msgctxt "STRINGS.DESCRIBE.RABBITHOLE"
+msgid "I wonder where it leads?"
+msgstr "I wonder where it leads?"
+
+#. STRINGS.DESCRIBE.RABBITHOUSE
+msgctxt "STRINGS.DESCRIBE.RABBITHOUSE"
+msgid "Nnaa, I feel at home already."
+msgstr "Nnaa, I feel at home already."
+
+#. STRINGS.DESCRIBE.RAINOMETER
+msgctxt "STRINGS.DESCRIBE.RAINOMETER"
+msgid "This device should tell me the weather."
+msgstr "This device should tell me the weather."
+
+#. STRINGS.DESCRIBE.RATATOUILLE
+msgctxt "STRINGS.DESCRIBE.RATATOUILLE"
+msgid "Fancy and yummy, all at once."
+msgstr "Fancy and yummy, all at once."
+
+#. STRINGS.DESCRIBE.RAZOR
+msgctxt "STRINGS.DESCRIBE.RAZOR"
+msgid "I might need more than one, if this is meant for me."
+msgstr "I might need more than one, if this is meant for me."
+
+#. STRINGS.DESCRIBE.REDGEM
+msgctxt "STRINGS.DESCRIBE.REDGEM"
+msgid "A red gem. It feels warm."
+msgstr "A red gem. It feels warm."
+
+#. STRINGS.DESCRIBE.RED_CAP
+msgctxt "STRINGS.DESCRIBE.RED_CAP"
+msgid "I bet it'd fill me right up. Though it doesn't look very healthy."
+msgstr "I bet it'd fill me right up. Though it doesn't look very healthy."
+
+#. STRINGS.DESCRIBE.RED_CAP_COOKED
+msgctxt "STRINGS.DESCRIBE.RED_CAP_COOKED"
+msgid "Maybe I shouldn't eat it now."
+msgstr "Maybe I shouldn't eat it now."
+
+#. STRINGS.DESCRIBE.RED_MUSHROOM.GENERIC
+msgctxt "STRINGS.DESCRIBE.RED_MUSHROOM.GENERIC"
+msgid "It's a red mushroom."
+msgstr "It's a red mushroom."
+
+#. STRINGS.DESCRIBE.RED_MUSHROOM.INGROUND
+msgctxt "STRINGS.DESCRIBE.RED_MUSHROOM.INGROUND"
+msgid "Looks like it's gone for now."
+msgstr "Looks like it's gone for now."
+
+#. STRINGS.DESCRIBE.RED_MUSHROOM.PICKED
+msgctxt "STRINGS.DESCRIBE.RED_MUSHROOM.PICKED"
+msgid "I wonder if it will grow back."
+msgstr "I wonder if it will grow back."
+
+#. STRINGS.DESCRIBE.REEDS.BURNING
+msgctxt "STRINGS.DESCRIBE.REEDS.BURNING"
+msgid "That's really burning."
+msgstr "That's really burning."
+
+#. STRINGS.DESCRIBE.REEDS.GENERIC
+msgctxt "STRINGS.DESCRIBE.REEDS.GENERIC"
+msgid "It's a clump of reeds."
+msgstr "It's a clump of reeds."
+
+#. STRINGS.DESCRIBE.REEDS.PICKED
+msgctxt "STRINGS.DESCRIBE.REEDS.PICKED"
+msgid "I picked all the useful reeds."
+msgstr "I picked all the useful reeds."
+
+#. STRINGS.DESCRIBE.RELIC.BROKEN
+msgctxt "STRINGS.DESCRIBE.RELIC.BROKEN"
+msgid "Nothing to work with here."
+msgstr "Nothing to work with here."
+
+#. STRINGS.DESCRIBE.RELIC.GENERIC
+msgctxt "STRINGS.DESCRIBE.RELIC.GENERIC"
+msgid "A relic. I'm sure a Cave Raider would be all over this."
+msgstr "A relic. I'm sure a Cave Raider would be all over this."
+
+#. STRINGS.DESCRIBE.RESEARCHLAB
+msgctxt "STRINGS.DESCRIBE.RESEARCHLAB"
+msgid "A strange, science-y machine. I can make all kinds of things with it."
+msgstr "A strange, science-y machine. I can make all kinds of things with it."
+
+#. STRINGS.DESCRIBE.RESEARCHLAB2
+msgctxt "STRINGS.DESCRIBE.RESEARCHLAB2"
+msgid "This one looks a bit more complicated."
+msgstr "This one looks a bit more complicated."
+
+#. STRINGS.DESCRIBE.RESEARCHLAB3
+msgctxt "STRINGS.DESCRIBE.RESEARCHLAB3"
+msgid "It looks more like a relic, than an object of science."
+msgstr "It looks more like a relic, than an object of science."
+
+#. STRINGS.DESCRIBE.RESEARCHLAB4
+msgctxt "STRINGS.DESCRIBE.RESEARCHLAB4"
+msgid "It's- A hat. On a box. With a lever."
+msgstr "It's- A hat. On a box. With a lever."
+
+#. STRINGS.DESCRIBE.RESURRECTIONSTATUE
+msgctxt "STRINGS.DESCRIBE.RESURRECTIONSTATUE"
+msgid "Close enough."
+msgstr "Close enough."
+
+#. STRINGS.DESCRIBE.RESURRECTIONSTONE
+msgctxt "STRINGS.DESCRIBE.RESURRECTIONSTONE"
+msgid "It looks scary, but I can't help but feel calm around it."
+msgstr "It looks scary, but I can't help but feel calm around it."
+
+#. STRINGS.DESCRIBE.REVIVER
+msgctxt "STRINGS.DESCRIBE.REVIVER"
+msgid "A makeshift heart. I hope this thing works.."
+msgstr "A makeshift heart. I hope this thing works.."
+
+#. STRINGS.DESCRIBE.ROBIN.GENERIC
+msgctxt "STRINGS.DESCRIBE.ROBIN.GENERIC"
+msgid "It looks so carefree. Mitty would love it."
+msgstr "It looks so carefree. Mitty would love it."
+
+#. STRINGS.DESCRIBE.ROBIN.HELD
+msgctxt "STRINGS.DESCRIBE.ROBIN.HELD"
+msgid "It's surprisingly calm."
+msgstr "It's surprisingly calm."
+
+#. STRINGS.DESCRIBE.ROBIN_WINTER.GENERIC
+msgctxt "STRINGS.DESCRIBE.ROBIN_WINTER.GENERIC"
+msgid "I guess not all things disappear during the winter."
+msgstr "I guess not all things disappear during the winter."
+
+#. STRINGS.DESCRIBE.ROBIN_WINTER.HELD
+msgctxt "STRINGS.DESCRIBE.ROBIN_WINTER.HELD"
+msgid "Naa.. It feels soft, and warm."
+msgstr "Naa.. It feels soft, and warm."
+
+#. STRINGS.DESCRIBE.ROBOT_PUPPET
+msgctxt "STRINGS.DESCRIBE.ROBOT_PUPPET"
+msgid "It's trapped."
+msgstr "It's trapped."
+
+#. STRINGS.DESCRIBE.ROCK
+msgctxt "STRINGS.DESCRIBE.ROCK"
+msgid "A big rock. I wonder if I can break it."
+msgstr "A big rock. I wonder if I can break it."
+
+#. STRINGS.DESCRIBE.ROCKS
+msgctxt "STRINGS.DESCRIBE.ROCKS"
+msgid "Rocks of varying shapes and sizes."
+msgstr "Rocks of varying shapes and sizes."
+
+#. STRINGS.DESCRIBE.ROCKY
+msgctxt "STRINGS.DESCRIBE.ROCKY"
+msgid "N-nnaa.. Maybe I shouldn't bother it.."
+msgstr "N-nnaa.. Maybe I shouldn't bother it.."
+
+#. STRINGS.DESCRIBE.ROCK_LIGHT.GENERIC
+msgctxt "STRINGS.DESCRIBE.ROCK_LIGHT.GENERIC"
+msgid "Looks like this lava pit is crusted over."
+msgstr "Looks like this lava pit is crusted over."
+
+#. STRINGS.DESCRIBE.ROCK_LIGHT.LOW
+msgctxt "STRINGS.DESCRIBE.ROCK_LIGHT.LOW"
+msgid "The lava's crusting over."
+msgstr "The lava's crusting over."
+
+#. STRINGS.DESCRIBE.ROCK_LIGHT.NORMAL
+msgctxt "STRINGS.DESCRIBE.ROCK_LIGHT.NORMAL"
+msgid "Comfy."
+msgstr "Comfy."
+
+#. STRINGS.DESCRIBE.ROCK_LIGHT.OUT
+msgctxt "STRINGS.DESCRIBE.ROCK_LIGHT.OUT"
+msgid "It's like it can break at any time."
+msgstr "It's like it can break at any time."
+
+#. STRINGS.DESCRIBE.ROOK
+msgctxt "STRINGS.DESCRIBE.ROOK"
+msgid "A creature made of metal?"
+msgstr "A creature made of metal?"
+
+#. STRINGS.DESCRIBE.ROOK_NIGHTMARE
+msgctxt "STRINGS.DESCRIBE.ROOK_NIGHTMARE"
+msgid "Nnnaa, can't say I wanna stick around here much longer."
+msgstr "Nnnaa, can't say I wanna stick around here much longer."
+
+#. STRINGS.DESCRIBE.ROPE
+msgctxt "STRINGS.DESCRIBE.ROPE"
+msgid "Some bits of rope."
+msgstr "Some bits of rope."
+
+#. STRINGS.DESCRIBE.ROTTENEGG
+msgctxt "STRINGS.DESCRIBE.ROTTENEGG"
+msgid "The odor on this is almost unbearable."
+msgstr "The odor on this is almost unbearable."
+
+#. STRINGS.DESCRIBE.RUBBLE
+msgctxt "STRINGS.DESCRIBE.RUBBLE"
+msgid "A pile of rubble. Not much to it."
+msgstr "A pile of rubble. Not much to it."
+
+#. STRINGS.DESCRIBE.RUINSHAT
+msgctxt "STRINGS.DESCRIBE.RUINSHAT"
+msgid "A crown?.. I've never seen anything like this before."
+msgstr "A crown?.. I've never seen anything like this before."
+
+#. STRINGS.DESCRIBE.RUINS_BAT
+msgctxt "STRINGS.DESCRIBE.RUINS_BAT"
+msgid "This thing's kinda heavy.. Reg could probably use this way more effectively than I can, nnaa.."
+msgstr "This thing's kinda heavy.. Reg could probably use this way more effectively than I can, nnaa.."
+
+#. STRINGS.DESCRIBE.RUINS_RUBBLE
+msgctxt "STRINGS.DESCRIBE.RUINS_RUBBLE"
+msgid "Maybe I can fix it up?"
+msgstr "Maybe I can fix it up?"
+
+#. STRINGS.DESCRIBE.SANITYROCK.ACTIVE
+msgctxt "STRINGS.DESCRIBE.SANITYROCK.ACTIVE"
+msgid "Nnaa.. That's one unsettling rock."
+msgstr "Nnaa.. That's one unsettling rock."
+
+#. STRINGS.DESCRIBE.SANITYROCK.INACTIVE
+msgctxt "STRINGS.DESCRIBE.SANITYROCK.INACTIVE"
+msgid "Could it be underground?"
+msgstr "Could it be underground?"
+
+#. STRINGS.DESCRIBE.SAPLING.BURNING
+msgctxt "STRINGS.DESCRIBE.SAPLING.BURNING"
+msgid "An easy target for a forest fire."
+msgstr "An easy target for a forest fire."
+
+#. STRINGS.DESCRIBE.SAPLING.GENERIC
+msgctxt "STRINGS.DESCRIBE.SAPLING.GENERIC"
+msgid "Soon it will grow big and strong."
+msgstr "Soon it will grow big and strong."
+
+#. STRINGS.DESCRIBE.SAPLING.PICKED
+msgctxt "STRINGS.DESCRIBE.SAPLING.PICKED"
+msgid "That'll teach him."
+msgstr "That'll teach him."
+
+#. STRINGS.DESCRIBE.SEEDS
+msgctxt "STRINGS.DESCRIBE.SEEDS"
+msgid "All these seeds, and nothing to do with them."
+msgstr "All these seeds, and nothing to do with them."
+
+#. STRINGS.DESCRIBE.SEEDS_COOKED
+msgctxt "STRINGS.DESCRIBE.SEEDS_COOKED"
+msgid "It's barely food, but it's better than nothing."
+msgstr "It's barely food, but it's better than nothing."
+
+#. STRINGS.DESCRIBE.SEWING_KIT
+msgctxt "STRINGS.DESCRIBE.SEWING_KIT"
+msgid "Now what to sew with it?.."
+msgstr "Now what to sew with it?.."
+
+#. STRINGS.DESCRIBE.SHOVEL
+msgctxt "STRINGS.DESCRIBE.SHOVEL"
+msgid "Who knows what kind of mysteries I could dig up."
+msgstr "Who knows what kind of mysteries I could dig up."
+
+#. STRINGS.DESCRIBE.SILK
+msgctxt "STRINGS.DESCRIBE.SILK"
+msgid "It feels nice and soft."
+msgstr "It feels nice and soft."
+
+#. STRINGS.DESCRIBE.SKELETON
+msgctxt "STRINGS.DESCRIBE.SKELETON"
+msgid "Another soul returns to the abyss."
+msgstr "Another soul returns to the abyss."
+
+#. STRINGS.DESCRIBE.SKELETON_PLAYER.DEFAULT
+msgctxt "STRINGS.DESCRIBE.SKELETON_PLAYER.DEFAULT"
+msgid "%s died by being hurt by %s. Poor soul."
+msgstr "%s died by being hurt by %s. Poor soul."
+
+#. STRINGS.DESCRIBE.SKELETON_PLAYER.FEMALE
+msgctxt "STRINGS.DESCRIBE.SKELETON_PLAYER.FEMALE"
+msgid "%s died by being hurt by %s. Poor soul."
+msgstr "%s died by being hurt by %s. Poor soul."
+
+#. STRINGS.DESCRIBE.SKELETON_PLAYER.MALE
+msgctxt "STRINGS.DESCRIBE.SKELETON_PLAYER.MALE"
+msgid "%s died by being hurt by %s. Poor soul."
+msgstr "%s died by being hurt by %s. Poor soul."
+
+#. STRINGS.DESCRIBE.SKELETON_PLAYER.ROBOT
+msgctxt "STRINGS.DESCRIBE.SKELETON_PLAYER.ROBOT"
+msgid "%s died by being hurt by %s. Poor soul."
+msgstr "%s died by being hurt by %s. Poor soul."
+
+#. STRINGS.DESCRIBE.SKULLCHEST
+msgctxt "STRINGS.DESCRIBE.SKULLCHEST"
+msgid "An ominous container for ominous goods."
+msgstr "An ominous container for ominous goods."
+
+#. STRINGS.DESCRIBE.SLURPER
+msgctxt "STRINGS.DESCRIBE.SLURPER"
+msgid "Nnnaa, I'm not sure I like this thing."
+msgstr "Nnnaa, I'm not sure I like this thing."
+
+#. STRINGS.DESCRIBE.SLURPERPELT
+msgctxt "STRINGS.DESCRIBE.SLURPERPELT"
+msgid ".. Now I feel a little bad, nnaaaa.."
+msgstr ".. Now I feel a little bad, nnaaaa.."
+
+#. STRINGS.DESCRIBE.SLURPER_PELT
+msgctxt "STRINGS.DESCRIBE.SLURPER_PELT"
+msgid ".. Now I feel a little bad, nnaaaa.."
+msgstr ".. Now I feel a little bad, nnaaaa.."
+
+#. STRINGS.DESCRIBE.SLURTLE
+msgctxt "STRINGS.DESCRIBE.SLURTLE"
+msgid "These things sure do eat a lot, nnna."
+msgstr "These things sure do eat a lot, nnna."
+
+#. STRINGS.DESCRIBE.SLURTLEHAT
+msgctxt "STRINGS.DESCRIBE.SLURTLEHAT"
+msgid "Nnna, I guess I could make more use of it than it's previous owner.."
+msgstr "Nnna, I guess I could make more use of it than it's previous owner.."
+
+#. STRINGS.DESCRIBE.SLURTLEHOLE
+msgctxt "STRINGS.DESCRIBE.SLURTLEHOLE"
+msgid "I wonder what it looks like in there.."
+msgstr "I wonder what it looks like in there.."
+
+#. STRINGS.DESCRIBE.SLURTLESLIME
+msgctxt "STRINGS.DESCRIBE.SLURTLESLIME"
+msgid "Like snot, but.. Not?"
+msgstr "Like snot, but.. Not?"
+
+#. STRINGS.DESCRIBE.SLURTLE_SHELLPIECES
+msgctxt "STRINGS.DESCRIBE.SLURTLE_SHELLPIECES"
+msgid "Poor thing. First it's life, then it's home."
+msgstr "Poor thing. First it's life, then it's home."
+
+#. STRINGS.DESCRIBE.SMALLBIRD.GENERIC
+msgctxt "STRINGS.DESCRIBE.SMALLBIRD.GENERIC"
+msgid "What a tiny bird."
+msgstr "What a tiny bird."
+
+#. STRINGS.DESCRIBE.SMALLBIRD.HUNGRY
+msgctxt "STRINGS.DESCRIBE.SMALLBIRD.HUNGRY"
+msgid "I think it might be hungry."
+msgstr "I think it might be hungry."
+
+#. STRINGS.DESCRIBE.SMALLBIRD.STARVING
+msgctxt "STRINGS.DESCRIBE.SMALLBIRD.STARVING"
+msgid "Poor thing, it looks like it's starving."
+msgstr "Poor thing, it looks like it's starving."
+
+#. STRINGS.DESCRIBE.SMALLMEAT
+msgctxt "STRINGS.DESCRIBE.SMALLMEAT"
+msgid "Some meat from a small animal. I can't help but feel sorry for it."
+msgstr "Some meat from a small animal. I can't help but feel sorry for it."
+
+#. STRINGS.DESCRIBE.SMALLMEAT_DRIED
+msgctxt "STRINGS.DESCRIBE.SMALLMEAT_DRIED"
+msgid "Really small jerky."
+msgstr "Really small jerky."
+
+#. STRINGS.DESCRIBE.SNURTLE
+msgctxt "STRINGS.DESCRIBE.SNURTLE"
+msgid "The lesser of two snurtles."
+msgstr "The lesser of two snurtles."
+
+#. STRINGS.DESCRIBE.SPAT
+msgctxt "STRINGS.DESCRIBE.SPAT"
+msgid "That thing could use a bath."
+msgstr "That thing could use a bath."
+
+#. STRINGS.DESCRIBE.SPEAR
+msgctxt "STRINGS.DESCRIBE.SPEAR"
+msgid "A rock on a stick. There's not much to it, but it works."
+msgstr "A rock on a stick. There's not much to it, but it works."
+
+#. STRINGS.DESCRIBE.SPIDER.DEAD
+msgctxt "STRINGS.DESCRIBE.SPIDER.DEAD"
+msgid "Nnaaa, good riddance."
+msgstr "Nnaaa, good riddance."
+
+#. STRINGS.DESCRIBE.SPIDER.GENERIC
+msgctxt "STRINGS.DESCRIBE.SPIDER.GENERIC"
+msgid "So creepy and crawly.."
+msgstr "So creepy and crawly.."
+
+#. STRINGS.DESCRIBE.SPIDER.SLEEPING
+msgctxt "STRINGS.DESCRIBE.SPIDER.SLEEPING"
+msgid "I'd better not be here when he wakes up."
+msgstr "I'd better not be here when he wakes up."
+
+#. STRINGS.DESCRIBE.SPIDERDEN
+msgctxt "STRINGS.DESCRIBE.SPIDERDEN"
+msgid "A big ball of webs. I wonder just how many spiders are in there."
+msgstr "A big ball of webs. I wonder just how many spiders are in there."
+
+#. STRINGS.DESCRIBE.SPIDEREGGSACK
+msgctxt "STRINGS.DESCRIBE.SPIDEREGGSACK"
+msgid "Please don't hatch, please don't hatch."
+msgstr "Please don't hatch, please don't hatch."
+
+#. STRINGS.DESCRIBE.SPIDERGLAND
+msgctxt "STRINGS.DESCRIBE.SPIDERGLAND"
+msgid "It smells.."
+msgstr "It smells.."
+
+#. STRINGS.DESCRIBE.SPIDERHAT
+msgctxt "STRINGS.DESCRIBE.SPIDERHAT"
+msgid "Nnnaa, gross.."
+msgstr "Nnnaa, gross.."
+
+#. STRINGS.DESCRIBE.SPIDERHOLE
+msgctxt "STRINGS.DESCRIBE.SPIDERHOLE"
+msgid "Who knows what kinds of horrible things live in there, naaa.."
+msgstr "Who knows what kinds of horrible things live in there, naaa.."
+
+#. STRINGS.DESCRIBE.SPIDERQUEEN
+msgctxt "STRINGS.DESCRIBE.SPIDERQUEEN"
+msgid "N-nnaaa, that spider's a little big for my tastes."
+msgstr "N-nnaaa, that spider's a little big for my tastes."
+
+#. STRINGS.DESCRIBE.SPIDER_DROPPER
+msgctxt "STRINGS.DESCRIBE.SPIDER_DROPPER"
+msgid "Nnnnaaa, don't look up, don't look up.."
+msgstr "Nnnnaaa, don't look up, don't look up.."
+
+#. STRINGS.DESCRIBE.SPIDER_HIDER
+msgctxt "STRINGS.DESCRIBE.SPIDER_HIDER"
+msgid "Nnna! They get scarier and scarier!"
+msgstr "Nnna! They get scarier and scarier!"
+
+#. STRINGS.DESCRIBE.SPIDER_SPITTER
+msgctxt "STRINGS.DESCRIBE.SPIDER_SPITTER"
+msgid "I'd keep my distance, but I think that's what it wants, nnnaa."
+msgstr "I'd keep my distance, but I think that's what it wants, nnnaa."
+
+#. STRINGS.DESCRIBE.SPIDER_WARRIOR.DEAD
+msgctxt "STRINGS.DESCRIBE.SPIDER_WARRIOR.DEAD"
+msgid "And stay dead!"
+msgstr "And stay dead!"
+
+#. STRINGS.DESCRIBE.SPIDER_WARRIOR.GENERIC
+msgctxt "STRINGS.DESCRIBE.SPIDER_WARRIOR.GENERIC"
+msgid "Naaa, I don't like the look of that one."
+msgstr "Naaa, I don't like the look of that one."
+
+#. STRINGS.DESCRIBE.SPIDER_WARRIOR.SLEEPING
+msgctxt "STRINGS.DESCRIBE.SPIDER_WARRIOR.SLEEPING"
+msgid "I should stay quiet.."
+msgstr "I should stay quiet.."
+
+#. STRINGS.DESCRIBE.SPOILED_FOOD
+msgctxt "STRINGS.DESCRIBE.SPOILED_FOOD"
+msgid "Maybe I shouldn't eat that.."
+msgstr "Maybe I shouldn't eat that.."
+
+#. STRINGS.DESCRIBE.STAFFLIGHT
+msgctxt "STRINGS.DESCRIBE.STAFFLIGHT"
+msgid "Seems dangerous. Should I really be near this thing?.. Nnaaa.."
+msgstr "Seems dangerous. Should I really be near this thing?.. Nnaaa.."
+
+#. STRINGS.DESCRIBE.STALAGMITE
+msgctxt "STRINGS.DESCRIBE.STALAGMITE"
+msgid "A big pointy rock."
+msgstr "A big pointy rock."
+
+#. STRINGS.DESCRIBE.STALAGMITE_FULL
+msgctxt "STRINGS.DESCRIBE.STALAGMITE_FULL"
+msgid "A big pointy rock."
+msgstr "A big pointy rock."
+
+#. STRINGS.DESCRIBE.STALAGMITE_LOW
+msgctxt "STRINGS.DESCRIBE.STALAGMITE_LOW"
+msgid "A big pointy rock."
+msgstr "A big pointy rock."
+
+#. STRINGS.DESCRIBE.STALAGMITE_MED
+msgctxt "STRINGS.DESCRIBE.STALAGMITE_MED"
+msgid "A big pointy rock."
+msgstr "A big pointy rock."
+
+#. STRINGS.DESCRIBE.STALAGMITE_TALL
+msgctxt "STRINGS.DESCRIBE.STALAGMITE_TALL"
+msgid "Pointy rocks sure are interesting, nnnaaa."
+msgstr "Pointy rocks sure are interesting, nnnaaa."
+
+#. STRINGS.DESCRIBE.STALAGMITE_TALL_FULL
+msgctxt "STRINGS.DESCRIBE.STALAGMITE_TALL_FULL"
+msgid "Pointy rocks sure are interesting, nnnaaa."
+msgstr "Pointy rocks sure are interesting, nnnaaa."
+
+#. STRINGS.DESCRIBE.STALAGMITE_TALL_LOW
+msgctxt "STRINGS.DESCRIBE.STALAGMITE_TALL_LOW"
+msgid "Rocks, rocks, rocks, rocks..."
+msgstr "Rocks, rocks, rocks, rocks..."
+
+#. STRINGS.DESCRIBE.STALAGMITE_TALL_MED
+msgctxt "STRINGS.DESCRIBE.STALAGMITE_TALL_MED"
+msgid "Rocks, rocks, rocks, rocks..."
+msgstr "Rocks, rocks, rocks, rocks..."
+
+#. STRINGS.DESCRIBE.STATUEHARP
+msgctxt "STRINGS.DESCRIBE.STATUEHARP"
+msgid "Nna, where'd the head go?"
+msgstr "Nna, where'd the head go?"
+
+#. STRINGS.DESCRIBE.STATUEMAXWELL
+msgctxt "STRINGS.DESCRIBE.STATUEMAXWELL"
+msgid "Compensating much?"
+msgstr "Compensating much?"
+
+#. STRINGS.DESCRIBE.STEELWOOL
+msgctxt "STRINGS.DESCRIBE.STEELWOOL"
+msgid "A big ball of metal fiber. What's the point of this anyway?"
+msgstr "A big ball of metal fiber. What's the point of this anyway?"
+
+#. STRINGS.DESCRIBE.STINGER
+msgctxt "STRINGS.DESCRIBE.STINGER"
+msgid "Ow, pointy."
+msgstr "Ow, pointy."
+
+#. STRINGS.DESCRIBE.STRAWHAT
+msgctxt "STRINGS.DESCRIBE.STRAWHAT"
+msgid "Looks a little tacky."
+msgstr "Looks a little tacky."
+
+#. STRINGS.DESCRIBE.STUFFEDEGGPLANT
+msgctxt "STRINGS.DESCRIBE.STUFFEDEGGPLANT"
+msgid "I can't wait to dig in!"
+msgstr "I can't wait to dig in!"
+
+#. STRINGS.DESCRIBE.SUNKBOAT
+msgctxt "STRINGS.DESCRIBE.SUNKBOAT"
+msgid "Well, that boat won't be going anywehre."
+msgstr "Well, that boat won't be going anywehre."
+
+#. STRINGS.DESCRIBE.SWEATERVEST
+msgctxt "STRINGS.DESCRIBE.SWEATERVEST"
+msgid "Looks comfy."
+msgstr "Looks comfy."
+
+#. STRINGS.DESCRIBE.TAFFY
+msgctxt "STRINGS.DESCRIBE.TAFFY"
+msgid "Chewy."
+msgstr "Chewy."
+
+#. STRINGS.DESCRIBE.TALLBIRD
+msgctxt "STRINGS.DESCRIBE.TALLBIRD"
+msgid "That bird sure is tall."
+msgstr "That bird sure is tall."
+
+#. STRINGS.DESCRIBE.TALLBIRDEGG
+msgctxt "STRINGS.DESCRIBE.TALLBIRDEGG"
+msgid "I wonder if it'll hatch."
+msgstr "I wonder if it'll hatch."
+
+#. STRINGS.DESCRIBE.TALLBIRDEGG_COOKED
+msgctxt "STRINGS.DESCRIBE.TALLBIRDEGG_COOKED"
+msgid "Delicious~"
+msgstr "Delicious~"
+
+#. STRINGS.DESCRIBE.TALLBIRDEGG_CRACKED.COLD
+msgctxt "STRINGS.DESCRIBE.TALLBIRDEGG_CRACKED.COLD"
+msgid "Maybe I should warm it up a little."
+msgstr "Maybe I should warm it up a little."
+
+#. STRINGS.DESCRIBE.TALLBIRDEGG_CRACKED.GENERIC
+msgctxt "STRINGS.DESCRIBE.TALLBIRDEGG_CRACKED.GENERIC"
+msgid "Nn-nnaaa! I think it's hatching!"
+msgstr "Nn-nnaaa! I think it's hatching!"
+
+#. STRINGS.DESCRIBE.TALLBIRDEGG_CRACKED.HOT
+msgctxt "STRINGS.DESCRIBE.TALLBIRDEGG_CRACKED.HOT"
+msgid "It's getting a little hot. Maybe I can cool it off a little?"
+msgstr "It's getting a little hot. Maybe I can cool it off a little?"
+
+#. STRINGS.DESCRIBE.TALLBIRDEGG_CRACKED.LONG
+msgctxt "STRINGS.DESCRIBE.TALLBIRDEGG_CRACKED.LONG"
+msgid "It'll be a while before it's time to hatch."
+msgstr "It'll be a while before it's time to hatch."
+
+#. STRINGS.DESCRIBE.TALLBIRDEGG_CRACKED.SHORT
+msgctxt "STRINGS.DESCRIBE.TALLBIRDEGG_CRACKED.SHORT"
+msgid "It should hatch any time now."
+msgstr "It should hatch any time now."
+
+#. STRINGS.DESCRIBE.TALLBIRDNEST.GENERIC
+msgctxt "STRINGS.DESCRIBE.TALLBIRDNEST.GENERIC"
+msgid "That egg sure does look tasty.."
+msgstr "That egg sure does look tasty.."
+
+#. STRINGS.DESCRIBE.TALLBIRDNEST.PICKED
+msgctxt "STRINGS.DESCRIBE.TALLBIRDNEST.PICKED"
+msgid "I'll be back for more."
+msgstr "I'll be back for more."
+
+#. STRINGS.DESCRIBE.TEENBIRD.GENERIC
+msgctxt "STRINGS.DESCRIBE.TEENBIRD.GENERIC"
+msgid "A juvinile tallbird."
+msgstr "A juvinile tallbird."
+
+#. STRINGS.DESCRIBE.TEENBIRD.HUNGRY
+msgctxt "STRINGS.DESCRIBE.TEENBIRD.HUNGRY"
+msgid "Hey little guy, you hungry?"
+msgstr "Hey little guy, you hungry?"
+
+#. STRINGS.DESCRIBE.TEENBIRD.STARVING
+msgctxt "STRINGS.DESCRIBE.TEENBIRD.STARVING"
+msgid "It doesn't look very happy to see me.."
+msgstr "It doesn't look very happy to see me.."
+
+#. STRINGS.DESCRIBE.TELEBASE.GEMS
+msgctxt "STRINGS.DESCRIBE.TELEBASE.GEMS"
+msgid "It needs more purple gems to work."
+msgstr "It needs more purple gems to work."
+
+#. STRINGS.DESCRIBE.TELEBASE.VALID
+msgctxt "STRINGS.DESCRIBE.TELEBASE.VALID"
+msgid "Looks like it's ready."
+msgstr "Looks like it's ready."
+
+#. STRINGS.DESCRIBE.TELEPORTATO_BASE.ACTIVE
+msgctxt "STRINGS.DESCRIBE.TELEPORTATO_BASE.ACTIVE"
+msgid "Where will this thing take me?"
+msgstr "Where will this thing take me?"
+
+#. STRINGS.DESCRIBE.TELEPORTATO_BASE.GENERIC
+msgctxt "STRINGS.DESCRIBE.TELEPORTATO_BASE.GENERIC"
+msgid "Some kind of portal?"
+msgstr "Some kind of portal?"
+
+#. STRINGS.DESCRIBE.TELEPORTATO_BASE.LOCKED
+msgctxt "STRINGS.DESCRIBE.TELEPORTATO_BASE.LOCKED"
+msgid "I don't think it's ready just yet.."
+msgstr "I don't think it's ready just yet.."
+
+#. STRINGS.DESCRIBE.TELEPORTATO_BASE.PARTIAL
+msgctxt "STRINGS.DESCRIBE.TELEPORTATO_BASE.PARTIAL"
+msgid "Hey, I think I'm getting somewhere."
+msgstr "Hey, I think I'm getting somewhere."
+
+#. STRINGS.DESCRIBE.TELEPORTATO_BOX
+msgctxt "STRINGS.DESCRIBE.TELEPORTATO_BOX"
+msgid "A.. Box? What Could this be?"
+msgstr "A.. Box? What Could this be?"
+
+#. STRINGS.DESCRIBE.TELEPORTATO_CRANK
+msgctxt "STRINGS.DESCRIBE.TELEPORTATO_CRANK"
+msgid "Tough enough to handle the most intense use."
+msgstr "Tough enough to handle the most intense use."
+
+#. STRINGS.DESCRIBE.TELEPORTATO_POTATO
+msgctxt "STRINGS.DESCRIBE.TELEPORTATO_POTATO"
+msgid "How do you grow a potato made from metal?"
+msgstr "How do you grow a potato made from metal?"
+
+#. STRINGS.DESCRIBE.TELEPORTATO_RING
+msgctxt "STRINGS.DESCRIBE.TELEPORTATO_RING"
+msgid "Some kind of ring."
+msgstr "Some kind of ring."
+
+#. STRINGS.DESCRIBE.TELESTAFF
+msgctxt "STRINGS.DESCRIBE.TELESTAFF"
+msgid "It can show me the world."
+msgstr "It can show me the world."
+
+#. STRINGS.DESCRIBE.TENT
+msgctxt "STRINGS.DESCRIBE.TENT"
+msgid "Finally, a comfy place to sleep."
+msgstr "Finally, a comfy place to sleep."
+
+#. STRINGS.DESCRIBE.TENTACLE
+msgctxt "STRINGS.DESCRIBE.TENTACLE"
+msgid "A tentacle from the ground? Looks dangerous."
+msgstr "A tentacle from the ground? Looks dangerous."
+
+#. STRINGS.DESCRIBE.TENTACLESPIKE
+msgctxt "STRINGS.DESCRIBE.TENTACLESPIKE"
+msgid "It's pointy and slimy."
+msgstr "It's pointy and slimy."
+
+#. STRINGS.DESCRIBE.TENTACLESPOTS
+msgctxt "STRINGS.DESCRIBE.TENTACLESPOTS"
+msgid "What's this supposed to be?"
+msgstr "What's this supposed to be?"
+
+#. STRINGS.DESCRIBE.TENTACLE_GARDEN
+msgctxt "STRINGS.DESCRIBE.TENTACLE_GARDEN"
+msgid "Yet another slimy pole."
+msgstr "Yet another slimy pole."
+
+#. STRINGS.DESCRIBE.TENTACLE_PILLAR
+msgctxt "STRINGS.DESCRIBE.TENTACLE_PILLAR"
+msgid "A big slimy pole."
+msgstr "A big slimy pole."
+
+#. STRINGS.DESCRIBE.TENTACLE_PILLAR_ARM
+msgctxt "STRINGS.DESCRIBE.TENTACLE_PILLAR_ARM"
+msgid "Little slippery arms."
+msgstr "Little slippery arms."
+
+#. STRINGS.DESCRIBE.THULECITE
+msgctxt "STRINGS.DESCRIBE.THULECITE"
+msgid "Mysterious materials. This sounds right up my alley, nnna~"
+msgstr "Mysterious materials. This sounds right up my alley, nnna~"
+
+#. STRINGS.DESCRIBE.THULECITE_PIECES
+msgctxt "STRINGS.DESCRIBE.THULECITE_PIECES"
+msgid "Thulecite. Lots and lots of little pieces of it."
+msgstr "Thulecite. Lots and lots of little pieces of it."
+
+#. STRINGS.DESCRIBE.TOPHAT
+msgctxt "STRINGS.DESCRIBE.TOPHAT"
+msgid "Fancy."
+msgstr "Fancy."
+
+#. STRINGS.DESCRIBE.TORCH
+msgctxt "STRINGS.DESCRIBE.TORCH"
+msgid "A Cave Raider's best friend."
+msgstr "A Cave Raider's best friend."
+
+#. STRINGS.DESCRIBE.TRAP
+msgctxt "STRINGS.DESCRIBE.TRAP"
+msgid "This should do the trick."
+msgstr "This should do the trick."
+
+#. STRINGS.DESCRIBE.TRAP_TEETH
+msgctxt "STRINGS.DESCRIBE.TRAP_TEETH"
+msgid "Those look awfully nasty."
+msgstr "Those look awfully nasty."
+
+#. STRINGS.DESCRIBE.TRAP_TEETH_MAXWELL
+msgctxt "STRINGS.DESCRIBE.TRAP_TEETH_MAXWELL"
+msgid "I should avoid stepping on that."
+msgstr "I should avoid stepping on that."
+
+#. STRINGS.DESCRIBE.TREASURECHEST
+msgctxt "STRINGS.DESCRIBE.TREASURECHEST"
+msgid "I wonder what's inside?"
+msgstr "I wonder what's inside?"
+
+#. STRINGS.DESCRIBE.TREASURECHEST_TRAP
+msgctxt "STRINGS.DESCRIBE.TREASURECHEST_TRAP"
+msgid "I bet there's all sorts of useful things in there."
+msgstr "I bet there's all sorts of useful things in there."
+
+#. STRINGS.DESCRIBE.TREECLUMP
+msgctxt "STRINGS.DESCRIBE.TREECLUMP"
+msgid "These trees are blocking my path."
+msgstr "These trees are blocking my path."
+
+#. STRINGS.DESCRIBE.TRINKET_1
+msgctxt "STRINGS.DESCRIBE.TRINKET_1"
+msgid "What is this even for? It's like a glorified rock."
+msgstr "What is this even for? It's like a glorified rock."
+
+#. STRINGS.DESCRIBE.TRINKET_10
+msgctxt "STRINGS.DESCRIBE.TRINKET_10"
+msgid "Morbid."
+msgstr "Morbid."
+
+#. STRINGS.DESCRIBE.TRINKET_11
+msgctxt "STRINGS.DESCRIBE.TRINKET_11"
+msgid "Everything this thing tells me smells fishy."
+msgstr "Everything this thing tells me smells fishy."
+
+#. STRINGS.DESCRIBE.TRINKET_12
+msgctxt "STRINGS.DESCRIBE.TRINKET_12"
+msgid "What's this doing in there?.."
+msgstr "What's this doing in there?.."
+
+#. STRINGS.DESCRIBE.TRINKET_13
+msgctxt "STRINGS.DESCRIBE.TRINKET_13"
+msgid "Looks like some kind of container."
+msgstr "Looks like some kind of container."
+
+#. STRINGS.DESCRIBE.TRINKET_2
+msgctxt "STRINGS.DESCRIBE.TRINKET_2"
+msgid "Some kind of instrument? It doesn't even work!"
+msgstr "Some kind of instrument? It doesn't even work!"
+
+#. STRINGS.DESCRIBE.TRINKET_3
+msgctxt "STRINGS.DESCRIBE.TRINKET_3"
+msgid "Nnaaa, what's with this thing? I can't seem to untie it."
+msgstr "Nnaaa, what's with this thing? I can't seem to untie it."
+
+#. STRINGS.DESCRIBE.TRINKET_4
+msgctxt "STRINGS.DESCRIBE.TRINKET_4"
+msgid "A weird little statue. I wonder who it's modeled after?"
+msgstr "A weird little statue. I wonder who it's modeled after?"
+
+#. STRINGS.DESCRIBE.TRINKET_5
+msgctxt "STRINGS.DESCRIBE.TRINKET_5"
+msgid "What kind of device could this be?"
+msgstr "What kind of device could this be?"
+
+#. STRINGS.DESCRIBE.TRINKET_6
+msgctxt "STRINGS.DESCRIBE.TRINKET_6"
+msgid "Well, I can't do much with these."
+msgstr "Well, I can't do much with these."
+
+#. STRINGS.DESCRIBE.TRINKET_7
+msgctxt "STRINGS.DESCRIBE.TRINKET_7"
+msgid "I have no time for fun and games."
+msgstr "I have no time for fun and games."
+
+#. STRINGS.DESCRIBE.TRINKET_8
+msgctxt "STRINGS.DESCRIBE.TRINKET_8"
+msgid "A plug for a tub? Where does this stuff even come from? "
+msgstr "A plug for a tub? Where does this stuff even come from? "
+
+#. STRINGS.DESCRIBE.TRINKET_9
+msgctxt "STRINGS.DESCRIBE.TRINKET_9"
+msgid "Buttons? I wonder what these came off of."
+msgstr "Buttons? I wonder what these came off of."
+
+#. STRINGS.DESCRIBE.TRUNKVEST_SUMMER
+msgctxt "STRINGS.DESCRIBE.TRUNKVEST_SUMMER"
+msgid "I shouldn't burn up in this."
+msgstr "I shouldn't burn up in this."
+
+#. STRINGS.DESCRIBE.TRUNKVEST_WINTER
+msgctxt "STRINGS.DESCRIBE.TRUNKVEST_WINTER"
+msgid "This should keep me nice and warm, nnnaaa~"
+msgstr "This should keep me nice and warm, nnnaaa~"
+
+#. STRINGS.DESCRIBE.TRUNK_COOKED
+msgctxt "STRINGS.DESCRIBE.TRUNK_COOKED"
+msgid "Hey, doesn't look half bad!"
+msgstr "Hey, doesn't look half bad!"
+
+#. STRINGS.DESCRIBE.TRUNK_SUMMER
+msgctxt "STRINGS.DESCRIBE.TRUNK_SUMMER"
+msgid "A light breezy trunk."
+msgstr "A light breezy trunk."
+
+#. STRINGS.DESCRIBE.TRUNK_WINTER
+msgctxt "STRINGS.DESCRIBE.TRUNK_WINTER"
+msgid "This trunk has tons of hair on it. Maybe to keep warm."
+msgstr "This trunk has tons of hair on it. Maybe to keep warm."
+
+#. STRINGS.DESCRIBE.TURF_CARPETFLOOR
+msgctxt "STRINGS.DESCRIBE.TURF_CARPETFLOOR"
+msgid "It's surprisingly scratchy."
+msgstr "It's surprisingly scratchy."
+
+#. STRINGS.DESCRIBE.TURF_CAVE
+msgctxt "STRINGS.DESCRIBE.TURF_CAVE"
+msgid "Yet another ground type."
+msgstr "Yet another ground type."
+
+#. STRINGS.DESCRIBE.TURF_CHECKERFLOOR
+msgctxt "STRINGS.DESCRIBE.TURF_CHECKERFLOOR"
+msgid "These are pretty snazzy."
+msgstr "These are pretty snazzy."
+
+#. STRINGS.DESCRIBE.TURF_DIRT
+msgctxt "STRINGS.DESCRIBE.TURF_DIRT"
+msgid "A chunk of ground."
+msgstr "A chunk of ground."
+
+#. STRINGS.DESCRIBE.TURF_FOREST
+msgctxt "STRINGS.DESCRIBE.TURF_FOREST"
+msgid "A chunk of ground."
+msgstr "A chunk of ground."
+
+#. STRINGS.DESCRIBE.TURF_FUNGUS
+msgctxt "STRINGS.DESCRIBE.TURF_FUNGUS"
+msgid "Yet another ground type."
+msgstr "Yet another ground type."
+
+#. STRINGS.DESCRIBE.TURF_GRASS
+msgctxt "STRINGS.DESCRIBE.TURF_GRASS"
+msgid "A chunk of ground."
+msgstr "A chunk of ground."
+
+#. STRINGS.DESCRIBE.TURF_MARSH
+msgctxt "STRINGS.DESCRIBE.TURF_MARSH"
+msgid "A chunk of ground."
+msgstr "A chunk of ground."
+
+#. STRINGS.DESCRIBE.TURF_MUD
+msgctxt "STRINGS.DESCRIBE.TURF_MUD"
+msgid "Yet another ground type."
+msgstr "Yet another ground type."
+
+#. STRINGS.DESCRIBE.TURF_ROAD
+msgctxt "STRINGS.DESCRIBE.TURF_ROAD"
+msgid "Hastily cobbled stones."
+msgstr "Hastily cobbled stones."
+
+#. STRINGS.DESCRIBE.TURF_ROCKY
+msgctxt "STRINGS.DESCRIBE.TURF_ROCKY"
+msgid "A chunk of ground."
+msgstr "A chunk of ground."
+
+#. STRINGS.DESCRIBE.TURF_SAVANNA
+msgctxt "STRINGS.DESCRIBE.TURF_SAVANNA"
+msgid "A chunk of ground."
+msgstr "A chunk of ground."
+
+#. STRINGS.DESCRIBE.TURF_SINKHOLE
+msgctxt "STRINGS.DESCRIBE.TURF_SINKHOLE"
+msgid "Yet another ground type."
+msgstr "Yet another ground type."
+
+#. STRINGS.DESCRIBE.TURF_UNDERROCK
+msgctxt "STRINGS.DESCRIBE.TURF_UNDERROCK"
+msgid "Yet another ground type."
+msgstr "Yet another ground type."
+
+#. STRINGS.DESCRIBE.TURF_WOODFLOOR
+msgctxt "STRINGS.DESCRIBE.TURF_WOODFLOOR"
+msgid "These are floorboards."
+msgstr "These are floorboards."
+
+#. STRINGS.DESCRIBE.TURKEYDINNER
+msgctxt "STRINGS.DESCRIBE.TURKEYDINNER"
+msgid "I sure am feeling hungry, looking at this."
+msgstr "I sure am feeling hungry, looking at this."
+
+#. STRINGS.DESCRIBE.TWIGS
+msgctxt "STRINGS.DESCRIBE.TWIGS"
+msgid "Some twigs. Now what to make with them..."
+msgstr "Some twigs. Now what to make with them..."
+
+#. STRINGS.DESCRIBE.UMBRELLA
+msgctxt "STRINGS.DESCRIBE.UMBRELLA"
+msgid "Hey, an umbrella! It should keep my fur nice and dry."
+msgstr "Hey, an umbrella! It should keep my fur nice and dry."
+
+#. STRINGS.DESCRIBE.UNAGI
+msgctxt "STRINGS.DESCRIBE.UNAGI"
+msgid "Nna, almost as good as Riko. Sometimes I surprise even myself."
+msgstr "Nna, almost as good as Riko. Sometimes I surprise even myself."
+
+#. STRINGS.DESCRIBE.UNIMPLEMENTED
+msgctxt "STRINGS.DESCRIBE.UNIMPLEMENTED"
+msgid "It doesn't look finished! It could be dangerous."
+msgstr "It doesn't look finished! It could be dangerous."
+
+#. STRINGS.DESCRIBE.WAFFLES
+msgctxt "STRINGS.DESCRIBE.WAFFLES"
+msgid "The perfect snack."
+msgstr "The perfect snack."
+
+#. STRINGS.DESCRIBE.WALL_HAY
+msgctxt "STRINGS.DESCRIBE.WALL_HAY"
+msgid "This isn't gonna last very long."
+msgstr "This isn't gonna last very long."
+
+#. STRINGS.DESCRIBE.WALL_HAY_ITEM
+msgctxt "STRINGS.DESCRIBE.WALL_HAY_ITEM"
+msgid "What's this going to stop?"
+msgstr "What's this going to stop?"
+
+#. STRINGS.DESCRIBE.WALL_MOONROCK
+msgctxt "STRINGS.DESCRIBE.WALL_MOONROCK"
+msgid "This wall is made out of strange material."
+msgstr "This wall is made out of strange material."
+
+#. STRINGS.DESCRIBE.WALL_MOONROCK_ITEM
+msgctxt "STRINGS.DESCRIBE.WALL_MOONROCK_ITEM"
+msgid "Very light but surprisingly sturdy."
+msgstr "Very light but surprisingly sturdy."
+
+#. STRINGS.DESCRIBE.WALL_RUINS
+msgctxt "STRINGS.DESCRIBE.WALL_RUINS"
+msgid "An ancient piece of wall."
+msgstr "An ancient piece of wall."
+
+#. STRINGS.DESCRIBE.WALL_RUINS_ITEM
+msgctxt "STRINGS.DESCRIBE.WALL_RUINS_ITEM"
+msgid "Old, but sturdy."
+msgstr "Old, but sturdy."
+
+#. STRINGS.DESCRIBE.WALL_STONE
+msgctxt "STRINGS.DESCRIBE.WALL_STONE"
+msgid "I feel safer already."
+msgstr "I feel safer already."
+
+#. STRINGS.DESCRIBE.WALL_STONE_ITEM
+msgctxt "STRINGS.DESCRIBE.WALL_STONE_ITEM"
+msgid "This wall should be pretty sturdy."
+msgstr "This wall should be pretty sturdy."
+
+#. STRINGS.DESCRIBE.WALL_WOOD
+msgctxt "STRINGS.DESCRIBE.WALL_WOOD"
+msgid "Back to basics."
+msgstr "Back to basics."
+
+#. STRINGS.DESCRIBE.WALL_WOOD_ITEM
+msgctxt "STRINGS.DESCRIBE.WALL_WOOD_ITEM"
+msgid "Better than grass, at least."
+msgstr "Better than grass, at least."
+
+#. STRINGS.DESCRIBE.WALRUS
+msgctxt "STRINGS.DESCRIBE.WALRUS"
+msgid "A walrus? I've never seen one up close like this before."
+msgstr "A walrus? I've never seen one up close like this before."
+
+#. STRINGS.DESCRIBE.WALRUSHAT
+msgctxt "STRINGS.DESCRIBE.WALRUSHAT"
+msgid "Nnaaa, why's this thing so prickly?"
+msgstr "Nnaaa, why's this thing so prickly?"
+
+#. STRINGS.DESCRIBE.WALRUS_CAMP.EMPTY
+msgctxt "STRINGS.DESCRIBE.WALRUS_CAMP.EMPTY"
+msgid "Looks like somebody was camping here. Doesn't look like they're here anymore."
+msgstr "Looks like somebody was camping here. Doesn't look like they're here anymore."
+
+#. STRINGS.DESCRIBE.WALRUS_CAMP.GENERIC
+msgctxt "STRINGS.DESCRIBE.WALRUS_CAMP.GENERIC"
+msgid "It looks warm and cozy inside."
+msgstr "It looks warm and cozy inside."
+
+#. STRINGS.DESCRIBE.WALRUS_TUSK
+msgctxt "STRINGS.DESCRIBE.WALRUS_TUSK"
+msgid "I'm sure I'll find a use for it eventually."
+msgstr "I'm sure I'll find a use for it eventually."
+
+#. STRINGS.DESCRIBE.WARG
+msgctxt "STRINGS.DESCRIBE.WARG"
+msgid "This one looks like an alpha. Nnnnaa, maybe I should keep my distance."
+msgstr "This one looks like an alpha. Nnnnaa, maybe I should keep my distance."
+
+#. STRINGS.DESCRIBE.WASPHIVE
+msgctxt "STRINGS.DESCRIBE.WASPHIVE"
+msgid "These ones don't look very happy."
+msgstr "These ones don't look very happy."
+
+#. STRINGS.DESCRIBE.WAXWELL.ATTACKER
+msgctxt "STRINGS.DESCRIBE.WAXWELL.ATTACKER"
+msgid "Nnnaa.. I'm not sure I trust Maxwell..."
+msgstr "Nnnaa.. I'm not sure I trust Maxwell..."
+
+#. STRINGS.DESCRIBE.WAXWELL.GENERIC
+msgctxt "STRINGS.DESCRIBE.WAXWELL.GENERIC"
+msgid "It's Maxwell!"
+msgstr "It's Maxwell!"
+
+#. STRINGS.DESCRIBE.WAXWELL.GHOST
+msgctxt "STRINGS.DESCRIBE.WAXWELL.GHOST"
+msgid "Poor soul, didn't stand a chance."
+msgstr "Poor soul, didn't stand a chance."
+
+#. STRINGS.DESCRIBE.WAXWELL.MURDERER
+msgctxt "STRINGS.DESCRIBE.WAXWELL.MURDERER"
+msgid "I know what you've done!"
+msgstr "I know what you've done!"
+
+#. STRINGS.DESCRIBE.WAXWELL.REVIVER
+msgctxt "STRINGS.DESCRIBE.WAXWELL.REVIVER"
+msgid "Quite the helpful soul, nnna~?"
+msgstr "Quite the helpful soul, nnna~?"
+
+#. STRINGS.DESCRIBE.WENDY.ATTACKER
+msgctxt "STRINGS.DESCRIBE.WENDY.ATTACKER"
+msgid "Nnnaa.. I'm not sure I trust Wendy..."
+msgstr "Nnnaa.. I'm not sure I trust Wendy..."
+
+#. STRINGS.DESCRIBE.WENDY.GENERIC
+msgctxt "STRINGS.DESCRIBE.WENDY.GENERIC"
+msgid "It's Wendy!"
+msgstr "It's Wendy!"
+
+#. STRINGS.DESCRIBE.WENDY.GHOST
+msgctxt "STRINGS.DESCRIBE.WENDY.GHOST"
+msgid "Poor soul, didn't stand a chance."
+msgstr "Poor soul, didn't stand a chance."
+
+#. STRINGS.DESCRIBE.WENDY.MURDERER
+msgctxt "STRINGS.DESCRIBE.WENDY.MURDERER"
+msgid "I know what you've done!"
+msgstr "I know what you've done!"
+
+#. STRINGS.DESCRIBE.WENDY.REVIVER
+msgctxt "STRINGS.DESCRIBE.WENDY.REVIVER"
+msgid "Quite the helpful soul, nnna~?"
+msgstr "Quite the helpful soul, nnna~?"
+
+#. STRINGS.DESCRIBE.WES.ATTACKER
+msgctxt "STRINGS.DESCRIBE.WES.ATTACKER"
+msgid "Nnnaa.. I'm not sure I trust Wes..."
+msgstr "Nnnaa.. I'm not sure I trust Wes..."
+
+#. STRINGS.DESCRIBE.WES.GENERIC
+msgctxt "STRINGS.DESCRIBE.WES.GENERIC"
+msgid "It's Wes."
+msgstr "It's Wes."
+
+#. STRINGS.DESCRIBE.WES.GHOST
+msgctxt "STRINGS.DESCRIBE.WES.GHOST"
+msgid "Poor soul, didn't stand a chance."
+msgstr "Poor soul, didn't stand a chance."
+
+#. STRINGS.DESCRIBE.WES.MURDERER
+msgctxt "STRINGS.DESCRIBE.WES.MURDERER"
+msgid "I know what you've done!"
+msgstr "I know what you've done!"
+
+#. STRINGS.DESCRIBE.WES.REVIVER
+msgctxt "STRINGS.DESCRIBE.WES.REVIVER"
+msgid "Quite the helpful soul, nnna~?"
+msgstr "Quite the helpful soul, nnna~?"
+
+#. STRINGS.DESCRIBE.WETGOOP
+msgctxt "STRINGS.DESCRIBE.WETGOOP"
+msgid "Good enough, I guess."
+msgstr "Good enough, I guess."
+
+#. STRINGS.DESCRIBE.WICKERBOTTOM.ATTACKER
+msgctxt "STRINGS.DESCRIBE.WICKERBOTTOM.ATTACKER"
+msgid "Nnnaa.. I'm not sure I trust Wickerbottom..."
+msgstr "Nnnaa.. I'm not sure I trust Wickerbottom..."
+
+#. STRINGS.DESCRIBE.WICKERBOTTOM.GENERIC
+msgctxt "STRINGS.DESCRIBE.WICKERBOTTOM.GENERIC"
+msgid "It's Wickerbottom!"
+msgstr "It's Wickerbottom!"
+
+#. STRINGS.DESCRIBE.WICKERBOTTOM.GHOST
+msgctxt "STRINGS.DESCRIBE.WICKERBOTTOM.GHOST"
+msgid "Poor soul, didn't stand a chance."
+msgstr "Poor soul, didn't stand a chance."
+
+#. STRINGS.DESCRIBE.WICKERBOTTOM.MURDERER
+msgctxt "STRINGS.DESCRIBE.WICKERBOTTOM.MURDERER"
+msgid "I know what you've done!"
+msgstr "I know what you've done!"
+
+#. STRINGS.DESCRIBE.WICKERBOTTOM.REVIVER
+msgctxt "STRINGS.DESCRIBE.WICKERBOTTOM.REVIVER"
+msgid "Quite the helpful soul, nnna~?"
+msgstr "Quite the helpful soul, nnna~?"
+
+#. STRINGS.DESCRIBE.WILLOW.ATTACKER
+msgctxt "STRINGS.DESCRIBE.WILLOW.ATTACKER"
+msgid "Nnnaa.. I'm not sure I trust Willow..."
+msgstr "Nnnaa.. I'm not sure I trust Willow..."
+
+#. STRINGS.DESCRIBE.WILLOW.GENERIC
+msgctxt "STRINGS.DESCRIBE.WILLOW.GENERIC"
+msgid "It's Willow!"
+msgstr "It's Willow!"
+
+#. STRINGS.DESCRIBE.WILLOW.GHOST
+msgctxt "STRINGS.DESCRIBE.WILLOW.GHOST"
+msgid "Poor soul, didn't stand a chance."
+msgstr "Poor soul, didn't stand a chance."
+
+#. STRINGS.DESCRIBE.WILLOW.MURDERER
+msgctxt "STRINGS.DESCRIBE.WILLOW.MURDERER"
+msgid "I know what you've done!"
+msgstr "I know what you've done!"
+
+#. STRINGS.DESCRIBE.WILLOW.REVIVER
+msgctxt "STRINGS.DESCRIBE.WILLOW.REVIVER"
+msgid "Quite the helpful soul, nnna~?"
+msgstr "Quite the helpful soul, nnna~?"
+
+#. STRINGS.DESCRIBE.WILSON.ATTACKER
+msgctxt "STRINGS.DESCRIBE.WILSON.ATTACKER"
+msgid "Nnnaa.. I'm not sure I trust Wilson..."
+msgstr "Nnnaa.. I'm not sure I trust Wilson..."
+
+#. STRINGS.DESCRIBE.WILSON.GENERIC
+msgctxt "STRINGS.DESCRIBE.WILSON.GENERIC"
+msgid "It's Wilson."
+msgstr "It's Wilson."
+
+#. STRINGS.DESCRIBE.WILSON.GHOST
+msgctxt "STRINGS.DESCRIBE.WILSON.GHOST"
+msgid "Poor soul, didn't stand a chance."
+msgstr "Poor soul, didn't stand a chance."
+
+#. STRINGS.DESCRIBE.WILSON.MURDERER
+msgctxt "STRINGS.DESCRIBE.WILSON.MURDERER"
+msgid "I know what you've done!"
+msgstr "I know what you've done!"
+
+#. STRINGS.DESCRIBE.WILSON.REVIVER
+msgctxt "STRINGS.DESCRIBE.WILSON.REVIVER"
+msgid "Quite the helpful soul, nnna~?"
+msgstr "Quite the helpful soul, nnna~?"
+
+#. STRINGS.DESCRIBE.WINTERHAT
+msgctxt "STRINGS.DESCRIBE.WINTERHAT"
+msgid "A nice warm hat, useful during winter in particular."
+msgstr "A nice warm hat, useful during winter in particular."
+
+#. STRINGS.DESCRIBE.WINTEROMETER
+msgctxt "STRINGS.DESCRIBE.WINTEROMETER"
+msgid "A needlessly large thermometer."
+msgstr "A needlessly large thermometer."
+
+#. STRINGS.DESCRIBE.WOLFGANG.ATTACKER
+msgctxt "STRINGS.DESCRIBE.WOLFGANG.ATTACKER"
+msgid "Nnnaa.. I'm not sure I trust Wolfgang..."
+msgstr "Nnnaa.. I'm not sure I trust Wolfgang..."
+
+#. STRINGS.DESCRIBE.WOLFGANG.GENERIC
+msgctxt "STRINGS.DESCRIBE.WOLFGANG.GENERIC"
+msgid "It's Wolfgang."
+msgstr "It's Wolfgang."
+
+#. STRINGS.DESCRIBE.WOLFGANG.GHOST
+msgctxt "STRINGS.DESCRIBE.WOLFGANG.GHOST"
+msgid "Poor soul, didn't stand a chance."
+msgstr "Poor soul, didn't stand a chance."
+
+#. STRINGS.DESCRIBE.WOLFGANG.MURDERER
+msgctxt "STRINGS.DESCRIBE.WOLFGANG.MURDERER"
+msgid "I know what you've done!"
+msgstr "I know what you've done!"
+
+#. STRINGS.DESCRIBE.WOLFGANG.REVIVER
+msgctxt "STRINGS.DESCRIBE.WOLFGANG.REVIVER"
+msgid "Quite the helpful soul, nnna~?"
+msgstr "Quite the helpful soul, nnna~?"
+
+#. STRINGS.DESCRIBE.WOODIE.ATTACKER
+msgctxt "STRINGS.DESCRIBE.WOODIE.ATTACKER"
+msgid "Nnnaa.. I'm not sure I trust Woodie..."
+msgstr "Nnnaa.. I'm not sure I trust Woodie..."
+
+#. STRINGS.DESCRIBE.WOODIE.GENERIC
+msgctxt "STRINGS.DESCRIBE.WOODIE.GENERIC"
+msgid "It's Woodie!"
+msgstr "It's Woodie!"
+
+#. STRINGS.DESCRIBE.WOODIE.GHOST
+msgctxt "STRINGS.DESCRIBE.WOODIE.GHOST"
+msgid "Poor soul, didn't stand a chance."
+msgstr "Poor soul, didn't stand a chance."
+
+#. STRINGS.DESCRIBE.WOODIE.MURDERER
+msgctxt "STRINGS.DESCRIBE.WOODIE.MURDERER"
+msgid "I know what you've done!"
+msgstr "I know what you've done!"
+
+#. STRINGS.DESCRIBE.WOODIE.REVIVER
+msgctxt "STRINGS.DESCRIBE.WOODIE.REVIVER"
+msgid "Quite the helpful soul, nnna~?"
+msgstr "Quite the helpful soul, nnna~?"
+
+#. STRINGS.DESCRIBE.WORM.DIRT
+msgctxt "STRINGS.DESCRIBE.WORM.DIRT"
+msgid "A pile of dirt. Nnnna. Interesting."
+msgstr "A pile of dirt. Nnnna. Interesting."
+
+#. STRINGS.DESCRIBE.WORM.PLANT
+msgctxt "STRINGS.DESCRIBE.WORM.PLANT"
+msgid "Looks like an ordinary plant to me."
+msgstr "Looks like an ordinary plant to me."
+
+#. STRINGS.DESCRIBE.WORM.WORM
+msgctxt "STRINGS.DESCRIBE.WORM.WORM"
+msgid "Worms, we could learn a lot from the little guys."
+msgstr "Worms, we could learn a lot from the little guys."
+
+#. STRINGS.DESCRIBE.WORMHOLE.GENERIC
+msgctxt "STRINGS.DESCRIBE.WORMHOLE.GENERIC"
+msgid "A hole?.. A hungry hole, at that."
+msgstr "A hole?.. A hungry hole, at that."
+
+#. STRINGS.DESCRIBE.WORMHOLE.OPEN
+msgctxt "STRINGS.DESCRIBE.WORMHOLE.OPEN"
+msgid "Maybe I should see what's inside."
+msgstr "Maybe I should see what's inside."
+
+#. STRINGS.DESCRIBE.WORMHOLE_LIMITED
+msgctxt "STRINGS.DESCRIBE.WORMHOLE_LIMITED"
+msgid "Nnnaa, this one looks a little strange."
+msgstr "Nnnaa, this one looks a little strange."
+
+#. STRINGS.DESCRIBE.WORMLIGHT
+msgctxt "STRINGS.DESCRIBE.WORMLIGHT"
+msgid "Hey, that doesn't look half bad."
+msgstr "Hey, that doesn't look half bad."
+
+#. STRINGS.DESCRIBE.WX78.ATTACKER
+msgctxt "STRINGS.DESCRIBE.WX78.ATTACKER"
+msgid "Nnnaa.. I'm not sure I trust that robot..."
+msgstr "Nnnaa.. I'm not sure I trust that robot..."
+
+#. STRINGS.DESCRIBE.WX78.GENERIC
+msgctxt "STRINGS.DESCRIBE.WX78.GENERIC"
+msgid "It's a robot."
+msgstr "It's a robot."
+
+#. STRINGS.DESCRIBE.WX78.GHOST
+msgctxt "STRINGS.DESCRIBE.WX78.GHOST"
+msgid "Poor soul, didn't stand a chance."
+msgstr "Poor soul, didn't stand a chance."
+
+#. STRINGS.DESCRIBE.WX78.MURDERER
+msgctxt "STRINGS.DESCRIBE.WX78.MURDERER"
+msgid "I know what you've done!"
+msgstr "I know what you've done!"
+
+#. STRINGS.DESCRIBE.WX78.REVIVER
+msgctxt "STRINGS.DESCRIBE.WX78.REVIVER"
+msgid "Quite the helpful soul, nnna~?"
+msgstr "Quite the helpful soul, nnna~?"
+
+#. STRINGS.DESCRIBE.YELLOWAMULET
+msgctxt "STRINGS.DESCRIBE.YELLOWAMULET"
+msgid "It feels a little warm.. I wonder what it does."
+msgstr "It feels a little warm.. I wonder what it does."
+
+#. STRINGS.DESCRIBE.YELLOWGEM
+msgctxt "STRINGS.DESCRIBE.YELLOWGEM"
+msgid "A yellow gem. Kinda looks valuable."
+msgstr "A yellow gem. Kinda looks valuable."
+
+#. STRINGS.DESCRIBE.YELLOWSTAFF
+msgctxt "STRINGS.DESCRIBE.YELLOWSTAFF"
+msgid "I'm not sure how comfortable I am with carrying this thing around, nnaaa..."
+msgstr "I'm not sure how comfortable I am with carrying this thing around, nnaaa..."
+
+#. STRINGS.DESCRIBE_GENERIC
+msgctxt "STRINGS.DESCRIBE_GENERIC"
+msgid "It's a thing, that's for sure."
+msgstr "It's a thing, that's for sure."
+
+#. STRINGS.DESCRIBE_SAMECHARACTER
+msgctxt "STRINGS.DESCRIBE_SAMECHARACTER"
+msgid "N-nnaa, you're just like me?!"
+msgstr "N-nnaa, you're just like me?!"
+
+#. STRINGS.DESCRIBE_TOODARK
+msgctxt "STRINGS.DESCRIBE_TOODARK"
+msgid "Nnaaa, I can't see a thing."
+msgstr "Nnaaa, I can't see a thing."
+
+#. STRINGS.EAT_FOOD.TALLBIRDEGG_CRACKED
+msgctxt "STRINGS.EAT_FOOD.TALLBIRDEGG_CRACKED"
+msgid "Shouldn't the egg be tall, too?"
+msgstr "Shouldn't the egg be tall, too?"

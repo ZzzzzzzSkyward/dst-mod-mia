@@ -95,3 +95,4 @@ local master_postinit = function(inst)
 end
 
 return MakePlayerCharacter("nanachi", prefabs, assets, common_postinit, master_postinit, start_inv)
+--娜娜奇应该受到雷古的降san光环

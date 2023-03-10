@@ -221,7 +221,7 @@ local function common_fn(bank, build, icon, tag, onbuiltfn)
 end
 
 local function nanachitent()
-    local inst = common_fn("nanachitent", "nanachitent", "nanachitent.tex", "nanachitent", onbuilt_tent)
+    local inst = common_fn("nanachitent", "nanachitent", "nanachitent.png", "nanachitent", onbuilt_tent)
 
     if not TheWorld.ismastersim then return inst end
 

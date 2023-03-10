@@ -1,0 +1,1352 @@
+msgid ""
+msgstr ""
+"Language: zh\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT Version: 2.0"
+
+
+#. STRINGS.ACTIONFAIL.COOK.GENERIC
+msgctxt "STRINGS.ACTIONFAIL.COOK.GENERIC"
+msgid "做不到呐。"
+msgstr "做不到呐。"
+
+#. STRINGS.ACTIONFAIL.COOK.INUSE
+msgctxt "STRINGS.ACTIONFAIL.COOK.INUSE"
+msgid "嗯呐，轮到咱了吧？"
+msgstr "嗯呐，轮到咱了吧？"
+
+#. STRINGS.ACTIONFAIL.GIVEALLTOPLAYER.FULL
+msgctxt "STRINGS.ACTIONFAIL.GIVEALLTOPLAYER.FULL"
+msgid "你拿不下呐…"
+msgstr "你拿不下呐…"
+
+#. STRINGS.ACTIONFAIL.GIVETOPLAYER.FULL
+msgctxt "STRINGS.ACTIONFAIL.GIVETOPLAYER.FULL"
+msgid "你拿不下呐…"
+msgstr "你拿不下呐…"
+
+#. STRINGS.ACTIONFAIL.RUMMAGE.GENERIC
+msgctxt "STRINGS.ACTIONFAIL.RUMMAGE.GENERIC"
+msgid "做不到呐。"
+msgstr "做不到呐。"
+
+#. STRINGS.ACTIONFAIL.RUMMAGE.INUSE
+msgctxt "STRINGS.ACTIONFAIL.RUMMAGE.INUSE"
+msgid "嗯呐，轮到咱了吧？"
+msgstr "嗯呐，轮到咱了吧？"
+
+#. STRINGS.ACTIONFAIL.SHAVE.AWAKEBEEFALO
+msgctxt "STRINGS.ACTIONFAIL.SHAVE.AWAKEBEEFALO"
+msgid "那么做很危险的呐。"
+msgstr "那么做很危险的呐。"
+
+#. STRINGS.ACTIONFAIL.SHAVE.GENERIC
+msgctxt "STRINGS.ACTIONFAIL.SHAVE.GENERIC"
+msgid "咱不认为这有用呐。"
+msgstr "咱不认为这有用呐。"
+
+#. STRINGS.ACTIONFAIL.SHAVE.NOBITS
+msgctxt "STRINGS.ACTIONFAIL.SHAVE.NOBITS"
+msgid "嗯呐，没那个必要。"
+msgstr "嗯呐，没那个必要。"
+
+#. STRINGS.ACTIONFAIL.STORE.GENERIC
+msgctxt "STRINGS.ACTIONFAIL.STORE.GENERIC"
+msgid "没空间了呐…"
+msgstr "没空间了呐…"
+
+#. STRINGS.ACTIONFAIL.STORE.INUSE
+msgctxt "STRINGS.ACTIONFAIL.STORE.INUSE"
+msgid "嗯呐，轮到咱了吧？"
+msgstr "嗯呐，轮到咱了吧？"
+
+#. STRINGS.ACTIONFAIL.STORE.NOTALLOWED
+msgctxt "STRINGS.ACTIONFAIL.STORE.NOTALLOWED"
+msgid "那不是个聪明的做法呐。"
+msgstr "那不是个聪明的做法呐。"
+
+#. STRINGS.ACTIONFAIL_GENERIC
+msgctxt "STRINGS.ACTIONFAIL_GENERIC"
+msgid "做不到呐。"
+msgstr "做不到呐。"
+
+#. STRINGS.ANNOUNCE_BEES
+msgctxt "STRINGS.ANNOUNCE_BEES"
+msgid "嗯呐！"
+msgstr "嗯呐！"
+
+#. STRINGS.ANNOUNCE_BOOMERANG
+msgctxt "STRINGS.ANNOUNCE_BOOMERANG"
+msgid "嗯呐！不过是失误罢了呐！"
+msgstr "嗯呐！不过是失误罢了呐！"
+
+#. STRINGS.ANNOUNCE_CANFIX
+msgctxt "STRINGS.ANNOUNCE_CANFIX"
+msgid "咱可以稍微修理一下它。"
+msgstr "咱可以稍微修理一下它。"
+
+#. STRINGS.ANNOUNCE_CHARLIE
+msgctxt "STRINGS.ANNOUNCE_CHARLIE"
+msgid "是谁？别靠那么近呐！"
+msgstr "是谁？别靠那么近呐！"
+
+#. STRINGS.ANNOUNCE_CHARLIE_ATTACK
+msgctxt "STRINGS.ANNOUNCE_CHARLIE_ATTACK"
+msgid "嗯呐！看来得赶快找到光呐…"
+msgstr "嗯呐！看来得赶快找到光呐…"
+
+#. STRINGS.ANNOUNCE_COLD
+msgctxt "STRINGS.ANNOUNCE_COLD"
+msgid "毛茸茸也不够暖呐…"
+msgstr "毛茸茸也不够暖呐…"
+
+#. STRINGS.ANNOUNCE_CRAFTING_FAIL
+msgctxt "STRINGS.ANNOUNCE_CRAFTING_FAIL"
+msgid "材料不够呐。"
+msgstr "材料不够呐。"
+
+#. STRINGS.ANNOUNCE_DEERCLOPS
+msgctxt "STRINGS.ANNOUNCE_DEERCLOPS"
+msgid "有东西过来了呐…！"
+msgstr "有东西过来了呐…！"
+
+#. STRINGS.ANNOUNCE_DUSK
+msgctxt "STRINGS.ANNOUNCE_DUSK"
+msgid "时间晚了，得做好准备呐…"
+msgstr "时间晚了，得做好准备呐…"
+
+#. STRINGS.ANNOUNCE_EAT.GENERIC
+msgctxt "STRINGS.ANNOUNCE_EAT.GENERIC"
+msgid "嗯呐~~~！"
+msgstr "嗯呐~~~！"
+
+#. STRINGS.ANNOUNCE_EAT.PAINFUL
+msgctxt "STRINGS.ANNOUNCE_EAT.PAINFUL"
+msgid "那玩意有毒呐…"
+msgstr "那玩意有毒呐…"
+
+#. STRINGS.ANNOUNCE_EAT.SPOILED
+msgctxt "STRINGS.ANNOUNCE_EAT.SPOILED"
+msgid "嗯呐！这不是坏了吗？！"
+msgstr "嗯呐！这不是坏了吗？！"
+
+#. STRINGS.ANNOUNCE_EAT.STALE
+msgctxt "STRINGS.ANNOUNCE_EAT.STALE"
+msgid "味道有些怪怪的，但还行呐。"
+msgstr "味道有些怪怪的，但还行呐。"
+
+#. STRINGS.ANNOUNCE_ENTER_DARK
+msgctxt "STRINGS.ANNOUNCE_ENTER_DARK"
+msgid "什么都看不清了呐…"
+msgstr "什么都看不清了呐…"
+
+#. STRINGS.ANNOUNCE_ENTER_LIGHT
+msgctxt "STRINGS.ANNOUNCE_ENTER_LIGHT"
+msgid "看来是暂时安全了呐。"
+msgstr "看来是暂时安全了呐。"
+
+#. STRINGS.ANNOUNCE_HOUNDS
+msgctxt "STRINGS.ANNOUNCE_HOUNDS"
+msgid "咱听到了…应该是猎犬呐。"
+msgstr "咱听到了…应该是猎犬呐。"
+
+#. STRINGS.ANNOUNCE_HUNGRY
+msgctxt "STRINGS.ANNOUNCE_HUNGRY"
+msgid "嗯呐，好饿呐~"
+msgstr "嗯呐，好饿呐~"
+
+#. STRINGS.ANNOUNCE_HUNT_BEAST_NEARBY
+msgctxt "STRINGS.ANNOUNCE_HUNT_BEAST_NEARBY"
+msgid "看来那家伙相当近了呐。"
+msgstr "看来那家伙相当近了呐。"
+
+#. STRINGS.ANNOUNCE_HUNT_LOST_TRAIL
+msgctxt "STRINGS.ANNOUNCE_HUNT_LOST_TRAIL"
+msgid "嗯呐，看来是跟丢了呐。"
+msgstr "嗯呐，看来是跟丢了呐。"
+
+#. STRINGS.ANNOUNCE_INV_FULL
+msgctxt "STRINGS.ANNOUNCE_INV_FULL"
+msgid "拿东西拿得太多不是个好主意呐。"
+msgstr "拿东西拿得太多不是个好主意呐。"
+
+#. STRINGS.ANNOUNCE_KNOCKEDOUT
+msgctxt "STRINGS.ANNOUNCE_KNOCKEDOUT"
+msgid "得集中精神…！"
+msgstr "得集中精神…！"
+
+#. STRINGS.ANNOUNCE_MOSQUITOS
+msgctxt "STRINGS.ANNOUNCE_MOSQUITOS"
+msgid "害虫呐…"
+msgstr "害虫呐…"
+
+#. STRINGS.ANNOUNCE_NODANGERAFK
+msgctxt "STRINGS.ANNOUNCE_NODANGERAFK"
+msgid "现在不是逃跑的时候呐！"
+msgstr "现在不是逃跑的时候呐！"
+
+#. STRINGS.ANNOUNCE_NODANGERSLEEP
+msgctxt "STRINGS.ANNOUNCE_NODANGERSLEEP"
+msgid "现在可不是休息的时候呐！"
+msgstr "现在可不是休息的时候呐！"
+
+#. STRINGS.ANNOUNCE_NODAYSLEEP
+msgctxt "STRINGS.ANNOUNCE_NODAYSLEEP"
+msgid "现在是收集资源的时间，别浪费了呐。"
+msgstr "现在是收集资源的时间，别浪费了呐。"
+
+#. STRINGS.ANNOUNCE_NODAYSLEEP_CAVE
+msgctxt "STRINGS.ANNOUNCE_NODAYSLEEP_CAVE"
+msgid "现在是收集资源的时间，别浪费了呐。"
+msgstr "现在是收集资源的时间，别浪费了呐。"
+
+#. STRINGS.ANNOUNCE_NOHUNGERSLEEP
+msgctxt "STRINGS.ANNOUNCE_NOHUNGERSLEEP"
+msgid "在那之前，咱得先填饱肚子呐。"
+msgstr "在那之前，咱得先填饱肚子呐。"
+
+#. STRINGS.ANNOUNCE_NO_TRAP
+msgctxt "STRINGS.ANNOUNCE_NO_TRAP"
+msgid "挺简单的呐。"
+msgstr "挺简单的呐。"
+
+#. STRINGS.ANNOUNCE_PECKED
+msgctxt "STRINGS.ANNOUNCE_PECKED"
+msgid "嗯呐！停下！"
+msgstr "嗯呐！停下！"
+
+#. STRINGS.ANNOUNCE_QUAKE
+msgctxt "STRINGS.ANNOUNCE_QUAKE"
+msgid "这附近不安全呐！"
+msgstr "这附近不安全呐！"
+
+#. STRINGS.ANNOUNCE_THORNS
+msgctxt "STRINGS.ANNOUNCE_THORNS"
+msgid "嗯呐！"
+msgstr "嗯呐！"
+
+#. STRINGS.ANNOUNCE_TORCH_OUT
+msgctxt "STRINGS.ANNOUNCE_TORCH_OUT"
+msgid "嗯呐？！不妙…"
+msgstr "嗯呐？！不妙…"
+
+#. STRINGS.ANNOUNCE_WORMHOLE
+msgctxt "STRINGS.ANNOUNCE_WORMHOLE"
+msgid "这里又是哪里呐…"
+msgstr "这里又是哪里呐…"
+
+#. STRINGS.BATTLECRY.GENERIC
+msgctxt "STRINGS.BATTLECRY.GENERIC"
+msgid "嗯呐！"
+msgstr "嗯呐！"
+
+#. STRINGS.BATTLECRY.PIG
+msgctxt "STRINGS.BATTLECRY.PIG"
+msgid "抱歉了呐！"
+msgstr "抱歉了呐！"
+
+#. STRINGS.BATTLECRY.PREY
+msgctxt "STRINGS.BATTLECRY.PREY"
+msgid "抱歉了呐！"
+msgstr "抱歉了呐！"
+
+#. STRINGS.BATTLECRY.SPIDER
+msgctxt "STRINGS.BATTLECRY.SPIDER"
+msgid "别靠那么近呐！"
+msgstr "别靠那么近呐！"
+
+#. STRINGS.BATTLECRY.SPIDER_WARRIOR
+msgctxt "STRINGS.BATTLECRY.SPIDER_WARRIOR"
+msgid "你的憧憬到此为止了呐！"
+msgstr "你的憧憬到此为止了呐！"
+
+#. STRINGS.COMBAT_QUIT.GENERIC
+msgctxt "STRINGS.COMBAT_QUIT.GENERIC"
+msgid "撤退呐！"
+msgstr "撤退呐！"
+
+#. STRINGS.COMBAT_QUIT.PIG
+msgctxt "STRINGS.COMBAT_QUIT.PIG"
+msgid "还是放过他呐…"
+msgstr "还是放过他呐…"
+
+#. STRINGS.COMBAT_QUIT.PREY
+msgctxt "STRINGS.COMBAT_QUIT.PREY"
+msgid "啧！"
+msgstr "啧！"
+
+#. STRINGS.COMBAT_QUIT.SPIDER
+msgctxt "STRINGS.COMBAT_QUIT.SPIDER"
+msgid "别再过来了呐！"
+msgstr "别再过来了呐！"
+
+#. STRINGS.COMBAT_QUIT.SPIDER_WARRIOR
+msgctxt "STRINGS.COMBAT_QUIT.SPIDER_WARRIOR"
+msgid "不行了呐…！"
+msgstr "不行了呐…！"
+
+#. STRINGS.DESCRIBE.ABIGAIL
+msgctxt "STRINGS.DESCRIBE.ABIGAIL"
+msgid "有人陪伴的感觉，肯定很好吧。"
+msgstr "有人陪伴的感觉，肯定很好吧。"
+
+#. STRINGS.DESCRIBE.ADVENTURE_PORTAL
+msgctxt "STRINGS.DESCRIBE.ADVENTURE_PORTAL"
+msgid "嗯呐……咱为什么从这出来了？"
+msgstr "嗯呐……咱为什么从这出来了？"
+
+#. STRINGS.DESCRIBE.AMULET
+msgctxt "STRINGS.DESCRIBE.AMULET"
+msgid "戴着它感觉很舒服。"
+msgstr "戴着它感觉很舒服。"
+
+#. STRINGS.DESCRIBE.ANCIENT_ALTAR
+msgctxt "STRINGS.DESCRIBE.ANCIENT_ALTAR"
+msgid "这个就是…遗物的起源呐？"
+msgstr "这个就是…遗物的起源呐？"
+
+#. STRINGS.DESCRIBE.ANCIENT_ALTAR_BROKEN
+msgctxt "STRINGS.DESCRIBE.ANCIENT_ALTAR_BROKEN"
+msgid "看起来坏了呐。"
+msgstr "看起来坏了呐。"
+
+#. STRINGS.DESCRIBE.ANCIENT_STATUE
+msgctxt "STRINGS.DESCRIBE.ANCIENT_STATUE"
+msgid "下层真是有一些神奇的东西呐。"
+msgstr "下层真是有一些神奇的东西呐。"
+
+#. STRINGS.DESCRIBE.ANIMAL_TRACK
+msgctxt "STRINGS.DESCRIBE.ANIMAL_TRACK"
+msgid "是猎物的踪迹。"
+msgstr "是猎物的踪迹。"
+
+#. STRINGS.DESCRIBE.ARMORGRASS
+msgctxt "STRINGS.DESCRIBE.ARMORGRASS"
+msgid "再薄，也能保护咱啊。"
+msgstr "再薄，也能保护咱啊。"
+
+#. STRINGS.DESCRIBE.ARMORMARBLE
+msgctxt "STRINGS.DESCRIBE.ARMORMARBLE"
+msgid "沉重可靠的保护措施呐。"
+msgstr "沉重可靠的保护措施呐。"
+
+#. STRINGS.DESCRIBE.ARMORRUINS
+msgctxt "STRINGS.DESCRIBE.ARMORRUINS"
+msgid "这件盔甲硬的出奇…是遗物呐？"
+msgstr "这件盔甲硬的出奇…是遗物呐？"
+
+#. STRINGS.DESCRIBE.ARMORSLURPER
+msgctxt "STRINGS.DESCRIBE.ARMORSLURPER"
+msgid "好吧，真没想到牠们的皮能这么有用呐。"
+msgstr "好吧，真没想到牠们的皮能这么有用呐。"
+
+#. STRINGS.DESCRIBE.ARMORSNURTLESHELL
+msgctxt "STRINGS.DESCRIBE.ARMORSNURTLESHELL"
+msgid "咱可要保护好自己啊。"
+msgstr "咱可要保护好自己啊。"
+
+#. STRINGS.DESCRIBE.ARMORWOOD
+msgctxt "STRINGS.DESCRIBE.ARMORWOOD"
+msgid "木头的铠甲很实用呐。"
+msgstr "木头的铠甲很实用呐。"
+
+#. STRINGS.DESCRIBE.ARMOR_SANITY
+msgctxt "STRINGS.DESCRIBE.ARMOR_SANITY"
+msgid "嗯呐……但是咱的内心感觉不安呢。"
+msgstr "嗯呐……但是咱的内心感觉不安呢。"
+
+#. STRINGS.DESCRIBE.ASH.GENERIC
+msgctxt "STRINGS.DESCRIBE.ASH.GENERIC"
+msgid "烧成灰咱也……还真不认识呐。"
+msgstr "烧成灰咱也……还真不认识呐。"
+
+#. STRINGS.DESCRIBE.ASH.REMAINS_EYE_BONE
+msgctxt "STRINGS.DESCRIBE.ASH.REMAINS_EYE_BONE"
+msgid "眼骨在传送时烧坏啦！"
+msgstr "眼骨在传送时烧坏啦！"
+
+#. STRINGS.DESCRIBE.ASH.REMAINS_THINGIE
+msgctxt "STRINGS.DESCRIBE.ASH.REMAINS_THINGIE"
+msgid "在烧坏之前是挺有用的东西呐。"
+msgstr "在烧坏之前是挺有用的东西呐。"
+
+#. STRINGS.DESCRIBE.AXE
+msgctxt "STRINGS.DESCRIBE.AXE"
+msgid "咱需要这样可靠易用的装备。"
+msgstr "咱需要这样可靠易用的装备。"
+
+#. STRINGS.DESCRIBE.BABYBEEFALO
+msgctxt "STRINGS.DESCRIBE.BABYBEEFALO"
+msgid "嗯呐，是牛的幼崽。"
+msgstr "嗯呐，是牛的幼崽。"
+
+#. STRINGS.DESCRIBE.BACKPACK
+msgctxt "STRINGS.DESCRIBE.BACKPACK"
+msgid "咱要生存，怎么能没有背包呢？"
+msgstr "咱要生存，怎么能没有背包呢？"
+
+#. STRINGS.DESCRIBE.BACONEGGS
+msgctxt "STRINGS.DESCRIBE.BACONEGGS"
+msgid "嗯呐……高蛋白的诱惑。"
+msgstr "嗯呐……高蛋白的诱惑。"
+
+#. STRINGS.DESCRIBE.BANDAGE
+msgctxt "STRINGS.DESCRIBE.BANDAGE"
+msgid "有效的治疗方式。"
+msgstr "有效的治疗方式。"
+
+#. STRINGS.DESCRIBE.BASALT
+msgctxt "STRINGS.DESCRIBE.BASALT"
+msgid "咱没有怪力能打破它啦。"
+msgstr "咱没有怪力能打破它啦。"
+
+#. STRINGS.DESCRIBE.BAT
+msgctxt "STRINGS.DESCRIBE.BAT"
+msgid "嗯呐？！"
+msgstr "嗯呐？！"
+
+#. STRINGS.DESCRIBE.BATBAT
+msgctxt "STRINGS.DESCRIBE.BATBAT"
+msgid "嗯呐，真是怪异的武器。"
+msgstr "嗯呐，真是怪异的武器。"
+
+#. STRINGS.DESCRIBE.BATWING
+msgctxt "STRINGS.DESCRIBE.BATWING"
+msgid "哺乳动物的翅膀。"
+msgstr "哺乳动物的翅膀。"
+
+#. STRINGS.DESCRIBE.BATWING_COOKED
+msgctxt "STRINGS.DESCRIBE.BATWING_COOKED"
+msgid "嗯呐，算是一种野味吧。"
+msgstr "嗯呐，算是一种野味吧。"
+
+#. STRINGS.DESCRIBE.BEARDHAIR
+msgctxt "STRINGS.DESCRIBE.BEARDHAIR"
+msgid "咱身上没有黑色的毛发啦。"
+msgstr "咱身上没有黑色的毛发啦。"
+
+#. STRINGS.DESCRIBE.BEDROLL_FURRY
+msgctxt "STRINGS.DESCRIBE.BEDROLL_FURRY"
+msgid "嗯呐~~好软和。"
+msgstr "嗯呐~~好软和。"
+
+#. STRINGS.DESCRIBE.BEDROLL_STRAW
+msgctxt "STRINGS.DESCRIBE.BEDROLL_STRAW"
+msgid "咱可以来个短暂的休息。"
+msgstr "咱可以来个短暂的休息。"
+
+#. STRINGS.DESCRIBE.BEE.GENERIC
+msgctxt "STRINGS.DESCRIBE.BEE.GENERIC"
+msgid "嗡嗡响的昆虫呐。"
+msgstr "嗡嗡响的昆虫呐。"
+
+#. STRINGS.DESCRIBE.BEE.HELD
+msgctxt "STRINGS.DESCRIBE.BEE.HELD"
+msgid "咱最好不要被蛰到。"
+msgstr "咱最好不要被蛰到。"
+
+#. STRINGS.DESCRIBE.BEEBOX.FULLHONEY
+msgctxt "STRINGS.DESCRIBE.BEEBOX.FULLHONEY"
+msgid "嗯呐……很多蜂蜜。"
+msgstr "嗯呐……很多蜂蜜。"
+
+#. STRINGS.DESCRIBE.BEEBOX.GENERIC
+msgctxt "STRINGS.DESCRIBE.BEEBOX.GENERIC"
+msgid "咱有蜂蜜吃啦！"
+msgstr "咱有蜂蜜吃啦！"
+
+#. STRINGS.DESCRIBE.BEEBOX.NOHONEY
+msgctxt "STRINGS.DESCRIBE.BEEBOX.NOHONEY"
+msgid "空空的，没有了。"
+msgstr "空空的，没有了。"
+
+#. STRINGS.DESCRIBE.BEEBOX.SOMEHONEY
+msgctxt "STRINGS.DESCRIBE.BEEBOX.SOMEHONEY"
+msgid "攒一攒再收集吧。"
+msgstr "攒一攒再收集吧。"
+
+#. STRINGS.DESCRIBE.BEEFALO.FOLLOWER
+msgctxt "STRINGS.DESCRIBE.BEEFALO.FOLLOWER"
+msgid "安静地跟着咱呢。"
+msgstr "安静地跟着咱呢。"
+
+#. STRINGS.DESCRIBE.BEEFALO.GENERIC
+msgctxt "STRINGS.DESCRIBE.BEEFALO.GENERIC"
+msgid "一头牛。"
+msgstr "一头牛。"
+
+#. STRINGS.DESCRIBE.BEEFALO.NAKED
+msgctxt "STRINGS.DESCRIBE.BEEFALO.NAKED"
+msgid "嗯呐……咱打了个冷颤。"
+msgstr "嗯呐……咱打了个冷颤。"
+
+#. STRINGS.DESCRIBE.BEEFALO.SLEEPING
+msgctxt "STRINGS.DESCRIBE.BEEFALO.SLEEPING"
+msgid "这牛睡着了。"
+msgstr "这牛睡着了。"
+
+#. STRINGS.DESCRIBE.BEEFALOHAT
+msgctxt "STRINGS.DESCRIBE.BEEFALOHAT"
+msgid "现在咱是牛啦，哞。"
+msgstr "现在咱是牛啦，哞。"
+
+#. STRINGS.DESCRIBE.BEEFALOWOOL
+msgctxt "STRINGS.DESCRIBE.BEEFALOWOOL"
+msgid "牛儿牛儿别伤心呐。"
+msgstr "牛儿牛儿别伤心呐。"
+
+#. STRINGS.DESCRIBE.BEEHAT
+msgctxt "STRINGS.DESCRIBE.BEEHAT"
+msgid "蜜蜂蛰不到咱啦。"
+msgstr "蜜蜂蛰不到咱啦。"
+
+#. STRINGS.DESCRIBE.BEEHIVE
+msgctxt "STRINGS.DESCRIBE.BEEHIVE"
+msgid "嗡嗡嗡的。"
+msgstr "嗡嗡嗡的。"
+
+#. STRINGS.DESCRIBE.BEEMINE
+msgctxt "STRINGS.DESCRIBE.BEEMINE"
+msgid "真是恐怖的陷阱呐。"
+msgstr "真是恐怖的陷阱呐。"
+
+#. STRINGS.DESCRIBE.BEEMINE_MAXWELL
+msgctxt "STRINGS.DESCRIBE.BEEMINE_MAXWELL"
+msgid "瓶装蚊子炸弹！"
+msgstr "瓶装蚊子炸弹！"
+
+#. STRINGS.DESCRIBE.BERRIES
+msgctxt "STRINGS.DESCRIBE.BERRIES"
+msgid "嗯呐~酸甜的果子。"
+msgstr "嗯呐~酸甜的果子。"
+
+#. STRINGS.DESCRIBE.BERRIES_COOKED
+msgctxt "STRINGS.DESCRIBE.BERRIES_COOKED"
+msgid "酸甜的熟果子。"
+msgstr "酸甜的熟果子。"
+
+#. STRINGS.DESCRIBE.BERRYBUSH.BARREN
+msgctxt "STRINGS.DESCRIBE.BERRYBUSH.BARREN"
+msgid "贫瘠的土地怎么种菜呐？"
+msgstr "贫瘠的土地怎么种菜呐？"
+
+#. STRINGS.DESCRIBE.BERRYBUSH.GENERIC
+msgctxt "STRINGS.DESCRIBE.BERRYBUSH.GENERIC"
+msgid "嗯呐，酸甜的果子。"
+msgstr "嗯呐，酸甜的果子。"
+
+#. STRINGS.DESCRIBE.BERRYBUSH.PICKED
+msgctxt "STRINGS.DESCRIBE.BERRYBUSH.PICKED"
+msgid "光秃秃的，没有果子呐。"
+msgstr "光秃秃的，没有果子呐。"
+
+#. STRINGS.DESCRIBE.BIRDCAGE.GENERIC
+msgctxt "STRINGS.DESCRIBE.BIRDCAGE.GENERIC"
+msgid "想起了一些不愉快的回忆呐。"
+msgstr "想起了一些不愉快的回忆呐。"
+
+#. STRINGS.DESCRIBE.BIRDCAGE.OCCUPIED
+msgctxt "STRINGS.DESCRIBE.BIRDCAGE.OCCUPIED"
+msgid "这是咱的鸟~~"
+msgstr "这是咱的鸟~~"
+
+#. STRINGS.DESCRIBE.BIRDCAGE.SLEEPING
+msgctxt "STRINGS.DESCRIBE.BIRDCAGE.SLEEPING"
+msgid "嗯呐，安静的睡吧。"
+msgstr "嗯呐，安静的睡吧。"
+
+#. STRINGS.DESCRIBE.BIRDTRAP
+msgctxt "STRINGS.DESCRIBE.BIRDTRAP"
+msgid "鸟儿鸟儿快上钩。"
+msgstr "鸟儿鸟儿快上钩。"
+
+#. STRINGS.DESCRIBE.BIRD_EGG
+msgctxt "STRINGS.DESCRIBE.BIRD_EGG"
+msgid "嗯呐……虽然没有锤嘴鸟的蛋大。"
+msgstr "嗯呐……虽然没有锤嘴鸟的蛋大。"
+
+#. STRINGS.DESCRIBE.BIRD_EGG_COOKED
+msgctxt "STRINGS.DESCRIBE.BIRD_EGG_COOKED"
+msgid "黄白相间的，很开胃呐~"
+msgstr "黄白相间的，很开胃呐~"
+
+#. STRINGS.DESCRIBE.BISHOP
+msgctxt "STRINGS.DESCRIBE.BISHOP"
+msgid "离咱远点……嗯呐？！"
+msgstr "离咱远点……嗯呐？！"
+
+#. STRINGS.DESCRIBE.BISHOP_NIGHTMARE
+msgctxt "STRINGS.DESCRIBE.BISHOP_NIGHTMARE"
+msgid "不是枢机返还之光，但依然能要你的命呐。"
+msgstr "不是枢机返还之光，但依然能要你的命呐。"
+
+#. STRINGS.DESCRIBE.BLOWDART_FIRE
+msgctxt "STRINGS.DESCRIBE.BLOWDART_FIRE"
+msgid "咻——呼啦！就着起来啦。"
+msgstr "咻——呼啦！就着起来啦。"
+
+#. STRINGS.DESCRIBE.BLOWDART_PIPE
+msgctxt "STRINGS.DESCRIBE.BLOWDART_PIPE"
+msgid "最好离得远远的呐。"
+msgstr "最好离得远远的呐。"
+
+#. STRINGS.DESCRIBE.BLOWDART_SLEEP
+msgctxt "STRINGS.DESCRIBE.BLOWDART_SLEEP"
+msgid "小心不要吸一口呐。"
+msgstr "小心不要吸一口呐。"
+
+#. STRINGS.DESCRIBE.BLUEAMULET
+msgctxt "STRINGS.DESCRIBE.BLUEAMULET"
+msgid "感觉脖子上冰凉的呐。"
+msgstr "感觉脖子上冰凉的呐。"
+
+#. STRINGS.DESCRIBE.BLUEGEM
+msgctxt "STRINGS.DESCRIBE.BLUEGEM"
+msgid "晶莹漂亮的宝石呐。"
+msgstr "晶莹漂亮的宝石呐。"
+
+#. STRINGS.DESCRIBE.BLUEPRINT
+msgctxt "STRINGS.DESCRIBE.BLUEPRINT"
+msgid "这古代智慧也是遗物吗？"
+msgstr "这古代智慧也是遗物吗？"
+
+#. STRINGS.DESCRIBE.BLUE_CAP
+msgctxt "STRINGS.DESCRIBE.BLUE_CAP"
+msgid "蓝色的小帽子。"
+msgstr "蓝色的小帽子。"
+
+#. STRINGS.DESCRIBE.BLUE_CAP_COOKED
+msgctxt "STRINGS.DESCRIBE.BLUE_CAP_COOKED"
+msgid "现在不一样了呐……"
+msgstr "现在不一样了呐……"
+
+#. STRINGS.DESCRIBE.BLUE_MUSHROOM.GENERIC
+msgctxt "STRINGS.DESCRIBE.BLUE_MUSHROOM.GENERIC"
+msgid "蘑菇帽子。"
+msgstr "蘑菇帽子。"
+
+#. STRINGS.DESCRIBE.BLUE_MUSHROOM.INGROUND
+msgctxt "STRINGS.DESCRIBE.BLUE_MUSHROOM.INGROUND"
+msgid "蘑菇帽子在休息。"
+msgstr "蘑菇帽子在休息。"
+
+#. STRINGS.DESCRIBE.BLUE_MUSHROOM.PICKED
+msgctxt "STRINGS.DESCRIBE.BLUE_MUSHROOM.PICKED"
+msgid "不知道还会不会长呐。"
+msgstr "不知道还会不会长呐。"
+
+#. STRINGS.DESCRIBE.BOARDS
+msgctxt "STRINGS.DESCRIBE.BOARDS"
+msgid "木板。"
+msgstr "木板。"
+
+#. STRINGS.DESCRIBE.BOAT
+msgctxt "STRINGS.DESCRIBE.BOAT"
+msgid "要咱划船呐……"
+msgstr "要咱划船呐……"
+
+#. STRINGS.DESCRIBE.BONESTEW
+msgctxt "STRINGS.DESCRIBE.BONESTEW"
+msgid "嗯呐……没有小废铁的料理难吃啦。"
+msgstr "嗯呐……没有小废铁的料理难吃啦。"
+
+#. STRINGS.DESCRIBE.BOOMERANG
+msgctxt "STRINGS.DESCRIBE.BOOMERANG"
+msgid "有意思的狩猎工具。"
+msgstr "有意思的狩猎工具。"
+
+#. STRINGS.DESCRIBE.BUGNET
+msgctxt "STRINGS.DESCRIBE.BUGNET"
+msgid "用来抓虫子。"
+msgstr "用来抓虫子。"
+
+#. STRINGS.DESCRIBE.BUNNYMAN
+msgctxt "STRINGS.DESCRIBE.BUNNYMAN"
+msgid "它们会不会也尝试过上行呢？"
+msgstr "它们会不会也尝试过上行呢？"
+
+#. STRINGS.DESCRIBE.BUSHHAT
+msgctxt "STRINGS.DESCRIBE.BUSHHAT"
+msgid "嗯呐……耳朵会痒啦>_<"
+msgstr "嗯呐……耳朵会痒啦>_<"
+
+#. STRINGS.DESCRIBE.BUTTER
+msgctxt "STRINGS.DESCRIBE.BUTTER"
+msgid "这个好像叫黄油？"
+msgstr "这个好像叫黄油？"
+
+#. STRINGS.DESCRIBE.BUTTERFLY.GENERIC
+msgctxt "STRINGS.DESCRIBE.BUTTERFLY.GENERIC"
+msgid "飞来飞去的漂亮昆虫。"
+msgstr "飞来飞去的漂亮昆虫。"
+
+#. STRINGS.DESCRIBE.BUTTERFLY.HELD
+msgctxt "STRINGS.DESCRIBE.BUTTERFLY.HELD"
+msgid "捉住你啦。"
+msgstr "捉住你啦。"
+
+#. STRINGS.DESCRIBE.BUTTERFLYMUFFIN
+msgctxt "STRINGS.DESCRIBE.BUTTERFLYMUFFIN"
+msgid "很花哨的料理啊。"
+msgstr "很花哨的料理啊。"
+
+#. STRINGS.DESCRIBE.BUTTERFLYWINGS
+msgctxt "STRINGS.DESCRIBE.BUTTERFLYWINGS"
+msgid "嗯呐，咱也能飞就好了。"
+msgstr "嗯呐，咱也能飞就好了。"
+
+#. STRINGS.DESCRIBE.CAVE_BANANA
+msgctxt "STRINGS.DESCRIBE.CAVE_BANANA"
+msgid "应该是能吃的果子呐。"
+msgstr "应该是能吃的果子呐。"
+
+#. STRINGS.DESCRIBE.CAVE_BANANA_COOKED
+msgctxt "STRINGS.DESCRIBE.CAVE_BANANA_COOKED"
+msgid "嗯呐……看起来不错。"
+msgstr "嗯呐……看起来不错。"
+
+#. STRINGS.DESCRIBE.CAVE_BANANA_TREE
+msgctxt "STRINGS.DESCRIBE.CAVE_BANANA_TREE"
+msgid "应该是一种食物来源。"
+msgstr "应该是一种食物来源。"
+
+#. STRINGS.DESCRIBE.CAVE_ENTRANCE.GENERIC
+msgctxt "STRINGS.DESCRIBE.CAVE_ENTRANCE.GENERIC"
+msgid "咱可以试试凿开它。"
+msgstr "咱可以试试凿开它。"
+
+#. STRINGS.DESCRIBE.CAVE_ENTRANCE.OPEN
+msgctxt "STRINGS.DESCRIBE.CAVE_ENTRANCE.OPEN"
+msgid "嗯呐……咱可以下一层了哦。"
+msgstr "嗯呐……咱可以下一层了哦。"
+
+#. STRINGS.DESCRIBE.CAVE_EXIT
+msgctxt "STRINGS.DESCRIBE.CAVE_EXIT"
+msgid "比起诅咒，咱更想离开这呐。"
+msgstr "比起诅咒，咱更想离开这呐。"
+
+#. STRINGS.DESCRIBE.COMPASS.E
+msgctxt "STRINGS.DESCRIBE.COMPASS.E"
+msgid "东。"
+msgstr "东。"
+
+#. STRINGS.DESCRIBE.COMPASS.GENERIC
+msgctxt "STRINGS.DESCRIBE.COMPASS.GENERIC"
+msgid "咱不会迷路的。"
+msgstr "咱不会迷路的。"
+
+#. STRINGS.DESCRIBE.COMPASS.N
+msgctxt "STRINGS.DESCRIBE.COMPASS.N"
+msgid "北。"
+msgstr "北。"
+
+#. STRINGS.DESCRIBE.COMPASS.NE
+msgctxt "STRINGS.DESCRIBE.COMPASS.NE"
+msgid "东北。"
+msgstr "东北。"
+
+#. STRINGS.DESCRIBE.COMPASS.NW
+msgctxt "STRINGS.DESCRIBE.COMPASS.NW"
+msgid "西北。"
+msgstr "西北。"
+
+#. STRINGS.DESCRIBE.COMPASS.S
+msgctxt "STRINGS.DESCRIBE.COMPASS.S"
+msgid "南。"
+msgstr "南。"
+
+#. STRINGS.DESCRIBE.COMPASS.SE
+msgctxt "STRINGS.DESCRIBE.COMPASS.SE"
+msgid "东南。"
+msgstr "东南。"
+
+#. STRINGS.DESCRIBE.COMPASS.SW
+msgctxt "STRINGS.DESCRIBE.COMPASS.SW"
+msgid "西南。"
+msgstr "西南。"
+
+#. STRINGS.DESCRIBE.COMPASS.W
+msgctxt "STRINGS.DESCRIBE.COMPASS.W"
+msgid "西。"
+msgstr "西。"
+
+#. STRINGS.DESCRIBE.CUTLICHEN
+msgctxt "STRINGS.DESCRIBE.CUTLICHEN"
+msgid "这东西不会保存很久呐。"
+msgstr "这东西不会保存很久呐。"
+
+#. STRINGS.DESCRIBE.EEL
+msgctxt "STRINGS.DESCRIBE.EEL"
+msgid "咱应该把它交给莉可处理呐。"
+msgstr "咱应该把它交给莉可处理呐。"
+
+#. STRINGS.DESCRIBE.EEL_COOKED
+msgctxt "STRINGS.DESCRIBE.EEL_COOKED"
+msgid "呐，他还能更棒。"
+msgstr "呐，他还能更棒。"
+
+#. STRINGS.DESCRIBE.EYETURRET
+msgctxt "STRINGS.DESCRIBE.EYETURRET"
+msgid "枢机…枢机返还之光…？"
+msgstr "枢机…枢机返还之光…？"
+
+#. STRINGS.DESCRIBE.EYETURRET_ITEM
+msgctxt "STRINGS.DESCRIBE.EYETURRET_ITEM"
+msgid "这件遗物能自动攻击咱的敌人。"
+msgstr "这件遗物能自动攻击咱的敌人。"
+
+#. STRINGS.DESCRIBE.FLOWER_CAVE
+msgctxt "STRINGS.DESCRIBE.FLOWER_CAVE"
+msgid "会发光的神奇植物呢。"
+msgstr "会发光的神奇植物呢。"
+
+#. STRINGS.DESCRIBE.FLOWER_CAVE_DOUBLE
+msgctxt "STRINGS.DESCRIBE.FLOWER_CAVE_DOUBLE"
+msgid "会发光的神奇植物呢。"
+msgstr "会发光的神奇植物呢。"
+
+#. STRINGS.DESCRIBE.FLOWER_CAVE_TRIPLE
+msgctxt "STRINGS.DESCRIBE.FLOWER_CAVE_TRIPLE"
+msgid "会发光的神奇植物呢。"
+msgstr "会发光的神奇植物呢。"
+
+#. STRINGS.DESCRIBE.GEMSOCKET.GEMS
+msgctxt "STRINGS.DESCRIBE.GEMSOCKET.GEMS"
+msgid "把紫色宝石放上去就可以启动呐。"
+msgstr "把紫色宝石放上去就可以启动呐。"
+
+#. STRINGS.DESCRIBE.GEMSOCKET.VALID
+msgctxt "STRINGS.DESCRIBE.GEMSOCKET.VALID"
+msgid "好呐，要飞了呐！"
+msgstr "好呐，要飞了呐！"
+
+#. STRINGS.DESCRIBE.GREENAMULET
+msgctxt "STRINGS.DESCRIBE.GREENAMULET"
+msgid "越省当然越好呐。"
+msgstr "越省当然越好呐。"
+
+#. STRINGS.DESCRIBE.GREENGEM
+msgctxt "STRINGS.DESCRIBE.GREENGEM"
+msgid "看上去很珍贵，但不知道有什么用呐。"
+msgstr "看上去很珍贵，但不知道有什么用呐。"
+
+#. STRINGS.DESCRIBE.GREENSTAFF
+msgctxt "STRINGS.DESCRIBE.GREENSTAFF"
+msgid "能瞬间拆掉建筑的遗物呐。"
+msgstr "能瞬间拆掉建筑的遗物呐。"
+
+#. STRINGS.DESCRIBE.GUANO
+msgctxt "STRINGS.DESCRIBE.GUANO"
+msgid "天上掉下来的粪。"
+msgstr "天上掉下来的粪。"
+
+#. STRINGS.DESCRIBE.HOUNDSTOOTH
+msgctxt "STRINGS.DESCRIBE.HOUNDSTOOTH"
+msgid "尖尖的。"
+msgstr "尖尖的。"
+
+#. STRINGS.DESCRIBE.KNIGHT_NIGHTMARE
+msgctxt "STRINGS.DESCRIBE.KNIGHT_NIGHTMARE"
+msgid "为什么机械生物没一个正常的呐！"
+msgstr "为什么机械生物没一个正常的呐！"
+
+#. STRINGS.DESCRIBE.LANTERN
+msgctxt "STRINGS.DESCRIBE.LANTERN"
+msgid "咱有可移动而且明亮的光源了。"
+msgstr "咱有可移动而且明亮的光源了。"
+
+#. STRINGS.DESCRIBE.LICHEN
+msgctxt "STRINGS.DESCRIBE.LICHEN"
+msgid "这东西在几乎没有光的地方生存。"
+msgstr "这东西在几乎没有光的地方生存。"
+
+#. STRINGS.DESCRIBE.LIGHTBULB
+msgctxt "STRINGS.DESCRIBE.LIGHTBULB"
+msgid "嗯呐，好有趣的果实。"
+msgstr "嗯呐，好有趣的果实。"
+
+#. STRINGS.DESCRIBE.MANRABBIT_TAIL
+msgctxt "STRINGS.DESCRIBE.MANRABBIT_TAIL"
+msgid "咱不稀罕这些毛啦……"
+msgstr "咱不稀罕这些毛啦……"
+
+#. STRINGS.DESCRIBE.MAXWELLPHONOGRAPH
+msgctxt "STRINGS.DESCRIBE.MAXWELLPHONOGRAPH"
+msgid "音乐就是这里传来的。"
+msgstr "音乐就是这里传来的。"
+
+#. STRINGS.DESCRIBE.MINOTAUR
+msgctxt "STRINGS.DESCRIBE.MINOTAUR"
+msgid "别被他撞到呐！"
+msgstr "别被他撞到呐！"
+
+#. STRINGS.DESCRIBE.MINOTAURCHEST
+msgctxt "STRINGS.DESCRIBE.MINOTAURCHEST"
+msgid "这个世界，也会有奈落至宝呐。"
+msgstr "这个世界，也会有奈落至宝呐。"
+
+#. STRINGS.DESCRIBE.MINOTAURHORN
+msgctxt "STRINGS.DESCRIBE.MINOTAURHORN"
+msgid "可以吃，但总觉得该用在更重要的地方呐。"
+msgstr "可以吃，但总觉得该用在更重要的地方呐。"
+
+#. STRINGS.DESCRIBE.MULTIPLAYER_PORTAL
+msgctxt "STRINGS.DESCRIBE.MULTIPLAYER_PORTAL"
+msgid "就是这道门把咱送过来的呐。"
+msgstr "就是这道门把咱送过来的呐。"
+
+#. STRINGS.DESCRIBE.MULTITOOL_AXE_PICKAXE
+msgctxt "STRINGS.DESCRIBE.MULTITOOL_AXE_PICKAXE"
+msgid "这应该不能算是遗物呐…"
+msgstr "这应该不能算是遗物呐…"
+
+#. STRINGS.DESCRIBE.MUSHTREE_MEDIUM
+msgctxt "STRINGS.DESCRIBE.MUSHTREE_MEDIUM"
+msgid "咱种蘑菇为什么不长蘑菇树呢？"
+msgstr "咱种蘑菇为什么不长蘑菇树呢？"
+
+#. STRINGS.DESCRIBE.MUSHTREE_SMALL
+msgctxt "STRINGS.DESCRIBE.MUSHTREE_SMALL"
+msgid "咱想知道它们为什么发光。"
+msgstr "咱想知道它们为什么发光。"
+
+#. STRINGS.DESCRIBE.MUSHTREE_TALL
+msgctxt "STRINGS.DESCRIBE.MUSHTREE_TALL"
+msgid "它比咱高很多呢。"
+msgstr "它比咱高很多呢。"
+
+#. STRINGS.DESCRIBE.NIGHTMARELIGHT
+msgctxt "STRINGS.DESCRIBE.NIGHTMARELIGHT"
+msgid "咱知道它会发光，但发光的条件？"
+msgstr "咱知道它会发光，但发光的条件？"
+
+#. STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.CALM
+msgctxt "STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.CALM"
+msgid "看上去没什么问题呐。"
+msgstr "看上去没什么问题呐。"
+
+#. STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.DAWN
+msgctxt "STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.DAWN"
+msgid "呐，已经没问题了。"
+msgstr "呐，已经没问题了。"
+
+#. STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.NOMAGIC
+msgctxt "STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.NOMAGIC"
+msgid "深渊里的东西是没办法从外界观测的呐。"
+msgstr "深渊里的东西是没办法从外界观测的呐。"
+
+#. STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.STEADY
+msgctxt "STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.STEADY"
+msgid "别管什么上升负荷了，赶快离开呐！"
+msgstr "别管什么上升负荷了，赶快离开呐！"
+
+#. STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.WANING
+msgctxt "STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.WANING"
+msgid "还是有些危险，但应该差不多了呐。"
+msgstr "还是有些危险，但应该差不多了呐。"
+
+#. STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.WARN
+msgctxt "STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.WARN"
+msgid "开始有些什么在躁动了呐。"
+msgstr "开始有些什么在躁动了呐。"
+
+#. STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.WAXING
+msgctxt "STRINGS.DESCRIBE.NIGHTMARE_TIMEPIECE.WAXING"
+msgid "在这时在遗迹探险可不是什么好主意呐。"
+msgstr "在这时在遗迹探险可不是什么好主意呐。"
+
+#. STRINGS.DESCRIBE.ORANGEAMULET
+msgctxt "STRINGS.DESCRIBE.ORANGEAMULET"
+msgid "有了这个，就不必去特地拾取遗物了。"
+msgstr "有了这个，就不必去特地拾取遗物了。"
+
+#. STRINGS.DESCRIBE.ORANGEGEM
+msgctxt "STRINGS.DESCRIBE.ORANGEGEM"
+msgid "这好像不是一般的…铥…呐？"
+msgstr "这好像不是一般的…铥…呐？"
+
+#. STRINGS.DESCRIBE.ORANGESTAFF
+msgctxt "STRINGS.DESCRIBE.ORANGESTAFF"
+msgid "能短程传送的遗物，不知道有没有办法绕过力场呐？"
+msgstr "能短程传送的遗物，不知道有没有办法绕过力场呐？"
+
+#. STRINGS.DESCRIBE.PIGGUARD
+msgctxt "STRINGS.DESCRIBE.PIGGUARD"
+msgid "嗯呐，这家伙看起来不那么友善啊。"
+msgstr "嗯呐，这家伙看起来不那么友善啊。"
+
+#. STRINGS.DESCRIBE.PLAYER.ATTACKER
+msgctxt "STRINGS.DESCRIBE.PLAYER.ATTACKER"
+msgid "%s…别靠近咱…！"
+msgstr "%s…别靠近咱…！"
+
+#. STRINGS.DESCRIBE.PLAYER.GENERIC
+msgctxt "STRINGS.DESCRIBE.PLAYER.GENERIC"
+msgid "嗯呐，%s"
+msgstr "嗯呐，%s"
+
+#. STRINGS.DESCRIBE.PLAYER.GHOST
+msgctxt "STRINGS.DESCRIBE.PLAYER.GHOST"
+msgid "你该庆幸你没有变成生骸才是呐。"
+msgstr "你该庆幸你没有变成生骸才是呐。"
+
+#. STRINGS.DESCRIBE.PLAYER.MURDERER
+msgctxt "STRINGS.DESCRIBE.PLAYER.MURDERER"
+msgid "这家伙…！"
+msgstr "这家伙…！"
+
+#. STRINGS.DESCRIBE.PLAYER.REVIVER
+msgctxt "STRINGS.DESCRIBE.PLAYER.REVIVER"
+msgid "嘛…谢了呐，%s"
+msgstr "嘛…谢了呐，%s"
+
+#. STRINGS.DESCRIBE.POND_ALGAE
+msgctxt "STRINGS.DESCRIBE.POND_ALGAE"
+msgid "阿比斯也有很多类似的东西呐。"
+msgstr "阿比斯也有很多类似的东西呐。"
+
+#. STRINGS.DESCRIBE.POTTEDFERN
+msgctxt "STRINGS.DESCRIBE.POTTEDFERN"
+msgid "多些植物当装饰总是好的呐。"
+msgstr "多些植物当装饰总是好的呐。"
+
+#. STRINGS.DESCRIBE.POWCAKE
+msgctxt "STRINGS.DESCRIBE.POWCAKE"
+msgid "嗯呐……不知道该不该吃。"
+msgstr "嗯呐……不知道该不该吃。"
+
+#. STRINGS.DESCRIBE.RABBITHOUSE
+msgctxt "STRINGS.DESCRIBE.RABBITHOUSE"
+msgid "好大的萝卜……屋。"
+msgstr "好大的萝卜……屋。"
+
+#. STRINGS.DESCRIBE.RELIC
+msgctxt "STRINGS.DESCRIBE.RELIC"
+msgid "那些不是遗物，别管它们了呐。"
+msgstr "那些不是遗物，别管它们了呐。"
+
+#. STRINGS.DESCRIBE.RESEARCHLAB4
+msgctxt "STRINGS.DESCRIBE.RESEARCHLAB4"
+msgid "所以那顶帽子是遗物…呐？"
+msgstr "所以那顶帽子是遗物…呐？"
+
+#. STRINGS.DESCRIBE.ROCKY
+msgctxt "STRINGS.DESCRIBE.ROCKY"
+msgid "咱也许可以利用这大家伙。"
+msgstr "咱也许可以利用这大家伙。"
+
+#. STRINGS.DESCRIBE.ROOK_NIGHTMARE
+msgctxt "STRINGS.DESCRIBE.ROOK_NIGHTMARE"
+msgid "只要够小心就能躲开了呐！"
+msgstr "只要够小心就能躲开了呐！"
+
+#. STRINGS.DESCRIBE.RUINSHAT
+msgctxt "STRINGS.DESCRIBE.RUINSHAT"
+msgid "希望没有副作用…呐？"
+msgstr "希望没有副作用…呐？"
+
+#. STRINGS.DESCRIBE.RUINS_BAT
+msgctxt "STRINGS.DESCRIBE.RUINS_BAT"
+msgid "咱还是不建议近身战斗就是了呐…"
+msgstr "咱还是不建议近身战斗就是了呐…"
+
+#. STRINGS.DESCRIBE.RUINS_RUBBLE
+msgctxt "STRINGS.DESCRIBE.RUINS_RUBBLE"
+msgid "一些神秘小碎片呐。"
+msgstr "一些神秘小碎片呐。"
+
+#. STRINGS.DESCRIBE.SLURPER
+msgctxt "STRINGS.DESCRIBE.SLURPER"
+msgid "他会咬住你的头，不会咬掉就是了呐。"
+msgstr "他会咬住你的头，不会咬掉就是了呐。"
+
+#. STRINGS.DESCRIBE.SLURPERPELT
+msgctxt "STRINGS.DESCRIBE.SLURPERPELT"
+msgid "虽然咱不认为有需要去剥牠们的皮呐…"
+msgstr "虽然咱不认为有需要去剥牠们的皮呐…"
+
+#. STRINGS.DESCRIBE.SLURPER_PELT
+msgctxt "STRINGS.DESCRIBE.SLURPER_PELT"
+msgid "虽然咱不认为有需要去剥牠们的皮呐…"
+msgstr "虽然咱不认为有需要去剥牠们的皮呐…"
+
+#. STRINGS.DESCRIBE.SLURTLE
+msgctxt "STRINGS.DESCRIBE.SLURTLE"
+msgid "嗯呐……都是黏液。"
+msgstr "嗯呐……都是黏液。"
+
+#. STRINGS.DESCRIBE.SLURTLEHAT
+msgctxt "STRINGS.DESCRIBE.SLURTLEHAT"
+msgid "咱的耳朵表示不想戴着它。"
+msgstr "咱的耳朵表示不想戴着它。"
+
+#. STRINGS.DESCRIBE.SLURTLEHOLE
+msgctxt "STRINGS.DESCRIBE.SLURTLEHOLE"
+msgid "一窝黏乎乎的家伙。"
+msgstr "一窝黏乎乎的家伙。"
+
+#. STRINGS.DESCRIBE.SLURTLESLIME
+msgctxt "STRINGS.DESCRIBE.SLURTLESLIME"
+msgid "嗯呐……还是会有用的。"
+msgstr "嗯呐……还是会有用的。"
+
+#. STRINGS.DESCRIBE.SLURTLE_SHELLPIECES
+msgctxt "STRINGS.DESCRIBE.SLURTLE_SHELLPIECES"
+msgid "那家伙破碎的小房子。"
+msgstr "那家伙破碎的小房子。"
+
+#. STRINGS.DESCRIBE.SNURTLE
+msgctxt "STRINGS.DESCRIBE.SNURTLE"
+msgid "出来跟咱决斗！"
+msgstr "出来跟咱决斗！"
+
+#. STRINGS.DESCRIBE.SPIDERHOLE
+msgctxt "STRINGS.DESCRIBE.SPIDERHOLE"
+msgid "八条腿的家伙会都在这里吗？"
+msgstr "八条腿的家伙会都在这里吗？"
+
+#. STRINGS.DESCRIBE.SPIDER_DROPPER
+msgctxt "STRINGS.DESCRIBE.SPIDER_DROPPER"
+msgid "来了…！"
+msgstr "来了…！"
+
+#. STRINGS.DESCRIBE.SPIDER_HIDER
+msgctxt "STRINGS.DESCRIBE.SPIDER_HIDER"
+msgid "嗯呐？！蜘蛛陷阱！"
+msgstr "嗯呐？！蜘蛛陷阱！"
+
+#. STRINGS.DESCRIBE.SPIDER_SPITTER
+msgctxt "STRINGS.DESCRIBE.SPIDER_SPITTER"
+msgid "@#&嗯呐？！"
+msgstr "@#&嗯呐？！"
+
+#. STRINGS.DESCRIBE.STAFFLIGHT
+msgctxt "STRINGS.DESCRIBE.STAFFLIGHT"
+msgid "别太靠近，就不会有危险呐。"
+msgstr "别太靠近，就不会有危险呐。"
+
+#. STRINGS.DESCRIBE.STALAGMITE
+msgctxt "STRINGS.DESCRIBE.STALAGMITE"
+msgid "石头。"
+msgstr "石头。"
+
+#. STRINGS.DESCRIBE.STALAGMITE_FULL
+msgctxt "STRINGS.DESCRIBE.STALAGMITE_FULL"
+msgid "也是石头。"
+msgstr "也是石头。"
+
+#. STRINGS.DESCRIBE.STALAGMITE_LOW
+msgctxt "STRINGS.DESCRIBE.STALAGMITE_LOW"
+msgid "这也是石头。"
+msgstr "这也是石头。"
+
+#. STRINGS.DESCRIBE.STALAGMITE_MED
+msgctxt "STRINGS.DESCRIBE.STALAGMITE_MED"
+msgid "石头。"
+msgstr "石头。"
+
+#. STRINGS.DESCRIBE.STALAGMITE_TALL
+msgctxt "STRINGS.DESCRIBE.STALAGMITE_TALL"
+msgid "石头洞里的石头。"
+msgstr "石头洞里的石头。"
+
+#. STRINGS.DESCRIBE.STALAGMITE_TALL_FULL
+msgctxt "STRINGS.DESCRIBE.STALAGMITE_TALL_FULL"
+msgid "嗯呐，石头。"
+msgstr "嗯呐，石头。"
+
+#. STRINGS.DESCRIBE.STALAGMITE_TALL_LOW
+msgctxt "STRINGS.DESCRIBE.STALAGMITE_TALL_LOW"
+msgid "石头洞里的石头。"
+msgstr "石头洞里的石头。"
+
+#. STRINGS.DESCRIBE.STALAGMITE_TALL_MED
+msgctxt "STRINGS.DESCRIBE.STALAGMITE_TALL_MED"
+msgid "嗯呐，石头。"
+msgstr "嗯呐，石头。"
+
+#. STRINGS.DESCRIBE.TELEBASE.GEMS
+msgctxt "STRINGS.DESCRIBE.TELEBASE.GEMS"
+msgid "把紫色宝石放上去就可以启动呐。"
+msgstr "把紫色宝石放上去就可以启动呐。"
+
+#. STRINGS.DESCRIBE.TELEBASE.VALID
+msgctxt "STRINGS.DESCRIBE.TELEBASE.VALID"
+msgid "好呐，要飞了呐！"
+msgstr "好呐，要飞了呐！"
+
+#. STRINGS.DESCRIBE.THULECITE
+msgctxt "STRINGS.DESCRIBE.THULECITE"
+msgid "这颗从底下来的石头，似乎不寻常呐…"
+msgstr "这颗从底下来的石头，似乎不寻常呐…"
+
+#. STRINGS.DESCRIBE.THULECITE_PIECES
+msgctxt "STRINGS.DESCRIBE.THULECITE_PIECES"
+msgid "嗯呐，似乎只是一些碎片呐。"
+msgstr "嗯呐，似乎只是一些碎片呐。"
+
+#. STRINGS.DESCRIBE.TURF_CARPETFLOOR
+msgctxt "STRINGS.DESCRIBE.TURF_CARPETFLOOR"
+msgid "一块地皮。"
+msgstr "一块地皮。"
+
+#. STRINGS.DESCRIBE.TURF_CAVE
+msgctxt "STRINGS.DESCRIBE.TURF_CAVE"
+msgid "一块地皮。"
+msgstr "一块地皮。"
+
+#. STRINGS.DESCRIBE.TURF_CHECKERFLOOR
+msgctxt "STRINGS.DESCRIBE.TURF_CHECKERFLOOR"
+msgid "一块地皮。"
+msgstr "一块地皮。"
+
+#. STRINGS.DESCRIBE.TURF_DIRT
+msgctxt "STRINGS.DESCRIBE.TURF_DIRT"
+msgid "一块地皮。"
+msgstr "一块地皮。"
+
+#. STRINGS.DESCRIBE.TURF_FOREST
+msgctxt "STRINGS.DESCRIBE.TURF_FOREST"
+msgid "一块地皮。"
+msgstr "一块地皮。"
+
+#. STRINGS.DESCRIBE.TURF_FUNGUS
+msgctxt "STRINGS.DESCRIBE.TURF_FUNGUS"
+msgid "一块地皮。"
+msgstr "一块地皮。"
+
+#. STRINGS.DESCRIBE.TURF_GRASS
+msgctxt "STRINGS.DESCRIBE.TURF_GRASS"
+msgid "一块地皮。"
+msgstr "一块地皮。"
+
+#. STRINGS.DESCRIBE.TURF_MARSH
+msgctxt "STRINGS.DESCRIBE.TURF_MARSH"
+msgid "一块地皮。"
+msgstr "一块地皮。"
+
+#. STRINGS.DESCRIBE.TURF_MUD
+msgctxt "STRINGS.DESCRIBE.TURF_MUD"
+msgid "一块地皮。"
+msgstr "一块地皮。"
+
+#. STRINGS.DESCRIBE.TURF_ROAD
+msgctxt "STRINGS.DESCRIBE.TURF_ROAD"
+msgid "一块地皮。"
+msgstr "一块地皮。"
+
+#. STRINGS.DESCRIBE.TURF_ROCKY
+msgctxt "STRINGS.DESCRIBE.TURF_ROCKY"
+msgid "一块地皮。"
+msgstr "一块地皮。"
+
+#. STRINGS.DESCRIBE.TURF_SAVANNA
+msgctxt "STRINGS.DESCRIBE.TURF_SAVANNA"
+msgid "一块地皮。"
+msgstr "一块地皮。"
+
+#. STRINGS.DESCRIBE.TURF_SINKHOLE
+msgctxt "STRINGS.DESCRIBE.TURF_SINKHOLE"
+msgid "一块地皮。"
+msgstr "一块地皮。"
+
+#. STRINGS.DESCRIBE.TURF_UNDERROCK
+msgctxt "STRINGS.DESCRIBE.TURF_UNDERROCK"
+msgid "一块地皮。"
+msgstr "一块地皮。"
+
+#. STRINGS.DESCRIBE.TURF_WOODFLOOR
+msgctxt "STRINGS.DESCRIBE.TURF_WOODFLOOR"
+msgid "一块地皮。"
+msgstr "一块地皮。"
+
+#. STRINGS.DESCRIBE.UNAGI
+msgctxt "STRINGS.DESCRIBE.UNAGI"
+msgid "嗯呐~~~"
+msgstr "嗯呐~~~"
+
+#. STRINGS.DESCRIBE.WILSON.ATTACKER
+msgctxt "STRINGS.DESCRIBE.WILSON.ATTACKER"
+msgid "%s…别靠近咱…！"
+msgstr "%s…别靠近咱…！"
+
+#. STRINGS.DESCRIBE.WILSON.GENERIC
+msgctxt "STRINGS.DESCRIBE.WILSON.GENERIC"
+msgid "嗯呐，%s"
+msgstr "嗯呐，%s"
+
+#. STRINGS.DESCRIBE.WILSON.GHOST
+msgctxt "STRINGS.DESCRIBE.WILSON.GHOST"
+msgid "你该庆幸你没有变成生骸才是呐。"
+msgstr "你该庆幸你没有变成生骸才是呐。"
+
+#. STRINGS.DESCRIBE.WILSON.MURDERER
+msgctxt "STRINGS.DESCRIBE.WILSON.MURDERER"
+msgid "这家伙…！"
+msgstr "这家伙…！"
+
+#. STRINGS.DESCRIBE.WILSON.REVIVER
+msgctxt "STRINGS.DESCRIBE.WILSON.REVIVER"
+msgid "嘛…谢了呐，%s"
+msgstr "嘛…谢了呐，%s"
+
+#. STRINGS.DESCRIBE.WORM.DIRT
+msgctxt "STRINGS.DESCRIBE.WORM.DIRT"
+msgid "嗯呐？有什么在地下…"
+msgstr "嗯呐？有什么在地下…"
+
+#. STRINGS.DESCRIBE.WORM.PLANT
+msgctxt "STRINGS.DESCRIBE.WORM.PLANT"
+msgid "看起来是能吃的呐。"
+msgstr "看起来是能吃的呐。"
+
+#. STRINGS.DESCRIBE.WORM.WORM
+msgctxt "STRINGS.DESCRIBE.WORM.WORM"
+msgid "这种生物在阿比斯到处都是呐。"
+msgstr "这种生物在阿比斯到处都是呐。"
+
+#. STRINGS.DESCRIBE.WORMLIGHT
+msgctxt "STRINGS.DESCRIBE.WORMLIGHT"
+msgid "看起来是能吃的呐。"
+msgstr "看起来是能吃的呐。"
+
+#. STRINGS.DESCRIBE.WX78.ATTACKER
+msgctxt "STRINGS.DESCRIBE.WX78.ATTACKER"
+msgid "看来，%s并不是个友善的机器人呐！"
+msgstr "看来，%s并不是个友善的机器人呐！"
+
+#. STRINGS.DESCRIBE.WX78.GENERIC
+msgctxt "STRINGS.DESCRIBE.WX78.GENERIC"
+msgid "机器人吗…可别乱摸呐…"
+msgstr "机器人吗…可别乱摸呐…"
+
+#. STRINGS.DESCRIBE.WX78.GHOST
+msgctxt "STRINGS.DESCRIBE.WX78.GHOST"
+msgid "机器人是有灵魂的…咱早就知道。"
+msgstr "机器人是有灵魂的…咱早就知道。"
+
+#. STRINGS.DESCRIBE.WX78.MURDERER
+msgctxt "STRINGS.DESCRIBE.WX78.MURDERER"
+msgid "这家伙…！"
+msgstr "这家伙…！"
+
+#. STRINGS.DESCRIBE.WX78.REVIVER
+msgctxt "STRINGS.DESCRIBE.WX78.REVIVER"
+msgid "谢了，雷…%s！"
+msgstr "谢了，雷…%s！"
+
+#. STRINGS.DESCRIBE.YELLOWAMULET
+msgctxt "STRINGS.DESCRIBE.YELLOWAMULET"
+msgid "在阿比斯可能用不到，但这里的地下很黑呐。"
+msgstr "在阿比斯可能用不到，但这里的地下很黑呐。"
+
+#. STRINGS.DESCRIBE.YELLOWGEM
+msgctxt "STRINGS.DESCRIBE.YELLOWGEM"
+msgid "感觉就像是会发光呐。"
+msgstr "感觉就像是会发光呐。"
+
+#. STRINGS.DESCRIBE.YELLOWSTAFF
+msgctxt "STRINGS.DESCRIBE.YELLOWSTAFF"
+msgid "登上明星…好啦，这不是那玩意呐。"
+msgstr "登上明星…好啦，这不是那玩意呐。"
