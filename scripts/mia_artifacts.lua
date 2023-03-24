@@ -326,7 +326,7 @@ local defs = {
         end
     },
     longetivity_drink = {
-        disabled = true,
+        --disabled = true,
         assets = {Asset("ANIM", "anim/longetivity_drink.zip")},
         bank = "longetivity_drink",
         build = "longetivity_drink",
@@ -644,7 +644,7 @@ It was eaten by an aquatic creature in the Sea of Corpses.
         desc = [[火葬炮]]
     },
     fruitful_orb = {
-        disabled= true,
+        --disabled= true,
         assets = {Asset("ANIM", "anim/fruitful_orb.zip")},
         bank = "fruitful_orb",
         build = "fruitful_orb",
@@ -672,7 +672,7 @@ It was eaten by an aquatic creature in the Sea of Corpses.
         It heals injuries, but can't cure disease]]
     },
     artifact_prushka = {
-        disabled = true,
+        --disabled = true,
         slot = "neck",
         bank = "artifact_prushka",
         build = "artifact_prushka",

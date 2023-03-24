@@ -1,7 +1,8 @@
 from zzz import *
 srcdir = ""
-excluded=["exported","FUNDING.yml",".git",".gitignore","__pycache__",".vscode"]
+excluded=["exported","FUNDING.yml",".git",".gitignore","__pycache__",".vscode","exclude.txt"]
 excluded_regexp=["py$"]
+excluded_cmd=[".py",".po"]
 dstdir = "z:\\mia\\"
 def isexclude(x):
     e=x in excluded
@@ -17,7 +18,7 @@ for i in files:
         continue
     try:
         if os.path.isdir(i):
-            cmd("xcopy /s /y "+srcdir+i+" "+dstdir+i+"\\")
+            cmd("xcopy /s /y /exclude:exclude.txt "+srcdir+i+" "+dstdir+i+"\\ ")
         else:
             pass
             file.copy(srcdir+i, dstdir+i)
