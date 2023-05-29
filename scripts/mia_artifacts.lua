@@ -685,7 +685,12 @@ It was eaten by an aquatic creature in the Sea of Corpses.
             inst.components.useableitem:SetOnUseFn(prushka_activate)
             -- inst.components.equippable.restrictedtag = "riko"--others can equip her but nothing happens
         end
-    }
+    },
+    stone_lighter={
+    desc=[[在阿比斯里采集到的石头。
+打磨之后,施加某种频率的振动就会发出强光。
+可以用作机械式的照明灯。
+]]
 }
 -- protect
 for k, v in pairs(defs) do if v.disabled then defs[k] = nil end end
