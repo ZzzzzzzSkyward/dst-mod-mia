@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Build name="wendy_handmedown">
+    <Symbol name="arm_lower">
+        <Frame duration="1" framenum="0" h="48" w="23" x="0.149999902" y="16.875"/>
+        <Frame duration="1" framenum="1" h="62" w="22" x="-1.32500005" y="22"/>
+        <Frame duration="1" framenum="2" h="35" w="60" x="-16.2999992" y="6.49687481"/>
+        <Frame duration="1" framenum="3" h="47" w="23" x="0.149999902" y="16.2000008"/>
+        <Frame duration="1" framenum="4" h="62" w="27" x="-2.07500005" y="22"/>
+        <Frame duration="1" framenum="5" h="58" w="24" x="-0.125000194" y="15.8000002"/>
+        <Frame duration="1" framenum="6" h="35" w="60" x="-16.2999992" y="6.49687481"/>
+    </Symbol>
+    <Symbol name="hand">
+        <Frame duration="1" framenum="0" h="35" w="34" x="1.14999998" y="11.0749998"/>
+        <Frame duration="1" framenum="1" h="37" w="45" x="3.92499995" y="13.5249996"/>
+        <Frame duration="1" framenum="2" h="35" w="43" x="0.899999619" y="10.375"/>
+        <Frame duration="1" framenum="3" h="37" w="40" x="-1.57500005" y="10.9750004"/>
+        <Frame duration="1" framenum="4" h="44" w="51" x="3.4000001" y="15.5500002"/>
+        <Frame duration="1" framenum="5" h="32" w="40" x="-2" y="10.1999998"/>
+        <Frame duration="1" framenum="6" h="50" w="46" x="-9.32499886" y="18.7749996"/>
+        <Frame duration="1" framenum="7" h="46" w="45" x="7.625" y="17.25"/>
+        <Frame duration="1" framenum="8" h="54" w="45" x="13.5249996" y="19.6000004"/>
+        <Frame duration="1" framenum="9" h="41" w="53" x="11.2749996" y="13.1312504"/>
+        <Frame duration="1" framenum="10" h="56" w="53" x="5.17499924" y="18.7331009"/>
+        <Frame duration="1" framenum="11" h="34" w="33" x="0.699999809" y="12.12187"/>
+        <Frame duration="1" framenum="12" h="41" w="50" x="2.24999905" y="13.6000004"/>
+        <Frame duration="1" framenum="13" h="62" w="63" x="-1.47500002" y="21.8747101"/>
+        <Frame duration="1" framenum="14" h="44" w="51" x="3.4000001" y="15.5500002"/>
+        <Frame duration="1" framenum="15" h="159" w="91" x="4.32500076" y="72.7750015"/>
+        <Frame duration="1" framenum="16" h="54" w="45" x="13.5249996" y="19.6000004"/>
+        <Frame duration="1" framenum="17" h="62" w="63" x="-1.47500002" y="21.8747101"/>
+        <Frame duration="1" framenum="18" h="58" w="60" x="-1.5" y="4.5625"/>
+        <Frame duration="1" framenum="19" h="54" w="76" x="2.8499999" y="-2.78295898"/>
+    </Symbol>
+    <Symbol name="torso">
+        <Frame duration="1" framenum="0" h="82" w="81" x="0.537500381" y="-36.9500008"/>
+        <Frame duration="1" framenum="1" h="84" w="82" x="2.5" y="-37.4500008"/>
+        <Frame duration="1" framenum="2" h="82" w="80" x="0" y="-36.3875008"/>
+        <Frame duration="1" framenum="3" h="88" w="77" x="1.125" y="-40.7000008"/>
+        <Frame duration="1" framenum="4" h="88" w="82" x="2.450001" y="-41.4500008"/>
+        <Frame duration="1" framenum="5" h="88" w="78" x="-1.700001" y="-41.2374992"/>
+        <Frame duration="1" framenum="6" h="87" w="76" x="-0.125" y="-39.6500015"/>
+        <Frame duration="1" framenum="7" h="89" w="83" x="0.475000411" y="-40.9500008"/>
+        <Frame duration="1" framenum="8" h="90" w="83" x="-2.612499" y="-40.8250008"/>
+        <Frame duration="1" framenum="9" h="74" w="79" x="9.25" y="-11.8000002"/>
+        <Frame duration="1" framenum="10" h="76" w="69" x="-1.25" y="-41.875"/>
+    </Symbol>
+    <Symbol name="leg">
+        <Frame duration="1" framenum="0" h="54" w="25" x="-2.0250001" y="20.0499992"/>
+        <Frame duration="1" framenum="1" h="59" w="28" x="-1.75" y="18.7749996"/>
+        <Frame duration="1" framenum="2" h="60" w="24" x="1.25" y="20.3311005"/>
+        <Frame duration="1" framenum="3" h="61" w="28" x="-4" y="22.8943291"/>
+        <Frame duration="1" framenum="4" h="46" w="47" x="-10.25" y="16"/>
+        <Frame duration="1" framenum="5" h="63" w="24" x="-2.32500005" y="24.2669106"/>
+        <Frame duration="1" framenum="6" h="53" w="49" x="-18.25" y="11.7749996"/>
+        <Frame duration="1" framenum="7" h="48" w="41" x="-6.25" y="12.8593798"/>
+        <Frame duration="1" framenum="8" h="61" w="29" x="0.75" y="21.7239304"/>
+        <Frame duration="1" framenum="9" h="54" w="25" x="-2.0250001" y="20.0499992"/>
+        <Frame duration="1" framenum="10" h="61" w="29" x="-3.98749995" y="22.8943291"/>
+    </Symbol>
+    <Symbol name="hairpigtails">
+        <Frame duration="1" framenum="0" h="202" w="181" x="-11.375" y="46.3499985"/>
+        <Frame duration="1" framenum="1" h="188" w="213" x="-1.05000305" y="34.1879883"/>
+        <Frame duration="1" framenum="2" h="227" w="193" x="-54.7374992" y="0.031253811"/>
+        <Frame duration="1" framenum="3" h="201" w="181" x="-11.375" y="46.8562508"/>
+        <Frame duration="1" framenum="4" h="185" w="171" x="19.9484406" y="28.6390591"/>
+    </Symbol>
+    <Symbol name="headbase">
+        <Frame duration="1" framenum="0" h="231" w="263" x="-9.23749542" y="-86.4875031"/>
+        <Frame duration="1" framenum="1" h="234" w="200" x="-34.1749992" y="-95.3249969"/>
+        <Frame duration="1" framenum="2" h="223" w="269" x="-6.42499495" y="-90.25"/>
+        <Frame duration="1" framenum="3" h="231" w="263" x="-9.23749542" y="-86.4875031"/>
+    </Symbol>
+    <Symbol name="cheeks">
+        <Frame duration="1" framenum="0" h="57" w="60" x="-0.550000191" y="-0.0249996204"/>
+        <Frame duration="1" framenum="1" h="57" w="60" x="2.45000005" y="-1.07500005"/>
+    </Symbol>
+    <Symbol name="face">
+        <Frame duration="1" framenum="0" h="93" w="129" x="-4.07499886" y="10.3249998"/>
+        <Frame duration="1" framenum="1" h="84" w="133" x="-6.20000076" y="15.1999998"/>
+        <Frame duration="1" framenum="2" h="67" w="134" x="-6.875" y="23.3250008"/>
+        <Frame duration="1" framenum="3" h="79" w="128" x="-4.50000191" y="17.75"/>
+        <Frame duration="1" framenum="4" h="92" w="76" x="-25.3999996" y="11.6499996"/>
+        <Frame duration="1" framenum="5" h="82" w="81" x="-27.6749992" y="16.4750004"/>
+        <Frame duration="1" framenum="6" h="67" w="82" x="-28.2749996" y="23.8999996"/>
+        <Frame duration="1" framenum="7" h="76" w="79" x="-26.9249992" y="19.5249996"/>
+        <Frame duration="1" framenum="8" h="93" w="129" x="-4.07499886" y="10.3249998"/>
+        <Frame duration="1" framenum="9" h="101" w="129" x="-4.07499886" y="14.3000002"/>
+        <Frame duration="1" framenum="10" h="105" w="129"
+            x="-4.07499886" y="16.0750008"/>
+        <Frame duration="1" framenum="11" h="76" w="125" x="-5.07499886" y="19.2749996"/>
+        <Frame duration="1" framenum="12" h="96" w="125" x="-5.07499886" y="17.1000004"/>
+        <Frame duration="1" framenum="13" h="96" w="132" x="-5.04999924" y="20.0249996"/>
+        <Frame duration="1" framenum="14" h="37" w="87" x="-7.99843693" y="1.89843798"/>
+        <Frame duration="1" framenum="15" h="102" w="128" x="-4.099998" y="13.1625004"/>
+        <Frame duration="1" framenum="16" h="96" w="129" x="-4.07499886" y="11.6499996"/>
+        <Frame duration="1" framenum="17" h="77" w="125" x="-5.07499886" y="21.875"/>
+        <Frame duration="1" framenum="18" h="78" w="125" x="-5.07499886" y="22.75"/>
+        <Frame duration="1" framenum="19" h="93" w="129" x="-4.07499886" y="10.125"/>
+        <Frame duration="1" framenum="20" h="76" w="138" x="-2.85000205" y="21.5375004"/>
+        <Frame duration="1" framenum="21" h="86" w="134" x="-4.7750001" y="24.1499996"/>
+        <Frame duration="1" framenum="22" h="77" w="138" x="-2.85000205" y="21.8125"/>
+        <Frame duration="1" framenum="23" h="101" w="118" x="5.0999999" y="16.96875"/>
+        <Frame duration="1" framenum="24" h="96" w="129" x="-4.07499886" y="11.6499996"/>
+        <Frame duration="1" framenum="25" h="94" w="136" x="-6" y="44.0875015"/>
+        <Frame duration="1" framenum="26" h="90" w="136" x="-6" y="39.5750008"/>
+        <Frame duration="1" framenum="27" h="73" w="136" x="-6" y="30.5249996"/>
+        <Frame duration="1" framenum="28" h="91" w="129" x="-4.17500114" y="9.97500038"/>
+        <Frame duration="1" framenum="29" h="72" w="135" x="-5.67499924" y="29.375"/>
+        <Frame duration="1" framenum="30" h="94" w="129" x="-4.17500114" y="11.0749998"/>
+        <Frame duration="1" framenum="31" h="91" w="125" x="-5.07499886" y="14.7250004"/>
+        <Frame duration="1" framenum="32" h="87" w="136" x="-6" y="40.7750015"/>
+        <Frame duration="1" framenum="33" h="107" w="166"
+            x="-8.35625076" y="20.2999992"/>
+    </Symbol>
+    <Symbol name="foot">
+        <Frame duration="1" framenum="0" h="25" w="36" x="-11.25" y="11.2749996"/>
+        <Frame duration="1" framenum="1" h="28" w="38" x="4.6875" y="15.3374996"/>
+        <Frame duration="1" framenum="2" h="27" w="39" x="8.25" y="13.5324697"/>
+        <Frame duration="1" framenum="3" h="31" w="36" x="-11" y="14.9250002"/>
+        <Frame duration="1" framenum="4" h="33" w="33" x="-27.25" y="0.0749998093"/>
+        <Frame duration="1" framenum="5" h="24" w="40" x="4.75" y="14.3455095"/>
+        <Frame duration="1" framenum="6" h="30" w="38" x="-11.25" y="15.875"/>
+        <Frame duration="1" framenum="7" h="24" w="40" x="4.75" y="14.3455095"/>
+    </Symbol>
+    <Symbol name="torso_pelvis">
+        <Frame duration="1" framenum="0" h="43" w="67" x="0.125" y="-8.97500038"/>
+        <Frame duration="1" framenum="1" h="43" w="66" x="0.423711807" y="-8.97500038"/>
+        <Frame duration="1" framenum="2" h="43" w="64" x="0.369377106" y="-8.97500038"/>
+        <Frame duration="1" framenum="3" h="41" w="62" x="0.152744293" y="-8.44999981"/>
+        <Frame duration="1" framenum="4" h="41" w="60" x="-0.937200487" y="-8.44999981"/>
+        <Frame duration="1" framenum="5" h="41" w="63" x="-0.649622023" y="-8.44999981"/>
+        <Frame duration="1" framenum="6" h="43" w="64" x="0.452158898" y="-9.25"/>
+        <Frame duration="1" framenum="7" h="43" w="66" x="-0.0500001907" y="-9.25"/>
+        <Frame duration="1" framenum="8" h="43" w="70" x="-2.0530231" y="-9.5"/>
+        <Frame duration="1" framenum="9" h="68" w="70" x="-1.950001" y="-6.71250105"/>
+        <Frame duration="1" framenum="10" h="42" w="65" x="1.375" y="-8.875"/>
+    </Symbol>
+    <Symbol name="torso_wide">
+        <Frame duration="1" framenum="0" h="70" w="134" x="2.82499909" y="-33.8250008"/>
+        <Frame duration="1" framenum="1" h="72" w="126" x="-7.04999924" y="-36.375"/>
+        <Frame duration="1" framenum="2" h="78" w="119" x="13.25" y="-37.4375"/>
+        <Frame duration="1" framenum="3" h="75" w="133" x="0.25" y="-40.75"/>
+        <Frame duration="1" framenum="4" h="75" w="120" x="7.9749999" y="-38.59375"/>
+        <Frame duration="1" framenum="5" h="75" w="118" x="-13.25" y="-39.9000015"/>
+        <Frame duration="1" framenum="6" h="77" w="141" x="0.299999207" y="-39.5250015"/>
+        <Frame duration="1" framenum="7" h="80" w="133" x="-14.125" y="-41.0250015"/>
+        <Frame duration="1" framenum="8" h="73" w="136" x="10.625" y="-35.7718811"/>
+        <Frame duration="1" framenum="9" h="99" w="94" x="40.875" y="-22.2749996"/>
+        <Frame duration="1" framenum="10" h="87" w="126" x="-7.04999924" y="-28.7000008"/>
+    </Symbol>
+    <Symbol name="SWAP_ICON">
+        <Frame duration="1" framenum="0" h="194" w="198"
+            x="0.0125007601" y="-2.299999"/>
+    </Symbol>
+    <Symbol name="swap_face">
+        <Frame duration="1" framenum="0" h="91" w="175" x="-14.375" y="-16.2123508"/>
+        <Frame duration="3" framenum="1" h="91" w="175" x="-14.375" y="7.28764486"/>
+        <Frame duration="4" framenum="4" h="114" w="106" x="-43.0999985" y="-23.0922508"/>
+    </Symbol>
+    <Symbol name="swap_hat">
+        <Frame duration="1" framenum="0" h="193" w="278" x="-9" y="-174.375"/>
+        <Frame duration="1" framenum="1" h="189" w="256" x="-51.875" y="-150.350006"/>
+        <Frame duration="1" framenum="2" h="195" w="279" x="-8.14020157" y="-175.686798"/>
+        <Frame duration="1" framenum="3" h="182" w="232" x="3.9668541" y="-55.9811287"/>
+    </Symbol>
+    <Symbol name="swap_body_tall">
+        <Frame duration="1" framenum="0" h="143" w="80" x="2.2750001" y="-33.139061"/>
+        <Frame duration="1" framenum="1" h="141" w="90" x="-3.54925704" y="-33.5944099"/>
+        <Frame duration="1" framenum="2" h="143" w="81" x="2.69431901" y="-33.1298599"/>
+        <Frame duration="1" framenum="3" h="140" w="80" x="2.2750001" y="-34.4890594"/>
+        <Frame duration="1" framenum="4" h="142" w="81" x="1.46126604" y="-33.88937"/>
+        <Frame duration="1" framenum="5" h="138" w="88" x="1.31271899" y="-35.4968491"/>
+        <Frame duration="1" framenum="6" h="245" w="152" x="-3.375" y="-93.1750031"/>
+        <Frame duration="1" framenum="7" h="242" w="156" x="-20.2484798" y="-91.0203629"/>
+        <Frame duration="1" framenum="8" h="245" w="160" x="5.04404402" y="-91.5383072"/>
+        <Frame duration="1" framenum="9" h="245" w="152" x="-3.424999" y="-93.1750031"/>
+        <Frame duration="3" framenum="10" h="218" w="205"
+            x="-105.532997" y="-81.9642334"/>
+        <Frame duration="1" framenum="13" h="200" w="213" x="9.31590271" y="-43.36549"/>
+        <Frame duration="1" framenum="14" h="238" w="248"
+            x="-14.4250002" y="-84.0749969"/>
+    </Symbol>
+    <Symbol name="swap_body">
+        <Frame duration="1" framenum="0" h="132" w="82" x="1.75" y="-37.6791496"/>
+        <Frame duration="1" framenum="1" h="131" w="89" x="-1.674999" y="-38.6187515"/>
+        <Frame duration="1" framenum="2" h="132" w="81" x="3.799999" y="-37.0499992"/>
+        <Frame duration="1" framenum="3" h="140" w="83" x="1.5" y="-33.8019981"/>
+        <Frame duration="1" framenum="4" h="140" w="82" x="0.625" y="-33.2249985"/>
+        <Frame duration="1" framenum="5" h="141" w="88" x="2.0250001" y="-33.625"/>
+        <Frame duration="1" framenum="6" h="125" w="81" x="2" y="-26.7937508"/>
+        <Frame duration="1" framenum="7" h="125" w="87" x="0.325000793" y="-27.8562508"/>
+        <Frame duration="1" framenum="8" h="125" w="86" x="4.224998" y="-28.3812504"/>
+        <Frame duration="1" framenum="13" h="160" w="173" x="3.974998" y="-42.125"/>
+        <Frame duration="1" framenum="14" h="69" w="72" x="0.190689102" y="-0.0153560601"/>
+        <Frame duration="1" framenum="15" h="77" w="29" x="1.25" y="-29.0015602"/>
+    </Symbol>
+    <Symbol name="swap_object">
+        <Frame duration="3" framenum="0" h="306" w="73" x="9.25" y="-48.2999992"/>
+        <Frame duration="1" framenum="5" h="236" w="59" x="6.89081717" y="-55.9839592"/>
+        <Frame duration="1" framenum="6" h="263" w="85" x="17.0354004" y="-54.4175987"/>
+        <Frame duration="1" framenum="7" h="259" w="104" x="18.125" y="-53.375"/>
+        <Frame duration="1" framenum="8" h="288" w="112" x="7.08941984" y="-131.259201"/>
+    </Symbol>
+    <Symbol name="skirt">
+        <Frame duration="1" framenum="0" h="66" w="93" x="0" y="5.625"/>
+        <Frame duration="1" framenum="1" h="70" w="94" x="-0.5" y="8.42500114"/>
+        <Frame duration="1" framenum="2" h="71" w="117" x="-6.7249999" y="-2.03749895"/>
+        <Frame duration="1" framenum="3" h="48" w="134" x="9.89999962" y="-9.66874981"/>
+        <Frame duration="1" framenum="4" h="66" w="93" x="0" y="5.625"/>
+    </Symbol>
+    <Symbol name="arm_upper">
+        <Frame duration="1" framenum="0" h="61" w="33" x="-1.52499998" y="20.3669891"/>
+        <Frame duration="1" framenum="1" h="63" w="43" x="-0.0999994278" y="17.7625008"/>
+        <Frame duration="1" framenum="2" h="61" w="37" x="0.262499809" y="18.7124996"/>
+        <Frame duration="1" framenum="3" h="67" w="40" x="0.425000191" y="18.0499992"/>
+        <Frame duration="1" framenum="4" h="38" w="40" x="0.174999699" y="8.59999943"/>
+        <Frame duration="1" framenum="5" h="61" w="33" x="-1.52499998" y="20.3669891"/>
+        <Frame duration="1" framenum="6" h="64" w="43" x="-0.0999994278" y="17.8624992"/>
+    </Symbol>
+    <Atlas name="atlas-0.tex"/>
+</Build>

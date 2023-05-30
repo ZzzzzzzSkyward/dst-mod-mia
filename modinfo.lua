@@ -1,4 +1,4 @@
-name = "Riko, Reg &Nanachi"
+name = "Riko, Reg ,Nanachi& Prushka"
 description =
     [[Riko, a lively and inquisitive girl, a apprentice delver, her dream is to catch up with her mother, become the legendary explorer "White Whistle".
 Reg, the humanoid-looking robot that Riko had found in the Abyss, has lost its memory.
@@ -48,7 +48,7 @@ translation = {
             return translation[1].dict[key] or nil
         end,
         dict = {
-            name = "莉可，雷古与娜娜奇",
+            name = "莉可，雷古，娜娜奇与普鲁修卡",
             language = "语言",
             author = "羽织Haori & 宵征, zzzzzzzs",
             unusable = "不可用",
