@@ -39,15 +39,15 @@
         <file id="4" name="skirt/skirt-4.png" width="93" height="66" pivot_x="0.5" pivot_y="0.585227"/>
     </folder>
     <folder id="3" name="torso">
-        <file id="0" name="torso/torso-0.png" width="81" height="82" pivot_x="0.493364" pivot_y="0.0493902"/>
-        <file id="1" name="torso/torso-1.png" width="82" height="84" pivot_x="0.469512" pivot_y="0.0541667"/>
-        <file id="2" name="torso/torso-2.png" width="80" height="82" pivot_x="0.5" pivot_y="0.05625"/>
-        <file id="3" name="torso/torso-3.png" width="77" height="88" pivot_x="0.48539" pivot_y="0.0375"/>
-        <file id="4" name="torso/torso-4.png" width="82" height="88" pivot_x="0.470122" pivot_y="0.0289773"/>
-        <file id="5" name="torso/torso-5.png" width="78" height="88" pivot_x="0.521795" pivot_y="0.0313921"/>
-        <file id="6" name="torso/torso-6.png" width="76" height="87" pivot_x="0.501645" pivot_y="0.0442529"/>
-        <file id="7" name="torso/torso-7.png" width="83" height="89" pivot_x="0.494277" pivot_y="0.0398876"/>
-        <file id="8" name="torso/torso-8.png" width="83" height="90" pivot_x="0.531476" pivot_y="0.0463889"/>
+        <file id="0" name="torso/torso-0.png" width="81" height="116" pivot_x="0.493348" pivot_y="0.2714"/>
+        <file id="1" name="torso/torso-1.png" width="81" height="116" pivot_x="0.469512" pivot_y="0.2714"/>
+        <file id="2" name="torso/torso-2.png" width="81" height="116" pivot_x="0.5" pivot_y="0.2714"/>
+        <file id="3" name="torso/torso-3.png" width="79" height="121" pivot_x="0.48539" pivot_y="0.4145"/>
+        <file id="4" name="torso/torso-4.png" width="79" height="121" pivot_x="0.45529" pivot_y="0.4145"/>
+        <file id="5" name="torso/torso-5.png" width="79" height="121" pivot_x="0.521795" pivot_y="0.4145"/>
+        <file id="6" name="torso/torso-6.png" width="76" height="120" pivot_x="0.468079" pivot_y="0.2"/>
+        <file id="7" name="torso/torso-7.png" width="76" height="120" pivot_x="0.494277" pivot_y="0.2"/>
+        <file id="8" name="torso/torso-8.png" width="76" height="120" pivot_x="0.531476" pivot_y="0.2"/>
         <file id="9" name="torso/torso-9.png" width="79" height="74" pivot_x="0.382911" pivot_y="0.340541"/>
         <file id="10" name="torso/torso-10.png" width="69" height="76" pivot_x="0.518116" pivot_y="-0.0509868"/>
     </folder>
@@ -164,6 +164,12 @@
     </folder>
     <folder id="13" name="SWAP_ICON">
         <file id="0" name="SWAP_ICON/SWAP_ICON-0.png" width="258" height="184" pivot_x="0.499937" pivot_y="0.488144"/>
+    </folder>
+    <folder id="14" name="headbase_hat">
+        <file id="0" name="headbase_hat/headbase_hat-0.png" width="263" height="231" pivot_x="0.535124" pivot_y="0.125595"/>
+        <file id="1" name="headbase_hat/headbase_hat-1.png" width="220" height="202" pivot_x="0.670875" pivot_y="0.0926282"/>
+        <file id="2" name="headbase_hat/headbase_hat-2.png" width="263" height="231" pivot_x="0.523885" pivot_y="0.0952915"/>
+        <file id="3" name="headbase_hat/headbase_hat-3.png" width="246" height="187" pivot_x="0.535124" pivot_y="0.125595"/>
     </folder>
     <entity id="0" name="wilson">
         <animation id="0" name="mime100" length="1600" interval="100">
