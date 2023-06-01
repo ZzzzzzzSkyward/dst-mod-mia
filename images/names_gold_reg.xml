@@ -1,6 +1,6 @@
 <Atlas>
-	<Texture filename="names_gold_reg.tex" />
+	<Texture filename="names_reg.tex" />
 	<Elements>
-		<Element name="reg.tex" u1="0.00195313" u2="0.900391" v1="0.404297" v2="0.998047" />
+		<Element name="reg.tex" u1="0.000976563" u2="0.741211" v1="0.43457" v2="0.999023" />
 	</Elements>
 </Atlas>

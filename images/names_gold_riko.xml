@@ -1,6 +1,6 @@
 <Atlas>
-	<Texture filename="names_gold_riko.tex" />
+	<Texture filename="names_riko.tex" />
 	<Elements>
-		<Element name="riko.tex" u1="0.000976563" u2="0.645508" v1="0.404297" v2="0.998047" />
+		<Element name="riko.tex" u1="0.000976563" u2="0.932617" v1="0.432617" v2="0.999023" />
 	</Elements>
 </Atlas>

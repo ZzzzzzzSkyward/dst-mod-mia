@@ -1,6 +1,6 @@
 <Atlas>
-	<Texture filename="names_gold_nanachi.tex" />
+	<Texture filename="names_nanachi.tex" />
 	<Elements>
-		<Element name="nanachi.tex" u1="0.000488281" u2="0.530762" v1="0.419922" v2="0.998047" />
+		<Element name="nanachi.tex" u1="0.000488281" u2="0.774902" v1="0.321289" v2="0.999023" />
 	</Elements>
 </Atlas>
