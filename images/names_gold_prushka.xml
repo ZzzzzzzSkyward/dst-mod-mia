@@ -1,6 +1,7 @@
+<?xml version="1.0"?>
 <Atlas>
 	<Texture filename="names_gold_prushka.tex" />
 	<Elements>
-		<Element name="prushka.tex" u1="0.000976563" u2="0.645508" v1="0.404297" v2="0.998047" />
+		<Element name="prushka.tex" u1="0.000488281" u2="0.862793" v1="0.358398" v2="0.999023" />
 	</Elements>
 </Atlas>

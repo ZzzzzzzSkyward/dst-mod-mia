@@ -9,7 +9,7 @@ local params = {
     skins = skins,
     skin_tags = {"%s", "CHARACTER", "BASE"},
     build_name = "%s",
-    rarity = "Modded",
+    rarity = "Character",
     build_name_override="%s"
 }
 local prefs = {}
