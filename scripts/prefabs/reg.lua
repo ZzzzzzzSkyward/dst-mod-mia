@@ -146,11 +146,5 @@ local master_postinit = function(inst)
     inst.OnSave = onsave
     -- spawn custom relic inscinerator
     inst:DoTaskInTime(0, TrySpawnInscinerator)
-    --[[
-        abandoned
-    for i = 1, 10 do
-        inst:DoTaskInTime(2 ^ i, hudpostinit) -- try to postinit this
-    end
-    ]]
 end
 return MakePlayerCharacter("reg", prefabs, assets, common_postinit, master_postinit, start_inv)
