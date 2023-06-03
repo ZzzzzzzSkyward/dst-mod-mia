@@ -220,13 +220,12 @@ local function prushka(inst)
   DoContainerSetup()
 end
 local function prushka_getcreature()
-    --handler for lightbulb flies and mi miao
+  -- handler for lightbulb flies and mi miao
 end
-local function prushka_losecreature()
-end
+local function prushka_losecreature() end
 local function prushka_removed(inst)
-    local inv=inst.components.inventory
-    inv:DropEverything()
+  local inv = inst.components.inventory
+  inv:DropEverything()
 end
 local function prushka2(inst)
   inst.build = "hat_regerhat"
@@ -237,7 +236,7 @@ local function prushka2(inst)
   inst.components.container:WidgetSetup("prushkahat")
   inst.components.container.acceptsstacks = false
   inst:AddComponent("preserver")
-  inst.components.preserver:SetPerishRateMultiplier(TUNING.PERISH_SALTBOX_MULT)
+  inst.components.preserver:SetPerishRateMultiplier(TUNING.PERISH_SALTBOX_MULT * 4 / 3)
   inst:ListenForEvent("itemget", prushka_getcreature)
   inst:ListenForEvent("itemlose", prushka_losecreature)
   inst:ListenForEvent("onremove", prushka_removed)
