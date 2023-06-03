@@ -199,16 +199,6 @@ local function reg2(inst)
   inst.components.inventoryitem:SetSinks(true)
   inst.components.inventoryitem.keepondeath = true
 end
-local function DoContainerSetup()
-  local params = require "containers"
-  params = params.params
-  if params.prushkahat then return end
-  local h = deepcopy(params.antlionhat)
-  h.widget.animbuild = "ui_prushkahat_1x1"
-  h.excludefromcrafting = nil
-  h.itemtestfn = function(container, item, slot) return item:HasTag("smallcreature") end
-  params.prushkahat = h
-end
 local function prushka(inst)
   inst.AnimState:SetBank("prushkahat")
   inst.AnimState:SetBuild("hat_prushka")
@@ -216,8 +206,6 @@ local function prushka(inst)
   inst:AddTag("prushkahat")
   inst:AddTag("waterproofer")
   inst:AddTag("good_sleep_aid")
-  inst:AddTag("fridge")
-  DoContainerSetup()
 end
 local function prushka_getcreature()
   -- handler for lightbulb flies and mi miao
@@ -228,7 +216,7 @@ local function prushka_removed(inst)
   inv:DropEverything()
 end
 local function prushka2(inst)
-  inst.build = "hat_regerhat"
+  inst.build = "hat_prushka"
   inst:AddComponent('waterproofer')
   inst.components.waterproofer:SetEffectiveness(TUNING.WATERPROOFNESS_SMALL)
   inst.components.equippable.dapperness = -TUNING.DAPPERNESS_TINY

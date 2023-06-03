@@ -40,6 +40,13 @@ containers.params.riko_sack = containers.params.krampus_sack or {
   openlimit = 1
 }
 containers.params.rikocookpot = containers.params.portablecookpot
+--prushkahat
+local h = deepcopy(containers.params.antlionhat)
+h.widget.animbuild = "ui_prushkahat_1x1"
+h.excludefromcrafting = nil
+h.itemtestfn = function(container, item, slot) return item:HasTag("smallcreature") end
+containers.params.prushkahat = h
+
 -- blaze reap
 FUELTYPE.POWER = "power"
 local powerlevel = {
@@ -55,3 +62,49 @@ for k, v in pairs(powerlevel) do
     inst.components.fuel.fuelvalue = v
   end)
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+do return end
+AddModShadersInit(function()
+  -- 变量: x,y
+  UniformVariables.INSCINERATOR_CENTER = PostProcessor:AddUniformVariable("INSCINERATOR_CENTER", 2)
+  local path = resolvefilepath("shaders/glow.ksh")
+  PostProcessorEffects.INSCINERATOR_CENTER = PostProcessor:AddPostProcessEffect(path)
+  PostProcessor:SetEffectUniformVariables(PostProcessorEffects.INSCINERATOR_CENTER, UniformVariables.INSCINERATOR_CENTER)
+end)
+AddModShadersSortAndEnable(function()
+  PostProcessor:SetPostProcessEffectAfter(PostProcessorEffects.INSCINERATOR_CENTER,
+   PostProcessorEffects.INSCINERATOR_CENTER)
+  PostProcessor:EnablePostProcessEffect(PostProcessorEffects.INSCINERATOR_CENTER, false)
+  PostProcessor:SetUniformVariable(UniformVariables.INSCINERATOR_CENTER, 0, 0)
+end)
+AddPlayerPostInit(function(inst)
+  inst:DoPeriodicTask(1, function()
+    local x, y, z = TheInput:GetScreenPosition():Get()
+      PostProcessor:SetUniformVariable(UniformVariables.INSCINERATOR_CENTER, x, y)
+  end)
+end)
