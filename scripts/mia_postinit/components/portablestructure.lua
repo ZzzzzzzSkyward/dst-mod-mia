@@ -4,8 +4,8 @@ local function CannotDismantle(self, inst, doer)
     return false
 end
 return function(PortableStructure)
-    local old = PortableStructure.OnDismantle
-    function PortableStructure:OnDismantle(inst, doer, ...)
+    local old = PortableStructure.Dismantle
+    function PortableStructure:Dismantle(inst, doer, ...)
         if CannotDismantle(self, inst, doer, ...) then
             if doer and doer.components.talker and doer:HasTag("player") then
                 doer.components.talker:Say(GetActionFailString(doer, "DISMANTLE"))
