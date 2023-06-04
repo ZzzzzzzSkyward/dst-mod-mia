@@ -28,7 +28,7 @@ local function fn()
     inst:AddComponent("inventoryitem")
     inst.components.inventoryitem.keepondeath = true
     inst:AddComponent("equippable")
-    inst.components.equippable.equipslot = EQUIPSLOTS.BODY
+    inst.components.equippable.equipslot = EQUIPSLOTS.BACK or EQUIPSLOTS.BODY
     inst:AddComponent("insulator")
     inst.components.insulator:SetInsulation(TUNING.INSULATION_MED)
     inst.components.insulator:SetSummer()

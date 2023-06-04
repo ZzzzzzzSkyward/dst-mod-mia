@@ -12,7 +12,7 @@ import("mia_recipes")
 import("hamlet_dodge")
 import("mia_actions")
 local preinit = {
-  components = {"portablestructure"},
+  components = {"portablestructure", "playeractionpicker"},
   scenarios = {"chestfunctions"}
 }
 local postinit = {
@@ -40,7 +40,7 @@ containers.params.riko_sack = containers.params.krampus_sack or {
   openlimit = 1
 }
 containers.params.rikocookpot = containers.params.portablecookpot
---prushkahat
+-- prushkahat
 local h = deepcopy(containers.params.antlionhat)
 h.widget.animbuild = "ui_prushkahat_1x1"
 h.excludefromcrafting = nil
@@ -63,31 +63,6 @@ for k, v in pairs(powerlevel) do
   end)
 end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 do return end
 AddModShadersInit(function()
   -- 变量: x,y
@@ -105,6 +80,6 @@ end)
 AddPlayerPostInit(function(inst)
   inst:DoPeriodicTask(1, function()
     local x, y, z = TheInput:GetScreenPosition():Get()
-      PostProcessor:SetUniformVariable(UniformVariables.INSCINERATOR_CENTER, x, y)
+    PostProcessor:SetUniformVariable(UniformVariables.INSCINERATOR_CENTER, x, y)
   end)
 end)

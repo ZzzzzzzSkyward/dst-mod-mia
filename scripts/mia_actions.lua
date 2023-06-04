@@ -1,42 +1,66 @@
 -- componentaction is right
 local function init()
-    local modname = env.modname
-    local actions, componentactions = dig("actions_def")
-    for k, v in pairs(componentactions) do
-        if v.type == "POINT" then
-            AddPlayerPostInit(function(inst)
-                if inst.prefab ~= k then return end
-                inst:ListenForEvent("playeractivated", function(inst)
-                    if inst == ThePlayer then
-                        local ac = inst.components.playeractionpicker
-                        if not ac then return end
-                        local old = ac.pointspecialactionsfn
-                        if not old then
-                            ac.pointspecialactionsfn = v.fn
-                        else
-                            ac.pointspecialactionsfn = function(...)
-                                return ArrayUnion(old(...), v.fn(...))
-                            end
-                        end
-                    end
-                end)
-            end)
-        else
-            AddComponentAction(v.type, k, v.fn, modname)
-        end
+  local modname = env.modname
+  local actions, componentactions = dig("actions_def")
+  for k, v in pairs(componentactions) do
+    if v.type == "POINTSPECIAL" then
+      AddPlayerPostInit(function(inst)
+        if inst.prefab ~= k then return end
+        inst:ListenForEvent("playeractivated", function(inst)
+          if inst == ThePlayer then
+            local ac = inst.components.playeractionpicker
+            if not ac then return end
+            local old = ac.pointspecialactionsfn
+            if not old then
+              ac.pointspecialactionsfn = v.fn
+            else
+              ac.pointspecialactionsfn = function(...) return ArrayUnion(old(...), v.fn(...)) end
+            end
+          end
+        end)
+      end)
+    else
+      AddComponentAction(v.type, k, v.fn, modname)
     end
-    -- here we skirt around modutil
-    for id, action in pairs(actions) do
-        action.mod_name = modname
-        action.id = id
-        ACTIONS[id] = action
-        if ACTION_MOD_IDS[modname] == nil then ACTION_MOD_IDS[modname] = {} end
-        table.insert(ACTION_MOD_IDS[modname], action.id)
-        action.code = #ACTION_MOD_IDS[modname]
-        if MOD_ACTIONS_BY_ACTION_CODE[modname] == nil then MOD_ACTIONS_BY_ACTION_CODE[modname] = {} end
-        MOD_ACTIONS_BY_ACTION_CODE[modname][action.code] = action
-        -- only to comment this line!
-        -- STRINGS.ACTIONS[action.id] = action.str
-    end
+  end
+  -- here we skirt around modutil
+  for id, action in pairs(actions) do
+    action.mod_name = modname
+    action.id = id
+    ACTIONS[id] = action
+    if ACTION_MOD_IDS[modname] == nil then ACTION_MOD_IDS[modname] = {} end
+    table.insert(ACTION_MOD_IDS[modname], action.id)
+    action.code = #ACTION_MOD_IDS[modname]
+    if MOD_ACTIONS_BY_ACTION_CODE[modname] == nil then MOD_ACTIONS_BY_ACTION_CODE[modname] = {} end
+    MOD_ACTIONS_BY_ACTION_CODE[modname][action.code] = action
+    -- only to comment this line!
+    -- STRINGS.ACTIONS[action.id] = action.str
+  end
+  for k, v in pairs(componentactions) do
+    if v.actionhandler then AddStateGraphActionHandler("wilson", ActionHandler(ACTIONS[k], v.actionhandler)) end
+  end
 end
 init()
+do return end
+AddStateGraphState("wilson", State{
+  name = "aoeprojectile",
+  tags = {"doing", "nodangle", "busy"},
+
+  onenter = function(inst)
+    inst:AddTag("launching")
+    inst.AnimState:Show("ARM_carry")
+    inst.AnimState:Hide("ARM_normal")
+    inst.AnimState:ClearOverrideSymbol("swap_object")
+    inst.inscinerator.components.aoetargeting:StartTargeting()
+end,
+
+onupdate = function(inst) end,
+
+events = {EventHandler("equip", function(inst)
+    if inst.components.inventory:GetEquippedItem(EQUIPSLOTS.HANDS) then ACTIONS.CANCELAOEPROJECTILE.fn(inst) end
+end)},
+
+onexit = function(inst)
+    inst:RemoveTag("launching")
+  end
+})

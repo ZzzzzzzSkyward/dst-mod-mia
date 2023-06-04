@@ -29,13 +29,13 @@ return {
     pre_action_cb = function(act)
       local doer = act.doer
       local obj = doer.inscinerator
-      obj:Launch(doer,act.pos,act.target)
+      obj:Launch(doer, act.pos, act.target)
       return doer.inscinerator.components.aoetargeting:StopTargeting()
     end,
     fn = function(act)
       local doer = act.doer
       local obj = doer.inscinerator
-      obj:Launch(doer,act.pos,act.target)
+      obj:Launch(doer, act.pos, act.target)
       doer.inscinerator.components.aoetargeting:StopTargeting()
       return true
     end
@@ -44,11 +44,15 @@ return {
     str = "AOEPROJECTILE",
     instant = true,
     rmb = true,
+    canforce = true,
     priority = -3,
     paused_valid = true,
     distance = 40,
+    disable_platform_hopping = true,
     pre_action_cb = function(act)
       local doer = act.doer
+      local obj = doer.inscinerator
+      obj:StartTargeting(doer)
       return doer.inscinerator.components.aoetargeting:StartTargeting()
     end,
     fn = function(act)
@@ -56,7 +60,8 @@ return {
       local obj = doer.inscinerator
       obj:StartTargeting(doer)
       return doer.inscinerator.components.aoetargeting:StartTargeting()
-    end
+    end,
+    _actionhandler = function(inst) return "aoeprojectile" end
   },
   CANCELAOEPROJECTILE = {
     str = "CANCELAOEPROJECTILE",
@@ -70,18 +75,20 @@ return {
     distance = 40,
     pre_action_cb = function(act)
       local doer = act.doer
+      local obj = doer.inscinerator
+      obj:StopTargeting(doer)
       return doer.inscinerator.components.aoetargeting:StopTargeting()
     end,
     fn = function(act)
       local doer = act.doer
       local obj = doer.inscinerator
       obj:StopTargeting(doer)
-      return doer.inscinerator.components.aoetargeting:StopTargeting()
+      return true
     end
   }
 }, {
   reg = {
-    type = "POINT",
+    type = "POINTSPECIAL",
     str = "发射",
     fn = function(inst, pos, useitem, right)
       if not inst.inscinerator then return empty end

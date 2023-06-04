@@ -256,7 +256,7 @@ local function inscinerator_Launch(inst, pos, target)
     local final = 5
     local tick = 0.2
     inst:AddTag("launching")
-    --#FIXME use anim or shader, this updates too slow
+    -- #FIXME use anim or shader, this updates too slow
     inst._ticktask = inst:DoPeriodicTask(tick, function(inst)
       local radius = inst._light.Light:GetRadius()
       if radius < final then
@@ -726,6 +726,7 @@ It was eaten by an aquatic creature in the Sea of Corpses.
       inst.steam_after = "steam fx"
       -- other.burnt = "?"
       -- ground.burnt = "meteor ground fx"
+      inst:DoTaskInTime(1, function(inst) if not inst:GetParent() then inst:Remove() end end)
       return inst
     end,
 
@@ -780,6 +781,7 @@ It was eaten by an aquatic creature in the Sea of Corpses.
     end
   },
   stone_lighter = {
+    disabled = true,
     desc = [[在阿比斯里采集到的石头。
 打磨之后,施加某种频率的振动就会发出强光。
 可以用作机械式的照明灯。
