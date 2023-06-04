@@ -195,8 +195,10 @@ local function common_fn(bank, build, icon, tag, onbuiltfn)
     inst.components.workable:SetOnFinishCallback(onhammered)
     inst.components.workable:SetOnWorkCallback(onhit)
 
-    -- inst:AddComponent("finiteuses")
-    -- inst.components.finiteuses:SetOnFinished(onfinished)
+    inst:AddComponent("finiteuses")
+    inst.components.finiteuses:SetMaxUses(TUNING.NANACHITENT_USES)
+    inst.components.finiteuses:SetUses(TUNING.NANACHITENT_USES)
+    inst.components.finiteuses:SetOnFinished(onfinished)
 
     inst:AddComponent("sleepingbag")
     inst.components.sleepingbag.onsleep = onsleep
