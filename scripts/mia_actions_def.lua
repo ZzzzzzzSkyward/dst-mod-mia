@@ -88,7 +88,7 @@ return {
     end
   }
 }, {
-  reg = {
+  _reg = {
     type = "POINTSPECIAL",
     str = "发射",
     fn = function(inst, pos, useitem, right)
