@@ -3,7 +3,7 @@ return {
     "mia_hats",
     "riko_sack",
     "rikocookpot",
-    "rikofoods",
+    "mia_foods",
     "nanachi",
     "nanachitent",
     "mitty",

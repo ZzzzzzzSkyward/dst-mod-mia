@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r11">
+    <folder id="0" name="nanachi_soup">
+        <file id="0" name="nanachi_soup/nanachi_soup-0.png" width="128" height="128" pivot_x="0.523438" pivot_y="0.273438"/>
+    </folder>
+    <folder id="1" name="riko_dashi">
+        <file id="0" name="riko_dashi/riko_dashi-0.png" width="128" height="128" pivot_x="0.507812" pivot_y="0.25"/>
+    </folder>
+    <folder id="2" name="riko_friedfish">
+        <file id="0" name="riko_friedfish/riko_friedfish-0.png" width="128" height="128" pivot_x="0.515625" pivot_y="0.476562"/>
+    </folder>
+    <folder id="3" name="riko_grill">
+        <file id="0" name="riko_grill/riko_grill-0.png" width="128" height="128" pivot_x="0.539062" pivot_y="0.179688"/>
+    </folder>
+    <folder id="4" name="riko_onigiri">
+        <file id="0" name="riko_onigiri/riko_onigiri-0.png" width="128" height="128" pivot_x="0.5" pivot_y="0.335938"/>
+    </folder>
+    <folder id="5" name="riko_snack">
+        <file id="0" name="riko_snack/riko_snack-0.png" width="128" height="128" pivot_x="0.484375" pivot_y="0.507812"/>
+    </folder>
+    <entity id="0" name="cook_pot_food">
+        <animation id="0" name="idle" length="34" interval="100">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="0" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="0" z_index="2"/>
+                    <object_ref id="3" timeline="3" key="0" z_index="3"/>
+                    <object_ref id="4" timeline="4" key="0" z_index="4"/>
+                    <object_ref id="5" timeline="5" key="0" z_index="5"/>
+                </key>
+                <key id="1" time="34"/>
+            </mainline>
+            <timeline id="0" name="nanachi_soup-0">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="-142" y="119"/>
+                </key>
+            </timeline>
+            <timeline id="1" name="riko_dashi-0">
+                <key id="0" spin="0">
+                    <object folder="1" file="0" x="85" y="130"/>
+                </key>
+            </timeline>
+            <timeline id="2" name="riko_friedfish-0">
+                <key id="0" spin="0">
+                    <object folder="2" file="0" x="-147" y="1"/>
+                </key>
+            </timeline>
+            <timeline id="3" name="riko_grill-0">
+                <key id="0" spin="0">
+                    <object folder="3" file="0" x="106" y="-16"/>
+                </key>
+            </timeline>
+            <timeline id="4" name="riko_onigiri-0">
+                <key id="0" spin="0">
+                    <object folder="4" file="0" x="-128" y="-146"/>
+                </key>
+            </timeline>
+            <timeline id="5" name="riko_snack-0">
+                <key id="0" spin="0">
+                    <object folder="5" file="0" x="91" y="-118"/>
+                </key>
+            </timeline>
+        </animation>
+    </entity>
+</spriter_data>
