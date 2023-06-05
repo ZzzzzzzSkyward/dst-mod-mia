@@ -24,5 +24,5 @@ AddRecipe2("rikocookpot_item", {Ingredient("cutgrass", 8), Ingredient("twigs", 6
  }, {"MODS", "STRUCTURES", "RIKO"})
 -- Gives back a mitty later
 -- Health value is set to character's max health*60% later
-AddRecipe2("mitty_tea_bundle", {Ingredient("mitty_bottled", 1), Ingredient(CHARACTER_INGREDIENT.MAX_HEALTH, 0)},
- TECH.NONE, {}, {"MODS", "BELAF", "FOOD"})
+--AddRecipe2("mitty_tea_bundle", {Ingredient("mitty_bottled", 1), Ingredient(CHARACTER_INGREDIENT.MAX_HEALTH, 0)},
+-- TECH.NONE, {}, {"MODS", "BELAF", "FOOD"})
