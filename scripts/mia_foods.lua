@@ -106,6 +106,13 @@ local foods = {
 for k, v in pairs(foods) do
   if v.disabled then foods[k] = nil end
   if v.spice then foods[k] = nil end
+  if k:find("riko_") then
+    if v.tag then
+      v.tag[#v.tag + 1] = "rikofood"
+    else
+      v.tag = {"rikofood"}
+    end
+  end
   v.name = k
   v.weight = v.weight or 1
   v.overridebuild = "mia_cook_pot_food"

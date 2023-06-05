@@ -10,8 +10,13 @@ local delicious_abyss_dishes = dig("foods")
 for k, recipe in pairs(delicious_abyss_dishes) do
   if recipe.spice then
     AddCookerRecipe("portablespicer", recipe)
+  elseif k:find("riko_") then
+    AddCookerRecipe("rikocookpot", recipe)
   else
     AddCookerRecipe("rikocookpot", recipe)
+    AddCookerRecipe("cookpot", recipe)
+    AddCookerRecipe("portablecookpot", recipe)
+    AddCookerRecipe("archivecookpot", recipe)
   end
 end
 import("mia_recipes")

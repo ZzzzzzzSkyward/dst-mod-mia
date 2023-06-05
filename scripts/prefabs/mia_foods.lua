@@ -1,3 +1,5 @@
+local food_defs = require("mia_foods")
+-- 以下内容照抄即可
 local function MakeFood(name, def)
   local assets = {Asset("ANIM", "anim/" .. (def.overridebuild or name) .. ".zip")}
   local prefabs = {"spoiled_food"}
@@ -7,7 +9,7 @@ local function MakeFood(name, def)
     table.insert(assets, Asset("ANIM", "anim/plate_food.zip"))
     table.insert(assets, Asset("INV_IMAGE", spicename .. "_over"))
   end
-  --#FIXME 某处调用显示[prefab ""]，但不是这里
+  -- #FIXME 某处调用显示[prefab ""]，但不是这里
   local function DisplayNameFn(inst)
     return subfmt(STRINGS.NAMES[def.spice .. "_FOOD"], {
       food = STRINGS.NAMES[string.upper(def.basename)]
@@ -27,8 +29,6 @@ local function MakeFood(name, def)
       elseif type(def.tag) == "table" and def.tag[1] then
         for i, v in pairs(def.tag) do inst:AddTag(v) end
       end
-    else
-      inst:AddTag("rikofood")
     end
     local food_symbol_build
     if spicename ~= nil then
@@ -98,7 +98,6 @@ local function MakeFood(name, def)
   end
   return Prefab(name, fn, assets, prefabs)
 end
-local food_defs = require("mia_foods")
 local ret = {}
 for name, def in pairs(food_defs) do table.insert(ret, MakeFood(name, def)) end
 
