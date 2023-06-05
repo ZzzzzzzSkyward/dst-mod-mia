@@ -139,7 +139,9 @@ local common_postinit = function(inst)
   inst.last_dodge_time = GetTime()
   inst:ListenForEvent("dodgetimedirty", function()
     -- do a penality here
-    inst.components.hunger:DoDelta(-TUNING.CALORIES_TINY / 5)
+    if inst.components.hunger then
+      if inst.last_dodge_time + 5 > GetTime() then inst.components.hunger:DoDelta(-TUNING.CALORIES_TINY / 5) end
+    end
     inst.last_dodge_time = GetTime()
   end)
   inst:ListenForEvent("setowner", OnSetOwner)
