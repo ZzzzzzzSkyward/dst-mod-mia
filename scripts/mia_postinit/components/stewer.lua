@@ -1,49 +1,37 @@
-function Stewer:StartCooking(doer)
-    if self.targettime == nil and self.inst.components.container ~= nil then
-		self.chef_id = (doer ~= nil and doer.player_classified ~= nil) and doer.userid
-		self.ingredient_prefabs = {}
+local function hacktag()
 
-        self.done = nil
-        self.spoiltime = nil
-
-        if self.onstartcooking ~= nil then
-            self.onstartcooking(self.inst)
-        end
-
-		for k, v in pairs (self.inst.components.container.slots) do
-			table.insert(self.ingredient_prefabs, v.prefab)
-		end
-
-        local cooktime = 1
-        self.product, cooktime = cooking.CalculateRecipe(self.inst.prefab, self.ingredient_prefabs)
-        local productperishtime = cooking.GetRecipe(self.inst.prefab, self.product).perishtime or 0
-
-        if productperishtime > 0 then
-			local spoilage_total = 0
-			local spoilage_n = 0
-			for k, v in pairs (self.inst.components.container.slots) do
-				if v.components.perishable ~= nil then
-					spoilage_n = spoilage_n + 1
-					spoilage_total = spoilage_total + v.components.perishable:GetPercent()
-				end
-			end
-            self.product_spoilage =
-                (spoilage_n <= 0 and 1) or
-                (self.keepspoilage and spoilage_total / spoilage_n) or
-                1 - (1 - spoilage_total / spoilage_n) * .5
-		else
-			self.product_spoilage = nil
-		end
-
-        cooktime = TUNING.BASE_COOK_TIME * cooktime * self.cooktimemult
-        self.targettime = GetTime() + cooktime
-        if self.task ~= nil then
-            self.task:Cancel()
-        end
-        self.task = self.inst:DoTaskInTime(cooktime, dostew, self)
-
-        self.inst.components.container:Close()
-        self.inst.components.container:DestroyContents()
-        self.inst.components.container.canbeopened = false
+  local cooking = require("cooking")
+  local cookerrecipes = cooking.recipes
+  local CalculateRecipe = cooking.CalculateRecipe
+  -- remove and add to skip recipes that the chef cannot cook
+  -- as recipedef.cheftag
+  function cooking.CalculateRecipe(cooker, names, chef)
+    chef = chef or cooking.chef
+    local rec = cookerrecipes[names]
+    if not rec then return CalculateRecipe(cooker, names, chef) end
+    local oldvals = {}
+    for k, v in pairs(rec) do
+      if v.cheftag and chef and not chef:HasTag(v.cheftag) then
+        oldvals[k] = v
+        rec[k] = nil
+      end
     end
+    if chef and chef.ChangeRecipe then chef:ChangeRecipe(rec, cooker, names) end
+    local ret = {CalculateRecipe(cooker, names, chef)}
+    for k, v in pairs(oldvals) do rec[k] = v end
+    if chef and chef.ChangeRecipe then chef:ChangeRecipe(rec, cooker, names, true) end
+    return unpack(ret)
+  end
+  local warlys = cookerrecipes.portablecookpot
+  if warlys then for k, v in pairs(warlys) do v.cheftag = "masterchef" end end
+end
+AddGamePostInit(hacktag)
+return function(Stewer)
+  local StartCooking = Stewer.StartCooking
+  function Stewer:StartCooking(doer)
+    cooking.chef = doer
+    local ret = StartCooking(self, doer)
+    if cooking.chef == doer then cooking.chef = nil end
+    return ret
+  end
 end

@@ -23,7 +23,7 @@ import("mia_recipes")
 import("hamlet_dodge")
 import("mia_actions")
 local preinit = {
-  components = {"portablestructure", "playeractionpicker"},
+  components = {"portablestructure", "playeractionpicker","stewer"},
   scenarios = {"chestfunctions"}
 }
 local postinit = {
