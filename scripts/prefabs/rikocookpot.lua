@@ -215,7 +215,6 @@ local function fn()
     inst.entity:SetPristine()
     if not TheWorld.ismastersim then return inst end
     inst:AddComponent("portablestructure")
-    -- #FIXME ondismantle
     inst.components.portablestructure:SetOnDismantleFn(OnDismantle)
     inst.components.portablestructure.restrictedtag = "riko"
     inst:AddComponent("stewer")
@@ -234,7 +233,7 @@ local function fn()
     inst:AddComponent("lootdropper")
     inst:AddComponent("workable")
     inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
-    inst.components.workable:SetWorkLeft(75)
+    inst.components.workable:SetWorkLeft(5)
     inst.components.workable:SetOnFinishCallback(onhammered)
     inst.components.workable:SetOnWorkCallback(onhit)
     inst:AddComponent("inspectable")
