@@ -15,10 +15,12 @@ local chars = {
     skin = {"nanachi_none"},
     start_inv = {"nanachihat"}
   },
+  --[[
   prushka = {
     gender = "FEMALE",
     skin = {"prushka_none"},
     start_inv = {}
   }
+  ]]
 }
 return chars
