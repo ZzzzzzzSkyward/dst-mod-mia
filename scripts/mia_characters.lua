@@ -2,7 +2,11 @@ local chars = {
   riko = {
     gender = "FEMALE",
     skin = {"riko_none"},
-    start_inv = {"rikohat", "rikocookpot_item", "scaled_umbrella"}
+    start_inv = {"rikohat", "rikocookpot_item", "scaled_umbrella"},
+    skins = {
+      ghost_skin = "ghost_willow_build",
+      normal_skin = "riko"
+    }
   },
   reg = {
     gender = "MALE",

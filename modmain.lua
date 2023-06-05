@@ -28,13 +28,7 @@ do
   AddMinimapAtlas(minimapatlas)
   local characters = dig("characters")
   for name, data in pairs(characters) do
-    AddModCharacter(name, data.gender, {{
-      type = "ghost_skin",
-      anim_bank = "ghost",
-      idle_anim = "idle",
-      scale = 0.75,
-      offset = {0, 25}
-    }})
+    AddModCharacter(name, data.gender, {})
     if data.skin then PREFAB_SKINS[name] = data.skin end
     if data.start_inv then TUNING.GAMEMODE_STARTING_ITEMS.DEFAULT[name:upper()] = data.start_inv end
   end
