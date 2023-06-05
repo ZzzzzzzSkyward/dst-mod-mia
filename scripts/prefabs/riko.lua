@@ -10,7 +10,7 @@ local common_postinit = function(inst)
   inst:AddTag("riko") -- referenced by inventoryitem to specify restrictedtag
   inst:AddTag("soulless") -- non human representation
   inst:AddTag("expertchef") -- cook faster on fire
-  inst:AddTag("masterchef")
+  --inst:AddTag("masterchef")--#PLANNED remove warly items
   inst:AddTag("nowormholesanityloss") -- from walter
   inst.AnimState:AddOverrideBuild("player_idles_warly") -- warly idle
   if TheNet:GetServerGameMode() == "quagmire" then inst:AddTag("quagmire_shopper") end
