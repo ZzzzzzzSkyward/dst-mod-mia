@@ -249,5 +249,5 @@ local function makehat(a, b)
   end
 end
 return Prefab("rikohat", makehat(riko, riko2), riko_assets),
- Prefab("nanachihat", makehat(nanachi, nanachi2), nanachi_assets), Prefab("reghat", makehat(reg, reg2), reg_assets),
- Prefab("prushkahat", makehat(prushka, prushka2), prushka_assets)
+ Prefab("nanachihat", makehat(nanachi, nanachi2), nanachi_assets), Prefab("reghat", makehat(reg, reg2), reg_assets)
+ --Prefab("prushkahat", makehat(prushka, prushka2), prushka_assets)
