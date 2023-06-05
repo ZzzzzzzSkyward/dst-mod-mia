@@ -58,7 +58,10 @@ local function miner_perish(inst)
   if equippable ~= nil and equippable:IsEquipped() then
     local owner = inst.components.inventoryitem ~= nil and inst.components.inventoryitem.owner or nil
     if owner ~= nil then
-      local data = {prefab = inst.prefab, equipslot = equippable.equipslot}
+      local data = {
+        prefab = inst.prefab,
+        equipslot = equippable.equipslot
+      }
       miner_turnoff(inst)
       owner:PushEvent("torchranout", data)
       return
@@ -198,6 +201,16 @@ local function reg2(inst)
   inst:AddComponent("submersible")
   inst.components.inventoryitem:SetSinks(true)
   inst.components.inventoryitem.keepondeath = true
+  -- get percent from equipper's chargeleft
+  inst:ListenForEvent("equipped", function(inst, data)
+    if data.owner then
+      local chargeleft = data.owner.chargeleft
+      if chargeleft then
+        inst.components.amor.condition = math.max((chargeleft / TUNING.REG_INSCINERATOR_USE) *
+                                                   inst.components.amor.maxcondition, 1e-4)
+      end
+    end
+  end)
 end
 local function prushka(inst)
   inst.AnimState:SetBank("prushkahat")
@@ -217,7 +230,7 @@ local function prushka_removed(inst)
 end
 local function prushka2(inst)
   inst.build = "hat_prushka"
-  inst:AddComponent('waterproofer')
+  inst:AddComponent("waterproofer")
   inst.components.waterproofer:SetEffectiveness(TUNING.WATERPROOFNESS_SMALL)
   inst.components.equippable.dapperness = -TUNING.DAPPERNESS_TINY
   inst:AddComponent("container")
@@ -236,5 +249,5 @@ local function makehat(a, b)
   end
 end
 return Prefab("rikohat", makehat(riko, riko2), riko_assets),
-  Prefab("nanachihat", makehat(nanachi, nanachi2), nanachi_assets), Prefab("reghat", makehat(reg, reg2), reg_assets),
-  Prefab("prushkahat", makehat(prushka, prushka2), prushka_assets)
+ Prefab("nanachihat", makehat(nanachi, nanachi2), nanachi_assets), Prefab("reghat", makehat(reg, reg2), reg_assets),
+ Prefab("prushkahat", makehat(prushka, prushka2), prushka_assets)
