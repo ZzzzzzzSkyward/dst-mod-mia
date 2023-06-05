@@ -122,6 +122,7 @@ for k, v in pairs(foods) do
 end
 -- spiced foods
 -- official function goes to spicedfoods
+require("spicedfoods")
 GenerateSpicedFoods(foods)
 
 local spices = require("spicedfoods")
