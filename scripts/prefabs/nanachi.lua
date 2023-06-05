@@ -137,7 +137,11 @@ local common_postinit = function(inst)
   -- compatible with hamlet
   inst.dodgetime = net_bool(inst.GUID, "player.dodgetime", "dodgetimedirty")
   inst.last_dodge_time = GetTime()
-  inst:ListenForEvent("dodgetimedirty", function() inst.last_dodge_time = GetTime() end)
+  inst:ListenForEvent("dodgetimedirty", function()
+    -- do a penality here
+    inst.components.hunger:DoDelta(-TUNING.CALORIES_TINY / 5)
+    inst.last_dodge_time = GetTime()
+  end)
   inst:ListenForEvent("setowner", OnSetOwner)
 end
 
