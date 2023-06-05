@@ -206,8 +206,8 @@ local function reg2(inst)
     if data.owner then
       local chargeleft = data.owner.chargeleft
       if chargeleft then
-        inst.components.amor.condition = math.max((chargeleft / TUNING.REG_INSCINERATOR_USE) *
-                                                   inst.components.amor.maxcondition, 1e-4)
+        inst.components.armor.condition = math.max((chargeleft / TUNING.REG_INSCINERATOR_USE) *
+                                                    inst.components.armor.maxcondition, 0)
       end
     end
   end)
