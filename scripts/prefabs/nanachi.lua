@@ -137,13 +137,7 @@ local common_postinit = function(inst)
   -- compatible with hamlet
   inst.dodgetime = net_bool(inst.GUID, "player.dodgetime", "dodgetimedirty")
   inst.last_dodge_time = GetTime()
-  inst:ListenForEvent("dodgetimedirty", function()
-    -- do a penality here
-    if inst.components.hunger then
-      if inst.last_dodge_time + 5 > GetTime() then inst.components.hunger:DoDelta(-TUNING.CALORIES_TINY / 5) end
-    end
-    inst.last_dodge_time = GetTime()
-  end)
+  inst:ListenForEvent("dodgetimedirty", function() inst.last_dodge_time = GetTime() end)
   inst:ListenForEvent("setowner", OnSetOwner)
 end
 
@@ -165,6 +159,16 @@ local master_postinit = function(inst)
   inst:ListenForEvent("death", forcefast)
   inst.OnLoad = forcefast
   inst:ListenForEvent("playeractivated", forcefast)
+  local previousdodge = 0
+  inst:ListenForEvent("dodgetimedirty", function()
+    -- do a penality here
+    if inst.components.hunger then
+      if previousdodge + 1 > GetTime() then inst.components.hunger:DoDelta(-TUNING.CALORIES_TINY / 5) end
+      if previousdodge + 3 > GetTime() then inst.components.hunger:DoDelta(-TUNING.CALORIES_TINY / 5) end
+      if previousdodge + 5 > GetTime() then inst.components.hunger:DoDelta(-TUNING.CALORIES_TINY / 5) end
+    end
+    previousdodge = GetTime()
+  end)
 end
 
 return MakePlayerCharacter("nanachi", prefabs, assets, common_postinit, master_postinit, start_inv)

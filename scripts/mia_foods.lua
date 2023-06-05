@@ -80,6 +80,7 @@ local foods = {
   nanachi_soup = {
     test = function(cooker, names, tags) return tags.egg and tags.veggie and tags.veggie >= 2 and tags.fish end,
     tag = {"nanachisoup"},
+    cheftag = "nanachi",
     priority = 6,
     weight = 1,
     foodtype = FOODTYPE.VEGGIE,
@@ -111,6 +112,7 @@ for k, v in pairs(foods) do
       v.tag[#v.tag + 1] = "rikofood"
     else
       v.tag = {"rikofood"}
+      v.cheftag = "riko"
     end
   end
   v.name = k
