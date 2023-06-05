@@ -20,7 +20,6 @@ AddRecipe2("nanachitent", {Ingredient("goose_feather", 5), Ingredient("cutgrass"
 AddRecipe2("rikocookpot_item", {Ingredient("cutgrass", 8), Ingredient("twigs", 6), Ingredient("charcoal", 2)},
  TECH.NONE, {
    builder_tag = "riko",
-   placer = "rikocookpot_item_placer"
  }, {"MODS", "COOKING", "CHARACTER"})
 AddRecipeToFilter("rikocookpot_item", "CHARACTER")
 AddRecipeToFilter("nanachitent", "CHARACTER")
