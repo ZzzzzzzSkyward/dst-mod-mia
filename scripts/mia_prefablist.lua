@@ -8,8 +8,6 @@ return {
     "nanachitent",
     "mitty",
     "regcloak",
-    "regweapon",
-    "reg_projectile",
     "reg",
     "mia_skins",
     "mia_artifacts",

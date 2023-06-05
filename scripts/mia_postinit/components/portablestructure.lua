@@ -4,7 +4,6 @@ local function CannotDismantle(self, inst, doer)
   return false
 end
 return function(PortableStructure)
-  -- #FIXME PortableStructure
   local old = PortableStructure.Dismantle
   function PortableStructure:Dismantle(doer, ...)
     if CannotDismantle(self, self.inst, doer, ...) then

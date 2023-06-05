@@ -216,7 +216,6 @@ local function fn()
     inst.entity:SetPristine()
     if not TheWorld.ismastersim then return inst end
     inst:AddComponent("portablestructure")
-    -- #FIXME ondismantle
     inst.components.portablestructure:SetOnDismantleFn(OnDismantle)
     inst.components.portablestructure.restrictedtag = "riko"
     inst:AddComponent("stewer")

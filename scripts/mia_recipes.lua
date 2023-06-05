@@ -1,4 +1,3 @@
--- #TODO compatible recipe format with DS
 if not AddRecipe2 then
   AddRecipe("riko_sack", {Ingredient("bearger_fur", 1), Ingredient("papyrus", 4), Ingredient("rope", 2)},
    RECIPETABS.SURVIVAL, TECH.NONE, nil, nil, nil, nil, "riko")

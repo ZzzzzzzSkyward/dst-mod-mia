@@ -136,12 +136,12 @@ local common_postinit = function(inst)
   inst:DoTaskInTime(0, TrySpawnInscinerator)
   -- #TODO add a hud
   -- inst.hud=
-  -- #TODO rethink about forge and gorge
+  -- #NOTPLANNED rethink about forge and gorge
   -- if TheNet:GetServerGameMode() == "quagmire" then inst:AddTag("quagmire_grillmaster") end
 end
 local master_postinit = function(inst)
   inst.starting_inventory = start_inv
-  inst.soundsname = "walter" -- #TODO sound for reg
+  inst.soundsname = "walter" -- #NOTPLANNED sound for reg
 
   inst.components.health:SetMaxHealth(TUNING.REG_HEALTH)
   inst.components.health.vulnerabletopoisondamage = false

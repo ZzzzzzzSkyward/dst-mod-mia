@@ -1,7 +1,7 @@
 local assets = {Asset("ANIM", "anim/%s.zip"), Asset("ANIM", "anim/ghost_%s_build.zip")}
 
 local skins = {normal_skin = "%s", ghost_skin = "ghost_%s_build"}
--- #TODO this is simplified because there is actually no skins
+-- #NOTPLANNED this is simplified because there is actually no skins
 local params = {
     base_prefab = "%s",
     type = "base",

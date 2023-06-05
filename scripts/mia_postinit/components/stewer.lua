@@ -1,5 +1,4 @@
 local function hacktag()
-
   local cooking = require("cooking")
   local cookerrecipes = cooking.recipes
   local CalculateRecipe = cooking.CalculateRecipe
@@ -22,6 +21,7 @@ local function hacktag()
     if chef and chef.ChangeRecipe then chef:ChangeRecipe(rec, cooker, names, true) end
     return unpack(ret)
   end
+
   local warlys = cookerrecipes.portablecookpot
   if warlys then for k, v in pairs(warlys) do v.cheftag = "masterchef" end end
 end

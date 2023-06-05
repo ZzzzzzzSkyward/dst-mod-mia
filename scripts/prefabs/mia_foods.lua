@@ -9,7 +9,7 @@ local function MakeFood(name, def)
     table.insert(assets, Asset("ANIM", "anim/plate_food.zip"))
     table.insert(assets, Asset("INV_IMAGE", spicename .. "_over"))
   end
-  -- #FIXME 某处调用显示[prefab ""]，但不是这里
+  -- #NOTPLANNED 某处调用显示[prefab ""]，但不是这里
   local function DisplayNameFn(inst)
     return subfmt(STRINGS.NAMES[def.spice .. "_FOOD"], {
       food = STRINGS.NAMES[string.upper(def.basename)]
