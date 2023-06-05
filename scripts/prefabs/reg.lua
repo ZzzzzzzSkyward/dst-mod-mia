@@ -12,7 +12,7 @@ local function DoEnoughHit(inst)
   inst.components.hunger:DoDelta(TUNING.REG_HUNGER)
   inst.components.sanity:DoDelta(TUNING.REG_SANITY)
   inst.components.health:DoDelta(TUNING.REG_HEALTH, false, "lightning")
-  inst.chargeleft = TUNING.REG_INSCINATOR_MAX_USE
+  inst.chargeleft = TUNING.REG_INSCINERATOR_USE
   lightning_counter = 0
   local t = inst.components.timer
   if t:TimerExists("forgetlightninghit") then t:StopTimer("forgetlightninghit") end
@@ -68,7 +68,7 @@ local function TrySpawnInscinerator(inst)
     end
     return
   end
-  inst.chargeleft = inst.chargeleft or TUNING.REG_INSCINATOR_MAX_USE
+  inst.chargeleft = inst.chargeleft or TUNING.REG_INSCINERATOR_USE
   local i = SpawnPrefab("inscinerator")
   inst.inscinerator = i
   i.entity:SetParent(inst.entity)
@@ -83,7 +83,7 @@ local function onload(inst, data)
   inst:ListenForEvent("seamlessplayerswap", KillInscinerator)
   -- if this is considered a worldly data then move it to TheWorld.abyss
   if not data then return end
-  inst.chargeleft = data.chargeleft or TUNING.REG_INSCINATOR_MAX_USE
+  inst.chargeleft = data.chargeleft or TUNING.REG_INSCINERATOR_USE
   inst.inscinerator = data.inscinerator and SpawnSaveRecord(data.inscinerator) or SpawnPrefab("inscinerator")
   inst.inscinerator.entity:SetParent(inst.entity)
   inst.inscinerator.Transform:SetPosition(0, 0, 0) -- force teleport to player
