@@ -224,22 +224,44 @@ local function blaze_reap_onattack(inst, owner, target)
     end
   end
 end
-local function inscinerator_StartTargeting(inst)
+local inscinerator_light = {
+  falloff = 3,
+  radius = 1,
+  intensity = 0.1,
+  color = RGB(249, 123, 21)
+}
+local function inscinerator_StartTargeting(inst, doer)
   print("inscinerator_StartTargeting")
+  if inst:HasTag("launching") then return end
   -- #FIXME
   if not inst._light then
-    local lightfx = CreateLight({
-      falloff = 1,
-      radius = 2,
-      intensity = 0.5,
-      color = RGB(249, 123, 21)
-    })
+    local lightfx = CreateLight(inscinerator_light)
     local parent = inst:GetParent()
     lightfx.entity:SetParent(parent.entity)
     lightfx.entity:AddFollower()
     lightfx.Follower:FollowSymbol(parent.GUID, "swap_object", 15, 130, 0)
-    rawset(_G, "fxy", function(x, y) lightfx.Follower:FollowSymbol(parent.GUID, "swap_object", x or 0, y or 130, 0) end)
     inst._light = lightfx
+
+    doer.AnimState:Show("ARM_carry")
+    doer.AnimState:Hide("ARM_normal")
+    doer.AnimState:ClearOverrideSymbol("swap_object")
+
+    inst.components.aoetargeting:StartTargeting()
+  end
+end
+local function launchtask(inst)
+  local final = 5
+  local radius = inst._light.Light:GetRadius()
+  if radius < final then
+    inst._light.Light:SetRadius(radius + 0.5)
+  else
+    inst._ticktask:Cancel()
+    inst._ticktask = nil
+    inst._light:Remove()
+    inst._light = nil
+    -- #FIXME
+    inst:DoTaskInTime(5, function(inst) inst:RemoveTag("launching") end)
+    return inst.components.aoeprojectile:Launch()
   end
 end
 local function inscinerator_StopTargeting(inst)
@@ -248,37 +270,32 @@ local function inscinerator_StopTargeting(inst)
     inst._light:Remove()
     inst._light = nil
   end
+  inst.components.aoetargeting:StopTargeting()
 end
 local function inscinerator_Launch(inst, pos, target)
   if inst:HasTag("launching") then return end
   if inst._light then
     print("inscinerator_Launch")
-    local final = 5
+    inst.components.aoetargeting:StopTargeting()
     local tick = 0.2
     inst:AddTag("launching")
     -- #FIXME use anim or shader, this updates too slow
-    inst._ticktask = inst:DoPeriodicTask(tick, function(inst)
-      local radius = inst._light.Light:GetRadius()
-      if radius < final then
-        inst._light.Light:SetRadius(radius + 0.5)
-      else
-        inst._ticktask:Cancel()
-        inst._ticktask = nil
-        inst._light:Remove()
-        inst._light = nil
-        inst:RemoveTag("launching")
-        return inst.components.aoeprojectile:Launch({
-          pos = pos,
-          target = target
-        })
-      end
-    end)
+    inst._ticktask = inst:DoPeriodicTask(tick, launchtask)
+    inst.components.aoetargeting.pos = pos
+    inst.components.aoetargeting.target = target
   end
 end
 
 local function blaze_reap_ondepleted(inst) inst.components.tool:SetAction(ACTIONS.MINE, 0) end
 local function blaze_reap_onfueled(inst)
   inst.components.tool:SetAction(ACTIONS.MINE, TUNING.BLAZEREAP_MINE_EFFECTIVENESS)
+end
+local function blaze_reap_UpdateState(inst)
+  if inst.components.fueled:IsEmpty() then
+    blaze_reap_ondepleted(inst)
+  else
+    blaze_reap_onfueled(inst)
+  end
 end
 local function blaze_reap(inst)
   inst:AddComponent("weapon")
@@ -296,7 +313,7 @@ local function blaze_reap(inst)
   inst.components.fueled:SetTakeFuelFn(blaze_reap_onfueled)
   inst.components.fueled.accepting = true
   -- seems that it is not called when start, so I do it
-  inst:DoTaskInTime(0, function() if inst.components.fueled.currentfuel <= 0 then blaze_reap_ondepleted(inst) end end)
+  inst:DoTaskInTime(0, blaze_reap_UpdateState)
   return inst
 end
 local function sun_sphere_recharge(inst) inst._chargeprogress = 1 end

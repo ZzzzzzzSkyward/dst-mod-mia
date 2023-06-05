@@ -41,26 +41,4 @@ local function init()
   end
 end
 init()
-do return end
-AddStateGraphState("wilson", State{
-  name = "aoeprojectile",
-  tags = {"doing", "nodangle", "busy"},
 
-  onenter = function(inst)
-    inst:AddTag("launching")
-    inst.AnimState:Show("ARM_carry")
-    inst.AnimState:Hide("ARM_normal")
-    inst.AnimState:ClearOverrideSymbol("swap_object")
-    inst.inscinerator.components.aoetargeting:StartTargeting()
-end,
-
-onupdate = function(inst) end,
-
-events = {EventHandler("equip", function(inst)
-    if inst.components.inventory:GetEquippedItem(EQUIPSLOTS.HANDS) then ACTIONS.CANCELAOEPROJECTILE.fn(inst) end
-end)},
-
-onexit = function(inst)
-    inst:RemoveTag("launching")
-  end
-})

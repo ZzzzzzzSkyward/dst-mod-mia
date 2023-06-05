@@ -24,19 +24,19 @@ return {
     str = "LAUNCHAOEPROJECTILE",
     instant = true,
     canforce = true,
-    priority = 1,
+    priority = 100,
+    disable_platform_hopping=true,
     distance = 40,
     pre_action_cb = function(act)
       local doer = act.doer
       local obj = doer.inscinerator
       obj:Launch(doer, act.pos, act.target)
-      return doer.inscinerator.components.aoetargeting:StopTargeting()
+      return true
     end,
     fn = function(act)
       local doer = act.doer
       local obj = doer.inscinerator
       obj:Launch(doer, act.pos, act.target)
-      doer.inscinerator.components.aoetargeting:StopTargeting()
       return true
     end
   },
@@ -53,13 +53,13 @@ return {
       local doer = act.doer
       local obj = doer.inscinerator
       obj:StartTargeting(doer)
-      return doer.inscinerator.components.aoetargeting:StartTargeting()
+      return true
     end,
     fn = function(act)
       local doer = act.doer
       local obj = doer.inscinerator
       obj:StartTargeting(doer)
-      return doer.inscinerator.components.aoetargeting:StartTargeting()
+      return true
     end,
     _actionhandler = function(inst) return "aoeprojectile" end
   },
@@ -71,13 +71,14 @@ return {
     rmb = true,
     encumbered_valid = true,
     mount_valid = true,
-    priority = -3,
+    disable_platform_hopping = true,
+    priority = 100,
     distance = 40,
     pre_action_cb = function(act)
       local doer = act.doer
       local obj = doer.inscinerator
       obj:StopTargeting(doer)
-      return doer.inscinerator.components.aoetargeting:StopTargeting()
+      return true
     end,
     fn = function(act)
       local doer = act.doer

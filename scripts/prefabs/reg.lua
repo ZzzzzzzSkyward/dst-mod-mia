@@ -46,11 +46,11 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 -- Inscienerator
 local function DisableInscinerator(inst)
-  if inst.inscinerator then inst.inscinerator.components.aoetargeting:StopTargeting() end
+  if inst.inscinerator then inst.inscinerator:StopTargeting() end
 end
 local function KillInscinerator(inst)
   if inst.inscinerator then
-    inst.inscinerator.components.aoetargeting:StopTargeting()
+    inst.inscinerator:StopTargeting()
     inst.inscinerator:Remove()
     inst.inscinerator = nil
   end
@@ -168,5 +168,7 @@ local master_postinit = function(inst)
   inst:DoTaskInTime(0, TrySpawnInscinerator)
   inst:ListenForEvent("timerdone",
    function(inst, data) if data.name == "forgetlightninghit" then ForgetLightningHit(inst) end end)
+  inst:ListenForEvent("death", DisableInscinerator)
+  inst:ListenForEvent("equip", DisableInscinerator)
 end
 return MakePlayerCharacter("reg", prefabs, assets, common_postinit, master_postinit, start_inv)
