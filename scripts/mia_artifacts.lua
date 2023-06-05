@@ -228,7 +228,8 @@ local inscinerator_light = {
   falloff = 3,
   radius = 1,
   intensity = 0.1,
-  color = RGB(249, 123, 21)
+  color = RGB(249, 123, 21),
+  pos = {-120, 40, 0.2}
 }
 local function inscinerator_StartTargeting(inst, doer)
   print("inscinerator_StartTargeting")
@@ -239,7 +240,8 @@ local function inscinerator_StartTargeting(inst, doer)
     local parent = inst:GetParent()
     lightfx.entity:SetParent(parent.entity)
     lightfx.entity:AddFollower()
-    lightfx.Follower:FollowSymbol(parent.GUID, "swap_object", 15, 130, 0)
+    lightfx.Follower:FollowSymbol(parent.GUID, "arm_lower", unpack(inscinerator_light.pos))
+    lightfx.AnimState:SetFinalOffset(2)
     inst._light = lightfx
 
     doer.AnimState:Show("ARM_carry")

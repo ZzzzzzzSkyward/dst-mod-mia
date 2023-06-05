@@ -82,7 +82,6 @@ local master_postinit = function(inst)
     inst.components.health:SetMaxHealth(TUNING.NANACHI_HEALTH)
     inst.components.hunger:SetMax(TUNING.NANACHI_HUNGER)
     inst.components.sanity:SetMax(TUNING.NANACHI_SANITY)
-    -- inst.components.combat.damagemultiplier = 1
     inst:AddComponent("sanityaura")
     inst.components.sanityaura.aura = TUNING.SANITYAURA_MED
     inst.components.locomotor:SetTriggersCreep(false)
