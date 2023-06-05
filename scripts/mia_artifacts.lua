@@ -232,7 +232,6 @@ local inscinerator_light = {
   pos = {-120, 40, 0.2}
 }
 local function inscinerator_StartTargeting(inst, doer)
-  print("inscinerator_StartTargeting")
   if inst:HasTag("launching") then return end
   -- #FIXME
   if not inst._light then
@@ -267,7 +266,6 @@ local function launchtask(inst)
   end
 end
 local function inscinerator_StopTargeting(inst)
-  print("inscinerator_StopTargeting")
   if inst._light then
     inst._light:Remove()
     inst._light = nil
@@ -277,7 +275,6 @@ end
 local function inscinerator_Launch(inst, pos, target)
   if inst:HasTag("launching") then return end
   if inst._light then
-    print("inscinerator_Launch")
     inst.components.aoetargeting:StopTargeting()
     local tick = 0.2
     inst:AddTag("launching")
@@ -430,7 +427,7 @@ local defs = {
     postinit = function(inst) inst:AddComponent("activatable") end
   },
   longetivity_drink = {
-    -- disabled = true,
+    disabled = true,
     assets = {Asset("ANIM", "anim/longetivity_drink.zip")},
     bank = "longetivity_drink",
     build = "longetivity_drink",
@@ -752,7 +749,7 @@ It was eaten by an aquatic creature in the Sea of Corpses.
     desc = [[火葬炮]]
   },
   fruitful_orb = {
-    -- disabled= true,
+    disabled= true,
     assets = {Asset("ANIM", "anim/fruitful_orb.zip")},
     bank = "fruitful_orb",
     build = "fruitful_orb",
@@ -785,7 +782,7 @@ It was eaten by an aquatic creature in the Sea of Corpses.
         It heals injuries, but can't cure disease]]
   },
   artifact_prushka = {
-    -- disabled = true,
+    disabled = true,
     slot = "neck",
     bank = "artifact_prushka",
     build = "artifact_prushka",

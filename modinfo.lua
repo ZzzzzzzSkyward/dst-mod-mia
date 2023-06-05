@@ -1,4 +1,4 @@
-name = "Riko, Reg ,Nanachi& Prushka"
+name = "Riko, Reg ,Nanachi"
 description =
     [[Riko, a lively and inquisitive girl, a apprentice delver, her dream is to catch up with her mother, become the legendary explorer "White Whistle".
 Reg, the humanoid-looking robot that Riko had found in the Abyss, has lost its memory.
@@ -16,7 +16,7 @@ all_clients_require_mod = true
 icon_atlas = "modicon.xml"
 icon = "modicon.tex"
 server_filter_tags = {"XZmodmaker", "made_in_abyss"}
-version = "20230303.3"
+version = "20230605"
 configuration = {
     {
         name = "language",
@@ -48,7 +48,7 @@ translation = {
             return translation[1].dict[key] or nil
         end,
         dict = {
-            name = "莉可，雷古，娜娜奇与普鲁修卡",
+            name = "莉可，雷古，娜娜奇",
             language = "语言",
             author = "羽织Haori & 宵征, zzzzzzzs",
             unusable = "不可用",
@@ -56,7 +56,7 @@ translation = {
 莉可，活泼而又好奇心旺盛的女孩子，是见习探窟家，梦想追上母亲，成为传说中的探窟家“白笛”。
 雷古，莉可在深渊里发现的，拥有和人类相似外形的机器人，失去了记忆。
 娜娜奇，来自深渊底部的迷之生物，毛茸茸的闻起来很香很香。]],
-            version = [[修改数值和特点]],
+            version = [[]],
             ["Accord to the game"] = "跟随游戏设置",
             ["Set Language"] = "设置语言",
             Keybinds = "按键绑定",
@@ -76,7 +76,7 @@ translation = {
         dict = {
             name = name,
             description = description,
-            version = [[Change stats and perks.]],
+            version = [[]],
             complement_hover = "Give Riko's starting items if they no longer exist in the world."
         },
         translateFunction = function(key)
