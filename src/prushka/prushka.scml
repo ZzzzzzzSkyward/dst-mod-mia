@@ -35,9 +35,9 @@
         <file id="0" name="torso/torso-0.png" width="81" height="116" pivot_x="0.493348" pivot_y="0.2714"/>
         <file id="1" name="torso/torso-1.png" width="81" height="116" pivot_x="0.469512" pivot_y="0.2714"/>
         <file id="2" name="torso/torso-2.png" width="81" height="116" pivot_x="0.5" pivot_y="0.2714"/>
-        <file id="3" name="torso/torso-3.png" width="79" height="121" pivot_x="0.48539" pivot_y="0.4145"/>
-        <file id="4" name="torso/torso-4.png" width="79" height="121" pivot_x="0.45529" pivot_y="0.4145"/>
-        <file id="5" name="torso/torso-5.png" width="79" height="121" pivot_x="0.521795" pivot_y="0.4145"/>
+        <file id="3" name="torso/torso-3.png" width="79" height="121" pivot_x="0.515573" pivot_y="0.27"/>
+        <file id="4" name="torso/torso-4.png" width="79" height="121" pivot_x="0.5155" pivot_y="0.34"/>
+        <file id="5" name="torso/torso-5.png" width="79" height="121" pivot_x="0.468" pivot_y="0.34"/>
         <file id="6" name="torso/torso-6.png" width="76" height="120" pivot_x="0.468079" pivot_y="0.2"/>
         <file id="7" name="torso/torso-7.png" width="76" height="120" pivot_x="0.494277" pivot_y="0.2"/>
         <file id="8" name="torso/torso-8.png" width="76" height="120" pivot_x="0.531476" pivot_y="0.2"/>
@@ -74,9 +74,9 @@
         <file id="4" name="hairpigtails/hairpigtails-4.png" width="171" height="185" pivot_x="0.383342" pivot_y="0.654806"/>
     </folder>
     <folder id="6" name="headbase">
-        <file id="0" name="headbase/headbase-0.png" width="263" height="231" pivot_x="0.535124" pivot_y="0.125595"/>
-        <file id="1" name="headbase/headbase-1.png" width="220" height="202" pivot_x="0.670875" pivot_y="0.0926282"/>
-        <file id="2" name="headbase/headbase-2.png" width="263" height="231" pivot_x="0.523885" pivot_y="0.0952915"/>
+        <file id="0" name="headbase/headbase-0.png" width="266" height="185" pivot_x="0.515038" pivot_y="0.07"/>
+        <file id="1" name="headbase/headbase-1.png" width="220" height="202" pivot_x="0.561935" pivot_y="0.1"/>
+        <file id="2" name="headbase/headbase-2.png" width="282" height="231" pivot_x="0.523885" pivot_y="0.0952915"/>
         <file id="3" name="headbase/headbase-3.png" width="263" height="231" pivot_x="0.535124" pivot_y="0.125595"/>
     </folder>
     <folder id="7" name="cheeks">
@@ -88,10 +88,10 @@
         <file id="1" name="face/face-1.png" width="129" height="93" pivot_x="0.546617" pivot_y="0.680952"/>
         <file id="2" name="face/face-2.png" width="123" height="126" pivot_x="0.551306" pivot_y="0.848134"/>
         <file id="3" name="face/face-3.png" width="129" height="93" pivot_x="0.535156" pivot_y="0.724684"/>
-        <file id="4" name="face/face-4.png" width="72" height="88" pivot_x="0.834211" pivot_y="0.62663"/>
-        <file id="5" name="face/face-5.png" width="65" height="64" pivot_x="0.841667" pivot_y="0.700915"/>
-        <file id="6" name="face/face-6.png" width="75" height="80" pivot_x="0.844817" pivot_y="0.856716"/>
-        <file id="7" name="face/face-7.png" width="71" height="76" pivot_x="0.840823" pivot_y="0.756908"/>
+        <file id="4" name="face/face-4.png" width="72" height="88" pivot_x="0.471396" pivot_y="0.64"/>
+        <file id="5" name="face/face-5.png" width="65" height="64" pivot_x="0.646" pivot_y="0.83"/>
+        <file id="6" name="face/face-6.png" width="75" height="80" pivot_x="0.52" pivot_y="0.775"/>
+        <file id="7" name="face/face-7.png" width="71" height="76" pivot_x="0.56338" pivot_y="0.66"/>
         <file id="8" name="face/face-8.png" width="129" height="93" pivot_x="0.531589" pivot_y="0.611022"/>
         <file id="9" name="face/face-9.png" width="129" height="93" pivot_x="0.531589" pivot_y="0.641584"/>
         <file id="10" name="face/face-10.png" width="129" height="93" pivot_x="0.531589" pivot_y="0.653095"/>
@@ -130,152 +130,36 @@
         <file id="7" name="foot/foot-7.png" width="40" height="24" pivot_x="0.38125" pivot_y="1.09773"/>
     </folder>
     <folder id="10" name="SWAP_ICON">
-        <file id="0" name="SWAP_ICON/SWAP_ICON-0.png" width="258" height="184" pivot_x="0.499937" pivot_y="0.488144"/>
+        <file id="0" name="SWAP_ICON/SWAP_ICON-0.png" width="219" height="137" pivot_x="0.499937" pivot_y="0.488144"/>
     </folder>
     <folder id="11" name="headbase_hat">
-        <file id="0" name="headbase_hat/headbase_hat-0.png" width="263" height="231" pivot_x="0.535124" pivot_y="0.125595"/>
-        <file id="1" name="headbase_hat/headbase_hat-1.png" width="220" height="202" pivot_x="0.670875" pivot_y="0.0926282"/>
-        <file id="2" name="headbase_hat/headbase_hat-2.png" width="263" height="231" pivot_x="0.523885" pivot_y="0.0952915"/>
-        <file id="3" name="headbase_hat/headbase_hat-3.png" width="246" height="187" pivot_x="0.535124" pivot_y="0.125595"/>
+        <file id="0" name="headbase_hat/headbase_hat-0.png" width="266" height="185" pivot_x="0.515038" pivot_y="0.07"/>
+        <file id="1" name="headbase_hat/headbase_hat-1.png" width="220" height="202" pivot_x="0.561935" pivot_y="0.1"/>
+        <file id="2" name="headbase_hat/headbase_hat-2.png" width="282" height="231" pivot_x="0.523885" pivot_y="0.0952915"/>
+        <file id="3" name="headbase_hat/headbase_hat-3.png" width="263" height="231" pivot_x="0.535124" pivot_y="0.125595"/>
     </folder>
     <entity id="0" name="wilson">
-        <obj_info name="wilson_face" realname="face" type="sprite">
-            <frames>
-                <i folder="8" file="0"/>
-                <i folder="8" file="10"/>
-                <i folder="8" file="21"/>
-                <i folder="8" file="15"/>
-                <i folder="8" file="2"/>
-            </frames>
-        </obj_info>
-        <obj_info name="wilson_headbase" realname="headbase" type="sprite">
-            <frames>
-                <i folder="6" file="0"/>
-            </frames>
-        </obj_info>
-        <obj_info name="wilson_torso" realname="torso" type="sprite">
-            <frames>
-                <i folder="2" file="0"/>
-            </frames>
-        </obj_info>
-        <obj_info name="wilson_foot_0" realname="foot_0" type="sprite">
-            <frames>
-                <i folder="9" file="0"/>
-            </frames>
-        </obj_info>
-        <obj_info name="wilson_leg_0" realname="leg_0" type="sprite">
-            <frames>
-                <i folder="3" file="0"/>
-                <i folder="3" file="4"/>
-                <i folder="3" file="1"/>
-            </frames>
-        </obj_info>
-        <obj_info name="wilson_foot_1" realname="foot_1" type="sprite">
-            <frames>
-                <i folder="9" file="0"/>
-            </frames>
-        </obj_info>
-        <obj_info name="wilson_leg_1" realname="leg_1" type="sprite">
-            <frames>
-                <i folder="3" file="0"/>
-                <i folder="3" file="4"/>
-                <i folder="3" file="1"/>
-            </frames>
-        </obj_info>
-        <obj_info name="wilson_arm_upper_0" realname="arm_upper_0" type="sprite">
-            <frames>
-                <i folder="4" file="0"/>
-                <i folder="4" file="2"/>
-            </frames>
-        </obj_info>
-        <obj_info name="wilson_hand_0" realname="hand_0" type="sprite">
-            <frames>
-                <i folder="1" file="0"/>
-                <i folder="1" file="17"/>
-                <i folder="1" file="6"/>
-                <i folder="1" file="1"/>
-            </frames>
-        </obj_info>
-        <obj_info name="wilson_arm_lower_0" realname="arm_lower_0" type="sprite">
-            <frames>
-                <i folder="0" file="0"/>
-            </frames>
-        </obj_info>
-        <obj_info name="wilson_hand_1" realname="hand_1" type="sprite">
-            <frames>
-                <i folder="1" file="0"/>
-                <i folder="1" file="17"/>
-            </frames>
-        </obj_info>
-        <obj_info name="wilson_arm_upper_1" realname="arm_upper_1" type="sprite">
-            <frames>
-                <i folder="4" file="0"/>
-                <i folder="4" file="2"/>
-            </frames>
-        </obj_info>
-        <obj_info name="wilson_arm_lower_1" realname="arm_lower_1" type="sprite">
-            <frames>
-                <i folder="0" file="0"/>
-            </frames>
-        </obj_info>
-        <obj_info name="wilson_hand_2" realname="hand_2" type="sprite">
-            <frames>
-                <i folder="1" file="1"/>
-                <i folder="1" file="10"/>
-                <i folder="1" file="6"/>
-                <i folder="1" file="17"/>
-            </frames>
-        </obj_info>
-        <obj_info name="wilson_arm_upper_2" realname="arm_upper_2" type="sprite">
-            <frames>
-                <i folder="4" file="1"/>
-                <i folder="4" file="2"/>
-            </frames>
-        </obj_info>
-        <obj_info name="wilson_arm_lower_2" realname="arm_lower_2" type="sprite">
-            <frames>
-                <i folder="0" file="1"/>
-                <i folder="0" file="0"/>
-            </frames>
-        </obj_info>
-        <obj_info name="wilson_hairpigtails_0" realname="hairpigtails_0" type="sprite">
-            <frames>
-                <i folder="5" file="0"/>
-            </frames>
-        </obj_info>
-        <obj_info name="wilson_hairpigtails_1" realname="hairpigtails_1" type="sprite">
-            <frames>
-                <i folder="5" file="1"/>
-            </frames>
-        </obj_info>
-        <obj_info name="wilson_hand_3" realname="hand_3" type="sprite">
-            <frames>
-                <i folder="1" file="17"/>
-                <i folder="1" file="6"/>
-                <i folder="1" file="1"/>
-            </frames>
-        </obj_info>
         <animation id="0" name="mime100" length="1600" interval="100">
             <mainline>
                 <key id="0">
-                    <object_ref id="0" name="hairpigtails_1" folder="5" file="1" abs_x="-59.70009" abs_y="224.912012" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="17" key="0" z_index="0"/>
-                    <object_ref id="1" name="hairpigtails_0" folder="5" file="0" abs_x="-145.224945" abs_y="232.00009" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="16" key="0" z_index="1"/>
-                    <object_ref id="2" name="arm_lower_2" folder="0" file="1" abs_x="49.076534" abs_y="75.442119" abs_angle="108.584" abs_scale_x="0.993629" abs_scale_y="0.993629" abs_a="1" timeline="15" key="0" z_index="2"/>
-                    <object_ref id="3" name="arm_upper_2" folder="4" file="1" abs_x="-0.689807" abs_y="94.534464" abs_angle="61.0164" abs_scale_x="0.995619" abs_scale_y="0.995619" abs_a="1" timeline="14" key="0" z_index="3"/>
-                    <object_ref id="4" name="hand_2" folder="1" file="1" abs_x="90.899003" abs_y="85.585577" abs_angle="99.4339" abs_scale_x="0.993478" abs_scale_y="0.993493" abs_a="1" timeline="13" key="0" z_index="4"/>
-                    <object_ref id="5" name="arm_lower_1" folder="0" file="0" abs_x="44.171756" abs_y="90.384236" abs_angle="12.0078" abs_scale_x="-0.995054" abs_scale_y="0.995054" abs_a="1" timeline="12" key="0" z_index="5"/>
-                    <object_ref id="6" name="arm_upper_1" folder="4" file="0" abs_x="35.125836" abs_y="126.222023" abs_angle="21.0547" abs_scale_x="-0.997732" abs_scale_y="0.997732" abs_a="1" timeline="11" key="0" z_index="6"/>
-                    <object_ref id="7" name="hand_1" folder="1" file="0" abs_x="57.453072" abs_y="58.537226" abs_angle="358.19" abs_scale_x="-0.99427" abs_scale_y="0.99427" abs_a="1" timeline="10" key="0" z_index="7"/>
-                    <object_ref id="8" name="arm_lower_0" folder="0" file="0" abs_x="-42.071724" abs_y="91.03427" abs_angle="347.992" abs_scale_x="0.995054" abs_scale_y="0.995054" abs_a="1" timeline="9" key="0" z_index="8"/>
-                    <object_ref id="9" name="hand_0" folder="1" file="0" abs_x="-55.353063" abs_y="59.187251" abs_angle="1.80991" abs_scale_x="0.99427" abs_scale_y="0.99427" abs_a="1" timeline="8" key="0" z_index="9"/>
-                    <object_ref id="10" name="arm_upper_0" folder="4" file="0" abs_x="-33.025753" abs_y="126.872091" abs_angle="338.945" abs_scale_x="0.997732" abs_scale_y="0.997732" abs_a="1" timeline="7" key="0" z_index="10"/>
-                    <object_ref id="11" name="leg_1" folder="3" file="0" abs_x="-20.075" abs_y="47.000016" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="6" key="0" z_index="11"/>
-                    <object_ref id="12" name="foot_1" folder="9" file="0" abs_x="-34.8" abs_y="11.275" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="5" key="0" z_index="12"/>
-                    <object_ref id="13" name="leg_0" folder="3" file="0" abs_x="21.275" abs_y="47.000016" abs_angle="0" abs_scale_x="-1" abs_scale_y="1" abs_a="1" timeline="4" key="0" z_index="13"/>
-                    <object_ref id="14" name="foot_0" folder="9" file="0" abs_x="36" abs_y="11.275" abs_angle="0" abs_scale_x="-1" abs_scale_y="1" abs_a="1" timeline="3" key="0" z_index="14"/>
-                    <object_ref id="15" name="torso" folder="2" file="0" abs_x="-39.261188" abs_y="129.4676" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="2" key="0" z_index="15"/>
-                    <object_ref id="16" name="headbase" folder="6" file="0" abs_x="-138.737612" abs_y="322.087555" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="1" key="0" z_index="16"/>
-                    <object_ref id="17" name="face" folder="8" file="0" abs_x="-61.124981" abs_y="219.474954" abs_angle="0" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="0" key="0" z_index="17"/>
+                    <object_ref id="0" timeline="17" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="16" key="0" z_index="1"/>
+                    <object_ref id="2" timeline="15" key="0" z_index="2"/>
+                    <object_ref id="3" timeline="14" key="0" z_index="3"/>
+                    <object_ref id="4" timeline="13" key="0" z_index="4"/>
+                    <object_ref id="5" timeline="12" key="0" z_index="5"/>
+                    <object_ref id="6" timeline="11" key="0" z_index="6"/>
+                    <object_ref id="7" timeline="10" key="0" z_index="7"/>
+                    <object_ref id="8" timeline="9" key="0" z_index="8"/>
+                    <object_ref id="9" timeline="8" key="0" z_index="9"/>
+                    <object_ref id="10" timeline="7" key="0" z_index="10"/>
+                    <object_ref id="11" timeline="6" key="0" z_index="11"/>
+                    <object_ref id="12" timeline="5" key="0" z_index="12"/>
+                    <object_ref id="13" timeline="4" key="0" z_index="13"/>
+                    <object_ref id="14" timeline="3" key="0" z_index="14"/>
+                    <object_ref id="15" timeline="2" key="0" z_index="15"/>
+                    <object_ref id="16" timeline="1" key="0" z_index="16"/>
+                    <object_ref id="17" timeline="0" key="0" z_index="17"/>
                 </key>
                 <key id="1" time="34">
                     <object_ref id="0" timeline="17" key="1" z_index="0"/>
@@ -1259,7 +1143,7 @@
                     <object_ref id="17" timeline="0" key="48" z_index="17"/>
                 </key>
             </mainline>
-            <timeline id="0" obj="0" name="face">
+            <timeline id="0" name="face">
                 <key id="0" spin="0">
                     <object folder="8" file="0" x="7.45" y="183.3" angle="0"/>
                 </key>
@@ -1408,7 +1292,7 @@
                     <object folder="8" file="0" x="7.4" y="182.25" angle="0" scale_x="1.00137" scale_y="0.993988"/>
                 </key>
             </timeline>
-            <timeline id="1" obj="1" name="headbase">
+            <timeline id="1" name="headbase">
                 <key id="0" spin="0">
                     <object folder="6" file="0" x="2" y="120.1" angle="0"/>
                 </key>
@@ -1557,7 +1441,7 @@
                     <object folder="6" file="0" x="1.85" y="119.5" angle="0" scale_x="1.00137" scale_y="0.998398"/>
                 </key>
             </timeline>
-            <timeline id="2" obj="2" name="torso">
+            <timeline id="2" name="torso">
                 <key id="0" spin="0">
                     <object folder="2" file="0" x="0.7" y="44.95" angle="0"/>
                 </key>
@@ -1706,7 +1590,7 @@
                     <object folder="2" file="0" x="0.599933" y="44.499" angle="0" scale_x="1.00137" scale_y="0.998398"/>
                 </key>
             </timeline>
-            <timeline id="3" obj="3" name="foot_0">
+            <timeline id="3" name="foot_0">
                 <key id="0" spin="-1">
                     <object folder="9" file="0" x="6.75" y="10.05" angle="0" scale_x="-1"/>
                 </key>
@@ -1855,7 +1739,7 @@
                     <object folder="9" file="0" x="6.8" y="10.05" angle="359.92" scale_x="-1" scale_y="1.00011"/>
                 </key>
             </timeline>
-            <timeline id="4" obj="4" name="leg_0">
+            <timeline id="4" name="leg_0">
                 <key id="0">
                     <object folder="3" file="0" x="6.75" y="40.05" angle="0" scale_x="-1"/>
                 </key>
@@ -2004,7 +1888,7 @@
                     <object folder="3" file="0" x="7" y="39.75" angle="179.806" scale_x="1.00078" scale_y="-0.99929"/>
                 </key>
             </timeline>
-            <timeline id="5" obj="5" name="foot_1">
+            <timeline id="5" name="foot_1">
                 <key id="0">
                     <object folder="9" file="0" x="-5.55" y="10.05" angle="0"/>
                 </key>
@@ -2153,7 +2037,7 @@
                     <object folder="9" file="0" x="-5.55" y="10.05" angle="0.094841" scale_y="1.00016"/>
                 </key>
             </timeline>
-            <timeline id="6" obj="6" name="leg_1">
+            <timeline id="6" name="leg_1">
                 <key id="0" spin="-1">
                     <object folder="3" file="0" x="-5.55" y="40.05" angle="0"/>
                 </key>
@@ -2302,7 +2186,7 @@
                     <object folder="3" file="0" x="-5.8" y="39.75" angle="0.157931" scale_x="1.00078" scale_y="0.999191"/>
                 </key>
             </timeline>
-            <timeline id="7" obj="7" name="arm_upper_0">
+            <timeline id="7" name="arm_upper_0">
                 <key id="0" spin="-1">
                     <object folder="4" file="0" x="-19.8745" y="110.976" angle="338.945" scale_x="0.997732" scale_y="0.997732"/>
                 </key>
@@ -2451,7 +2335,7 @@
                     <object folder="4" file="0" x="-19.8268" y="109.878" angle="339.173" scale_x="1.00314" scale_y="1.00138"/>
                 </key>
             </timeline>
-            <timeline id="8" obj="8" name="hand_0">
+            <timeline id="8" name="hand_0">
                 <key id="0" spin="-1">
                     <object folder="1" file="0" x="-39.4" y="53.3" angle="1.80991" scale_x="0.99427" scale_y="0.99427"/>
                 </key>
@@ -2597,7 +2481,7 @@
                     <object folder="1" file="0" x="-39.05" y="51.85" angle="2.01303" scale_x="0.996408" scale_y="1.00131"/>
                 </key>
             </timeline>
-            <timeline id="9" obj="9" name="arm_lower_0">
+            <timeline id="9" name="arm_lower_0">
                 <key id="0" spin="-1">
                     <object folder="0" file="0" x="-32.5" y="81.75" angle="347.992" scale_x="0.995054" scale_y="0.995054"/>
                 </key>
@@ -2746,7 +2630,7 @@
                     <object folder="0" file="0" x="-32.2" y="80.5" angle="348.215" scale_x="0.999144" scale_y="1.00014"/>
                 </key>
             </timeline>
-            <timeline id="10" obj="10" name="hand_1">
+            <timeline id="10" name="hand_1">
                 <key id="0">
                     <object folder="1" file="0" x="41.5" y="52.65" angle="358.19" scale_x="-0.99427" scale_y="0.99427"/>
                 </key>
@@ -2796,7 +2680,7 @@
                     <object folder="1" file="0" x="39.05" y="52.6" angle="358.651" scale_x="-0.994973" scale_y="0.994165"/>
                 </key>
             </timeline>
-            <timeline id="11" obj="11" name="arm_upper_1">
+            <timeline id="11" name="arm_upper_1">
                 <key id="0">
                     <object folder="4" file="0" x="21.9745" y="110.326" angle="21.0547" scale_x="-0.997732" scale_y="0.997732"/>
                 </key>
@@ -2945,7 +2829,7 @@
                     <object folder="4" file="0" x="19.7759" y="110.427" angle="20.873" scale_x="-0.998546" scale_y="0.998645"/>
                 </key>
             </timeline>
-            <timeline id="12" obj="12" name="arm_lower_1">
+            <timeline id="12" name="arm_lower_1">
                 <key id="0">
                     <object folder="0" file="0" x="34.6" y="81.1" angle="12.0078" scale_x="-0.995054" scale_y="0.995054"/>
                 </key>
@@ -3094,7 +2978,7 @@
                     <object folder="0" file="0" x="32.35" y="81.2" angle="11.8918" scale_x="-0.995862" scale_y="0.994782"/>
                 </key>
             </timeline>
-            <timeline id="13" obj="13" name="hand_2">
+            <timeline id="13" name="hand_2">
                 <key id="0" spin="-1">
                     <object folder="1" file="1" x="92.75" y="104.6" angle="99.4339" scale_x="0.993478" scale_y="0.993493"/>
                 </key>
@@ -3243,7 +3127,7 @@
                     <object folder="1" file="1" x="91.8" y="101.55" angle="94.8688" scale_x="0.993189" scale_y="0.993411"/>
                 </key>
             </timeline>
-            <timeline id="14" obj="14" name="arm_upper_2">
+            <timeline id="14" name="arm_upper_2">
                 <key id="0" spin="-1">
                     <object folder="4" file="1" x="21.6952" y="106.719" angle="61.0164" scale_x="0.995619" scale_y="0.995619"/>
                 </key>
@@ -3392,7 +3276,7 @@
                     <object folder="4" file="1" x="21.6463" y="106.324" angle="60.0879" scale_x="0.995346" scale_y="1.0006"/>
                 </key>
             </timeline>
-            <timeline id="15" obj="15" name="arm_lower_2">
+            <timeline id="15" name="arm_lower_2">
                 <key id="0" spin="-1">
                     <object folder="0" file="1" x="53.65" y="89.9" angle="108.584" scale_x="0.993629" scale_y="0.993629"/>
                 </key>
@@ -3541,7 +3425,7 @@
                     <object folder="0" file="1" x="53.25" y="88.6" angle="105.794" scale_x="0.992691" scale_y="0.986311"/>
                 </key>
             </timeline>
-            <timeline id="16" obj="16" name="hairpigtails_0">
+            <timeline id="16" name="hairpigtails_0">
                 <key id="0" spin="-1">
                     <object folder="5" file="0" x="-43.35" y="177.35" angle="0"/>
                 </key>
@@ -3690,7 +3574,7 @@
                     <object folder="5" file="0" x="-43.05" y="176.35" angle="0.508173" scale_x="1.0013" scale_y="0.998649"/>
                 </key>
             </timeline>
-            <timeline id="17" obj="17" name="hairpigtails_1">
+            <timeline id="17" name="hairpigtails_1">
                 <key id="0">
                     <object folder="5" file="1" x="47.85" y="165.1" angle="0"/>
                 </key>
@@ -3839,7 +3723,7 @@
                     <object folder="5" file="1" x="47.6" y="164.25" angle="359.804" scale_x="1.00124" scale_y="0.998465"/>
                 </key>
             </timeline>
-            <timeline id="18" obj="18" name="hand_3">
+            <timeline id="18" name="hand_3">
                 <key id="0" time="134">
                     <object folder="1" file="17" x="-94.7" y="142.05" angle="227.618" scale_x="1.22133" scale_y="1.22133"/>
                 </key>
