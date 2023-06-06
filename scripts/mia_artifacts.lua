@@ -260,7 +260,7 @@ local function postprocesstask(parent)
     if parent and parent:IsValid() then
       local x, y = TheSim:GetScreenPos(parent.AnimState:GetSymbolPosition("arm_lower",
        unpack(inscinerator_light.postpos)))
-      local radius = GetRadius()
+      local radius = parent._GetFXRadius and parent:_GetFXRadius() or GetRadius()
       PostProcessor:SetUniformVariable(UniformVariables.INSCINERATOR_CENTER, x, y, radius)
     end
   end
@@ -299,21 +299,32 @@ local function inscinerator_StartTargeting(inst, doer)
     inst.components.aoetargeting:StartTargeting()
   end
 end
+local launch_target_radius = 5
 local function launchtask(inst)
-  local final = 5
+  local final = launch_target_radius
   local radius = inst._light.Light:GetRadius()
   if radius < final then
     inst._light.Light:SetRadius(radius + 0.5)
   else
+    local parent = inst:GetParent()
     inst._ticktask:Cancel()
     inst._ticktask = nil
     inst._light:Remove()
     inst._light = nil
     DisablePostProcess(inst)
-    StopTrackMouse(inst:GetParent())
-    -- #FIXME
+    parent._GetFXRadius = nil
     inst:DoTaskInTime(5, function(inst) inst:RemoveTag("launching") end)
     return inst.components.aoeprojectile:Launch()
+  end
+end
+local function MakeRadiusFn(startrad, endrad, duration)
+  local starttime = GetTime()
+  return function()
+    local t = GetTime()
+    local dt = t - starttime
+    if dt > duration then return endrad end
+    local r = startrad + (endrad - startrad) * dt / duration
+    return r
   end
 end
 local function inscinerator_StopTargeting(inst)
@@ -331,12 +342,14 @@ local function inscinerator_Launch(inst, pos, target)
   if inst._light then
     print("inscinerator_Launch")
     inst.components.aoetargeting:StopTargeting()
-    local tick = 0.2
     inst:AddTag("launching")
-    -- #FIXME use anim or shader, this updates too slow
-    inst._ticktask = inst:DoPeriodicTask(tick, launchtask)
+    local parent = inst:GetParent()
+    StopTrackMouse(parent)
+    parent._GetFXRadius = MakeRadiusFn(GetRadius(), launch_target_radius, 1)
+    local tick = 0.2
     inst.components.aoetargeting.pos = pos
     inst.components.aoetargeting.target = target
+    inst._ticktask = inst:DoPeriodicTask(tick, launchtask)
   end
 end
 
