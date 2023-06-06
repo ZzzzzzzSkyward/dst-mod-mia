@@ -1,5 +1,5 @@
+local cooking = require("cooking")
 local function hacktag()
-  local cooking = require("cooking")
   local cookerrecipes = cooking.recipes
   local CalculateRecipe = cooking.CalculateRecipe
   -- remove and add to skip recipes that the chef cannot cook
