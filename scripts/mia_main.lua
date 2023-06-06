@@ -75,23 +75,23 @@ for k, v in pairs(powerlevel) do
 end
 import("mia_compatibility")
 
-do return end
 AddModShadersInit(function()
   -- 变量: x,y
-  UniformVariables.INSCINERATOR_CENTER = PostProcessor:AddUniformVariable("INSCINERATOR_CENTER", 2)
+  UniformVariables.INSCINERATOR_CENTER = PostProcessor:AddUniformVariable("INSCINERATOR_CENTER", 3)
   local path = resolvefilepath("shaders/glow.ksh")
   PostProcessorEffects.INSCINERATOR_CENTER = PostProcessor:AddPostProcessEffect(path)
   PostProcessor:SetEffectUniformVariables(PostProcessorEffects.INSCINERATOR_CENTER, UniformVariables.INSCINERATOR_CENTER)
 end)
 AddModShadersSortAndEnable(function()
-  PostProcessor:SetPostProcessEffectAfter(PostProcessorEffects.INSCINERATOR_CENTER,
-   PostProcessorEffects.INSCINERATOR_CENTER)
+  PostProcessor:SetPostProcessEffectAfter(PostProcessorEffects.INSCINERATOR_CENTER, PostProcessorEffects.Lunacy)
   PostProcessor:EnablePostProcessEffect(PostProcessorEffects.INSCINERATOR_CENTER, false)
-  PostProcessor:SetUniformVariable(UniformVariables.INSCINERATOR_CENTER, 0, 0)
+  PostProcessor:SetUniformVariable(UniformVariables.INSCINERATOR_CENTER, 0, 0, 0)
 end)
+do return end
 AddPlayerPostInit(function(inst)
-  inst:DoPeriodicTask(1, function()
+  inst:DoPeriodicTask(0.3, function()
     local x, y, z = TheInput:GetScreenPosition():Get()
-    PostProcessor:SetUniformVariable(UniformVariables.INSCINERATOR_CENTER, x, y)
+    local w, h = TheSim:GetScreenSize()
+    PostProcessor:SetUniformVariable(UniformVariables.INSCINERATOR_CENTER, x, y, 1)
   end)
 end)

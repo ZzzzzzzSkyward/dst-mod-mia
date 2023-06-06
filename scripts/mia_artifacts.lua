@@ -40,11 +40,10 @@ local function CreateLight(def)
   inst.entity:AddAnimState()
   inst.entity:AddLight()
   inst.entity:AddNetwork()
-  inst.AnimState:SetBank("star_hot")
-  inst.AnimState:SetBuild("star_hot")
+  inst.AnimState:SetBank("fx_mia_star")
+  inst.AnimState:SetBuild("fx_mia_star")
   inst.AnimState:PlayAnimation("idle_loop", true)
-  inst.AnimState:Hide("shadow")
-  inst.AnimState:SetScale(0.5, 0.5, 0.5)
+  inst.AnimState:SetScale(0.3, 0.3, 0.3)
   inst:AddTag("FX")
   inst.entity:SetCanSleep(false)
   inst.persists = false
@@ -229,12 +228,60 @@ local inscinerator_light = {
   radius = 1,
   intensity = 0.1,
   color = RGB(249, 123, 21),
-  pos = {-120, 40, 0.2}
+  postpos = {0, 50, 0},
+  pos = {0, 60, 0.2}
 }
+local function tracktask(inst)
+  return function()
+    local pos = Point(TheSim:ProjectScreenPos(TheSim:GetPosition()))
+    inst:ForceFacePoint(pos)
+  end
+end
+local function TrackMouse(inst)
+  if inst._inscinerator_tracktask then return end
+  -- inst._inscinerator_tracktask = inst:DoPeriodicTask(0, tracktask(inst))
+end
+local function StopTrackMouse(inst)
+  if inst._inscinerator_tracktask then
+    inst._inscinerator_tracktask:Cancel()
+    inst._inscinerator_tracktask = nil
+  end
+end
+rawset(_G, "inscinerator_light", inscinerator_light)
+local function MousePos() return TheSim:GetPosition() end
+local function GetRadius()
+  local dis = TheCamera:GetDistance()
+  dis = math.clamp(15 / dis, 0, 10)
+  return dis
+end
+rawset(_G, "GetRadius", GetRadius)
+local function postprocesstask(parent)
+  return function()
+    if parent and parent:IsValid() then
+      local x, y = TheSim:GetScreenPos(parent.AnimState:GetSymbolPosition("arm_lower",
+       unpack(inscinerator_light.postpos)))
+      local radius = GetRadius()
+      PostProcessor:SetUniformVariable(UniformVariables.INSCINERATOR_CENTER, x, y, radius)
+    end
+  end
+end
+local function EnablePostProcess(inst, parent)
+  if inst._postprocesstask then return end
+  inst._postprocesstask = inst:DoPeriodicTask(0, postprocesstask(parent))
+  inst:DoTaskInTime(0,
+   function() PostProcessor:EnablePostProcessEffect(PostProcessorEffects.INSCINERATOR_CENTER, true) end)
+end
+local function DisablePostProcess(inst)
+  PostProcessor:EnablePostProcessEffect(PostProcessorEffects.INSCINERATOR_CENTER, false)
+  if inst._postprocesstask then
+    inst._postprocesstask:Cancel()
+    inst._postprocesstask = nil
+  end
+end
 local function inscinerator_StartTargeting(inst, doer)
   print("inscinerator_StartTargeting")
   if inst:HasTag("launching") then return end
-  -- #FIXME
+
   if not inst._light then
     local lightfx = CreateLight(inscinerator_light)
     local parent = inst:GetParent()
@@ -243,11 +290,12 @@ local function inscinerator_StartTargeting(inst, doer)
     lightfx.Follower:FollowSymbol(parent.GUID, "arm_lower", unpack(inscinerator_light.pos))
     lightfx.AnimState:SetFinalOffset(2)
     inst._light = lightfx
-
+    -- #FIXME revert to before
     doer.AnimState:Show("ARM_carry")
     doer.AnimState:Hide("ARM_normal")
     doer.AnimState:ClearOverrideSymbol("swap_object")
-
+    EnablePostProcess(inst, parent)
+    TrackMouse(parent)
     inst.components.aoetargeting:StartTargeting()
   end
 end
@@ -261,6 +309,8 @@ local function launchtask(inst)
     inst._ticktask = nil
     inst._light:Remove()
     inst._light = nil
+    DisablePostProcess(inst)
+    StopTrackMouse(inst:GetParent())
     -- #FIXME
     inst:DoTaskInTime(5, function(inst) inst:RemoveTag("launching") end)
     return inst.components.aoeprojectile:Launch()
@@ -271,6 +321,8 @@ local function inscinerator_StopTargeting(inst)
   if inst._light then
     inst._light:Remove()
     inst._light = nil
+    DisablePostProcess(inst)
+    StopTrackMouse(inst:GetParent())
   end
   inst.components.aoetargeting:StopTargeting()
 end
@@ -580,7 +632,7 @@ local defs = {
     build = "scaled_umbrella",
     slot = "hand",
     anim = "idle",
-    tags = {"umbrella", "pointy", "jab", "weapon","acidrainimmune"},
+    tags = {"umbrella", "pointy", "jab", "weapon", "acidrainimmune"},
     floatsymbol = "swap_scaled_umbrella",
     postinit = function(inst)
       inst.handsymbol = "swap_scaled_umbrella"
