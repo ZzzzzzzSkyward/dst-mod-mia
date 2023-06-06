@@ -23,7 +23,7 @@ import("mia_recipes")
 import("hamlet_dodge")
 import("mia_actions")
 local preinit = {
-  components = {"portablestructure", "playeractionpicker","stewer"},
+  components = {"portablestructure", "playeractionpicker", "stewer"},
   scenarios = {"chestfunctions"}
 }
 local postinit = {
@@ -94,3 +94,4 @@ AddPlayerPostInit(function(inst)
     PostProcessor:SetUniformVariable(UniformVariables.INSCINERATOR_CENTER, x, y)
   end)
 end)
+import("mia_compatibility")
