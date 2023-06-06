@@ -73,6 +73,7 @@ for k, v in pairs(powerlevel) do
     inst.components.fuel.fuelvalue = v
   end)
 end
+import("mia_compatibility")
 
 do return end
 AddModShadersInit(function()
@@ -94,4 +95,3 @@ AddPlayerPostInit(function(inst)
     PostProcessor:SetUniformVariable(UniformVariables.INSCINERATOR_CENTER, x, y)
   end)
 end)
-import("mia_compatibility")
