@@ -793,6 +793,7 @@ It was eaten by an aquatic creature in the Sea of Corpses.
       inst.components.relicequip.equipslot = RELICSLOTS.ARM
       inst.components.relicequip.un_unequippable = true
       inst:AddComponent("aoeprojectile")
+      inst.components.aoeprojectile:SetCannon("inscinerator_particle")
       -- see action def
       inst.StartTargeting = inscinerator_StartTargeting
       inst.StopTargeting = inscinerator_StopTargeting

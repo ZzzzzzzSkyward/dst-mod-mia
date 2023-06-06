@@ -10,21 +10,12 @@ uniform vec4 SCREEN_PARAMS;
 
 #define W_H  (SCREEN_PARAMS.x / SCREEN_PARAMS.y)
 
-uniform vec4 HOMURA_BLAST;
-
-#define P            HOMURA_BLAST
-#define X 	         P.x
-#define Y            P.y
-#define OUTER_RADIUS P.z
-#define INNER_RADIUS P.z - 0.04
-#define INTENSITY	 P.w
-
 varying vec2 PS_TEXCOORD0;
 
 //uniform vec2 u_resolution;
 //uniform vec2 u_mouse;
 uniform vec4 TIMEPARAMS;
-#define iTIme TIMEPARAMS.x
+#define iTime TIMEPARAMS.x
 
 #define PI 3.141592653589793238
 
@@ -53,11 +44,11 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord ){
     float c0 = 0.0;
 
     for (float i = 0.0; i < radius*50.0; ++i) {
-        float t = 1.8 * iTIme + hash11(i);
+        float t = 1.8 * iTime + hash11(i);
 
         vec2 v = hash21(i + 50.0 * floor(t));
         t = fract(t);
-        v = vec2(sqrt(-2.0 * log(1.0 - v.x)), 6.283185 * v.y);
+        v = vec2(sqrt(-2.0 * log(1.0 - v.x)), PI*2 * v.y);
         v = 15.*pow(radius,0.5)*v.x*vec2(cos(v.y), sin(v.y));
 
         vec2 p = center + t * v - fragCoord;
@@ -77,14 +68,13 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord ){
     }
 
     vec3 rgb = c0 * base_color;
-    rgb += hash33(vec3(fragCoord, iTIme * 256.0)) / 512.0;
+    rgb += hash33(vec3(fragCoord, iTime * 256.0)) / 512.0;
     rgb = pow(rgb, vec3(0.7));
     fragColor = vec4(rgb, 1.0);
-    //add with source image "SRC_IMAGE" here with texture2D(), mix type is additive
-    vec4 src = texture2D(SRC_IMAGE, PS_TEXCOORD0);
-    fragColor =src+fragColor;
-
 }
 void main(){
     mainImage(gl_FragColor, gl_FragCoord.xy);
+    //add with source image "SRC_IMAGE" here with texture2D(), mix type is additive
+    vec4 src = texture2D(SRC_IMAGE, PS_TEXCOORD0);
+    gl_FragColor =src+gl_FragColor;
 }

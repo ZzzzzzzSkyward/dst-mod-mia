@@ -76,18 +76,30 @@ end
 import("mia_compatibility")
 
 AddModShadersInit(function()
-  -- 变量: x,y
+  -- 变量: x,y,radius
   UniformVariables.INSCINERATOR_CENTER = PostProcessor:AddUniformVariable("INSCINERATOR_CENTER", 3)
-  local path = resolvefilepath("shaders/glow.ksh")
+  local path = resolvefilepath("shaders/mia_inscinerator_glow.ksh")
   PostProcessorEffects.INSCINERATOR_CENTER = PostProcessor:AddPostProcessEffect(path)
   PostProcessor:SetEffectUniformVariables(PostProcessorEffects.INSCINERATOR_CENTER, UniformVariables.INSCINERATOR_CENTER)
+end)
+AddModShadersInit(function()
+  -- 变量: t
+  UniformVariables.INSCINERATOR_TIME = PostProcessor:AddUniformVariable("INSCINERATOR_TIME", 1)
+  local path = resolvefilepath("shaders/mia_inscinerator_ember.ksh")
+  PostProcessorEffects.INSCINERATOR_TIME = PostProcessor:AddPostProcessEffect(path)
+  PostProcessor:SetEffectUniformVariables(PostProcessorEffects.INSCINERATOR_TIME, UniformVariables.INSCINERATOR_TIME)
 end)
 AddModShadersSortAndEnable(function()
   PostProcessor:SetPostProcessEffectAfter(PostProcessorEffects.INSCINERATOR_CENTER, PostProcessorEffects.Lunacy)
   PostProcessor:EnablePostProcessEffect(PostProcessorEffects.INSCINERATOR_CENTER, false)
   PostProcessor:SetUniformVariable(UniformVariables.INSCINERATOR_CENTER, 0, 0, 0)
 end)
-do return end
+AddModShadersSortAndEnable(function()
+  PostProcessor:SetPostProcessEffectAfter(PostProcessorEffects.INSCINERATOR_TIME, PostProcessorEffects.Lunacy)
+  PostProcessor:EnablePostProcessEffect(PostProcessorEffects.INSCINERATOR_TIME, false)
+  PostProcessor:SetUniformVariable(UniformVariables.INSCINERATOR_TIME, 0)
+end)
+--[[
 AddPlayerPostInit(function(inst)
   inst:DoPeriodicTask(0.3, function()
     local x, y, z = TheInput:GetScreenPosition():Get()
@@ -95,3 +107,4 @@ AddPlayerPostInit(function(inst)
     PostProcessor:SetUniformVariable(UniformVariables.INSCINERATOR_CENTER, x, y, 1)
   end)
 end)
+]]

@@ -109,6 +109,21 @@ function AOEProjectile:Launch(data)
   if pos then if type(pos) == "table" and pos.x then return self:LaunchToPos(pos) end end
   return false
 end
-function AOEProjectile:LaunchToTarget(inst) return true end
-function AOEProjectile:LaunchToPos(pos) return false end
+function AOEProjectile:LaunchToTarget(inst)
+  print("not supported, use pos instead")
+  return true
+end
+function AOEProjectile:LaunchToPos(pos)
+  local inst = self.inst
+  local x, y, z = inst.Transform:GetPosition()
+  local vec = Vector3(pos.x - x, pos.y - y, pos.z - z)
+  vec:Normalize()
+  if not self.cannonprefab then return false end
+  local cannon = SpawnPrefab(self.cannonprefab)
+  cannon.Transform:SetPosition(x, y, z)
+  self:InitAttack(cannon, vec)
+  self:Run()
+  return true
+end
+function AOEProjectile:SetCannon(prefab) self.cannonprefab = prefab end
 return AOEProjectile

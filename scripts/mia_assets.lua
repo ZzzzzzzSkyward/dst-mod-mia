@@ -1,5 +1,8 @@
-local assets = {Asset("ATLAS_BUILD", "images/mia_inventoryimages.xml", 256), Asset("SHADER", resolvefilepath"shaders/glow.ksh"),
-                Asset("DYNAMIC_ATLAS", "images/mia_cookbook.xml"), Asset("PKGREF", "images/mia_cookbook.tex"),Asset("ANIM","anim/fx_mia_star.zip")}
+local assets = {Asset("ATLAS_BUILD", "images/mia_inventoryimages.xml", 256),
+                Asset("SHADER", resolvefilepath"shaders/mia_inscinerator_glow.ksh"),
+                Asset("SHADER", resolvefilepath"shaders/mia_inscinerator_ember.ksh"),
+                Asset("DYNAMIC_ATLAS", "images/mia_cookbook.xml"), Asset("PKGREF", "images/mia_cookbook.tex"),
+                Asset("ANIM", "anim/fx_mia_star.zip")}
 local mia_assets = {"images/mia_inventoryimages", "images/mia_minimap"}
 for i, v in ipairs(mia_assets) do
   table.insert(assets, Asset("IMAGE", v .. ".tex"))
