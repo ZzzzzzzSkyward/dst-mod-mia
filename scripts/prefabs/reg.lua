@@ -22,7 +22,7 @@ local function RecordLightningHit(inst)
   lightning_counter = lightning_counter + 1
   if lightning_counter >= lightning_target_hits then
     DoEnoughHit(inst)
-    lightning_counter = {}
+    lightning_counter = 0
   else
     if inst.components.timer:TimerExists("forgetlightninghit") then
       inst.components.timer:SetTimeLeft("forgetlightninghit", lightning_forget_elapse)
