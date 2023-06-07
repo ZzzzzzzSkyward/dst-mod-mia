@@ -25,16 +25,7 @@ local function inscinerator_ReticuleUpdate(inst, pos, reticule, ease, smoothing,
   end
   reticule.Transform:SetRotation(rot)
 end
-
-local function BloomOrange(inst)
-  inst:AddLight()
-  --    inst.AnimState:SetMultColour(204/255,131/255,57/255,1)
-  inst.Light:SetColour(219 / 255, 168 / 255, 117 / 255, 1)
-  inst.Light:SetRadius(1)
-  inst.Light:SetFalloff(0.5)
-  inst.Light:SetIntensity(1)
-end
-local function CreateLight(def)
+local function Inscinerator_CreateLight(def)
   local inst = CreateEntity()
   inst.entity:AddTransform()
   inst.entity:AddAnimState()
@@ -55,137 +46,6 @@ local function CreateLight(def)
   inst.entity:SetPristine()
   return inst
 end
-local function makefx(t)
-  local function startfx(proxy)
-    -- print ("SPAWN", debugstack())
-    local inst = CreateEntity(t.name)
-
-    inst.entity:AddTransform()
-    inst.entity:AddAnimState()
-
-    local parent = proxy.entity:GetParent()
-    if parent ~= nil then inst.entity:SetParent(parent.entity) end
-
-    if t.nameoverride == nil and t.description == nil then inst:AddTag("FX") end
-    --[[Non-networked entity]]
-    inst.entity:SetCanSleep(false)
-    inst.persists = false
-
-    inst.Transform:SetFromProxy(proxy.GUID)
-
-    if t.autorotate and parent ~= nil then inst.Transform:SetRotation(parent.Transform:GetRotation()) end
-
-    if t.sound ~= nil then
-      inst.entity:AddSoundEmitter()
-      if t.update_while_paused then
-        inst:DoStaticTaskInTime(t.sounddelay or 0, PlaySound, t.sound)
-      else
-        inst:DoTaskInTime(t.sounddelay or 0, PlaySound, t.sound)
-      end
-    end
-
-    if t.sound2 ~= nil then
-      if inst.SoundEmitter == nil then inst.entity:AddSoundEmitter() end
-      if t.update_while_paused then
-        inst:DoStaticTaskInTime(t.sounddelay2 or 0, PlaySound, t.sound2)
-      else
-        inst:DoTaskInTime(t.sounddelay2 or 0, PlaySound, t.sound2)
-      end
-    end
-
-    inst.AnimState:SetBank(t.bank)
-    inst.AnimState:SetBuild(t.build)
-    inst.AnimState:PlayAnimation(FunctionOrValue(t.anim)) -- THIS IS A CLIENT SIDE FUNCTION
-    if t.update_while_paused then inst.AnimState:AnimateWhilePaused(true) end
-    if t.tint ~= nil then
-      inst.AnimState:SetMultColour(t.tint.x, t.tint.y, t.tint.z, t.tintalpha or 1)
-    elseif t.tintalpha ~= nil then
-      inst.AnimState:SetMultColour(t.tintalpha, t.tintalpha, t.tintalpha, t.tintalpha)
-    end
-    -- print(inst.AnimState:GetMultColour())
-    if t.transform ~= nil then inst.AnimState:SetScale(t.transform:Get()) end
-
-    if t.nameoverride ~= nil then
-      if inst.components.inspectable == nil then inst:AddComponent("inspectable") end
-      inst.components.inspectable.nameoverride = t.nameoverride
-      inst.name = t.nameoverride
-    end
-
-    if t.description ~= nil then
-      if inst.components.inspectable == nil then inst:AddComponent("inspectable") end
-      inst.components.inspectable.descriptionfn = t.description
-    end
-
-    if t.bloom then inst.AnimState:SetBloomEffectHandle("shaders/anim.ksh") end
-
-    if t.animqueue then
-      inst:ListenForEvent("animqueueover", inst.Remove)
-    else
-      inst:ListenForEvent("animover", inst.Remove)
-    end
-
-    if t.fn ~= nil then
-      if t.fntime ~= nil then
-        if t.update_while_paused then
-          inst:DoStaticTaskInTime(t.fntime, t.fn)
-        else
-          inst:DoTaskInTime(t.fntime, t.fn)
-        end
-      else
-        t.fn(inst)
-      end
-    end
-  end
-
-  local function fn()
-    local inst = CreateEntity()
-
-    inst.entity:AddTransform()
-    inst.entity:AddNetwork()
-
-    -- Dedicated server does not need to spawn the local fx
-    if not TheNet:IsDedicated() then
-      -- Delay one frame so that we are positioned properly before starting the effect
-      -- or in case we are about to be removed
-      if t.update_while_paused then
-        inst:DoStaticTaskInTime(0, startfx, inst)
-      else
-        inst:DoTaskInTime(0, startfx, inst)
-      end
-    end
-
-    if t.twofaced then
-      inst.Transform:SetTwoFaced()
-    elseif t.eightfaced then
-      inst.Transform:SetEightFaced()
-    elseif t.sixfaced then
-      inst.Transform:SetSixFaced()
-    elseif not t.nofaced then
-      inst.Transform:SetFourFaced()
-    end
-
-    inst:AddTag("FX")
-
-    inst.entity:SetPristine()
-
-    if not TheWorld.ismastersim then return inst end
-
-    inst.persists = false
-    inst:DoTaskInTime(1, inst.Remove)
-
-    return inst
-  end
-
-  return fn
-end
-local glow_fx = makefx({
-  name = "inscinerator_glowfx",
-  bank = "",
-  build = "",
-  anim = "",
-  fn = function(inst) BloomOrange(inst) end
-})
-local fireball_hit_fx = function() return Prefabs.fireball_hit_fx.fn() end
 -- AOE targeted explosion
 local explosion_spawner = function(name, target) return SpawnAt(name, target) end
 local aoe_must_tags = {"_combat", "_health"}
@@ -247,14 +107,13 @@ local function StopTrackMouse(inst)
     inst._inscinerator_tracktask = nil
   end
 end
-rawset(_G, "inscinerator_light", inscinerator_light)
 local function GetMouse() return Point(TheSim:ProjectScreenPos(TheSim:GetPosition())) end
 local function GetRadius()
   local dis = TheCamera:GetDistance()
   dis = math.clamp(15 / dis, 0, 10)
   return dis
 end
-local function postprocesstask(parent)
+local function _postprocesstask(parent)
   return function()
     if parent and parent:IsValid() then
       local x, y = TheSim:GetScreenPos(parent.AnimState:GetSymbolPosition("arm_lower",
@@ -266,7 +125,7 @@ local function postprocesstask(parent)
 end
 local function EnablePostProcess(inst, parent)
   if inst._postprocesstask then return end
-  inst._postprocesstask = inst:DoPeriodicTask(0, postprocesstask(parent))
+  inst._postprocesstask = inst:DoPeriodicTask(0, _postprocesstask(parent))
   inst:DoTaskInTime(0,
    function() PostProcessor:EnablePostProcessEffect(PostProcessorEffects.INSCINERATOR_CENTER, true) end)
 end
@@ -277,12 +136,12 @@ local function DisablePostProcess(inst)
     inst._postprocesstask = nil
   end
 end
-local function inscinerator_StartTargeting(inst, doer)
+local function Inscinerator_StartTargeting(inst, doer)
   print("inscinerator_StartTargeting")
   if inst:HasTag("launching") then return end
 
   if not inst._light then
-    local lightfx = CreateLight(inscinerator_light)
+    local lightfx = Inscinerator_CreateLight(inscinerator_light)
     local parent = inst:GetParent()
     lightfx.entity:SetParent(parent.entity)
     lightfx.entity:AddFollower()
@@ -314,6 +173,8 @@ local function launchtask(inst)
     parent._GetFXRadius = nil
     inst:DoTaskInTime(5, function(inst) inst:RemoveTag("launching") end)
     inst.components.aoeprojectile.enable = true
+    parent.chargeleft = parent.chargeleft - 1
+    inst:UpdateCharge()
     return inst.components.aoeprojectile:Launch()
   end
 end
@@ -327,17 +188,25 @@ local function MakeRadiusFn(startrad, endrad, duration)
     return r
   end
 end
-local function inscinerator_StopTargeting(inst)
+local function Inscinerator_StopTargeting(inst)
   print("inscinerator_StopTargeting")
   if inst._light then
     inst._light:Remove()
     inst._light = nil
     DisablePostProcess(inst)
     StopTrackMouse(inst:GetParent())
+    -- revert arm
+    local parent = inst:GetParent()
+    if parent then
+      if parent.components.inventory and parent.components.inventory:GetEquippedItem(EQUIPSLOTS.HANDS) then
+        parent.AnimState:Hide("ARM_carry")
+        parent.AnimState:Show("ARM_normal")
+      end
+    end
   end
   inst.components.aoetargeting:StopTargeting()
 end
-local function inscinerator_Launch(inst, doer, pos, target)
+local function Inscinerator_Launch(inst, doer, pos, target)
   if inst:HasTag("launching") then return end
   if inst._light then
     print("inscinerator_Launch")
@@ -491,7 +360,7 @@ end
 local defs = {
   unheard_bell = {
     disabled = true,
-    assets = {Asset("ANIM", "anim/artifact_unheard_bell.zip")},
+    assets = {Asset("ANIM", "anim/unheard_bell.zip")},
     postinit = function(inst) inst:AddComponent("activatable") end
   },
   longetivity_drink = {
@@ -615,9 +484,6 @@ local defs = {
     desc_en = [[It is a dust collecting pot]],
     desc = [[收集沙尘的壶]]
   },
-  --[[your_worth={
-        desc="生命回响之石"
-        --},]]
   tomorrow_signal = {
     disabled = true,
     assets = {Asset("ANIM", "anim/tomorrow_signal.zip")},
@@ -795,30 +661,27 @@ It was eaten by an aquatic creature in the Sea of Corpses.
       inst:AddComponent("aoeprojectile")
       inst.components.aoeprojectile:SetCannon("inscinerator_particle")
       -- see action def
-      inst.StartTargeting = inscinerator_StartTargeting
-      inst.StopTargeting = inscinerator_StopTargeting
-      inst.Launch = inscinerator_Launch
-      -- "red glow glimmer unstable fx"
-      -- simplified
-      inst.instant_fire_fx = fireball_hit_fx
+      inst.StartTargeting = Inscinerator_StartTargeting
+      inst.StopTargeting = Inscinerator_StopTargeting
+      inst.Launch = Inscinerator_Launch
+      inst.UpdateCharge = function()
+        local parent = inst:GetParent()
+        local charge
+        if parent then charge = parent.chargeleft end
+        if charge then
+          local hat = parent.components.inventory:GetEquippedItem(EQUIPSLOTS.HEAD)
+          if hat and hat.prefab == "reg_hat" then
+            hat.components.fueled:SetPercent(charge / TUNING.REG_INSCINERATOR_USE)
+          end
+        end
+      end
 
-      -- below are not realized fx
-      inst.heat_glow = glow_fx
-      inst.energy_absorb = "sparks flying into fx"
-      inst.emit_before = "electric shock fx"
-      inst.emit_stream = {"electricity ring around fx", "particle send fx", "unstable x-ray fx"}
-      inst.ember_after = "spark scatter fx"
-      inst.steam_after = "steam fx"
-      -- other.burnt = "?"
-      -- ground.burnt = "meteor ground fx"
       inst:DoTaskInTime(1, function(inst) if not inst:GetParent() then inst:Remove() end end)
       return inst
     end,
-
     desc = [[火葬炮]]
   },
   fruitful_orb = {
-    -- disabled= true,
     assets = {Asset("ANIM", "anim/fruitful_orb.zip")},
     bank = "fruitful_orb",
     build = "fruitful_orb",
@@ -830,7 +693,6 @@ It was eaten by an aquatic creature in the Sea of Corpses.
     },
     anim = "idle",
     postinit = function(inst)
-      -- inst.AnimState:SetMultColour(1,1,1,0.8)--#TODO change anim
       inst:AddComponent("relicactivatable")
       inst.components.relicactivatable:SetOnActivate(function()
         inst.Light:Enable(true)
@@ -851,7 +713,6 @@ It was eaten by an aquatic creature in the Sea of Corpses.
         It heals injuries, but can't cure disease]]
   },
   artifact_prushka = {
-    -- disabled = true,
     slot = "neck",
     bank = "artifact_prushka",
     build = "artifact_prushka",
@@ -871,6 +732,10 @@ It was eaten by an aquatic creature in the Sea of Corpses.
 打磨之后,施加某种频率的振动就会发出强光。
 可以用作机械式的照明灯。
 ]]
+  },
+  infinite_gunpowder = {
+    disabled = true,
+    desc = [[无尽火药]]
   }
 }
 -- protect

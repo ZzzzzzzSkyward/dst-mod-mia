@@ -1,4 +1,5 @@
 -- fix the bug when mouse point water or void, the action picker will not show the actions
+--#PLANNED fix dark
 return function(PlayerActionPicker)
   local GetRightClickActions = PlayerActionPicker.GetRightClickActions
   function PlayerActionPicker:GetRightClickActions(position, target, spellbook)

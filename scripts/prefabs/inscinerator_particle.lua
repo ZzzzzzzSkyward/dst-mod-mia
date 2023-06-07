@@ -18,45 +18,41 @@ local function range_search(inst, range, canhitfn)
 end
 -- on hit fn
 local function CheckSpawnedLoot(loot)
-    if loot.components.inventoryitem ~= nil then
-        loot.components.inventoryitem:TryToSink()
-    else
-        local lootx, looty, lootz = loot.Transform:GetWorldPosition()
-        if ShouldEntitySink(loot, true) or TheWorld.Map:IsPointNearHole(Vector3(lootx, 0, lootz)) then
-            SinkEntity(loot)
-        end
-    end
+  if loot.components.inventoryitem ~= nil then
+    loot.components.inventoryitem:TryToSink()
+  else
+    local lootx, looty, lootz = loot.Transform:GetWorldPosition()
+    if ShouldEntitySink(loot, true) or TheWorld.Map:IsPointNearHole(Vector3(lootx, 0, lootz)) then SinkEntity(loot) end
+  end
 end
 local function SpawnLootPrefab(inst, lootprefab)
-    if lootprefab == nil then
-        return
+  if lootprefab == nil then return end
+
+  local loot = SpawnPrefab(lootprefab)
+  if loot == nil then return end
+
+  local x, y, z = inst.Transform:GetWorldPosition()
+
+  if loot.Physics ~= nil then
+    local angle = math.random() * 2 * PI
+    loot.Physics:SetVel(2 * math.cos(angle), 10, 2 * math.sin(angle))
+
+    if inst.Physics ~= nil then
+      local len = loot:GetPhysicsRadius(0) + inst:GetPhysicsRadius(0)
+      x = x + math.cos(angle) * len
+      z = z + math.sin(angle) * len
     end
 
-    local loot = SpawnPrefab(lootprefab)
-    if loot == nil then
-        return
-    end
+    loot:DoTaskInTime(1, CheckSpawnedLoot)
+  end
 
-    local x, y, z = inst.Transform:GetWorldPosition()
+  loot.Transform:SetPosition(x, y, z)
 
-    if loot.Physics ~= nil then
-        local angle = math.random() * 2 * PI
-        loot.Physics:SetVel(2 * math.cos(angle), 10, 2 * math.sin(angle))
+  loot:PushEvent("on_loot_dropped", {
+    dropper = inst
+  })
 
-        if inst.Physics ~= nil then
-            local len = loot:GetPhysicsRadius(0) + inst:GetPhysicsRadius(0)
-            x = x + math.cos(angle) * len
-            z = z + math.sin(angle) * len
-        end
-
-        loot:DoTaskInTime(1, CheckSpawnedLoot)
-    end
-
-    loot.Transform:SetPosition(x, y, z)
-
-	loot:PushEvent("on_loot_dropped", {dropper = inst})
-
-    return loot
+  return loot
 end
 
 local function destroystructure(target, inst)
@@ -149,6 +145,8 @@ local function ondestroy(inst, target)
   if target.AnimState then target.AnimState:SetHaunted(true) end
   target:DoTaskInTime(1, function() if target:IsValid() then target:Remove() end end)
 end
+--#FIXME disable debug
+local dbg = true
 local function fn()
   local inst = CreateEntity()
   inst.entity:AddTransform()
@@ -156,15 +154,18 @@ local function fn()
   inst.entity:AddAnimState()
   inst.entity:SetCanSleep(false)
   -- debug purpose
-  inst.entity:AddLabel()
-  inst.Label:SetFontSize(20)
-  inst.Label:SetFont(DEFAULTFONT)
-  inst.Label:SetWorldOffset(0, 3, 0)
-  inst.Label:SetUIOffset(0, 0, 0)
-  inst.Label:SetColour(1, 1, 1)
-  inst.Label:Enable(true)
-  inst.Label:SetText("par")
+  if dbg then
 
+    inst.entity:AddLabel()
+    inst.Label:SetFontSize(20)
+    inst.Label:SetFont(DEFAULTFONT)
+    inst.Label:SetWorldOffset(0, 3, 0)
+    inst.Label:SetUIOffset(0, 0, 0)
+    inst.Label:SetColour(1, 1, 1)
+    inst.Label:Enable(true)
+    inst.Label:SetText("par")
+
+  end
   inst:AddTag("FX")
   inst:AddTag("NOCLICK")
   inst:AddTag("NOBLOCK")

@@ -22,7 +22,7 @@ local chars = {
   prushka = {
     gender = "FEMALE",
     skin = {"prushka_none"},
-    start_inv = {}
+    start_inv = {"prushkahat"}
   }
 }
 return chars

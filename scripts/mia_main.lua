@@ -7,16 +7,14 @@ RELICSLOTS = RELICSLOTS or {
 GLOBAL.RELICSLOTS = RELICSLOTS
 local function import(path) return modimport("scripts/" .. path .. ".lua") end
 local dishes = dig("foods")
-for k, recipe in pairs(dishes) do
+local allcookpots = {"cookpot", "portablecookpot", "archivecookpot", "rikocookpot"}
+for name, recipe in pairs(dishes) do
   if recipe.spice then
     AddCookerRecipe("portablespicer", recipe)
-  elseif k:find("riko_") then
+  elseif name:find("riko_") then
     AddCookerRecipe("rikocookpot", recipe)
   else
-    AddCookerRecipe("rikocookpot", recipe)
-    AddCookerRecipe("cookpot", recipe)
-    AddCookerRecipe("portablecookpot", recipe)
-    AddCookerRecipe("archivecookpot", recipe)
+    for _, pot in ipairs(allcookpots) do AddCookerRecipe(pot, recipe) end
   end
 end
 local imports = {"mia_recipes", "hamlet_dodge", "mia_actions", "mia_shader", "mia_compatibility"}
