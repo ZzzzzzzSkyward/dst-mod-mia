@@ -29,13 +29,6 @@ configuration = {
             {description = "繁体中文", data = "zht", hover = "Traditional Chinese"}
         },
         default = "default"
-    },
-    {
-        name = "complement",
-        label = "Retrieve Lost Starting Items",
-        hover = "complement_hover",
-        options = {{description = "Yes", data = "true"}, {description = "No", data = "false"}},
-        default = "false"
     }
 }
 

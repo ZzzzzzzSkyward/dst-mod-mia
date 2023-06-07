@@ -7,11 +7,12 @@ local AOEProjectile = Class(function(self, inst)
   self.canttags = {"FX", "INLIMBO", "DECOR", "NOCLICK", "noattack"}
   self.onhitfn = nil
   self.distance = 1
-  self.interval = 1
+  self.interval = 0.2
   self.cannons = {}
   self.enabled = true
 end, nil, {})
 function AOEProjectile:InitAttack(cannon, vec)
+  print("AOEProjectile:InitAttack", cannon, vec)
   table.insert(self.cannons, {
     cannon = cannon,
     vec = vec,
@@ -38,7 +39,7 @@ end
 function AOEProjectile:SearchSingleTarget(data)
   local inst = data.cannon
   local range = data.range or self.range
-  local x, y, z = inst.Transform:GetPosition()
+  local x, y, z = inst.Transform:GetWorldPosition()
   local ret = {}
   if self.method == "Sim" then
     local ents = TheSim:FindEntities(x, y, z, range, self.musttags, self.canttags)
@@ -56,8 +57,8 @@ end
 function AOEProjectile:SearchAllTargets() local cannons = self.cannons end
 function AOEProjectile:CleanCannons()
   for i = #self.cannons, 1, -1 do
-    if self.cannons[i] then
-      if self.cannons[i]:IsValid() then
+    if self.cannons[i].cannon then
+      if self.cannons[i].cannon:IsValid() then
       else
         table.remove(self.cannons, i)
       end
@@ -66,20 +67,28 @@ function AOEProjectile:CleanCannons()
   end
 end
 function AOEProjectile:Render() -- single
+  print("Render")
   self:CleanCannons()
-  local targets = {}
+  local donetarget = {}
   for i, v in ipairs(self.cannons) do
     if v.auto then
     else
       self:ManualUpdatePosition(v)
     end
-    local targs = self:SearchSingleTarget(v)
-    if not targs then
-    else
-      for k, v in pairs(targs) do targets[v] = true end
+    local c = v.cannon
+    if c.gettarget then
+      local targets = c:gettarget(5)
+      print("targets", #targets)
+      for _, v2 in ipairs(targets) do
+        if c.onhit then
+          c:onhit(v2)
+          v2.donetag = c.donetag
+          table.insert(donetarget, v2)
+        end
+      end
     end
   end
-  for target, _ in pairs(targets) do if self.onhitfn then self.onhitfn(self.inst, target) end end
+  for i, v in ipairs(donetarget) do donetarget.donetag = nil end
 end
 function AOEProjectile:BatchRender()
   self:CleanCannons()
@@ -90,7 +99,10 @@ function AOEProjectile:Run()
   self:CleanCannons()
   if #self.cannons == 0 then return end
   if self.task then return end
-  self.task = self.inst:DoPeriodicTask(self.interval, function() self:Render() end)
+  self.task = self.inst:DoPeriodicTask(self.interval, function()
+    self:Render()
+    if #self.cannons == 0 then self:Stop() end
+  end)
 end
 function AOEProjectile:Stop()
   if self.task then
@@ -100,6 +112,7 @@ function AOEProjectile:Stop()
 end
 -- export function
 function AOEProjectile:Launch(data)
+  print("Launch")
   if not self.enabled then return false, "DISABLED" end
   if not data then data = self end
   local target, pos = data.target, data.pos
@@ -114,10 +127,12 @@ function AOEProjectile:LaunchToTarget(inst)
   return true
 end
 function AOEProjectile:LaunchToPos(pos)
+  print("LaunchToPos")
   local inst = self.inst
-  local x, y, z = inst.Transform:GetPosition()
+  local x, y, z = inst.Transform:GetWorldPosition()
   local vec = Vector3(pos.x - x, pos.y - y, pos.z - z)
   vec:Normalize()
+  vec = vec * 10
   if not self.cannonprefab then return false end
   local cannon = SpawnPrefab(self.cannonprefab)
   cannon.Transform:SetPosition(x, y, z)

@@ -227,11 +227,11 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     col = smoothstep(-0.08, 1.0, col);
 
     fragColor = vec4(col, 1.0);
+    //add with source image "SRC_IMAGE" here with texture2D(), mix type is additive
+    vec4 src = texture2D(SRC_IMAGE, PS_TEXCOORD0);
+    fragColor =src+fragColor;
 }
 
 void main(){
     mainImage(gl_FragColor, gl_FragCoord.xy);
-    //add with source image "SRC_IMAGE" here with texture2D(), mix type is additive
-    vec4 src = texture2D(SRC_IMAGE, PS_TEXCOORD0);
-    gl_FragColor =src+gl_FragColor;
 }

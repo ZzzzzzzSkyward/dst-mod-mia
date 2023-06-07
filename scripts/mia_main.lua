@@ -6,8 +6,8 @@ RELICSLOTS = RELICSLOTS or {
 }
 GLOBAL.RELICSLOTS = RELICSLOTS
 local function import(path) return modimport("scripts/" .. path .. ".lua") end
-local delicious_abyss_dishes = dig("foods")
-for k, recipe in pairs(delicious_abyss_dishes) do
+local dishes = dig("foods")
+for k, recipe in pairs(dishes) do
   if recipe.spice then
     AddCookerRecipe("portablespicer", recipe)
   elseif k:find("riko_") then
@@ -19,15 +19,14 @@ for k, recipe in pairs(delicious_abyss_dishes) do
     AddCookerRecipe("archivecookpot", recipe)
   end
 end
-import("mia_recipes")
-import("hamlet_dodge")
-import("mia_actions")
+local imports = {"mia_recipes", "hamlet_dodge", "mia_actions", "mia_shader", "mia_compatibility"}
+for k, v in pairs(imports) do import(v) end
 local preinit = {
   components = {"portablestructure", "playeractionpicker", "stewer"},
   scenarios = {"chestfunctions"}
 }
 local postinit = {
-  Prefab = {"riko"}
+  Prefab = {}
 }
 for k, v in pairs(preinit) do for k2, v2 in pairs(v) do dig("postinit/" .. k .. "/" .. v2)(require(k .. "/" .. v2)) end end
 for k, v in pairs(postinit) do
@@ -73,38 +72,3 @@ for k, v in pairs(powerlevel) do
     inst.components.fuel.fuelvalue = v
   end)
 end
-import("mia_compatibility")
-
-AddModShadersInit(function()
-  -- 变量: x,y,radius
-  UniformVariables.INSCINERATOR_CENTER = PostProcessor:AddUniformVariable("INSCINERATOR_CENTER", 3)
-  local path = resolvefilepath("shaders/mia_inscinerator_glow.ksh")
-  PostProcessorEffects.INSCINERATOR_CENTER = PostProcessor:AddPostProcessEffect(path)
-  PostProcessor:SetEffectUniformVariables(PostProcessorEffects.INSCINERATOR_CENTER, UniformVariables.INSCINERATOR_CENTER)
-end)
-AddModShadersInit(function()
-  -- 变量: t
-  UniformVariables.INSCINERATOR_TIME = PostProcessor:AddUniformVariable("INSCINERATOR_TIME", 1)
-  local path = resolvefilepath("shaders/mia_inscinerator_ember.ksh")
-  PostProcessorEffects.INSCINERATOR_TIME = PostProcessor:AddPostProcessEffect(path)
-  PostProcessor:SetEffectUniformVariables(PostProcessorEffects.INSCINERATOR_TIME, UniformVariables.INSCINERATOR_TIME)
-end)
-AddModShadersSortAndEnable(function()
-  PostProcessor:SetPostProcessEffectAfter(PostProcessorEffects.INSCINERATOR_CENTER, PostProcessorEffects.Lunacy)
-  PostProcessor:EnablePostProcessEffect(PostProcessorEffects.INSCINERATOR_CENTER, false)
-  PostProcessor:SetUniformVariable(UniformVariables.INSCINERATOR_CENTER, 0, 0, 0)
-end)
-AddModShadersSortAndEnable(function()
-  PostProcessor:SetPostProcessEffectAfter(PostProcessorEffects.INSCINERATOR_TIME, PostProcessorEffects.Lunacy)
-  PostProcessor:EnablePostProcessEffect(PostProcessorEffects.INSCINERATOR_TIME, false)
-  PostProcessor:SetUniformVariable(UniformVariables.INSCINERATOR_TIME, 0)
-end)
---[[
-AddPlayerPostInit(function(inst)
-  inst:DoPeriodicTask(0.3, function()
-    local x, y, z = TheInput:GetScreenPosition():Get()
-    local w, h = TheSim:GetScreenSize()
-    PostProcessor:SetUniformVariable(UniformVariables.INSCINERATOR_CENTER, x, y, 1)
-  end)
-end)
-]]

@@ -248,13 +248,12 @@ local function StopTrackMouse(inst)
   end
 end
 rawset(_G, "inscinerator_light", inscinerator_light)
-local function MousePos() return TheSim:GetPosition() end
+local function GetMouse() return Point(TheSim:ProjectScreenPos(TheSim:GetPosition())) end
 local function GetRadius()
   local dis = TheCamera:GetDistance()
   dis = math.clamp(15 / dis, 0, 10)
   return dis
 end
-rawset(_G, "GetRadius", GetRadius)
 local function postprocesstask(parent)
   return function()
     if parent and parent:IsValid() then
@@ -314,6 +313,7 @@ local function launchtask(inst)
     DisablePostProcess(inst)
     parent._GetFXRadius = nil
     inst:DoTaskInTime(5, function(inst) inst:RemoveTag("launching") end)
+    inst.components.aoeprojectile.enable = true
     return inst.components.aoeprojectile:Launch()
   end
 end
@@ -337,18 +337,18 @@ local function inscinerator_StopTargeting(inst)
   end
   inst.components.aoetargeting:StopTargeting()
 end
-local function inscinerator_Launch(inst, pos, target)
+local function inscinerator_Launch(inst, doer, pos, target)
   if inst:HasTag("launching") then return end
   if inst._light then
     print("inscinerator_Launch")
     inst.components.aoetargeting:StopTargeting()
     inst:AddTag("launching")
-    local parent = inst:GetParent()
+    local parent = doer or inst:GetParent()
     StopTrackMouse(parent)
-    parent._GetFXRadius = MakeRadiusFn(GetRadius(), launch_target_radius, 1)
+    parent._GetFXRadius = MakeRadiusFn(GetRadius(), math.clamp(GetRadius() * 4, 1, launch_target_radius), 1)
     local tick = 0.2
-    inst.components.aoetargeting.pos = pos
-    inst.components.aoetargeting.target = target
+    inst.components.aoeprojectile.pos = GetMouse()
+    inst.components.aoeprojectile.target = target
     inst._ticktask = inst:DoPeriodicTask(tick, launchtask)
   end
 end

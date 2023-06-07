@@ -5,18 +5,60 @@ local actions = {"HAMMER", "CHOP", "MINE", "HACK"}
 -- range search fn
 local donetag = "inscinerator_particle_done"
 -- tags
-local canttags = {"INLIMBO", "invisible", "FX", "DECOR"}
+local canttags = {"INLIMBO", "invisible", "FX", "DECOR", "playerghost"}
 local musttags = nil
 local ispvp = TheNet:GetPVPEnabled()
 if not ispvp then table.insert(canttags, "player") end
 local function range_search(inst, range, canhitfn)
-  local x, y, z = inst.Transform:GetPosition()
+  local x, y, z = inst.Transform:GetWorldPosition()
   local ret = {}
   local ents = TheSim:FindEntities(x, y, z, range, musttags, canttags)
-  for k, v in pairs(ents) do if not v[donetag] and canhitfn(v) then table.insert(ret, v) end end
+  for k, v in pairs(ents) do if not v[donetag] and (not canhitfn or canhitfn(v)) then table.insert(ret, v) end end
   return ret
 end
 -- on hit fn
+local function CheckSpawnedLoot(loot)
+    if loot.components.inventoryitem ~= nil then
+        loot.components.inventoryitem:TryToSink()
+    else
+        local lootx, looty, lootz = loot.Transform:GetWorldPosition()
+        if ShouldEntitySink(loot, true) or TheWorld.Map:IsPointNearHole(Vector3(lootx, 0, lootz)) then
+            SinkEntity(loot)
+        end
+    end
+end
+local function SpawnLootPrefab(inst, lootprefab)
+    if lootprefab == nil then
+        return
+    end
+
+    local loot = SpawnPrefab(lootprefab)
+    if loot == nil then
+        return
+    end
+
+    local x, y, z = inst.Transform:GetWorldPosition()
+
+    if loot.Physics ~= nil then
+        local angle = math.random() * 2 * PI
+        loot.Physics:SetVel(2 * math.cos(angle), 10, 2 * math.sin(angle))
+
+        if inst.Physics ~= nil then
+            local len = loot:GetPhysicsRadius(0) + inst:GetPhysicsRadius(0)
+            x = x + math.cos(angle) * len
+            z = z + math.sin(angle) * len
+        end
+
+        loot:DoTaskInTime(1, CheckSpawnedLoot)
+    end
+
+    loot.Transform:SetPosition(x, y, z)
+
+	loot:PushEvent("on_loot_dropped", {dropper = inst})
+
+    return loot
+end
+
 local function destroystructure(target, inst)
   local recipe = AllRecipes[target.prefab]
   local ingredient_percent = ((target.components.finiteuses ~= nil and target.components.finiteuses:GetPercent()) or
@@ -82,7 +124,7 @@ local hitorder = { -- check if target can be acted on
     return target.components.health and not target.components.health:IsDead() and
             not target.components.health:IsInvincible()
   end,
-  fn = function(inst, target) target.components.health:DoDelta(-1) end
+  fn = function(inst, target) target.components.health:DoDelta(-100) end
 }, -- check if target can burn
 {
   criteria = function(inst, target) return target.components.burnable and not target.components.burnable:IsBurning() end,
@@ -113,6 +155,16 @@ local function fn()
   -- inst.entity:AddNetwork()
   inst.entity:AddAnimState()
   inst.entity:SetCanSleep(false)
+  -- debug purpose
+  inst.entity:AddLabel()
+  inst.Label:SetFontSize(20)
+  inst.Label:SetFont(DEFAULTFONT)
+  inst.Label:SetWorldOffset(0, 3, 0)
+  inst.Label:SetUIOffset(0, 0, 0)
+  inst.Label:SetColour(1, 1, 1)
+  inst.Label:Enable(true)
+  inst.Label:SetText("par")
+
   inst:AddTag("FX")
   inst:AddTag("NOCLICK")
   inst:AddTag("NOBLOCK")
@@ -124,5 +176,9 @@ local function fn()
   inst.onhit = onhitfn
   inst.gettarget = range_search
   inst.ondestroy = ondestroy
+  inst.donetag = donetag
+  local lifetime = 10
+  inst:DoTaskInTime(lifetime, function() if inst:IsValid() then inst:Remove() end end)
+  return inst
 end
 return Prefab("inscinerator_particle", fn, assets)

@@ -13,5 +13,6 @@ return {
     "mia_artifacts",
     "mia_equippable_artifacts",
     "charcoal_sand",
-    "prushka"
+    "prushka",
+    "inscinerator_particle"
 }
