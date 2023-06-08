@@ -3,59 +3,76 @@
 precision highp float;
 #endif
 uniform sampler2D SAMPLER[1];
-
 #define SRC_IMAGE SAMPLER[0]
-
 uniform vec4 SCREEN_PARAMS;
 #define iResolution SCREEN_PARAMS
 varying vec2 PS_TEXCOORD0;
-
 uniform vec4 TIMEPARAMS;
 #define iTime TIMEPARAMS.x
+uniform vec2 INSCINERATOR_TIME;
 
-
-float hash2_2(vec2 p)
+float hash1_2(in vec2 x)
 {
-    float h = dot(p, vec2(127.1, 311.7));
-    return fract(sin(h) * 43758.5453123);
+ 	return fract(sin(dot(x, vec2(52.127, 61.2871))) * 521.582);
 }
 
-float hash1_1(float p) {
-    return fract(sin(p * 7.11) * 523.7);
+vec2 hash2_2(in vec2 x)
+{
+    return fract(sin(x * mat2x2(20.52, 24.1994, 70.291, 80.171)) * 492.194);
 }
 
-vec2 hash2_1(float p) {
-    vec3 p3 = fract(vec3(p) * vec3(0.1031, 0.1030, 0.0973));
-    p3 += dot(p3, p3.yzx + 19.19);
-    return fract(vec2((p3.x + p3.y) * p3.z, (p3.x + p3.z) * p3.y));
-}
-float hash1_2(vec2 p){
-    float h = dot(p, vec2(127.1, 311.7));
-    return fract(sin(h) * 43758.5453123);
-}
-float noise1_2(float x) {
-    float  intPart = floor(x);
-    float fractPart = x - intPart;
-    float v1 = hash1_2(vec2(intPart,x));
-    float v2 = hash1_2(vec2(intPart+1.0,x));
-    return mix(v1, v2, fractPart);
-}
-float noise2_2(vec2 p) {
-    vec2 i = floor(p);
-    vec2 f = fract(p);
+//Simple interpolated noise
+vec2 noise2_2(vec2 uv)
+{
+    //vec2 f = fract(uv);
+    vec2 f = smoothstep(0.0, 1.0, fract(uv));
 
-    float a = hash2_2(i);
-    float b = hash2_2(i + vec2(1.0, 0.0));
-    float c = hash2_2(i + vec2(0.0, 1.0));
-    float d = hash2_2(i + vec2(1.0, 1.0));
+ 	vec2 uv00 = floor(uv);
+    vec2 uv01 = uv00 + vec2(0,1);
+    vec2 uv10 = uv00 + vec2(1,0);
+    vec2 uv11 = uv00 + 1.0;
+    vec2 v00 = hash2_2(uv00);
+    vec2 v01 = hash2_2(uv01);
+    vec2 v10 = hash2_2(uv10);
+    vec2 v11 = hash2_2(uv11);
 
-    vec2 u = f*f*(3.0-2.0*f);
+    vec2 v0 = mix(v00, v01, f.y);
+    vec2 v1 = mix(v10, v11, f.y);
+    vec2 v = mix(v0, v1, f.x);
 
-    return mix(a, b, u.x) +
-            (c - a)* u.y * (1.0 - u.x) +
-            (d - b) * u.x * u.y;
+    return v;
 }
 
+//Simple interpolated noise
+float noise1_2(in vec2 uv)
+{
+    vec2 f = fract(uv);
+    //vec2 f = smoothstep(0.0, 1.0, fract(uv));
+
+ 	vec2 uv00 = floor(uv);
+    vec2 uv01 = uv00 + vec2(0,1);
+    vec2 uv10 = uv00 + vec2(1,0);
+    vec2 uv11 = uv00 + 1.0;
+
+    float v00 = hash1_2(uv00);
+    float v01 = hash1_2(uv01);
+    float v10 = hash1_2(uv10);
+    float v11 = hash1_2(uv11);
+
+    float v0 = mix(v00, v01, f.y);
+    float v1 = mix(v10, v11, f.y);
+    float v = mix(v0, v1, f.x);
+
+    return v;
+}
+mat2 mat2x2(float s, float c,float s1, float c1){
+    mat2 rot;
+    rot[0][0] =  s;
+    rot[0][1] = s1;
+    rot[1][0] =  c;
+    rot[1][1] =  c1;
+    return rot;
+}
 
 
 //Shader License: CC BY 3.0
@@ -221,7 +238,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 
     vec3 particles = layeredParticles(uv, SIZE_MOD, ALPHA_MOD, LAYERS_COUNT, smokeIntensity);
 
-    vec3 col = particles + smoke + SMOKE_COLOR * 0.02;
+    vec3 col = particles + smoke*5. + SMOKE_COLOR * 0.02;
 	col *= vignette;
 
     col = smoothstep(-0.08, 1.0, col);

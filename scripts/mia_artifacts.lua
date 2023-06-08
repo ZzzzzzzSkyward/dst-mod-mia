@@ -113,49 +113,53 @@ local function GetRadius()
   dis = math.clamp(15 / dis, 0, 10)
   return dis
 end
+local function SetInscineratorParam(...)
+  return PostProcessor:SetUniformVariable(UniformVariables.INSCINERATOR_CENTER, ...)
+end
+local function SetInscineratorFire(enable)
+  return PostProcessor:EnablePostProcessEffect(PostProcessorEffects.INSCINERATOR_CENTER, enable)
+end
+local function EnableInscineratorFire() return SetInscineratorFire(true) end
+local function DisableInscineratorFire() return SetInscineratorFire(false) end
 local function _postprocesstask(parent)
   return function()
     if parent and parent:IsValid() then
       local x, y = TheSim:GetScreenPos(parent.AnimState:GetSymbolPosition("arm_lower",
        unpack(inscinerator_light.postpos)))
       local radius = parent._GetFXRadius and parent:_GetFXRadius() or GetRadius()
-      PostProcessor:SetUniformVariable(UniformVariables.INSCINERATOR_CENTER, x, y, radius)
+      SetInscineratorParam(x, y, radius)
     end
   end
 end
-local function EnablePostProcess(inst, parent)
+local function EnableInscineratorShaderTask(inst, parent)
   if inst._postprocesstask then return end
   inst._postprocesstask = inst:DoPeriodicTask(0, _postprocesstask(parent))
-  inst:DoTaskInTime(0,
-   function() PostProcessor:EnablePostProcessEffect(PostProcessorEffects.INSCINERATOR_CENTER, true) end)
+  inst:DoTaskInTime(0, EnableInscineratorFire)
 end
-local function DisablePostProcess(inst)
-  PostProcessor:EnablePostProcessEffect(PostProcessorEffects.INSCINERATOR_CENTER, false)
+local function DisableInscineratorShaderTask(inst)
+  DisableInscineratorFire()
   if inst._postprocesstask then
     inst._postprocesstask:Cancel()
     inst._postprocesstask = nil
   end
 end
 local function Inscinerator_StartTargeting(inst, doer)
-  print("inscinerator_StartTargeting")
   if inst:HasTag("launching") then return end
-
-  if not inst._light then
-    local lightfx = Inscinerator_CreateLight(inscinerator_light)
-    local parent = inst:GetParent()
-    lightfx.entity:SetParent(parent.entity)
-    lightfx.entity:AddFollower()
-    lightfx.Follower:FollowSymbol(parent.GUID, "arm_lower", unpack(inscinerator_light.pos))
-    lightfx.AnimState:SetFinalOffset(2)
-    inst._light = lightfx
-    -- #FIXME revert to before
-    doer.AnimState:Show("ARM_carry")
-    doer.AnimState:Hide("ARM_normal")
-    doer.AnimState:ClearOverrideSymbol("swap_object")
-    EnablePostProcess(inst, parent)
-    TrackMouse(parent)
-    inst.components.aoetargeting:StartTargeting()
-  end
+  if inst._light then return end
+  local lightfx = Inscinerator_CreateLight(inscinerator_light)
+  local parent = inst:GetParent()
+  lightfx.entity:SetParent(parent.entity)
+  lightfx.entity:AddFollower()
+  lightfx.Follower:FollowSymbol(parent.GUID, "arm_lower", unpack(inscinerator_light.pos))
+  lightfx.AnimState:SetFinalOffset(2)
+  inst._light = lightfx
+  -- #FIXME revert to before
+  doer.AnimState:Show("ARM_carry")
+  doer.AnimState:Hide("ARM_normal")
+  doer.AnimState:ClearOverrideSymbol("swap_object")
+  EnableInscineratorShaderTask(inst, parent)
+  TrackMouse(parent)
+  inst.components.aoetargeting:StartTargeting()
 end
 local launch_target_radius = 5
 local function launchtask(inst)
@@ -169,7 +173,7 @@ local function launchtask(inst)
     inst._ticktask = nil
     inst._light:Remove()
     inst._light = nil
-    DisablePostProcess(inst)
+    DisableInscineratorShaderTask(inst)
     parent._GetFXRadius = nil
     inst:DoTaskInTime(5, function(inst) inst:RemoveTag("launching") end)
     inst.components.aoeprojectile.enable = true
@@ -189,40 +193,39 @@ local function MakeRadiusFn(startrad, endrad, duration)
   end
 end
 local function Inscinerator_StopTargeting(inst)
-  print("inscinerator_StopTargeting")
-  if inst._light then
-    inst._light:Remove()
-    inst._light = nil
-    DisablePostProcess(inst)
-    StopTrackMouse(inst:GetParent())
-    -- revert arm
-    local parent = inst:GetParent()
-    if parent then
-      if parent.components.inventory and parent.components.inventory:GetEquippedItem(EQUIPSLOTS.HANDS) then
-        parent.AnimState:Hide("ARM_carry")
-        parent.AnimState:Show("ARM_normal")
-      end
+  inst.components.aoetargeting:StopTargeting()
+  if not inst._light then return end
+  inst._light:Remove()
+  inst._light = nil
+  DisableInscineratorShaderTask(inst)
+  StopTrackMouse(inst:GetParent())
+  -- revert arm
+  local parent = inst:GetParent()
+  if parent then
+    if parent.components.inventory and not parent.components.inventory:GetEquippedItem(EQUIPSLOTS.HANDS) then
+      --revert if bare hand
+      parent.AnimState:Hide("ARM_carry")
+      parent.AnimState:Show("ARM_normal")
     end
   end
-  inst.components.aoetargeting:StopTargeting()
 end
 local function Inscinerator_Launch(inst, doer, pos, target)
   if inst:HasTag("launching") then return end
-  if inst._light then
-    print("inscinerator_Launch")
-    inst.components.aoetargeting:StopTargeting()
-    inst:AddTag("launching")
-    local parent = doer or inst:GetParent()
-    StopTrackMouse(parent)
-    parent._GetFXRadius = MakeRadiusFn(GetRadius(), math.clamp(GetRadius() * 4, 1, launch_target_radius), 1)
-    local tick = 0.2
-    inst.components.aoeprojectile.pos = GetMouse()
-    inst.components.aoeprojectile.target = target
+  if not inst._light then return end
+  inst:AddTag("launching")
+  inst.components.aoetargeting:StopTargeting()
+  local parent = doer or inst:GetParent()
+  StopTrackMouse(parent)
+  parent._GetFXRadius = MakeRadiusFn(GetRadius(), math.clamp(GetRadius() * 4, 1, launch_target_radius), 1)
+  local tick = 0.2
+  inst.components.aoeprojectile.pos = GetMouse()
+  inst.components.aoeprojectile.target = target
+  if not inst._ticktask then
     inst._ticktask = inst:DoPeriodicTask(tick, launchtask)
   end
 end
 
-local function blaze_reap_ondepleted(inst) inst.components.tool:SetAction(ACTIONS.MINE, 0) end
+local function blaze_reap_ondepleted(inst) inst.components.tool:SetAction(ACTIONS.MINE, 0.5) end
 local function blaze_reap_onfueled(inst)
   inst.components.tool:SetAction(ACTIONS.MINE, TUNING.BLAZEREAP_MINE_EFFECTIVENESS)
 end
@@ -672,6 +675,11 @@ It was eaten by an aquatic creature in the Sea of Corpses.
           local hat = parent.components.inventory:GetEquippedItem(EQUIPSLOTS.HEAD)
           if hat and hat.prefab == "reg_hat" then
             hat.components.fueled:SetPercent(charge / TUNING.REG_INSCINERATOR_USE)
+          end
+          if charge<=0 then
+            inst:AddTag("inscinerator_depleted")
+          else
+            inst:RemoveTag("inscinerator_depleted")
           end
         end
       end

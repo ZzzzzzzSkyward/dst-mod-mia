@@ -5,8 +5,8 @@ local start_inv = TUNING.GAMEMODE_STARTING_ITEMS.DEFAULT.REG or {}
 for i, v in ipairs(start_inv) do table.insert(prefabs, v) end
 ------------------------------------------------------------------------------------------------------------------------
 -- Lightning
-local lightning_target_hits = 10
-local lightning_forget_elapse = 3
+local lightning_target_hits = 20
+local lightning_forget_elapse = 2
 local lightning_counter = 0
 local function DoEnoughHit(inst)
   inst.components.hunger:DoDelta(TUNING.REG_HUNGER)
@@ -16,6 +16,7 @@ local function DoEnoughHit(inst)
   lightning_counter = 0
   local t = inst.components.timer
   if t:TimerExists("forgetlightninghit") then t:StopTimer("forgetlightninghit") end
+  if inst.inscinerator then inst.inscinerator:UpdateCharge() end
   -- #PLANNED add recharge anim and fx and effect
 end
 local function RecordLightningHit(inst)
@@ -45,9 +46,7 @@ local function onlightingstrike(inst)
 end
 ------------------------------------------------------------------------------------------------------------------------
 -- Inscienerator
-local function DisableInscinerator(inst)
-  if inst.inscinerator then inst.inscinerator:StopTargeting() end
-end
+local function DisableInscinerator(inst) if inst.inscinerator then inst.inscinerator:StopTargeting() end end
 local function KillInscinerator(inst)
   if inst.inscinerator then
     inst.inscinerator:StopTargeting()

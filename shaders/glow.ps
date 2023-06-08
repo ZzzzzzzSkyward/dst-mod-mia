@@ -3,17 +3,9 @@
 precision highp float;
 #endif
 uniform sampler2D SAMPLER[1];
-
 #define SRC_IMAGE SAMPLER[0]
-
 uniform vec4 SCREEN_PARAMS;
-
-#define W_H  (SCREEN_PARAMS.x / SCREEN_PARAMS.y)
-
 varying vec2 PS_TEXCOORD0;
-
-//uniform vec2 u_resolution;
-//uniform vec2 u_mouse;
 uniform vec4 TIMEPARAMS;
 #define iTime TIMEPARAMS.x
 

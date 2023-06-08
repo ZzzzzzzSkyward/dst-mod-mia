@@ -1,26 +1,33 @@
+local shaders = {
+  INSCINERATOR_CENTER = {
+    path = "shaders/mia_inscinerator_glow.ksh",
+    -- 变量: x,y,radius
+    params = 3,
+    after = "Lunacy"
+  },
+  INSCINERATOR_TIME = {
+    path = "shaders/mia_inscinerator_ember.ksh",
+    -- 变量: t
+    params = 2,
+    after = "INSCINERATOR_CENTER"
+  }
+}
 AddModShadersInit(function()
-  -- 变量: x,y,radius
-  UniformVariables.INSCINERATOR_CENTER = PostProcessor:AddUniformVariable("INSCINERATOR_CENTER", 3)
-  local path = resolvefilepath("shaders/mia_inscinerator_glow.ksh")
-  PostProcessorEffects.INSCINERATOR_CENTER = PostProcessor:AddPostProcessEffect(path)
-  PostProcessor:SetEffectUniformVariables(PostProcessorEffects.INSCINERATOR_CENTER, UniformVariables.INSCINERATOR_CENTER)
-end)
-AddModShadersInit(function()
-  -- 变量: t
-  UniformVariables.INSCINERATOR_TIME = PostProcessor:AddUniformVariable("INSCINERATOR_TIME", 1)
-  local path = resolvefilepath("shaders/mia_inscinerator_ember.ksh")
-  PostProcessorEffects.INSCINERATOR_TIME = PostProcessor:AddPostProcessEffect(path)
-  PostProcessor:SetEffectUniformVariables(PostProcessorEffects.INSCINERATOR_TIME, UniformVariables.INSCINERATOR_TIME)
+  for k, v in pairs(shaders) do
+    UniformVariables[k] = PostProcessor:AddUniformVariable(k, v.params)
+    local path = resolvefilepath(v.path)
+    PostProcessorEffects[k] = PostProcessor:AddPostProcessEffect(path)
+    PostProcessor:SetEffectUniformVariables(PostProcessorEffects[k], UniformVariables[k])
+  end
 end)
 AddModShadersSortAndEnable(function()
-  PostProcessor:SetPostProcessEffectAfter(PostProcessorEffects.INSCINERATOR_CENTER, PostProcessorEffects.Lunacy)
-  PostProcessor:EnablePostProcessEffect(PostProcessorEffects.INSCINERATOR_CENTER, false)
-  PostProcessor:SetUniformVariable(UniformVariables.INSCINERATOR_CENTER, 0, 0, 0)
-end)
-AddModShadersSortAndEnable(function()
-  PostProcessor:SetPostProcessEffectAfter(PostProcessorEffects.INSCINERATOR_TIME, PostProcessorEffects.Lunacy)
-  PostProcessor:EnablePostProcessEffect(PostProcessorEffects.INSCINERATOR_TIME, false)
-  PostProcessor:SetUniformVariable(UniformVariables.INSCINERATOR_TIME, 0)
+  for k, v in pairs(shaders) do
+    if v.after then PostProcessor:SetPostProcessEffectAfter(PostProcessorEffects[k], PostProcessorEffects[v.after]) end
+    PostProcessor:EnablePostProcessEffect(PostProcessorEffects[k], false)
+    local zeros = {}
+    for i = 1, v.params do zeros[i] = 0 end
+    PostProcessor:SetUniformVariable(UniformVariables[k], unpack(zeros))
+  end
 end)
 --[[
   AddPlayerPostInit(function(inst)
