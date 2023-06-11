@@ -16,8 +16,8 @@ local function ProcessAtlas(atlas, ...)
   file:close()
   local images = xml:gmatch("<Element name=\"(.-)\"")
   for tex in images do
-    RegisterInventoryItemAtlas(atlas, tex)
-    RegisterInventoryItemAtlas(atlas, hash(tex))
+    RegisterInventoryItemAtlas(path, tex)
+    RegisterInventoryItemAtlas(path, hash(tex))
   end
 end
 ProcessAtlas(atlas)
