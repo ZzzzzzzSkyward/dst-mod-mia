@@ -1,9 +1,9 @@
 GLOBAL.setmetatable(env, {
   __index = function(t, k) return GLOBAL.rawget(GLOBAL, k) end
 })
-function GLOBAL.p(...) return print("[log]", ...) end
+function env.p(...) return print("[log]", ...) end
 function dig(x, _env)
-  local file = resolvefilepath_soft(table.concat({"scripts/mia_", x, ".lua"}))
+  local file = resolvefilepath_soft("scripts/mia_"..x.. ".lua")
   if not file then
     print("error: no such file", x)
     return nil

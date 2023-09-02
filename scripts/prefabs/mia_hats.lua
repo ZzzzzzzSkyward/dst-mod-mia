@@ -225,8 +225,9 @@ local function prushka_getcreature()
 end
 local function prushka_losecreature() end
 local function prushka_removed(inst)
-  local inv = inst.components.inventory
-  inv:DropEverything()
+  local inv = inst.components.container
+  if inv then
+  inv:DropEverything()end
 end
 local function prushka2(inst)
   inst.build = "hat_prushka"
@@ -235,7 +236,7 @@ local function prushka2(inst)
   inst.components.equippable.dapperness = -TUNING.DAPPERNESS_TINY
   inst:AddComponent("container")
   inst.components.container:WidgetSetup("prushkahat")
-  inst.components.container.acceptsstacks = false
+  --inst.components.container.acceptsstacks = false
   inst:AddComponent("preserver")
   inst.components.preserver:SetPerishRateMultiplier(TUNING.PERISH_SALTBOX_MULT * 4 / 3)
   inst:ListenForEvent("itemget", prushka_getcreature)
