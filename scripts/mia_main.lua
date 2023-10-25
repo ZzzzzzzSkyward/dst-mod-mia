@@ -1,9 +1,4 @@
-RELICSLOTS = RELICSLOTS or {
-  SKIN = "SKIN",
-  EYE = "EYE",
-  ARM = "ARM",
-  BODY = "BODY"
-}
+RELICSLOTS = RELICSLOTS or {SKIN = "SKIN", EYE = "EYE", ARM = "ARM", BODY = "BODY"}
 GLOBAL.RELICSLOTS = RELICSLOTS
 local function import(path) return modimport("scripts/" .. path .. ".lua") end
 local dishes = dig("foods")
@@ -36,17 +31,7 @@ for k, v in pairs(postinit) do
   end
 end
 local containers = require("containers")
-containers.params.riko_sack = containers.params.krampus_sack or {
-  widget = {
-    slotpos = {},
-    animbank = "ui_krampusbag_2x8",
-    animbuild = "ui_krampusbag_2x8",
-    pos = Vector3(-5, -120, 0)
-  },
-  issidewidget = true,
-  type = "pack",
-  openlimit = 1
-}
+containers.params.riko_sack = containers.params.krampus_sack
 containers.params.rikocookpot = containers.params.portablecookpot
 -- prushkahat
 local h = deepcopy(containers.params.antlionhat)
@@ -57,10 +42,7 @@ containers.params.prushkahat = h
 
 -- blaze reap
 FUELTYPE.POWER = "power"
-local powerlevel = {
-  gunpowder = 10,
-  slurtleslime = 2
-}
+local powerlevel = {gunpowder = 10, slurtleslime = 2}
 for k, v in pairs(powerlevel) do
   AddPrefabPostInit(k, function(inst)
     inst:AddTag("power_fuel")
