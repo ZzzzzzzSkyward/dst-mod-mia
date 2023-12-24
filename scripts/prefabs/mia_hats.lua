@@ -1,4 +1,5 @@
 local riko_assets = {Asset("ANIM", "anim/hat_rikohat.zip")}
+local prushka_assets=riko_assets
 local fns = require("common_hatfn")
 local function onequip(inst, owner, ...) fns._onequip(inst, owner, inst.build, ...) end
 local function onunequip(inst, owner) fns._onunequip(inst, owner) end

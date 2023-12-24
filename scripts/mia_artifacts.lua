@@ -623,8 +623,7 @@ It was eaten by an aquatic creature in the Sea of Corpses.
         if not inst:IsValid() then return end
         local player = inst:GetParent() or ThePlayer
         if not player then return end
-        if player:HasTag("playerghost") then return end
-        if player.replica.health:IsDead() then return end
+        if player:HasTag("playerghost") or player.replica.health:IsDead() then return end
         local r = inst.components.reticule
         if not r then
           inst:AddComponent("reticule")
