@@ -1,9 +1,8 @@
 GLOBAL.setmetatable(env, {
   __index = function(t, k) return GLOBAL.rawget(GLOBAL, k) end
 })
-function env.p(...) return print("[log]", ...) end
 function dig(x, _env)
-  local file = resolvefilepath_soft("scripts/mia_"..x.. ".lua")
+  local file = resolvefilepath_soft("scripts/mia_" .. x .. ".lua")
   if not file then
     print("error: no such file", x)
     return nil
@@ -11,40 +10,42 @@ function dig(x, _env)
   local fn = kleiloadlua(file)
   if type(fn) == "function" then
     setfenv(fn, _env or env)
+    print("loaded", x)
     return fn()
   else
     print("error: invalid file", x)
     return nil
   end
-  return nil
 end
 PrefabFiles = dig("prefablist")
 Assets = dig("assets")
 modimport("scripts/mia_inventoryimages.lua")
 modimport("scripts/mia_language.lua")
 modimport("scripts/common_utils.lua")
-do
-  local minimapatlas = "images/mia_minimap.xml"
-  AddMinimapAtlas(minimapatlas)
-  local characters = dig("characters")
-  for name, data in pairs(characters) do
-    AddModCharacter(name, data.gender, {})
-    if data.skin then PREFAB_SKINS[name] = data.skin end
-    if data.start_inv then TUNING.GAMEMODE_STARTING_ITEMS.DEFAULT[name:upper()] = data.start_inv end
+local minimapatlas = "images/mia_minimap.xml"
+AddMinimapAtlas(minimapatlas)
+local characters = dig("characters")
+for name, data in pairs(characters) do
+  AddModCharacter(name, data.gender, {})
+  if data.skin then PREFAB_SKINS[name] = data.skin end
+  if data.start_inv then
+    TUNING.GAMEMODE_STARTING_ITEMS.DEFAULT[name:upper()] = data.start_inv
   end
-  local TuningHack = {}
-  setmetatable(TuningHack, {
-    __index = function(_, k)
-      if k == nil then return nil end
-      if type(k) == "string" and TUNING[string.upper(k)] then
-        TuningHack[k] = TUNING[string.upper(k)]
-        return TuningHack[k]
-      else
-        return env[k]
-      end
-    end
-  })
-  local tuning = dig("tuning", TuningHack)
-  for k, v in pairs(tuning) do TUNING[k] = TUNING[k] or v end
 end
-if not env.ismim and (TheNet:GetIsServer() or TheNet:GetIsClient()) then modimport("scripts/mia_main.lua") end
+local TuningHack = {}
+setmetatable(TuningHack, {
+  __index = function(_, k)
+    if k == nil then return nil end
+    if type(k) == "string" and TUNING[string.upper(k)] then
+      TuningHack[k] = TUNING[string.upper(k)]
+      return TuningHack[k]
+    else
+      return env[k]
+    end
+  end
+})
+local tuning = dig("tuning", TuningHack)
+for k, v in pairs(tuning) do TUNING[k] = TUNING[k] or v end
+if not env.ismim and (TheNet:GetIsServer() or TheNet:GetIsClient()) then
+  modimport("scripts/mia_main.lua")
+end

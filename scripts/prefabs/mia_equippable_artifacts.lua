@@ -1,4 +1,4 @@
-local fns_hand = require("common_equip_hand")
+local fns_hand = require("common_handfn")
 local fns_body = require("common_bodyfn")
 local hand_onequip, hand_onunequip = fns_hand._onequip, fns_hand._onunequip
 local body_onequip, body_onunequip = fns_body._onequip, fns_body._onunequip
@@ -16,8 +16,11 @@ local function common(def)
   if def.tags then for i, v in pairs(def.tags) do inst:AddTag(v) end end
   if not def.should_sink then
     if def.floatsymbol then
-      MakeInventoryFloatable(inst, "med", 0, {1.0, 0.4, 1.0}, true, -20,
-        {sym_name = def.floatsymbol, sym_build = def.build, bank = def.bank})
+      MakeInventoryFloatable(inst, "med", 0, {1.0, 0.4, 1.0}, true, -20, {
+        sym_name = def.floatsymbol,
+        sym_build = def.build,
+        bank = def.bank
+      })
     else
       MakeInventoryFloatable(inst, "med", nil, 0.6)
     end
@@ -56,7 +59,11 @@ local function makeamulet(def) return function() return common_amulet(def) end e
 local function makehand(def) return function() return common_hand(def) end end
 local prefs = {}
 for k, v in pairs(require("mia_artifacts")) do
-  if v.slot == "hand" then table.insert(prefs, Prefab(k, makehand(v), v.assets)) end
-  if v.slot == "neck" then table.insert(prefs, Prefab(k, makeamulet(v), v.assets)) end
+  if v.slot == "hand" then
+    table.insert(prefs, Prefab(k, makehand(v), v.assets))
+  end
+  if v.slot == "neck" then
+    table.insert(prefs, Prefab(k, makeamulet(v), v.assets))
+  end
 end
 return unpack(prefs)

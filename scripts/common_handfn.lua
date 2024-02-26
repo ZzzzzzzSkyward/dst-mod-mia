@@ -12,8 +12,8 @@ local function _onequip(inst, owner, build, symbol_override)
     owner.AnimState:OverrideSymbol("swap_object", build, symbol_override)
   end
   if inst.components.fueled ~= nil then inst.components.fueled:StartConsuming() end
-  owner.AnimState:Show("ARM_carry")
   owner.AnimState:Hide("ARM_normal")
+  owner.AnimState:Show("ARM_carry")
 end
 local function _onunequip(inst, owner, symbol_override)
   if type(symbol_override) ~= "string" then
